@@ -1,0 +1,12 @@
+#!/bin/bash
+DIRS=(
+	"alacritty"
+	"i3"
+	"nvim"
+	"rofi"
+	"vifm"
+)
+
+for d in "${DIRS[@]}"; do
+	cp -R "./$d" ~/.config
+done
