@@ -2,6 +2,7 @@
 DIRS=(
 	"alacritty"
 	"i3"
+	"i3blocks"
 	"nvim"
 	"rofi"
 	"vifm"

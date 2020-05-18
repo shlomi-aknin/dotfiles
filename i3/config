@@ -182,6 +182,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+l exec slimlock
+bindsym $mod+Alt_L exec skippy-xd --toggle-window-picker
+bindsym $mod+Shift+f exec alacritty -e vifm
 # bindsym Mod1+Shift exec /usr/bin/keyboard_layout_switch
 # bindsym Shift+Mod1 exec /usr/bin/keyboard_layout_switch
 # bindsym Ctrl+Shift+v exec alacritty -e vifm
@@ -194,8 +196,7 @@ bar {
  	tray_output none
  	status_command bumblebee-status -m amixer cpu disk date layout memory time battery_all -t powerline
  }
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id sh ~/.fehbg
 exec_always --no-startup-id picom -c 
-exec_always --no-startup-id "setxkbmap -model pc105 -layout us,he -variant ,, -option grp:alt_shift_toggle"
+exec_always --no-startup-id "setxkbmap -model pc104 -layout us,il -variant ,, -option grp:alt_shift_toggle"
 

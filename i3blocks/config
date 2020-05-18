@@ -10,10 +10,30 @@ markup=pango
 
 [separator]
 full_text=<span size="20000">&#57522;</span>
+color=#8D5A97
+
+[wifi]
+command=echo "  $(nmcli connection show | grep wifi | awk '{ print $1 }' ) "
+interval=10
+background=#8D5A97
+
+[separator]
+full_text=<span size="20000">&#57522;</span>
+color=#0B6E4F
+background=#8D5A97
+
+[disk-space]
+command=echo "  $(df -h | grep sda2 | awk '{print $3"/"$2}') "
+interval=1
+background=#0B6E4F
+
+[separator]
+full_text=<span size="20000">&#57522;</span>
 color=#67AAF9
+background=#0B6E4F
 
 [battery]
-command=echo "  $(acpi -V | head -n 1 | awk '{ print $4 }' | awk '{$0=substr($0,1,length($0)-1); print $0}') "
+command=echo "  $(~/.config/i3blocks/battery/battery | tail -n 1 | awk '{ print $1 }') "
 interval=1
 background=#67AAF9
 
