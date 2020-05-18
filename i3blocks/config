@@ -1,0 +1,41 @@
+separator=true
+separator_block_width=0
+color=#FFFFFF
+background=#000000
+border_top=0
+border_bottom=0
+border_left=0
+border_right=0
+markup=pango
+
+[separator]
+full_text=<span size="20000">&#57522;</span>
+color=#67AAF9
+
+[battery]
+command=echo "  $(acpi -V | head -n 1 | awk '{ print $4 }' | awk '{$0=substr($0,1,length($0)-1); print $0}') "
+interval=1
+background=#67AAF9
+
+[separator]
+full_text=<span size="20000">&#57522;</span>
+color=#B95F89
+background=#67AAF9
+
+[date]
+command=echo "  $(date '+%d/%m/%Y') "
+background=#B95F89
+color=#FFFFFF
+interval=1
+
+[separator]
+full_text=<span size="20000">&#57522;</span>
+color=#FFFF00
+background=#B95F89
+
+[time]
+command=echo "  $( date '+%H:%M:%S') "
+background=#FFFF00
+color=#000000
+interval=1
+
