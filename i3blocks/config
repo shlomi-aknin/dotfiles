@@ -1,11 +1,4 @@
-separator=true
 separator_block_width=0
-color=#FFFFFF
-background=#000000
-border_top=0
-border_bottom=0
-border_left=0
-border_right=0
 markup=pango
 
 [separator]
@@ -26,6 +19,7 @@ background=#1EA896
 command=echo "  $(nmcli connection show | grep wifi | awk '{ print $1 }' ) "
 interval=10
 background=#8D5A97
+
 
 [separator]
 full_text=<span size="20000">&#57522;</span>
@@ -55,7 +49,6 @@ background=#67AAF9
 [date]
 command=echo "  $(date '+%d/%m/%Y') "
 background=#B95F89
-color=#FFFFFF
 interval=1
 
 [separator]
