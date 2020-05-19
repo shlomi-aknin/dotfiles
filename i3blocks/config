@@ -10,7 +10,17 @@ markup=pango
 
 [separator]
 full_text=<span size="20000">&#57522;</span>
+color=#1EA896
+
+[volume]
+command=echo "  $(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }') "
+interval=1
+background=#1EA896
+
+[separator]
+full_text=<span size="20000">&#57522;</span>
 color=#8D5A97
+background=#1EA896
 
 [wifi]
 command=echo "  $(nmcli connection show | grep wifi | awk '{ print $1 }' ) "
