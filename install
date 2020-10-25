@@ -5,6 +5,7 @@ DIRS=(
 	"i3"
 	"i3blocks"
 	"nvim"
+	"polybar"
 	"rofi"
 	"sxhkd"
 	"vifm"
