@@ -1,10 +1,12 @@
 #!/bin/bash
 DIRS=(
 	"alacritty"
+	"bspwm"
 	"i3"
 	"i3blocks"
 	"nvim"
 	"rofi"
+	"sxhkd"
 	"vifm"
 )
 
