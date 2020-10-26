@@ -36,7 +36,7 @@ super + y
 
 # swap the current node and the biggest window
 super + g
-	bspc node -s biggest.window
+	bspc node -s biggest.local.window
 
 #
 # state/flags
@@ -113,6 +113,10 @@ super + ctrl + {h,j,k,l}
 super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
+super + {h,v}
+	bspc node -p {east,south}; \ 
+	bspc node -o 0.5
+
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -141,7 +145,8 @@ super + alt + shift + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # toggle rofi switcher
-super + @space 
+# super + @space 
+super + shift + d 
 	rofi -show window 
 
 # open vifm
@@ -171,3 +176,7 @@ super + f
 # Shutdown
 super + ctrl + F12 
 	poweroff
+
+# Open gmail in firefox
+XF86Mail
+	firefox "https://mail.google.com/mail/u/0/#inbox"
