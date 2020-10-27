@@ -177,6 +177,20 @@ super + f
 super + ctrl + F12 
 	poweroff
 
+# Reboot
+super + ctrl + BackSpace
+	reboot
+
 # Open gmail in firefox
 XF86Mail
 	firefox "https://mail.google.com/mail/u/0/#inbox"
+
+# Open google drive in firefox
+XF86HomePage
+	firefox "https://drive.google.com/drive/my-drive"
+
+# Toggle polybar visible
+super + shift + b
+	{polybar-msg cmd toggle; bspc config top_padding +0 ,\
+         polybar-msg cmd toggle; bspc config top_padding 40 }
+
