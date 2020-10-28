@@ -213,3 +213,6 @@ super + KP_Subtract
 super + KP_Decimal
     bspc config top_padding 40; bspc config -d focused window_gap 10
 
+# Rotate view 
+super + alt + {Left,Right}
+	{bspc node @/ -R 90,bspc node @/ -R -90}
