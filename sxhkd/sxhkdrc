@@ -215,4 +215,4 @@ super + KP_Decimal
 
 # Rotate view 
 super + alt + {Left,Right}
-	{bspc node @/ -R 90,bspc node @/ -R -90}
+	{bspc node @/ -R -90,bspc node @/ -R 90}
