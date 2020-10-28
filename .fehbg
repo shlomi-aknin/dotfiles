@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale $HOME/Pictures/macos-catalina-day-mountains.jpg 

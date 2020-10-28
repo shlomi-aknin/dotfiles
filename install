@@ -2,6 +2,7 @@
 DIRS=(
 	"alacritty"
 	"bspwm"
+	"dunst"
 	"i3"
 	"i3blocks"
 	"nvim"
