@@ -216,3 +216,15 @@ super + KP_Decimal
 # Rotate view 
 super + alt + {Left,Right}
 	{bspc node @/ -R -90,bspc node @/ -R 90}
+
+# Change window layouts
+super + shift + {h,j,k,l}
+	bsp-layout set {tall,wide,even,tiled} -- --master-size 0.6
+
+# Remove applied layout
+super + shift + BackSpace
+	bsp-layout remove
+
+# Nuke a desktop. (i.e. close all windows in it.)
+super + Delete ; {0-9}
+	bspc node @^{10,1-9}:/ -c
