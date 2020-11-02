@@ -14,6 +14,51 @@ super + d
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# super + @space 
+super + shift + d 
+	rofi -show window 
+
+# open vifm
+super + z
+	alacritty -e vifm
+
+# lock the screen
+super + l 
+	slimlock
+
+# Raise/Lower/Toggle volume
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+	amixer set Master {5%+,5%-,toggle}
+
+# Start firefox
+super + f
+	firefox
+
+# Reboot
+super + ctrl + F1
+	reboot
+
+# Shutdown
+super + ctrl + F2 
+	poweroff
+
+# Open gmail in firefox
+XF86Mail
+	firefox "https://mail.google.com/mail/u/0/#inbox"
+
+# Open google drive in firefox
+XF86HomePage
+	firefox "https://drive.google.com/drive/my-drive"
+
+# Toggle polybar visible
+super + shift + b
+	{polybar-msg cmd toggle; bspc config top_padding +0 ,\
+         polybar-msg cmd toggle; bspc config top_padding 40 }
+
+# Open this file for editing
+super + F1
+	alacritty -e nvim ~/.config/sxhkd/sxhkdrc
+
 #
 # bspwm hotkeys
 #
@@ -68,21 +113,13 @@ super + {p,b,comma,period}
 # super + {_,shift + }c
 #	bspc node -f {next,prev}.local.!hidden.window
 
-# focus the previous window in the current desktop
-super + {_,shift + }Left 
-	bspc node -{f,s} prev.local.window
+# focus the previous/next window in the current desktop
+super + {_,shift + }{Left,Right}
+	bspc node -{f,s} {prev,next}.local.window
 
-# focus the next window in the current desktop
-super + {_,shift + }Right 
-	bspc node -{f,s} next.local.window
-
-# focus the window below in the current desktop
-super + {_,shift + }Down
-	bspc node -{f,s} south
-
-# focus the window above in the current desktop
-super + {_,shift + }Up 
-	bspc node -{f,s} north
+# focus the window below/above in the current desktop
+super + {_,shift + }{Down,Up}
+	bspc node -{f,s} {south,north}
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -114,7 +151,7 @@ super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 super + {h,v}
-	bspc node -p {east,south}; \ 
+	bspc node -p {east,south};
 	bspc node -o 0.5
 
 # preselect the ratio
@@ -143,60 +180,6 @@ super + alt + shift + {h,j,k,l}
 
 # move a floating window
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# toggle rofi switcher
-# super + @space 
-super + shift + d 
-	rofi -show window 
-
-# open vifm
-super + z
-	alacritty -e vifm
-
-# lock the screen
-super + l 
-	slimlock
-
-# Raise volume
-XF86AudioRaiseVolume
-	amixer -D pulse sset Master 5%+
-
-# Lower volume
-XF86AudioLowerVolume
-	amixer -D pulse sset Master 5%-
-
-# Mute / Unmute
-XF86AudioMute
-	amixer set Master toggle
-
-# Start firefox
-super + f
-	firefox
-
-# Reboot
-super + ctrl + F1
-	reboot
-
-# Shutdown
-super + ctrl + F2 
-	poweroff
-
-# Open gmail in firefox
-XF86Mail
-	firefox "https://mail.google.com/mail/u/0/#inbox"
-
-# Open google drive in firefox
-XF86HomePage
-	firefox "https://drive.google.com/drive/my-drive"
-
-# Toggle polybar visible
-super + shift + b
-	{polybar-msg cmd toggle; bspc config top_padding +0 ,\
-         polybar-msg cmd toggle; bspc config top_padding 40 }
-
-# Open this file for editing
-super + F1
-	alacritty -e nvim $HOME/.config/sxhkd/sxhkdrc
 
 # change window gap at run time
 super + KP_Add
@@ -228,3 +211,4 @@ super + shift + BackSpace
 # Nuke a desktop. (i.e. close all windows in it.)
 super + Delete ; {0-9}
 	bspc node @^{10,1-9}:/ -c
+
