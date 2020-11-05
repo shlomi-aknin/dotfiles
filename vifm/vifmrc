@@ -113,13 +113,14 @@ endif
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " ------------------------------------------------------------------------------
-
+set number
 " :mark mark /full/directory/path [filename]
 
 mark b ~/bin/
 mark c ~/.config
 mark h ~/
 mark r /
+mark d ~/Downloads
 
 " ------------------------------------------------------------------------------
 
@@ -173,7 +174,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
+filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c, firefox %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -390,8 +391,6 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " Customize view columns a bit (enable ellipsis for truncated file names)
 "
 " set viewcolumns=-{name}..,6{}.
-set viewcolumns=-{name}..,-16{mtime},7{}.
-set sort=-mtime,+name,dir
 
 " Filter-out build and temporary files
 "
@@ -492,3 +491,6 @@ command ln ln -s %f:p %D
 source ~/.config/vifm/SETUP
 command! FZFfind :set noquickview | :execute 'goto' fnameescape(term('find | fzf --height 10 2>/dev/tty'))
 command! extractfiles unzip -o %c -d %D && rm -f %c
+nnoremap zx :only<cr>
+nnoremap zc :vsplit<cr>
+nnoremap zo :sync %c<CR><Tab>
