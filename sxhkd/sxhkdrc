@@ -30,9 +30,9 @@ super + l
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	amixer set Master {5%+,5%-,toggle}
 
-# Start firefox
-super + f
-	firefox
+# Start browser 
+super + b
+	chromium
 
 # Reboot
 super + ctrl + F1
@@ -193,7 +193,7 @@ super + KP_Subtract
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` - 1 ))
 
 # Remove gap
-super + KP_Decimal
+super + BackSpace
     bspc config top_padding 40; bspc config -d focused window_gap 10
 
 # Rotate view 
