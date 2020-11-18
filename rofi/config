@@ -1,1 +1,3 @@
 rofi.theme: /usr/share/rofi/themes/material.rasi
+! Number of lines
+rofi.lines:                          5
