@@ -44,11 +44,11 @@ super + ctrl + F2
 
 # Open gmail in firefox
 XF86Mail
-	firefox "https://mail.google.com/mail/u/0/#inbox"
+	chromium "https://mail.google.com/mail/u/0/#inbox"
 
 # Open google drive in firefox
 XF86HomePage
-	firefox "https://drive.google.com/drive/my-drive"
+	chromium "https://drive.google.com/drive/my-drive"
 
 # Toggle polybar visible
 super + shift + b
@@ -102,9 +102,6 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 # super + {_,shift + }{h,j,k,l}
 # 	bspc node -{f,s} {west,south,north,east}
-# super + {_,shift + }{Left,Down,Up,Right}
-# 	bspc node -{f,s} {west,south,north,east}
-
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
@@ -114,16 +111,13 @@ super + {p,b,comma,period}
 #	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the previous/next window in the current desktop
-super + {_,shift + }{Left,Right}
-	bspc node -{f,s} {prev,next}.local.window
-
-# focus the window below/above in the current desktop
-super + {_,shift + }{Down,Up}
-	bspc node -{f,s} {south,north}
+super + {_,shift + }{Left,Right,Down,Up}
+	bspc node -{f,s} {prev,next,south,north}.local.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
+
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -139,6 +133,11 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+# send focused window to next desktop
+super + shift + bracket{left,right}
+	DIR={prev,next}; \
+	bspc node -d "$DIR"; \
+	bspc desktop -f "$DIR"
 #
 # preselect
 #
@@ -201,8 +200,8 @@ super + alt + {Left,Right}
 	{bspc node @/ -R -90,bspc node @/ -R 90}
 
 # Change window layouts
-super + shift + {h,j,k,l}
-	bsp-layout set {tall,wide,even,tiled} -- --master-size 0.6
+super + shift + {g,v,h}
+	bsp-layout set {grid,tall,wide} -- --master-size 0.6
 
 # Remove applied layout
 super + shift + BackSpace
