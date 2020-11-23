@@ -42,11 +42,11 @@ super + ctrl + F1
 super + ctrl + F2 
 	poweroff
 
-# Open gmail in firefox
+# Open gmail in browser
 XF86Mail
 	chromium "https://mail.google.com/mail/u/0/#inbox"
 
-# Open google drive in firefox
+# Open google drive in browser
 XF86HomePage
 	chromium "https://drive.google.com/drive/my-drive"
 
@@ -75,10 +75,6 @@ super + {_,shift + }x
 super + w
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
 # swap the current node and the biggest window
 super + g
 	bspc node -s biggest.local.window
@@ -102,13 +98,6 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 # super + {_,shift + }{h,j,k,l}
 # 	bspc node -{f,s} {west,south,north,east}
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous window in the current desktop
-# super + {_,shift + }c
-#	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the previous/next window in the current desktop
 super + {_,shift + }{Left,Right,Down,Up}
@@ -117,7 +106,6 @@ super + {_,shift + }{Left,Right,Down,Up}
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
-
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -151,7 +139,6 @@ super + ctrl + {Left,Down,Up,Right}
 
 super + {h,v}
 	bspc node -p {east,south};
-	bspc node -o 0.5
 
 # preselect the ratio
 super + ctrl + {1-9}
@@ -181,17 +168,10 @@ super + alt + shift + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # change window gap at run time
-super + KP_Add
-    bspc config -d focused window_gap $((`bspc config -d focused window_gap` + 1 ))
+super + {KP_Add,KP_Subtract}
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
 
 # Restore original gap
-super + shift + 0
-    bspc config top_padding 40; bspc config -d focused window_gap 10
-
-super + KP_Subtract
-    bspc config -d focused window_gap $((`bspc config -d focused window_gap` - 1 ))
-
-# Remove gap
 super + BackSpace
     bspc config top_padding 40; bspc config -d focused window_gap 10
 
