@@ -30,7 +30,7 @@
 	spacing: 0;
 	background-color: transparent;
 
-	font: "Roboto Mono 13";
+	font: "Sauce Code Pro 18";
 }
 
 window {
@@ -45,7 +45,7 @@ mainbox {
 	spacing: 30px;
 	/*margin: 20%;*/
 	padding: 30px 0;
-	border: 1px;
+	border: 5px;
 	border-color: @base0D;
 }
 
@@ -60,13 +60,13 @@ prompt {
 
 textbox-prompt-colon {
 	expand: false;
-	str: ":";
+	/* str: ":"; */
 	margin: 0 1ch 0 0;
 	text-color: @base0D;
 }
 
 entry {
-	text-color: @base07;
+	text-color: @base07; 
 }
 
 case-indicator {
@@ -106,6 +106,7 @@ scrollbar {
 element {
 	padding: 5px;
 	highlight: bold underline;
+
 }
 
 element normal {
@@ -117,11 +118,16 @@ element selected {
 }
 
 element alternate {
-	/*background-color: @base03;*/
+	/* background-color: @base03; */
 }
 
 element normal normal, element selected normal, element alternate normal {
 	text-color: @base07;
+}
+
+element selected normal {
+	text-color: #000;
+	highlight: bold; 
 }
 
 element normal urgent, element selected urgent, element alternate urgent {
