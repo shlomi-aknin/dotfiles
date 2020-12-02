@@ -1,0 +1,10 @@
+#!/bin/bash
+
+~/.fehbg &
+xsetroot -cursor_name left_ptr &
+numlockx &
+dunst &
+setxkbmap us,il ,, grp:alt_shift_toggle &
+sxhkd &
+~/.config/polybar/launch.sh &
+xrander --output HDMI-2 --same-as eDP-1 &
