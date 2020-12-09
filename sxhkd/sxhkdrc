@@ -2,69 +2,62 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + Return
-	alacritty	
+# toggle bar
+super + shift + b
+	{killall -q yabar && bspc config top_padding +0, \
+	yabar && bspc config top_padding 40}
 
-# program launcher
-super + d 
-	rofi -show run	
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
-# super + @space 
-super + shift + d 
-	rofi -show window 
-
-# open vifm
-super + z
-	alacritty -e vifm
-
-# lock the screen
-super + l 
-	slimlock
+# Nuke a desktop. (i.e. close all windows in it.)
+super + d ; {0-9}
+	bspc node @^{10,1-9}:/ -c
 
 # Raise/Lower/Toggle volume
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	amixer set Master {5%+,5%-,toggle}
 
-# Start browser 
+# reboot, poweroff
+super + shift + {F1,F2}
+	sudo {reboot,poweroff}
+
+# update mirrorlist
+super + r
+	urxvtc -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
+
+# htop, vifm
+super + {t,z,F1,F2}
+	urxvtc -e {htop,vifm,nvim ~/.config/sxhkd/sxhkdrc,urxvt -e xrdb ~/.Xresources}
+
+# browser
 super + b
-	chromium
+	chromium --force-device-scale-factor=1.5
 
-# Reboot
-super + ctrl + F1
-	reboot
+# slimlock
+super + shift + l
+	slimlock
 
-# Shutdown
-super + ctrl + F2 
-	poweroff
+# terminal emulator
+super + Return
+	urxvtc
 
-# Open gmail in browser
-XF86Mail
-	chromium "https://mail.google.com/mail/u/0/#inbox"
+# program launcher
+super + @space
+	dmenu_run
 
-# Open google drive in browser
-XF86HomePage
-	chromium "https://drive.google.com/drive/my-drive"
-
-# Toggle polybar visible
-super + shift + b
-	{polybar-msg cmd toggle; bspc config top_padding +0 ,\
-         polybar-msg cmd toggle; bspc config top_padding 40 }
-
-# Open this file for editing
-super + F1
-	alacritty -e nvim ~/.config/sxhkd/sxhkdrc
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
 #
 
+# set layouts
+super + shift + {t,w,g}
+	bsp-layout set {tall,wide,grid}
+
 # quit/restart bspwm
-super + shift + {e,r}
+super + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -72,8 +65,12 @@ super + {_,shift + }x
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
-super + w
+super + m
 	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
 super + g
@@ -84,7 +81,7 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,shift + f}
+super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -96,16 +93,24 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-# super + {_,shift + }{h,j,k,l}
-# 	bspc node -{f,s} {west,south,north,east}
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
 
-# focus the previous/next window in the current desktop
-super + {_,shift + }{Left,Right,Down,Up}
-	bspc node -{f,s} {prev,next,south,north}.local.window
+# focus the next/previous window in the current desktop
+super + {comma,period}
+	bspc node -f {prev,next}.local.!hidden.window
+
+# focus the node for the given path jump
+super + {p,b}
+	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
+
+# move window to prev/next desktop
+super + shift + bracket{left,right}
+	bspc node -d {prev,next} -f
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -121,11 +126,6 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-# send focused window to next desktop
-super + shift + bracket{left,right}
-	DIR={prev,next}; \
-	bspc node -d "$DIR"; \
-	bspc desktop -f "$DIR"
 #
 # preselect
 #
@@ -134,18 +134,12 @@ super + shift + bracket{left,right}
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
-super + ctrl + {Left,Down,Up,Right}
-	bspc node -p {west,south,north,east}
-
-super + {h,v}
-	bspc node -p {east,south};
-
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + @space 
+super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
@@ -165,29 +159,5 @@ super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
+super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# change window gap at run time
-super + {KP_Add,KP_Subtract}
-    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
-
-# Restore original gap
-super + BackSpace
-    bspc config top_padding 40; bspc config -d focused window_gap 10
-
-# Rotate view 
-super + alt + {Left,Right}
-	{bspc node @/ -R -90,bspc node @/ -R 90}
-
-# Change window layouts
-super + shift + {g,v,h}
-	bsp-layout set {grid,tall,wide} -- --master-size 0.6
-
-# Remove applied layout
-super + shift + BackSpace
-	bsp-layout remove
-
-# Nuke a desktop. (i.e. close all windows in it.)
-super + Delete ; {0-9}
-	bspc node @^{10,1-9}:/ -c
-
