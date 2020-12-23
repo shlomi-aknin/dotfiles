@@ -12,7 +12,7 @@ setxkbmap us,il ,, grp:alt_shift_toggle &
 xrandr --output HDMI-2 --same-as eDP-1 &
 
 # bspc monitor -d I II III IV V VI VII VIII IX X
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10 
+bspc monitor -d 1 2 3 4 5
 bspc config border_width        5
 bspc config window_gap          0
 
