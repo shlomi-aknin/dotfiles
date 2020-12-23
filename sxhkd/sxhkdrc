@@ -4,8 +4,8 @@
 
 # toggle bar
 super + shift + b
-	{killall -q yabar && bspc config top_padding +0, \
-	yabar && bspc config top_padding 40}
+	{polybar-msg cmd toggle; bspc config top_padding +0, \
+	polybar-msg cmd toggle; bspc config top_padding 40}
 
 
 # Nuke a desktop. (i.e. close all windows in it.)
@@ -22,27 +22,27 @@ super + shift + {F1,F2}
 
 # update mirrorlist
 super + r
-	urxvtc -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
+	urxvt -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
 
 # htop, vifm
 super + {t,z,F1,F2}
-	urxvtc -e {htop,vifm,nvim ~/.config/sxhkd/sxhkdrc,urxvt -e xrdb ~/.Xresources}
+	urxvt -e {htop,vifm,nvim ~/.config/sxhkd/sxhkdrc,urxvt -e xrdb ~/.Xresources}
 
 # browser
 super + b
 	chromium --force-device-scale-factor=1.5
 
 # slimlock
-super + shift + l
+super + control + l
 	slimlock
 
 # terminal emulator
 super + Return
-	urxvtc
+	urxvt
 
 # program launcher
-super + @space
-	dmenu_run
+# super + @space
+# 	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
