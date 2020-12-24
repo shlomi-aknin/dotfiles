@@ -25,7 +25,7 @@ super + r
 	urxvt -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
 
 # htop, vifm
-super + {t,z,F1,F2}
+super + {p,z,F1,F2}
 	urxvt -e {htop,vifm,nvim ~/.config/sxhkd/sxhkdrc,urxvt -e xrdb ~/.Xresources}
 
 # browser
