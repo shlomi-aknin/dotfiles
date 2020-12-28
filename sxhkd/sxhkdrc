@@ -33,7 +33,7 @@ super + b
 	chromium --force-device-scale-factor=1.5
 
 # slimlock
-super + control + l
+alt + l
 	slimlock
 
 # terminal emulator
@@ -54,7 +54,7 @@ super + Escape
 
 # set layouts
 super + shift + {t,w,g}
-	bsp-layout set {tall,wide,grid}
+	bsp-layout set {tall,wide,rgrid}
 
 # quit/restart bspwm
 super + shift + {q,r}
@@ -108,8 +108,14 @@ super + {p,b}
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
 # move window to prev/next desktop
 super + shift + bracket{left,right}
+	bspc node -d {prev,next} -f
+
+super + shift + {Left,Right}
 	bspc node -d {prev,next} -f
 
 # focus the last node/desktop
