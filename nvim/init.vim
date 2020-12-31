@@ -40,7 +40,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 let g:system_copy#copy_command='xclip -sel clipboard'
 lua require'colorizer'.setup()
-:nmap <space>e :CocCommand explorer<CR>
+:nmap <leader>e :CocCommand explorer<CR>
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
