@@ -50,5 +50,6 @@ let g:fzf_action = {
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 nnoremap <leader>f       :Files<CR>
-nnoremap <PageUp> <C-k>
-nnoremap <PageDown> <C-j>
+nnoremap <PageUp> <C-u>
+nnoremap <PageDown> <C-d>
+nnoremap <leader>h	:noh<CR>
