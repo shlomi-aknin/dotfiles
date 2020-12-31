@@ -35,7 +35,7 @@ let g:nnn#action = {
       \ '<c-v>': 'vsplit' }
 " autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'CocCommand explorer' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 let g:system_copy#copy_command='xclip -sel clipboard'
@@ -50,3 +50,5 @@ let g:fzf_action = {
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 nnoremap <leader>f       :Files<CR>
+nnoremap <PageUp> <C-k>
+nnoremap <PageDown> <C-j>
