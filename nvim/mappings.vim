@@ -11,12 +11,12 @@ nmap <A-j> :move +1<CR>
 nmap <A-k> :move -2<CR>
 nmap <leader>] :tabnext<CR>
 nmap <leader>[ :tabprevious<CR>
-nmap <leader>1 1gt<CR>
-nmap <leader>2 2gt<CR>
-nmap <leader>3 3gt<CR>
-nmap <leader>4 4gt<CR>
-nmap <leader>5 5gt<CR>
-nmap <leader>6 6gt<CR>
-nmap <leader>7 7gt<CR>
-nmap <leader>8 8gt<CR>
-nmap <leader>9 9gt<CR>
+nnoremap <leader>1 1gt<CR>
+nnoremap <leader>2 2gt<CR>
+nnoremap <leader>3 3gt<CR>
+nnoremap <leader>4 4gt<CR>
+nnoremap <leader>5 5gt<CR>
+nnoremap <leader>6 6gt<CR>
+nnoremap <leader>7 7gt<CR>
+nnoremap <leader>8 8gt<CR>
+nnoremap <leader>9 9gt<CR>
