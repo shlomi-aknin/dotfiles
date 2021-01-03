@@ -20,5 +20,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'haishanh/night-owl.vim'
 Plug 'alvan/vim-closetag'
+Plug 'elzr/vim-json'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 lua require'colorizer'.setup()
