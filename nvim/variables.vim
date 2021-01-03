@@ -9,7 +9,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
-let g:closetag_filenames = '*.html,*.xhtml,*.php'
+let g:closetag_filenames = '*.html,*.xhtml,*.php,*.json'
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
 let g:nnn#action = { '<c-t>': 'tab split', '<c-x>': 'split', '<c-v>': 'vsplit' }
 let g:nnn#layout = 'new tab'

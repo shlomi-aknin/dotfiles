@@ -22,5 +22,7 @@ Plug 'haishanh/night-owl.vim'
 Plug 'alvan/vim-closetag'
 Plug 'elzr/vim-json'
 Plug 'jremmen/vim-ripgrep'
+Plug 'dkprice/vim-easygrep'
+Plug 'maksimr/vim-jsbeautify'
 call plug#end()
 lua require'colorizer'.setup()
