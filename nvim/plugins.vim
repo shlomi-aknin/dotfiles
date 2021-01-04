@@ -24,5 +24,6 @@ Plug 'elzr/vim-json'
 Plug 'jremmen/vim-ripgrep'
 Plug 'dkprice/vim-easygrep'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'brooth/far.vim'
 call plug#end()
 lua require'colorizer'.setup()

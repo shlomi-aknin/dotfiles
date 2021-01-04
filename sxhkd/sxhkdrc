@@ -32,9 +32,9 @@ super + c; {n,s,v,z}
 	alacritty -e {nmtui,nvim ~/.config/sxhkd/sxhkdrc,nvim ~/.config/nvim/init.vim,nvim ~/.zshrc}
 
 super + c; c
-	export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
+	export NNN_PLUG='f:finder;n:_nnn -c \'$nnn\';o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
 	export NNN_FIFO=/tmp/nnn.fifo && \
-	export NNN_BMS='c:~/.config;d:~/Downloads;N:/var/nodejs;v:/var/nodejs' && \
+	export NNN_BMS='c:~/.config;d:~/Downloads;p:/var/www/html;v:/var/nodejs' && \
 	alacritty -e nnn ~/.config
 
 super + {o,z}
@@ -42,9 +42,9 @@ super + {o,z}
 
 super + n
 	export TERMINAL=alacritty && \
-	export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
+	export NNN_PLUG='f:finder;n:_nvim $nnn;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
 	export NNN_FIFO=/tmp/nnn.fifo && \
-	export NNN_BMS='c:~/.config;d:~/Downloads;N:/var/nodejs;v:/var/nodejs' && \
+	export NNN_BMS='c:~/.config;d:~/Downloads;p:/var/www/html;v:/var/nodejs' && \
 	alacritty -e nnn -H
 
 # browser
