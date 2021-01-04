@@ -18,6 +18,7 @@ nnoremap <leader>6 6gt<CR>
 nnoremap <leader>7 7gt<CR>
 nnoremap <leader>8 8gt<CR>
 nnoremap <leader>9 9gt<CR>
+nnoremap <silent> <leader>lg :LazyGit<CR>
 map <A-f> :call JsBeautify()<cr>
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
