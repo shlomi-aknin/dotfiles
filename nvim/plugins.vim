@@ -26,5 +26,6 @@ Plug 'dkprice/vim-easygrep'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'brooth/far.vim'
 Plug 'kdheepak/lazygit.nvim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 lua require'colorizer'.setup()
