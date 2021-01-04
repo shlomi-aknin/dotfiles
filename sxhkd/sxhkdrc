@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# dmenu
+super + p
+	dmenu_run
+
 # toggle bar
 super + shift + b
 	{polybar-msg cmd toggle; bspc config top_padding +0, \
@@ -21,24 +25,40 @@ super + shift + {F1,F2}
 	sudo {reboot,poweroff}
 
 # update mirrorlist
-super + r
-	urxvt -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
+# super + r
+# 	alacritty -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
 
-# htop, vifm
-super + {p,z,F1,F2}
-	urxvt -e {htop,vifm,nvim ~/.config/sxhkd/sxhkdrc,urxvt -e xrdb ~/.Xresources}
+super + c; {n,s,v,z}
+	alacritty -e {nmtui,nvim ~/.config/sxhkd/sxhkdrc,nvim ~/.config/nvim/init.vim,nvim ~/.zshrc}
+
+super + c; c
+	export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
+	export NNN_FIFO=/tmp/nnn.fifo && \
+	export NNN_BMS='c:~/.config;d:~/Downloads;N:/var/nodejs;v:/var/nodejs' && \
+	alacritty -e nnn ~/.config
+
+super + {o,z}
+	alacritty -e {htop,vifm}
+
+super + n
+	export TERMINAL=alacritty && \
+	export NNN_PLUG='f:finder;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
+	export NNN_FIFO=/tmp/nnn.fifo && \
+	export NNN_BMS='c:~/.config;d:~/Downloads;N:/var/nodejs;v:/var/nodejs' && \
+	alacritty -e nnn -H
 
 # browser
 super + b
-	chromium --force-device-scale-factor=1.5
+	firefox	I
+#	chromium --force-device-scale-factor=1.5
 
 # slimlock
-alt + l
+super + shift + BackSpace 
 	slimlock
 
 # terminal emulator
 super + Return
-	urxvt
+	alacritty
 
 # program launcher
 # super + @space
@@ -105,14 +125,14 @@ super + {p,b}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+alt + {h,l}
 	bspc desktop -f {prev,next}.local
 
 super + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
 # move window to prev/next desktop
-super + shift + bracket{left,right}
+alt + control + {h,l}
 	bspc node -d {prev,next} -f
 
 super + shift + {Left,Right}
