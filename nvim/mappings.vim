@@ -9,6 +9,8 @@ nnoremap <leader>f       :Files<CR>
 nnoremap <leader>h	:noh<CR>
 nmap <A-j> :move +1<CR>
 nmap <A-k> :move -2<CR>
+nnoremap j +
+nnoremap k -
 nnoremap <leader>1 1gt<CR>
 nnoremap <leader>2 2gt<CR>
 nnoremap <leader>3 3gt<CR>
