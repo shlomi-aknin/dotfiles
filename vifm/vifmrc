@@ -525,3 +525,4 @@ nnoremap zo :sync %c<CR><Tab>
 nnoremap zz :cd %d %c<CR>
 nnoremap . za
 nnoremap lg :!lazygit %d<CR>
+nnoremap W :!feh --bg-scale %f<CR>
