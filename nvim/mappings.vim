@@ -1,4 +1,12 @@
 nnoremap <SPACE> <Nop>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap < <><left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 let mapleader=" "
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>e :CocCommand explorer --open-action-strategy tab<CR>

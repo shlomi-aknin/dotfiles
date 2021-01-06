@@ -15,3 +15,9 @@ let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit
 let g:nnn#action = { '<c-t>': 'tab split', '<c-x>': 'split', '<c-v>': 'vsplit' }
 let g:nnn#layout = 'new tab'
 let g:system_copy#copy_command='xclip -sel clipboard'
+
+set nocompatible
+set runtimepath^=/home/shlomo/.local/share/nvim/site/autoload/coc.nvim/autoload
+filetype plugin indent on
+syntax on
+set hidden
