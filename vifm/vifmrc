@@ -245,8 +245,24 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ shotwell,
 	\ {View in feh}
 	\ feh -Zx %c,
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-         \ identify %f
+
+
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+	\ vifmimg draw %px %py %pw %ph %c
+	\ %pc
+	\ vifmimg clear
+
+fileviewer *.gif
+	\ vifmimg gifpreview %px %py %pw %ph %c
+	\ %pc
+	\ vifmimg clear
+
+fileviewer *.ico
+	\ vifmimg magickpreview %px %py %pw %ph %c
+	\ %pc
+	\ vifmimg clear
+" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+"          \ identify %f
 
 " OpenRaster
 filextype *.ora
@@ -526,3 +542,5 @@ nnoremap zz :cd %d %c<CR>
 nnoremap . za
 nnoremap T :!lazygit %d<CR>
 nnoremap W :!feh --bg-scale %f<CR>
+nnoremap * :!chmod +x %f<CR>
+nnoremap n :!touch 

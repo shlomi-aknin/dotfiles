@@ -2,6 +2,9 @@
 # wm independent hotkeys
 #
 
+# ssh to amazon
+super + a
+	alacritty -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 # dmenu
 super + p
 	dmenu_run
@@ -20,6 +23,9 @@ super + d ; {0-9}
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	amixer set Master {5%+,5%-,toggle}
 
+# gmail, drive
+{XF86Mail,XF86HomePage}
+	firefox {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
 # reboot, poweroff
 super + shift + {F1,F2}
 	sudo {reboot,poweroff}
@@ -38,11 +44,11 @@ super + c; c
 	alacritty -e nnn ~/.config
 
 super + {o,z}
-	alacritty -e {htop,vifm}
+	alacritty -e {htop,vifmrun}
 
 super + n
 	export TERMINAL=alacritty && \
-	export NNN_PLUG='f:finder;n:_nvim $nnn;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview' && \
+	export NNN_PLUG='f:finder;n:_nvim $nnn;o:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview;w:_setwallpaper $nnn' && \
 	export NNN_FIFO=/tmp/nnn.fifo && \
 	export NNN_BMS='c:~/.config;d:~/Downloads;p:/var/www/html;v:/var/nodejs' && \
 	alacritty -e nnn -H
