@@ -543,4 +543,5 @@ nnoremap . za
 nnoremap T :!lazygit %d<CR>
 nnoremap W :!feh --bg-scale %f<CR>
 nnoremap * :!chmod +x %f<CR>
-nnoremap n :!touch 
+nnoremap <C-f> :!touch<space>  
+nnoremap <C-d> :mkdir<space> 
