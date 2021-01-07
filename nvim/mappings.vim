@@ -15,8 +15,12 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 nnoremap <leader>f       :Files<CR>
 nnoremap <leader>h	:noh<CR>
-nmap <A-j> :move +1<CR>
-nmap <A-k> :move -2<CR>
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <C-j> :tabnext<CR>
 nnoremap <C-k> :tabprevious<CR>
 nnoremap ; +
