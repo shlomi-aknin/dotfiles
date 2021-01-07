@@ -1,0 +1,24 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+quote_type = single
+
+[**.js]
+; path=/home/shlomo/.nvm/versions/node/v12.10.0/lib/node_modules/js-beautify/js/lib/beautify.js
+path=/usr/local/bin/beautify.js
+indent_size = 4
+indent_style = space
+preserve_newlines = true
+keep_array_indentation = true
+brace_style = collapse-preserve-inline
+insert_final_newline = true
+
+[{package.json,*.yml,*.cjson}]
+indent_style = space
+indent_size = 4
