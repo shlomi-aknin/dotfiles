@@ -11,6 +11,7 @@ let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
 let g:system_copy#copy_command='xclip -sel clipboard'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 set nocompatible
 set runtimepath^=/home/shlomo/.local/share/nvim/site/autoload/coc.nvim/autoload
 filetype plugin indent on
