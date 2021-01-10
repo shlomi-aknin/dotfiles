@@ -10,6 +10,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 let mapleader=" "
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
+nmap s <Plug>(easymotion-overwin-w)
 nnoremap <C-p> :FZF<CR>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
