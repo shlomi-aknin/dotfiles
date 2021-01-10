@@ -21,10 +21,10 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'dkprice/vim-easygrep'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'brooth/far.vim'
-Plug 'kdheepak/lazygit.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
 call plug#end()
 lua require'colorizer'.setup()
