@@ -26,5 +26,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
+Plug 'liuchengxu/vista.vim'
 call plug#end()
 lua require'colorizer'.setup()

@@ -8,12 +8,10 @@ inoremap < <><left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 let mapleader=" "
-map <C-n> :NERDTreeToggle<CR>
 nmap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
 nmap s <Plug>(easymotion-overwin-w)
-nnoremap <C-p> :FZF<CR>
-nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+nnoremap <leader>p :Vista!!<CR>
 nnoremap <leader>f       :Files<CR>
 nnoremap <leader>h	:noh<CR>
 nnoremap <A-j> :m .+1<CR>==
