@@ -14,6 +14,7 @@ nmap <CR> o<Esc>
 nnoremap <leader>p :Vista!!<CR>
 nnoremap <leader>f       :Files<CR>
 nnoremap <leader>h	:noh<CR>
+noremap <Leader>s :update<CR>
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
