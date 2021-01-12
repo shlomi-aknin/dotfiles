@@ -20,7 +20,6 @@ Plug 'elzr/vim-json'
 Plug 'jremmen/vim-ripgrep'
 Plug 'dkprice/vim-easygrep'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'brooth/far.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tomtom/tcomment_vim'
@@ -29,5 +28,6 @@ Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
 Plug 'liuchengxu/vista.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'eugen0329/vim-esearch'
 call plug#end()
 lua require'colorizer'.setup()
