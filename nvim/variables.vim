@@ -21,7 +21,7 @@ let g:vista_cursor_delay = 50
 let g:vista_close_on_jump = 1
 let g:vista_blink = [0, 0]
 let g:vista_top_level_blink = [0, 0]
-let g:vista_ignore_kinds = ['classes', 'constants', 'properties']
+let g:vista_ignore_kinds = ['classes', 'constants', 'properties', 'global variables']
 let g:vista_fzf_preview = ['right:50%']
 set nocompatible
 set runtimepath^=/home/shlomo/.local/share/nvim/site/autoload/coc.nvim/autoload
