@@ -12,8 +12,8 @@ nmap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
 nmap s <Plug>(easymotion-overwin-w)
 nmap <CR> o<Esc>
 nnoremap <leader>p :Vista!!<CR>
-nnoremap <leader>f       :Files<CR>
-nnoremap <leader>h	:noh<CR>
+nnoremap <leader>z :Files<CR>
+nnoremap <leader>h :noh<CR>
 noremap <Leader>s :update<CR>
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==

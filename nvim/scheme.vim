@@ -8,3 +8,6 @@ hi TabLine guifg=#ffffff guibg=#1d3557 gui=NONE cterm=NONE
 hi TabLineSel guifg=#ffffff guibg=#0288D1 gui=NONE cterm=NONE
 hi PMenu guibg=#6610F2 guifg=#ffffff ctermbg=236 gui=NONE cterm=NONE
 hi PMenuSel guibg=#FFFFFF guifg=#000000 ctermbg=176 gui=NONE cterm=NONE
+hi Search guibg=#CD853F guifg=#000000
+hi Comment guibg=#6610F2 guifg=#ffffff
+hi IncSearch guifg=#000000 guibg=#CD853F gui=NONE cterm=NONE
