@@ -1,13 +1,4 @@
 nnoremap <SPACE> <Nop>
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ` ``<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap < <><left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
 let mapleader=" "
 nmap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
 nmap s <Plug>(easymotion-overwin-w)

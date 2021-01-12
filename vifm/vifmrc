@@ -124,6 +124,7 @@ mark r /
 mark d ~/Downloads
 mark n /var/nodejs
 mark p /var/www/html
+mark t ~/dotfiles
 
 " ------------------------------------------------------------------------------
 
@@ -177,7 +178,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i &, apvlv %c, chromium-browser %c, xpdf %c
+filextype *.pdf zathura %c %i &, apvlv %c, firefox %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -362,7 +363,7 @@ filextype *.pro qtcreator %f &
 
 filextype *.ddd,*.DDD,*.TGD,*V1B readesm -f html %c /tmp/"%c.html" && sed -i 's@body		{ font-family:sans-serif; }@a\t\t{ color: yellow; }\nsvg\t\t{ background-color: #fff; }\nbody\t\t{ background-color: #000; color: #fff; font-family:sans-serif; }@' /tmp/"%c.html" && sed -i 's@tr:hover 	{border-style:outset; background-color:#eeeeee; }@tr:hover 	{border-style:outset; background-color:#eeeeee; color: #000; }@' /tmp/"%c.html" && chromium-browser /tmp/"%c.html"
 
-filextype *.vim nvim -p %f 
+filextype *.vim nvim -p %f
 " Directories
 filextype */
         \ {View in thunar}
@@ -543,5 +544,5 @@ nnoremap . za
 nnoremap T :!lazygit %d<CR>
 nnoremap W :!feh --bg-scale %f<CR>
 nnoremap * :!chmod +x %f<CR>
-nnoremap <C-f> :!touch<space>  
-nnoremap <C-d> :mkdir<space> 
+nnoremap <C-f> :!touch<space>
+nnoremap <C-d> :mkdir<space>
