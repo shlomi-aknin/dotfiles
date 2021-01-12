@@ -1,6 +1,7 @@
 nnoremap <SPACE> <Nop>
 inoremap " ""<left>
 inoremap ' ''<left>
+inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>

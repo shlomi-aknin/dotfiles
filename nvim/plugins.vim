@@ -29,5 +29,6 @@ Plug 'liuchengxu/vista.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'eugen0329/vim-esearch'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 lua require'colorizer'.setup()
