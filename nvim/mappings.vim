@@ -25,6 +25,7 @@ nnoremap <C-j> :tabnext<CR>
 nnoremap <C-k> :tabprevious<CR>
 nnoremap ; +
 nnoremap ' -
+nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
 nnoremap <leader>1 1gt<CR>
 nnoremap <leader>2 2gt<CR>
 nnoremap <leader>3 3gt<CR>
@@ -37,6 +38,7 @@ nnoremap <leader>9 9gt<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <silent> <leader>F  :Farf<cr>
 nnoremap <silent> <C-d> :g/^\s*$/d<cr>
+nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
 autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
