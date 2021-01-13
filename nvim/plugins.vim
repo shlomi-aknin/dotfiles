@@ -31,5 +31,6 @@ Plug 'honza/vim-snippets'
 Plug 'eugen0329/vim-esearch'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'pseewald/vim-anyfold'
 call plug#end()
 lua require'colorizer'.setup()

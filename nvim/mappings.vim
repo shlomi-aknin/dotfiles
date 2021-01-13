@@ -31,6 +31,7 @@ nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <silent> <C-d> :g/^\s*$/d<cr>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
+nnoremap <leader>d :AnyFoldActivate<cr>
 autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
 autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
@@ -43,3 +44,4 @@ autocmd BufWritePre *.js :call JsBeautify()
 autocmd BufWritePre *.json :call JsonBeautify()
 autocmd BufWritePre *.html :call HtmlBeautify()
 autocmd BufWritePre *.css :call CSSBeautify()
+

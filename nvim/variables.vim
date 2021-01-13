@@ -40,6 +40,7 @@ set updatetime=300
 set runtimepath^=/home/shlomo/.local/share/nvim/site/autoload/coc.nvim/autoload
 set cmdheight=2
 set shortmess+=c
+set mouse=a
 syntax enable
 
 if has('patch-8.1.1564')
@@ -57,3 +58,4 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+

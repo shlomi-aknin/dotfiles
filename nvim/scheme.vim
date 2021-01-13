@@ -14,3 +14,4 @@ hi IncSearch guifg=#000000 guibg=#CD853F gui=NONE cterm=NONE
 hi GitGutterAdd guibg=#009900 guifg=#ffffff ctermfg=2
 hi GitGutterChange guibg=#bbbb00 guifg=#ffffff ctermfg=3
 hi GitGutterDelete guibg=#ff2222 guifg=#ffffff ctermfg=1
+hi Folded guibg=#34a1eb guifg=#000000 gui=NONE cterm=NONE
