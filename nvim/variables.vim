@@ -15,6 +15,12 @@ let g:vista_top_level_blink = [0, 0]
 let g:vista_ignore_kinds = ['classes', 'constants', 'properties', 'global variables']
 let g:vista_fzf_preview = ['right:50%']
 let g:gitgutter_map_keys = 0
+let g:coc_global_extensions = [
+      \'coc-explorer',
+      \'coc-json',
+      \'coc-snippets',
+      \'coc-tsserver'
+      \]
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>y  :<C-u>CocList -I symbols<cr>
