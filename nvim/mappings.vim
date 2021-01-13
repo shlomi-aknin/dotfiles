@@ -1,5 +1,6 @@
 nnoremap <SPACE> <Nop>
 let mapleader=' '
+nnoremap <A-m> :Emmet<space>
 nnoremap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
 nmap s <Plug>(easymotion-overwin-w)
 nnoremap <CR> o<Esc>
@@ -15,6 +16,8 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <C-j> :tabnext<CR>
 nnoremap <C-k> :tabprevious<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
 nnoremap ; +
 nnoremap ' -
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>

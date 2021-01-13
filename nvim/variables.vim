@@ -1,3 +1,4 @@
+autocmd FileType html EmmetInstall
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'CocCommand explorer' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 filetype plugin indent on
@@ -15,6 +16,7 @@ let g:vista_top_level_blink = [0, 0]
 let g:vista_ignore_kinds = ['classes', 'constants', 'properties', 'global variables']
 let g:vista_fzf_preview = ['right:50%']
 let g:gitgutter_map_keys = 0
+let g:user_emmet_install_global = 0
 let g:coc_global_extensions = [
       \'coc-explorer',
       \'coc-json',
