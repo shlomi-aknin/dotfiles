@@ -1,7 +1,7 @@
 nnoremap <SPACE> <Nop>
 let mapleader=' '
 nnoremap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
-nnoremap s <Plug>(easymotion-overwin-w)
+nmap s <Plug>(easymotion-overwin-w)
 nnoremap <CR> o<Esc>
 nnoremap <leader>p :Vista!!<CR>
 nnoremap <leader>z :Files<CR>
