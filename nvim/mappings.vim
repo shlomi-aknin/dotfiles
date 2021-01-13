@@ -1,8 +1,8 @@
 nnoremap <SPACE> <Nop>
-let mapleader=" "
-nmap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
-nmap s <Plug>(easymotion-overwin-w)
-nmap <CR> o<Esc>
+let mapleader=' '
+nnoremap <leader>e :CocCommand explorer --open-action-strategy tab<CR>
+nnoremap s <Plug>(easymotion-overwin-w)
+nnoremap <CR> o<Esc>
 nnoremap <leader>p :Vista!!<CR>
 nnoremap <leader>z :Files<CR>
 nnoremap <leader>h :noh<CR>
@@ -28,7 +28,6 @@ nnoremap <leader>7 7gt<CR>
 nnoremap <leader>8 8gt<CR>
 nnoremap <leader>9 9gt<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
-nnoremap <silent> <leader>F  :Farf<cr>
 nnoremap <silent> <C-d> :g/^\s*$/d<cr>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
