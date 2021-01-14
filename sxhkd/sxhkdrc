@@ -59,7 +59,7 @@ super + b
 #	chromium --force-device-scale-factor=1.5
 
 # slimlock
-super + shift + BackSpace 
+super + shift + BackSpace
 	slimlock
 
 # terminal emulator
@@ -80,7 +80,7 @@ super + Escape
 
 # set layouts
 super + shift + {t,w,g}
-	bsp-layout set {tall,wide,rgrid}
+	bsp-layout set {tall,wide,rgrid} -- --master-size 0.5
 
 # quit/restart bspwm
 super + shift + {q,r}

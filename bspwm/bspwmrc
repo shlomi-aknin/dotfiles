@@ -13,7 +13,7 @@ bspc config presel_feedback_color "#C57E8700"
 
 for i in {1..5}
 do
-  bsp-layout set tall "$i" -- --master-size 0.55 &
+  bsp-layout set tall "$i" -- --master-size 0.5 &
 done
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
