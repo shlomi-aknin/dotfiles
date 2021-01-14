@@ -4,12 +4,12 @@ nmap s <Plug>(easymotion-overwin-w)
 nnoremap ; +
 nnoremap ' -
 nnoremap <CR> o<Esc>
-nnoremap <leader>p :Vista!!<CR>
-nnoremap <leader>z :Files<CR>
-nnoremap <leader>g :GFiles?<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>h :noh<CR>
-noremap <Leader>s :update<CR>
+nnoremap <silent><leader>p :Vista!!<CR>
+nnoremap <silent><leader>z :Files<CR>
+nnoremap <silent><leader>g :GFiles?<CR>
+nnoremap <silent><leader>b :Buffers<CR>
+nnoremap <silent><leader>h :noh<CR>
+noremap <silent><leader>s :update<CR>
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
