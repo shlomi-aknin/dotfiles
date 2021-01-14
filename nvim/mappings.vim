@@ -6,6 +6,7 @@ nnoremap ' -
 nnoremap <CR> o<Esc>
 nnoremap <leader>p :Vista!!<CR>
 nnoremap <leader>z :Files<CR>
+nnoremap <leader>g :GFiles?<CR>
 nnoremap <leader>h :noh<CR>
 noremap <Leader>s :update<CR>
 nnoremap <A-j> :m .+1<CR>==
