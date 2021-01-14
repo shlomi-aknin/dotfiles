@@ -33,5 +33,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'pseewald/vim-anyfold'
 Plug 'bagrat/vim-buffet'
 Plug 'gvee-s/simo-zz-2'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 lua require'colorizer'.setup()
