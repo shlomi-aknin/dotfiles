@@ -7,6 +7,7 @@ nnoremap <CR> o<Esc>
 nnoremap <leader>p :Vista!!<CR>
 nnoremap <leader>z :Files<CR>
 nnoremap <leader>g :GFiles?<CR>
+nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>h :noh<CR>
 noremap <Leader>s :update<CR>
 nnoremap <A-j> :m .+1<CR>==
@@ -35,7 +36,7 @@ nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <silent> <C-d> :g/^\s*$/d<cr>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
-nnoremap <leader>d :AnyFoldActivate<cr>
+nnoremap <leader>d :AnyFoldActivate<cr> zR
 autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
 autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
