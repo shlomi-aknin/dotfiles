@@ -19,7 +19,6 @@ Plug 'elzr/vim-json'
 Plug 'jremmen/vim-ripgrep'
 Plug 'dkprice/vim-easygrep'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'easymotion/vim-easymotion'
@@ -34,5 +33,6 @@ Plug 'pseewald/vim-anyfold'
 Plug 'bagrat/vim-buffet'
 Plug 'gvee-s/simo-zz-2'
 Plug 'pangloss/vim-javascript'
+Plug 'hlissner/vim-multiedit'
 call plug#end()
 lua require'colorizer'.setup()
