@@ -5,6 +5,7 @@ filetype plugin indent on
 inoremap <silent><expr> <c-space> coc#refresh()
 nnoremap <SPACE> <Nop>
 let mapleader=' '
+let g:airline_theme='cobalt2'
 let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
