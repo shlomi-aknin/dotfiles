@@ -10,6 +10,8 @@ hi PMenu guibg=#023E8A guifg=#ffffff ctermbg=236 gui=NONE cterm=NONE
 hi PMenuSel guibg=#0077B6 guifg=#ffffff ctermbg=176 gui=NONE cterm=NONE
 hi Search guibg=#CD853F guifg=#000000
 hi Comment guifg=#34a1eb
+hi jsComment guifg=#34a1eb gui=italic
+hi javaScriptLineComment guifg=#34a1eb gui=italic
 hi IncSearch guifg=#000000 guibg=#CD853F gui=NONE cterm=NONE
 hi GitGutterAdd guibg=#009900 guifg=#ffffff ctermfg=2
 hi GitGutterChange guibg=#bbbb00 guifg=#ffffff ctermfg=3
