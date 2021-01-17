@@ -1,6 +1,5 @@
 autocmd FileType html EmmetInstall
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'CocCommand explorer' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 filetype plugin indent on
 inoremap <silent><expr> <c-space> coc#refresh()
 nnoremap <SPACE> <Nop>
