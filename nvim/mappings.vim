@@ -1,5 +1,5 @@
 nnoremap <A-m> :Emmet<space>
-nnoremap <leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
+nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
 nmap s <Plug>(easymotion-overwin-w)
 nnoremap ; +
 nnoremap ' -
