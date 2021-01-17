@@ -9,7 +9,7 @@ hi TabLineSel guifg=#ffffff guibg=#0288D1 gui=NONE cterm=NONE
 hi PMenu guibg=#6610F2 guifg=#ffffff ctermbg=236 gui=NONE cterm=NONE
 hi PMenuSel guibg=#FFFFFF guifg=#000000 ctermbg=176 gui=NONE cterm=NONE
 hi Search guibg=#CD853F guifg=#000000
-hi Comment guibg=#6610F2 guifg=#ffffff
+hi Comment guifg=#34a1eb
 hi IncSearch guifg=#000000 guibg=#CD853F gui=NONE cterm=NONE
 hi GitGutterAdd guibg=#009900 guifg=#ffffff ctermfg=2
 hi GitGutterChange guibg=#bbbb00 guifg=#ffffff ctermfg=3
