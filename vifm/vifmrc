@@ -118,6 +118,7 @@ set number
 " :mark mark /full/directory/path [filename]
 
 mark b ~/bin/
+mark l /usr/local/bin/
 mark c ~/.config
 mark h ~/
 mark r /
@@ -141,7 +142,7 @@ mark t ~/dotfiles
 " %m run the command in a menu window
 
 command! df df -h %m 2> /dev/null
-command! devour diff gnvim -d %f %F
+command! diff devour gnvim %f %F -- -d
 command! zip zip -r %f.zip %f
 command! run !! ./%f
 command! make !!make %a
