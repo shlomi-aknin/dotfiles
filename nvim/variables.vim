@@ -56,9 +56,6 @@ set shiftwidth=4
 set expandtab
 set nocompatible
 set updatetime=300
-set runtimepath^=/home/shlomo/.local/share/nvim/site/autoload/coc.nvim/autoload
-set cmdheight=2
-set shortmess+=c
 set mouse=a
 syntax enable
 

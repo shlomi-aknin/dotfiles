@@ -9,7 +9,7 @@ nnoremap <silent><leader>z :Files<CR>
 nnoremap <silent><leader>g :GFiles?<CR>
 nnoremap <silent><leader>b :Buffers<CR>
 nnoremap <silent><leader>h :noh<CR>
-noremap <silent><leader>s :update<CR>
+nnoremap <silent><leader>s :update<CR>
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
