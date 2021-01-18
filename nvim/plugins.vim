@@ -34,5 +34,7 @@ Plug 'bagrat/vim-buffet'
 Plug 'gvee-s/simo-zz-2'
 Plug 'pangloss/vim-javascript'
 Plug 'hlissner/vim-multiedit'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'danilamihailov/beacon.nvim'
 call plug#end()
 lua require'colorizer'.setup()

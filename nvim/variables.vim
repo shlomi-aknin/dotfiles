@@ -25,6 +25,8 @@ let g:buffet_always_show_tabline = 0
 let g:buffet_powerline_separators = 1
 let g:buffet_separator = ''
 let g:buffet_show_index = 1
+let g:beacon_minimal_jump = 1
+let g:beacon_timeout = 1000
 let g:coc_global_extensions = [
       \'coc-explorer',
       \'coc-json',
@@ -37,6 +39,7 @@ nnoremap <silent><nowait> <space>y  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 set clipboard+=unnamedplus
 set cursorline
+set guifont=Source\ Code\ Pro:h18
 set hidden
 set number
 set termguicolors

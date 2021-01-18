@@ -11,7 +11,7 @@
 " If you would like to use another vi clone such as Elvis or Vile
 " you will need to change this setting.
 
-set vicmd=nvim
+set vicmd=devour\ gnvim
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
@@ -141,7 +141,7 @@ mark t ~/dotfiles
 " %m run the command in a menu window
 
 command! df df -h %m 2> /dev/null
-command! diff nvim -d %f %F
+command! devour diff gnvim -d %f %F
 command! zip zip -r %f.zip %f
 command! run !! ./%f
 command! make !!make %a
@@ -363,7 +363,7 @@ filextype *.pro qtcreator %f &
 
 filextype *.ddd,*.DDD,*.TGD,*V1B readesm -f html %c /tmp/"%c.html" && sed -i 's@body		{ font-family:sans-serif; }@a\t\t{ color: yellow; }\nsvg\t\t{ background-color: #fff; }\nbody\t\t{ background-color: #000; color: #fff; font-family:sans-serif; }@' /tmp/"%c.html" && sed -i 's@tr:hover 	{border-style:outset; background-color:#eeeeee; }@tr:hover 	{border-style:outset; background-color:#eeeeee; color: #000; }@' /tmp/"%c.html" && chromium-browser /tmp/"%c.html"
 
-filextype *.vim nvim -p %f
+filextype *.vim devour gnvim -p %f
 " Directories
 filextype */
         \ {View in thunar}
@@ -438,7 +438,7 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
-nnoremap o :!nvim %d<cr>
+nnoremap o :!devour gnvim %d<cr>
 " Open file in new instance of gvim
 nnoremap O :!devour gnvim %d<cr>
 

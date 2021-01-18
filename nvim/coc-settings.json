@@ -8,33 +8,6 @@
   "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
   "signature.maxWindowWidth": 100,
   "list.alignColumns": true,
-  "suggest.snippetIndicator": " ~> ",
-  "suggest.completionItemKindLabels": {
-    "keyword": "\uf805",
-    "variable": "\ue79b",
-    "value": "\uf89f",
-    "operator": "\u03a8",
-    "function": "\uf794",
-    "reference": "\ufa46",
-    "constant": "\uf02e",
-    "method": "\ue721",
-    "struct": "\ufb44",
-    "class": "\uf1b3",
-    "interface": "\uf417",
-    "text": "\ue612",
-    "enum": "\uf435",
-    "enumMember": "\uf02b",
-    "module": "\uf40d",
-    "color": "\ue22b",
-    "property": "\uf719",
-    "field": "\uf9be",
-    "unit": "\uf475",
-    "event": "\ufacd",
-    "file": "\uf723",
-    "folder": "\uf114",
-    "snippet": "\ue60b",
-    "typeParameter": "\uf728",
-    "default": "\uf29c"
-  }
+  "suggest.snippetIndicator": " ~> "
 }
 
