@@ -31,7 +31,7 @@ nnoremap <silent> <C-l> :bn<CR>
 nnoremap <silent> <C-h> :bp<CR>
 nnoremap <silent> <C-s> :Bw<CR>
 nnoremap <silent> <C-c> :Bw!<CR>
-nnoremap <silent> <C-t> :tabnew<CR>
+nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <F3> :%s/<C-r><C-w>/
