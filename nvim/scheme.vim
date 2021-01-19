@@ -1,4 +1,4 @@
-colorscheme space-vim-dark
+colorscheme dracula
 
 hi Normal guifg=#ffffff ctermfg=253 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
 hi LineNr guifg=#0097A7 ctermfg=238 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
