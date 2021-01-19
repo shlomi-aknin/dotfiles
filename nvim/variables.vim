@@ -4,7 +4,7 @@ filetype plugin indent on
 inoremap <silent><expr> <c-space> coc#refresh()
 nnoremap <SPACE> <Nop>
 let mapleader=' '
-let g:airline_theme='cobalt2'
+let g:airline_theme='badwolf'
 let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
@@ -21,14 +21,13 @@ let g:vista_ignore_kinds = ['classes', 'constants', 'properties', 'global variab
 let g:vista_fzf_preview = ['right:50%']
 let g:gitgutter_map_keys = 0
 let g:user_emmet_install_global = 0
-let g:buffet_always_show_tabline = 0
-let g:buffet_powerline_separators = 1
-let g:buffet_separator = ''
-let g:buffet_show_index = 1
 let g:beacon_minimal_jump = 1
 let g:beacon_timeout = 1000
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:comfortable_motion_impulse_multiplier = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_tab_type = 0
 nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
 nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
 nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 3.7)<CR>

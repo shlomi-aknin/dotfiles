@@ -32,8 +32,8 @@ nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 nnoremap <silent> <C-l> :bn<CR>
 nnoremap <silent> <C-h> :bp<CR>
-nnoremap <silent> <C-s> :Bw<CR>
-nnoremap <silent> <C-c> :Bw!<CR>
+nnoremap <silent> <C-s> :bd<CR>
+nnoremap <silent> <C-c> :bw<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
