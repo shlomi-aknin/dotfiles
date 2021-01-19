@@ -17,6 +17,8 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 vnoremap // y:%s/<C-R>=escape(@",'/\')<CR>//g<left><left>
+vnoremap > >gv
+vnoremap < <gv
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
