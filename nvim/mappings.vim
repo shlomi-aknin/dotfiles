@@ -38,7 +38,7 @@ nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <silent><leader>r :e!<cr>
-nnoremap <silent><leader>t :silent :lcd %:p:h<cr>:silent !alacritty<cr>
+nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent !alacritty --working-directory $VIM_DIR<cr>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
 nnoremap <leader>d :AnyFoldActivate<cr> zR
