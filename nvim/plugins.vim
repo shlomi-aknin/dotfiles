@@ -34,5 +34,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'hlissner/vim-multiedit'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'danilamihailov/beacon.nvim'
+Plug 'liuchengxu/space-vim-dark'
 call plug#end()
 lua require'colorizer'.setup()
