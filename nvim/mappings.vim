@@ -37,6 +37,7 @@ nnoremap <silent> <C-c> :bw<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
+nnoremap <silent><leader>r :e!<cr>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
 nnoremap <leader>d :AnyFoldActivate<cr> zR
