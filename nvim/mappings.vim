@@ -51,6 +51,7 @@ augroup skeletons
   au!
   autocmd BufNewFile *.* silent! execute '0r ~/.config/nvim/templates/skeleton.'.expand("<afile>:e")
 augroup END
+
 autocmd BufWritePre *.js :call JsBeautify()
 autocmd BufWritePre *.json :call JsonBeautify()
 autocmd BufWritePre *.html :call HtmlBeautify()

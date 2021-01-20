@@ -28,6 +28,10 @@ let g:comfortable_motion_impulse_multiplier = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_tab_type = 0
+let g:any_jump_ignored_files = ['*.json', '*ignore', 'test/**', 'node_modules', 'node_modules/**', '.git']
+let g:any_jump_results_ui_style = 'filename_last'
+let g:any_jump_colors = { "help": "Function" }
+let g:any_jump_references_only_for_current_filetype = 1
 let g:fzf_colors = {
 \ 'fg': ['fg', 'Normal'],
 \ 'bg': ['bg', 'Normal'],
