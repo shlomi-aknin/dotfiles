@@ -28,6 +28,20 @@ let g:comfortable_motion_impulse_multiplier = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_tab_type = 0
+let g:fzf_colors = {
+\ 'fg': ['fg', 'Normal'],
+\ 'bg': ['bg', 'Normal'],
+\ 'hl': ['fg', 'Keyword'],
+\ 'fg+': ['fg', 'Normal'],
+\ 'bg+': ['bg', 'Normal'],
+\ 'hl+': ['fg', 'DraculaOrange'],
+\ 'info': ['fg', 'DraculaPurple'],
+\ 'border': ['fg', 'Ignore'],
+\ 'prompt': ['fg', 'DraculaGreen'],
+\ 'pointer': ['fg', 'Exception'],
+\ 'marker': ['fg', 'Keyword'],
+\ 'spinner': ['fg', 'Label'],
+\ 'header': ['fg', 'Comment'] }
 nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
 nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
 nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 3.7)<CR>

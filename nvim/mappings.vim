@@ -16,6 +16,7 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <silent><A-r> :BTags<CR>
 vnoremap // y:%s/<C-R>=escape(@",'/\')<CR>//g<left><left>
 vnoremap > >gv
 vnoremap < <gv
