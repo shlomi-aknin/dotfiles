@@ -36,5 +36,6 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'danilamihailov/beacon.nvim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'RRethy/vim-illuminate'
 call plug#end()
 lua require'colorizer'.setup()
