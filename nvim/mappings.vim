@@ -3,6 +3,8 @@ nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-str
 nmap s <Plug>(easymotion-overwin-w)
 nnoremap ; +
 nnoremap ' -
+nnoremap ds diwx
+nnoremap C ^i
 nnoremap <CR> o<Esc>
 nmap <silent> gd <Plug>(coc-definition)
 nnoremap <silent><leader>p :Vista!!<CR>
