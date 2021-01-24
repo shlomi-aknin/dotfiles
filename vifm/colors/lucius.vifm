@@ -6,16 +6,16 @@
 " This color scheme is loosely based on the lucius color scheme for vim
 
 highlight clear
-highlight Win cterm=none ctermfg=250 ctermbg=0
-highlight Directory cterm=bold ctermfg=4 ctermbg=0
+highlight Win cterm=none ctermfg=255 ctermbg=0
+highlight Directory cterm=bold ctermfg=51 ctermbg=4
 highlight Link cterm=bold ctermfg=yellow ctermbg=0
 highlight BrokenLink cterm=bold ctermfg=red ctermbg=none
 highlight Socket cterm=bold ctermfg=magenta ctermbg=black
 highlight Device cterm=bold ctermfg=red ctermbg=black
 highlight Fifo cterm=bold ctermfg=cyan ctermbg=none
-highlight Executable cterm=bold ctermfg=112 ctermbg=236
+highlight Executable cterm=bold ctermfg=118 ctermbg=0
 highlight Selected cterm=none ctermfg=236 ctermbg=208
-highlight CurrLine cterm=bold ctermfg=251 ctermbg=32
+highlight CurrLine cterm=bold ctermfg=0 ctermbg=11
 highlight TopLine cterm=none ctermfg=white ctermbg=black
 highlight TopLineSel cterm=none ctermfg=15 ctermbg=32
 highlight StatusLine cterm=bold ctermfg=black ctermbg=190
