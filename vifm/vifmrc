@@ -439,7 +439,7 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
-nnoremap o :!nvim %d<cr>
+nnoremap o :!nvim<cr>
 " Open file in new instance of gvim
 nnoremap O :!nvim %d<cr>
 

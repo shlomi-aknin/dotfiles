@@ -48,6 +48,7 @@ autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
 autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <a-f> :call CSSBeautify()<cr>
+autocmd VimLeavePre * SessionSave
 augroup skeletons
   au!
   autocmd BufNewFile *.* silent! execute '0r ~/.config/nvim/templates/skeleton.'.expand("<afile>:e")
