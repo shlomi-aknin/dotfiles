@@ -4,6 +4,7 @@ nmap s <Plug>(easymotion-overwin-w)
 nnoremap ; +
 nnoremap ' -
 nnoremap <CR> o<Esc>
+nmap <silent> gd <Plug>(coc-definition)
 nnoremap <silent><leader>p :Vista!!<CR>
 nnoremap <silent><leader>z :Files<CR>
 nnoremap <silent><leader>g :GFiles?<CR>
@@ -56,7 +57,6 @@ autocmd BufWritePre *.js :call JsBeautify()
 autocmd BufWritePre *.json :call JsonBeautify()
 autocmd BufWritePre *.html :call HtmlBeautify()
 autocmd BufWritePre *.css :call CSSBeautify()
-
 
 " Insert a disposable marker after the cursor
 nmap <leader>ma :MultieditAddMark a<CR>
