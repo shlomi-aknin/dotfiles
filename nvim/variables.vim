@@ -32,6 +32,9 @@ let g:any_jump_ignored_files = ['*.json', '*ignore', 'test/**', 'node_modules', 
 let g:any_jump_results_ui_style = 'filename_last'
 let g:any_jump_colors = { "help": "Function" }
 let g:any_jump_references_only_for_current_filetype = 1
+let g:UltiSnipsExpandTrigger="<c-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:fzf_colors = {
 \ 'fg': ['fg', 'Normal'],
 \ 'bg': ['bg', 'Normal'],

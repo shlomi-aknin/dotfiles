@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
-Plug 'DevWurm/autosession.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
@@ -25,7 +24,6 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'liuchengxu/vista.vim'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'mattn/emmet-vim'
-Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript'

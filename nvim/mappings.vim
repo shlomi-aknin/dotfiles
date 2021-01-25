@@ -7,6 +7,8 @@ nnoremap ds diwx
 nnoremap C ^i
 nnoremap <CR> o<Esc>
 nmap <silent> gd <Plug>(coc-definition)
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nnoremap <silent><leader>p :Vista!!<CR>
 nnoremap <silent><leader>z :Files<CR>
 nnoremap <silent><leader>g :GFiles?<CR>
