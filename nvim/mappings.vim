@@ -49,6 +49,7 @@ nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent !alacritty -
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>k <esc>V$% :TComment<cr>
 nnoremap <leader>d :AnyFoldActivate<cr> zR
+inoremap <C-l> <C-r>=expand('%:t:r')<CR>
 autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
 autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
