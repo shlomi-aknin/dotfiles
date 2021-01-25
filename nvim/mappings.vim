@@ -7,6 +7,7 @@ nnoremap ds diwx
 nnoremap C ^i
 nnoremap <CR> o<Esc>
 nmap <silent> gd <Plug>(coc-definition)
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nnoremap <silent><leader>p :Vista!!<CR>
