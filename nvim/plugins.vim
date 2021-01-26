@@ -20,6 +20,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
+Plug 'lepture/vim-css'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'liuchengxu/vista.vim'
 Plug 'maksimr/vim-jsbeautify'

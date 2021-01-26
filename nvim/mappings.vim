@@ -8,6 +8,7 @@ nnoremap C ^i
 nnoremap <CR> o<Esc>
 nmap <silent> gd <Plug>(coc-definition)
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nnoremap <silent><leader>p :Vista!!<CR>
@@ -39,7 +40,7 @@ nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 nnoremap <silent> <C-l> :bn<CR>
 nnoremap <silent> <C-h> :bp<CR>
-nnoremap <silent> <C-s> :bd<CR>
+nnoremap <silent> <C-s> :bd!<CR>
 nnoremap <silent> <C-c> :bw<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
