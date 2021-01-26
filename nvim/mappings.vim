@@ -28,6 +28,7 @@ vnoremap // y:%s/<C-R>=escape(@",'/\')<CR>//g<left><left>
 vnoremap > >gv
 vnoremap < <gv
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
+nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
 nmap <leader>3 <Plug>BuffetSwitch(3)
