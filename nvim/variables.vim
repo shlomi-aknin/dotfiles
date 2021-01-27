@@ -64,6 +64,7 @@ nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>y  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+set clipboard+=unnamed
 set clipboard+=unnamedplus
 set cursorline
 set guifont=Source\ Code\ Pro:h18

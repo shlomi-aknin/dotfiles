@@ -1,3 +1,4 @@
+inoremap jj <Esc>
 nnoremap <A-m> :Emmet<space>
 nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
 nmap s <Plug>(easymotion-overwin-w)
