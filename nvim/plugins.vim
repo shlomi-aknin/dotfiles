@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
 Plug 'RRethy/vim-illuminate'
 Plug 'SirVer/ultisnips'
+Plug 'StanAngeloff/php.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/Colorizer'
 Plug 'christoomey/vim-system-copy'
