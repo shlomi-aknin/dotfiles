@@ -1,6 +1,5 @@
 colorscheme dracula
 
-" hi PMenuSel guibg=#129AE2 guifg=#ffffff ctermbg=176 gui=NONE cterm=NONE
 hi Comment guifg=#34a1eb
 hi CursorLine guibg=#22577A ctermbg=100 gui=NONE cterm=NONE
 hi CursorLineNr guifg=#ffff00 ctermfg=248 guibg=#112630 ctermbg=235 gui=NONE cterm=NONE
@@ -12,7 +11,8 @@ hi IncSearch guifg=#000000 guibg=#ffff00 gui=NONE cterm=NONE
 hi LineNr guifg=#0097A7 ctermfg=238 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
 hi MatchParen cterm=none guibg=#129AE2 guifg=#ffffff
 hi Normal guifg=#ffffff ctermfg=253 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
-hi PMenu guibg=#1d3557 gui=NONE cterm=NONE
+hi PMenu guibg=#2176FF guifg=#ffffff gui=NONE cterm=NONE
+hi PMenuSel guibg=#ffffff guifg=#000000 ctermbg=176 gui=NONE cterm=NONE
 hi Search guibg=#ffff00 guifg=#000000
 hi String guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
 hi javaScriptLineComment guifg=#34a1eb gui=italic
