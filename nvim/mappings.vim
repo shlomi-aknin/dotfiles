@@ -31,7 +31,7 @@ nnoremap <silent><leader>b :Buffers<CR>
 nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
 nnoremap <silent><leader>g :GFiles?<CR>
 nnoremap <silent><leader>h :noh<CR>
-nnoremap <silent><leader>p :Vista!!<CR>
+nnoremap <silent><leader>p :Vista finder coc<CR>
 nnoremap <silent><leader>r :e!<cr>
 nnoremap <silent><leader>s :update<CR>
 nnoremap <silent><leader>S :bufdo wall<CR>
