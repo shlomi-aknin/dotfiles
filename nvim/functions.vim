@@ -8,6 +8,19 @@ autocmd BufWritePre *.json :call JsonBeautify()
 autocmd BufWritePre *.html :call HtmlBeautify()
 autocmd BufWritePre *.css :call CSSBeautify()
 
+function! DeleteEmptyBuffers()
+    let [i, n; empty] = [1, bufnr('$')]
+    while i <= n
+        if bufexists(i) && bufname(i) == ''
+            call add(empty, i)
+        endif
+        let i += 1
+    endwhile
+    if len(empty) > 0
+        exe 'bdelete' join(empty)
+    endif
+endfunction
+
 function! QuickFixOpenAll()
     if empty(getqflist())
         return
@@ -20,6 +33,8 @@ function! QuickFixOpenAll()
         endif
         let s:prev_val = s:curr_val
     endfor
+    :silent call DeleteEmptyBuffers()
 endfunction
 
-command! QuickFixOpenAll         call QuickFixOpenAll()
+command! QuickFixOpenAll call QuickFixOpenAll()
+
