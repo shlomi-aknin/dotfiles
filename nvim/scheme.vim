@@ -10,12 +10,12 @@ hi GitGutterDelete guibg=#ff2222 guifg=#ffffff ctermfg=1
 hi IncSearch guifg=#000000 guibg=#ffff00 gui=NONE cterm=NONE
 hi LineNr guifg=#0097A7 ctermfg=238 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
 hi MatchParen cterm=none guibg=#129AE2 guifg=#ffffff
-hi Normal guifg=#ffffff ctermfg=253 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
+hi Normal guifg=#FFFF00 ctermfg=253 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
 hi PMenu guibg=#2176FF guifg=#ffffff gui=NONE cterm=NONE
 hi PMenuSel guibg=#ffffff guifg=#000000 ctermbg=176 gui=NONE cterm=NONE
 hi Search guibg=#ffff00 guifg=#000000
-hi String guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
+hi String guifg=#34a1eb ctermfg=222 gui=NONE cterm=NONE
 hi javaScriptLineComment guifg=#34a1eb gui=italic
-hi javaScriptStringS guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
+hi javaScriptStringS guifg=#2DE1FC ctermfg=222 gui=NONE cterm=NONE
 hi jsComment guifg=#34a1eb gui=italic
-hi jsString guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
+hi jsString guifg=#2DE1FC ctermfg=222 gui=NONE cterm=NONE
