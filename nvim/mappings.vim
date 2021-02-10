@@ -39,6 +39,7 @@ nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent !alacritty -
 nnoremap <silent><leader>x :bufdo bd!<CR>
 nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nnoremap <silent><leader>z :Files<CR>
+nnoremap <silent><nowait> <leader>d :call CocAction('jumpDefinition', v:false)<CR>
 nnoremap C ^i
 nnoremap ds diwx
 vnoremap < <gv
