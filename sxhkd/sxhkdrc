@@ -12,7 +12,7 @@ super + P
 
 # ssh to amazon
 super + a
-    alacritty -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
+    alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 # dmenu
 super + p
 	dmenu_run
@@ -42,11 +42,23 @@ super + shift + {F1,F2}
 # super + r
 # 	alacritty -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
 
-super + c; {n,s,v,z}
-	alacritty -e {nmtui,nvim ~/.config/sxhkd/sxhkdrc,nvim ~/.config/nvim/init.vim,nvim ~/.zshrc}
+super + c; n
+	alacritty -t "Network Manager Config" -e nmtui
 
-super + {o,z}
-	alacritty -e {htop,vifmrun}
+super + c; s
+	alacritty -t "SXHKD Config" -e nvim ~/.config/sxhkd/sxhkdrc
+
+super + c; v
+	alacritty -t "Neovim Config" -e nvim ~/.config/nvim/init.vim
+
+super + c; z
+	alacritty -t "ZSHRC Edit" -e nvim ~/.zshrc
+
+super + o
+	alacritty -t "htop" -e htop
+
+super + z
+	alacritty -t "vifm" -e vifmrun
 
 # browser
 super + b
