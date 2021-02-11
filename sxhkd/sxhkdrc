@@ -2,9 +2,17 @@
 # wm independent hotkeys
 #
 
+# dswitcher
+super + Tab
+  dswitcher
+
+# clipmenu
+super + P
+  clipmenu
+
 # ssh to amazon
 super + a
-    alacritty -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com 
+    alacritty -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 # dmenu
 super + p
 	dmenu_run
