@@ -16,7 +16,7 @@ nnoremap <A-m> :Emmet<space>
 nnoremap <CR> o<Esc>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
-nnoremap <leader>d :AnyFoldActivate<cr> zR
+nnoremap <leader>D :AnyFoldActivate<cr> zR
 nnoremap <leader>k <esc>V$% :TComment<cr>
 nnoremap <silent> <C-c> :bw<CR>
 nnoremap <silent> <C-h> :bp<CR>
@@ -25,6 +25,7 @@ nnoremap <silent> <C-s> :bd!<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <silent><A-r> :BTags<CR>
+nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
 nnoremap <silent><leader>- :source ~/.config/nvim/init.vim \| :PlugClean<CR>
 nnoremap <silent><leader>b :Buffers<CR>
