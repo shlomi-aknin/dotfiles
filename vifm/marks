@@ -1,0 +1,9 @@
+mark b ~/bin/
+mark c ~/.config
+mark d ~/Downloads
+mark h ~/
+mark l /usr/local/bin/
+mark n /var/nodejs
+mark p /var/www/html
+mark r /
+mark t ~/dotfiles
