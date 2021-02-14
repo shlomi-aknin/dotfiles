@@ -2,9 +2,6 @@
 # wm independent hotkeys
 #
 
-super + t
-  dmenudatetime
-
 # change desktop
 super + D
   dmenudesktopchange
