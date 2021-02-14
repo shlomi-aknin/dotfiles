@@ -179,7 +179,7 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i &, apvlv %c, firefox %c, xpdf %c
+filextype *.pdf devour zathura %c %i &, apvlv %c, devour okular %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
@@ -541,13 +541,13 @@ nnoremap zx :only<cr>
 nnoremap zc :vsplit<cr>
 
 " open current directory in other pane
-nnoremap zo :sync %c<CR><Tab>
+nnoremap zo :sync<CR><Tab>
 
 nnoremap zz :cd %d %c<CR>
 nnoremap . za
 nnoremap T :!lazygit %d<CR>
-nnoremap W :!feh --bg-scale %f<CR>
+nnoremap W :!feh --bg-scale %f<CR>:!cp %f /usr/share/slim/themes/flat_green/background.jpg<CR>
 nnoremap * :!chmod +x %f<CR>
 nnoremap <C-f> :!touch<space>
 nnoremap <C-d> :mkdir<space>
-nnoremap gc :!git clone<space> 
+nnoremap gc :!git clone<space>
