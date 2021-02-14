@@ -362,7 +362,7 @@ filetype *.tudu tudu -f %c
 " Qt projects
 filextype *.pro qtcreator %f &
 
-filextype *.ddd,*.DDD,*.TGD,*V1B readesm -f html %c /tmp/"%c.html" && sed -i 's@body		{ font-family:sans-serif; }@a\t\t{ color: yellow; }\nsvg\t\t{ background-color: #fff; }\nbody\t\t{ background-color: #000; color: #fff; font-family:sans-serif; }@' /tmp/"%c.html" && sed -i 's@tr:hover 	{border-style:outset; background-color:#eeeeee; }@tr:hover 	{border-style:outset; background-color:#eeeeee; color: #000; }@' /tmp/"%c.html" && chromium-browser /tmp/"%c.html"
+filextype *.ddd,*.DDD,*.TGD,*V1B readesm -f html %c /tmp/"%c.html" && sed -i 's@body		{ font-family:sans-serif; }@a\t\t{ color: yellow; }\nsvg\t\t{ background-color: #fff; }\nbody\t\t{ background-color: #000; color: #fff; font-family:sans-serif; }@' /tmp/"%c.html" && sed -i 's@tr:hover 	{border-style:outset; background-color:#eeeeee; }@tr:hover 	{border-style:outset; background-color:#eeeeee; color: #000; }@' /tmp/"%c.html" && firefox /tmp/"%c.html"
 
 filextype *.vim nvim -p %f
 " Directories
@@ -431,7 +431,7 @@ set sort=dir,-mtime,+name
 " Sample mappings
 
 " Start shell in current directory
-nnoremap s :shell<cr>
+nnoremap s :!devour alacritty -t "Alacritty %d" --working-directory %d<cr>
 
 " Display sorting dialog
 nnoremap S :sort<cr>
@@ -442,7 +442,8 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
-nnoremap o :!nvim<cr>
+nnoremap i :!devour alacritty -t "Neovim %c" -e nvim %c<cr>
+nnoremap o :!devour alacritty -t "Neovim %d" -e nvim<cr>
 " Open file in new instance of gvim
 nnoremap O :!nvim %d<cr>
 
