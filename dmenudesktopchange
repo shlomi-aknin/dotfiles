@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wmctrl -d | dmenu -l 10 | awk '{print $9}' | xargs bspc desktop -f
