@@ -37,6 +37,7 @@ nnoremap <silent><leader>r :e!<cr>
 nnoremap <silent><leader>s :update<CR>
 nnoremap <silent><leader>S :bufdo wall<CR>
 nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent !alacritty --working-directory $VIM_DIR<cr>
+nnoremap <silent><leader>q :call tag_peek#ShowTag()<CR>
 nnoremap <silent><leader>x :bufdo bd!<CR>
 nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nnoremap <silent><leader>z :Files<CR>
