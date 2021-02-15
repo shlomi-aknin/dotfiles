@@ -34,6 +34,8 @@ nnoremap <silent><leader>g :GFiles?<CR>
 nnoremap <silent><leader>h :noh<CR>
 nnoremap <silent><leader>p :Vista finder coc<CR>
 nnoremap <silent><leader>r :e!<cr>
+nnoremap <leader>R :Rg<space>
+nnoremap <leader>O :QuickFixOpenAll<CR>
 nnoremap <silent><leader>s :update<CR>
 nnoremap <silent><leader>S :bufdo wall<CR>
 nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent !alacritty --working-directory $VIM_DIR<cr>
