@@ -28,6 +28,7 @@ nnoremap <silent><A-r> :BTags<CR>
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
 nnoremap <silent><leader>- :source ~/.config/nvim/init.vim \| :PlugClean<CR>
+nnoremap <silent><leader># :g/^\s*$/d<cr>
 nnoremap <silent><leader>b :Buffers<CR>
 nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
 nnoremap <silent><leader>g :GFiles?<CR>
