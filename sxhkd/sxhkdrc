@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# dmenu web search
+super + S
+  dmenu_websearch
+
 # dswitcher
 super + space
   dswitcher
