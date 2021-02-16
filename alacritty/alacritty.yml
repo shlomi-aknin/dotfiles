@@ -97,8 +97,8 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: monospace
-    family: "MesloLGS NF"
-    family: Sauce Code Pro
+    # family: "MesloLGS NF"
+    family: "SauceCodePro Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -141,7 +141,7 @@ font:
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-  #offset:
+  # offset:
   #  x: 0
   #  y: 0
 
@@ -171,6 +171,7 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
+colors:
   # Default colors
   primary:
     background: '#000000'
@@ -323,7 +324,7 @@ background_opacity: 0.8
   #save_to_clipboard: false
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+dynamic_title: true
 
 #cursor:
   # Cursor style
@@ -640,6 +641,8 @@ key_bindings:
   #- { key: Insert,   mods: Shift,                   action: PasteSelection   }
    - { key: Key0,     mods: Control,                 action: ResetFontSize    }
    - { key: Equals,   mods: Control,                 action: IncreaseFontSize }
+   - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
+   - { key: Return,   mods: Control, chars: "\x1b[13;5u" }
   # { key: Add,      mods: Control,                 action: IncreaseFontSize }
    # { key: Subtract, mods: Control,                 action: DecreaseFontSize }
    - { key: Minus,    mods: Control,                 action: DecreaseFontSize }

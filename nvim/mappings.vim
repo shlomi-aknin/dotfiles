@@ -14,6 +14,7 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 nnoremap <A-m> :Emmet<space>
 nnoremap <CR> o<Esc>
+nnoremap <C-CR> O<Esc>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
@@ -32,6 +33,7 @@ nnoremap <silent><leader># :g/^\s*$/d<cr>
 nnoremap <silent><leader>b :Buffers<CR>
 nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
 nnoremap <silent><leader>g :GFiles?<CR>
+nnoremap <silent><nowait> <leader>P :call CocAction('jumpDefinition', v:false)<CR>
 nnoremap <silent><leader>h :noh<CR>
 nnoremap <silent><leader>p :Vista finder coc<CR>
 nnoremap <silent><leader>r :e!<cr>
