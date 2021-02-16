@@ -30,23 +30,21 @@
 	spacing: 0;
 	background-color: transparent;
 
-	font: "Sauce Code Pro 18";
+	font: "Source Code Pro 14";
 }
 
 window {
 	transparency: "real";
 	/*fullscreen: true;*/
-	background-color: #263238CC; /*base00 + CC (80% opacity)*/
+	background-color: #001628CC; /*base00 + CC (80% opacity)*/
 }
 
 mainbox {
-	children: [inputbar, message, listview];
-	/* children: [inputbar, message, mode-switcher, listview]; */
+	/*children: [inputbar, message, mode-switcher, listview];*/
+	children: [inputbar, listview];
 	spacing: 30px;
-	/*margin: 20%;*/
 	padding: 30px 0;
-	border: 5px;
-	border-radius: 5px;
+	border: 1px;
 	border-color: @base0D;
 }
 
@@ -61,13 +59,13 @@ prompt {
 
 textbox-prompt-colon {
 	expand: false;
-	/* str: ":"; */
+	str: " @";
 	margin: 0 1ch 0 0;
-	text-color: @base0D;
+	text-color: #ffff00;
 }
 
 entry {
-	text-color: @base07; 
+	text-color: @base07;
 }
 
 case-indicator {
@@ -90,8 +88,7 @@ button selected {
 }
 
 listview {
-	/* scrollbar: true; */
-	scrollbar: false;
+	scrollbar: true;
 	margin: 0 10px 0 30px;
 }
 
@@ -105,9 +102,8 @@ scrollbar {
 }
 
 element {
-	padding: 5px 2%;
+	padding: 5px;
 	highlight: bold underline;
-
 }
 
 element normal {
@@ -115,21 +111,15 @@ element normal {
 }
 
 element selected {
-	background-color: @base0D;
-	border-radius: 5px;
+	background-color: #2176FF;
 }
 
 element alternate {
-	/* background-color: @base03; */
+	/*background-color: @base03;*/
 }
 
 element normal normal, element selected normal, element alternate normal {
 	text-color: @base07;
-}
-
-element selected normal {
-	text-color: #000;
-	highlight: bold; 
 }
 
 element normal urgent, element selected urgent, element alternate urgent {
@@ -139,3 +129,4 @@ element normal urgent, element selected urgent, element alternate urgent {
 element normal active, element selected active, element alternate active {
 	text-color: @base0B;
 }
+

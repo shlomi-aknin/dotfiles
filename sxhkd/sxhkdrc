@@ -2,24 +2,20 @@
 # wm independent hotkeys
 #
 
-# change desktop
-super + D
-  dmenudesktopchange
-
 # dswitcher
 super + space
-  dswitcher
+  rofi -show window
 
 # clipmenu
 super + P
-  clipmenu
+  CM_LAUNCHER=rofi clipmenu
 
 # ssh to amazon
 super + a
     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
-# dmenu
+# launcher
 super + p
-	dmenu_run
+  rofi -show run
 
 # toggle bar
 super + shift + b
