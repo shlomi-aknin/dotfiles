@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "500x300-10+50"
+    geometry = "500x300-710+390"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -130,7 +130,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
@@ -226,7 +226,7 @@
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
-    # parameter, an application may close the notification sent before the 
+    # parameter, an application may close the notification sent before the
     # user defined timeout.
     ignore_dbusclose = false
 

@@ -4,18 +4,18 @@
 
 # dswitcher
 super + space
-  rofi -show window
+  dswitcher
 
 # clipmenu
 super + P
-  CM_LAUNCHER=rofi clipmenu
+  clipmenu
 
 # ssh to amazon
 super + a
     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 # launcher
 super + p
-  rofi -show run
+  dmenu_run
 
 # toggle bar
 super + shift + b
