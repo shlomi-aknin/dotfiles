@@ -1,0 +1,3 @@
+"\C-i.":beginning-of-line
+"\C-a.":end-of-line
+"\C-l":clear-screen

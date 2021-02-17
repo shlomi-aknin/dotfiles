@@ -1,9 +1,10 @@
 #!/bin/bash
 
+export STARSHIP_CONFIG=~/.config/starship/config.toml
 xsetroot -cursor_name left_ptr &
 clipmenud &
 numlockx &
-# dunst &
+dunst &
 setxkbmap us,il ,, grp:alt_shift_toggle &
 # dwmblocks &
 pgrep -x sxhkd > /dev/null || sxhkd &
