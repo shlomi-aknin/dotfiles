@@ -46,6 +46,9 @@ super + shift + {F1,F2}
 # super + r
 # 	alacritty -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
 
+super + c; b
+	alacritty -t "BASHRC Edit" -e nvim ~/.bashrc
+
 super + c; n
 	alacritty -t "Network Manager Config" -e nmtui
 
