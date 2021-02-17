@@ -1,5 +1,11 @@
 #!/bin/bash
-FULLPATH=$(readlink -f $1)
-FILENAME=$(basename $1)
-DIRNAME=$(basename $(dirname $FULLPATH))
-cp -rfu $FULLPATH "$HOME/dotfiles/$DIRNAME/$FILENAME"
+args=("$@")
+for i in "${args[@]}"
+do
+   : 
+   FULLPATH=$(readlink -f $i)
+   FILENAME=$(basename $i)
+   DIRNAME=$(basename $(dirname $FULLPATH))
+   cp -rfu $FULLPATH "$HOME/dotfiles/$DIRNAME/$FILENAME"
+   # do whatever on $i
+done
