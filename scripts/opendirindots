@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DIRNAME=$(basename $1)
+vifm $1 "$HOME/dotfiles/$DIRNAME"
