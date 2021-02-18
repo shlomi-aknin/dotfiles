@@ -16,7 +16,7 @@ function! SaveFileKeepPosition(...)
         call JsonBeautify()
     elseif a:0 == "HtmlBeautify"
         call HtmlBeautify()
-    else a:0 == "CSSBeautify"
+    elseif a:0 == "CSSBeautify"
         call CSSBeautify()
     endif
     call cursor(l, c)
