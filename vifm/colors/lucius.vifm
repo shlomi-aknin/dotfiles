@@ -6,7 +6,7 @@
 " This color scheme is loosely based on the lucius color scheme for vim
 
 highlight clear
-highlight Win cterm=none ctermfg=255 ctermbg=0
+highlight Win cterm=bold ctermfg=118 ctermbg=0
 highlight Directory cterm=bold ctermfg=51 ctermbg=4
 highlight Link cterm=bold ctermfg=yellow ctermbg=0
 highlight BrokenLink cterm=bold ctermfg=red ctermbg=none
