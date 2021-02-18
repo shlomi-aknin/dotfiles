@@ -79,6 +79,7 @@ set expandtab
 set nocompatible
 set updatetime=300
 set mouse=a
+set scrolloff=999
 syntax enable
 
 command! -bang -nargs=* RgFzf

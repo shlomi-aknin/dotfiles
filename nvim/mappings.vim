@@ -10,6 +10,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap s <Plug>(easymotion-overwin-w)
 nnoremap ' -
 nnoremap ; +
+nnoremap tp <ESC>viwp
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 nnoremap <A-m> :Emmet<space>

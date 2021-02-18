@@ -8,9 +8,9 @@ hi GitGutterAdd guibg=#009900 guifg=#ffffff ctermfg=2
 hi GitGutterChange guibg=#bbbb00 guifg=#ffffff ctermfg=3
 hi GitGutterDelete guibg=#ff2222 guifg=#ffffff ctermfg=1
 hi IncSearch guifg=#000000 guibg=#ffff00 gui=NONE cterm=NONE
-hi LineNr guifg=#0097A7 ctermfg=238 guibg=#011627 ctermbg=233 gui=NONE cterm=NONE
+hi LineNr guifg=#0097A7 ctermfg=238 guibg=#000000 ctermbg=233 gui=NONE cterm=NONE
 hi MatchParen cterm=none guibg=#129AE2 guifg=#ffffff
-hi Normal guifg=#2DE1FC ctermfg=253 guibg=#001628 ctermbg=233 gui=NONE cterm=NONE
+hi Normal guifg=#2DE1FC ctermfg=253 guibg=#000000 ctermbg=233 gui=NONE cterm=NONE
 hi PMenu guibg=#2176FF guifg=#ffffff gui=NONE cterm=NONE
 hi PMenuSel guibg=#ffffff guifg=#000000 ctermbg=176 gui=NONE cterm=NONE
 hi Search guibg=#ffff00 guifg=#000000
