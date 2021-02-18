@@ -15,6 +15,7 @@ nnoremap <A-k> :m .-2<CR>==
 nnoremap <A-m> :Emmet<space>
 nnoremap <C-j> o<Esc>
 nnoremap <C-k> O<Esc>
+nnoremap <C-n> o<Esc>O<Esc>S
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
