@@ -117,8 +117,8 @@ nnoremap . za
 nnoremap T :!lazygit %d<CR>
 nnoremap W :!feh --bg-scale %f<CR>:!cp %f /usr/share/slim/themes/flat_green/background.jpg<CR>
 nnoremap * :!chmod +x %f<CR>
-nnoremap <C-f> :!touch<space>
-nnoremap <C-d> :mkdir<space>
+nnoremap F :!touch<space>
+nnoremap D :mkdir<space>
 nnoremap gc :!git clone<space>
 nnoremap cd :cd ~/.config ~/dotfiles<cr>
 nnoremap ca :!copytodots %f<cr>
