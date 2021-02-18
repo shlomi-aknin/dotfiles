@@ -13,8 +13,8 @@ nnoremap ; +
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 nnoremap <A-m> :Emmet<space>
-nnoremap <CR> o<Esc>
-nnoremap <C-CR> O<Esc>
+nnoremap <C-j> o<Esc>
+nnoremap <C-k> O<Esc>
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
@@ -53,4 +53,4 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-vnoremap <F4> :s/SEARCH/REPLACE/g
+vnoremap <F4> :s/SEARCH/REPLACE/g | :noh
