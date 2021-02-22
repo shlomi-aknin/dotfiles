@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bspc node @^"$(wmctrl -d | grep "*" | awk '{print $NF}')":/ -c

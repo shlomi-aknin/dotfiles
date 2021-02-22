@@ -100,9 +100,13 @@ super + shift + {t,w,g}
 super + shift + {q,r}
 	bspc {quit,wm -r}
 
-# close and kill
-super + {_,shift + }x
-	bspc node -{c,k}
+# close
+super + x
+	bspc node -c
+
+# close all windows on current desktop
+super + shift + x
+    closewindowsoncurrent
 
 # alternate between the tiled and monocle layout
 super + m
