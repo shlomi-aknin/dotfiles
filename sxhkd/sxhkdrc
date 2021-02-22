@@ -3,7 +3,7 @@
 #
 
 # dmenu web search
-super + S
+super + s
   dmenu_websearch
 
 # dswitcher
@@ -11,14 +11,14 @@ super + space
   dswitcher
 
 # clipmenu
-super + P
+super + p
   clipmenu
 
 # ssh to amazon
 super + a
     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 # launcher
-super + p
+super + r
   dmenu_run
 
 # toggle bar
@@ -108,10 +108,6 @@ super + {_,shift + }x
 super + m
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
 # swap the current node and the biggest window
 super + g
 	bspc node -s biggest.local.window
@@ -127,7 +123,6 @@ super + {t,shift + t,s,f}
 # set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
-
 #
 # focus/swap
 #
@@ -145,52 +140,20 @@ super + {p,b}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous desktop in the current monitor
-alt + {h,l}
-	bspc desktop -f {prev,next}.local
-
-super + {Left,Right}
+super + {u,i}
 	bspc desktop -f {prev,next}.local
 
 # move window to prev/next desktop
-alt + control + {h,l}
-	bspc node -d {prev,next} -f
-
-super + shift + {Left,Right}
+super + shift + {u,i}
 	bspc node -d {prev,next} -f
 
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# preselect
-#
-
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
