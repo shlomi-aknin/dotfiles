@@ -50,7 +50,7 @@ nnoremap <silent><leader>q :call tag_peek#ShowTag()<CR>
 nnoremap <silent><leader>x :bufdo bd!<CR>
 nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nnoremap <silent><leader>z :Files<CR>
-nnoremap <silent><nowait> <leader>d <esc>V$%d<esc>dd
+nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
 nnoremap <silent><nowait> <leader>P <esc>viwp
 nnoremap C ^i
 nnoremap ds diwx
