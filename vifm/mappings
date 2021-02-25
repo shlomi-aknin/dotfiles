@@ -126,3 +126,7 @@ nnoremap gc :!git clone<space>
 nnoremap cd :cd ~/.config ~/dotfiles<cr>
 nnoremap ca :!copytodots %f<cr>
 vnoremap ca :!copytodots %f<cr>
+nnoremap > :copy<cr>
+nnoremap < :copy<cr>
+vnoremap > :copy<cr>
+vnoremap < :copy<cr>
