@@ -152,19 +152,15 @@ super + {p,b}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous client in the current desktop
-super + {u,i}
-	bspc node -f {west,east}.local
-
-# focus the next/previous desktop in the current monitor
-# super + {u,i}
-# 	bspc desktop -f {prev,next}.local
-
-# focus the next/previous desktop in the current monitor
 super + {h,l}
+	bspc node -f {west,east}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + {u,i}
 	bspc desktop -f {prev,next}.local
 
 # move window to prev/next desktop
-super + ctrl + {h,l}
+super + shift + {u,i}
 	bspc node -d {prev,next} -f
 
 # focus the last node/desktop

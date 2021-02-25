@@ -100,8 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 bindkey -v
+alias reboot="sudo reboot"
+alias poweroff="sudo poweroff"
 alias ls="exa-linux-x86_64 -alF --icons --group-directories-first"
 alias ncdu="ncdu --color=dark"
 export VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 export VI_MODE_SET_CURSOR=true
-eval "$(starship init zsh)"
+export EDITOR=nvim
+export VISUAL=nvim
+# eval "$(starship init zsh)"
