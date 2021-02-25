@@ -36,8 +36,9 @@ super + d ; {0-9}
 	amixer set Master {5%+,5%-,toggle}
 
 # gmail, drive
-# {XF86Mail,XF86HomePage}
-# 	firefox {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
+{XF86Mail,XF86HomePage}
+	firefox {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
+
 # reboot, poweroff
 super + shift + {F1,F2}
 	sudo {reboot,poweroff}
