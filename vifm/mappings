@@ -130,3 +130,5 @@ nnoremap > :copy<cr>
 nnoremap < :copy<cr>
 vnoremap > :copy<cr>
 vnoremap < :copy<cr>
+nnoremap x :!rm -rf %f<cr>
+nnoremap X ggVGd
