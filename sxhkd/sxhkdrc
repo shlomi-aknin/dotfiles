@@ -44,8 +44,8 @@ super + shift + {F1,F2}
 	sudo {reboot,poweroff}
 
 # update mirrorlist
-# super + r
-# 	alacritty -e sudo reflector --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist-arch
+super + equal
+	alacritty -e reflector | sudo tee /etc/pacman.d/mirrorlist-arc
 
 super + c; b
 	alacritty -t "BASHRC Edit" -e nvim ~/.bashrc
