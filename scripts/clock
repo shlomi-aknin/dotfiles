@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tty-clock tty-clock -bcsS -C 4 -f "%d/%m/%Y"
