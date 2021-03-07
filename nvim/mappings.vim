@@ -32,6 +32,7 @@ nnoremap <silent> <C-l> :bn<CR>
 nnoremap <silent> <C-s> :bd!<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
+nnoremap <silent> <A-l> 0yg_
 nnoremap <silent><A-r> :BTags<CR>
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
