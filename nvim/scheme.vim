@@ -19,3 +19,4 @@ hi javaScriptLineComment guifg=#34a1eb gui=italic
 hi javaScriptStringS guifg=#2DE1FC ctermfg=222 gui=NONE cterm=NONE
 hi jsComment guifg=#34a1eb gui=italic
 hi jsString guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
+hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2

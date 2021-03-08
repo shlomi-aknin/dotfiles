@@ -1,4 +1,5 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
@@ -25,6 +26,7 @@ Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
 Plug 'liuchengxu/space-vim-dark'
 Plug 'liuchengxu/vista.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'machakann/vim-highlightedyank'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
