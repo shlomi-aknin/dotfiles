@@ -35,6 +35,15 @@ let g:any_jump_references_only_for_current_filetype = 1
 let g:UltiSnipsExpandTrigger="<c-x>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let php_sql_query = 1
+let php_sql_heredoc = 0
+let php_sql_nowdoc = 0
+let php_html_in_strings = 1
+let php_html_in_heredoc = 0
+let php_html_in_nowdoc = 0
+let php_parent_error_close = 1
+" let php_parent_error_open = 1
+let php_var_selector_is_identifier=1
 let g:fzf_colors = {
 \ 'fg': ['fg', 'Normal'],
 \ 'bg': ['bg', 'Normal'],
