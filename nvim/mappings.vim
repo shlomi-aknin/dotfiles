@@ -36,6 +36,7 @@ nnoremap <silent> <A-l> 0yg_
 nnoremap <silent><A-r> :BTags<CR>
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>1 :enew<CR>:e ~/.config/nvim/mappings.vim<CR>
+nnoremap <silent><leader>2 :enew<CR>:e ~/.config/nvim/plugins.vim<CR>
 nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
 nnoremap <silent><leader>- :source ~/.config/nvim/init.vim \| :PlugClean<CR>
 nnoremap <silent><leader># :g/^\s*$/d<cr>
