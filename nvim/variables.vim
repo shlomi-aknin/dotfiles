@@ -68,7 +68,8 @@ let g:coc_global_extensions = [
       \'coc-json',
       \'coc-snippets',
       \'coc-tsserver',
-      \'coc-tabnine'
+      \'coc-tabnine',
+      \'coc-emmet'
       \]
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
