@@ -1,4 +1,3 @@
-autocmd FileType html EmmetInstall
 autocmd StdinReadPre * let s:std_in=1
 filetype plugin indent on
 inoremap <silent><expr> <c-space> coc#refresh()
