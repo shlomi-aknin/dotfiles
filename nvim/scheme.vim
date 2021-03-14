@@ -20,3 +20,7 @@ hi javaScriptStringS guifg=#2DE1FC ctermfg=222 gui=NONE cterm=NONE
 hi jsComment guifg=#34a1eb gui=italic
 hi jsString guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
 hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
+hi CocInfoFloat guifg=#ffffff guibg=#03A9F4
+hi CocErrorFloat guifg=#ffffff guibg=#D32F2F
+hi CocWarningFloat guifg=#ffffff guibg=#F57C00
+hi CocHintFloat guifg=#ffffff guibg=#009688

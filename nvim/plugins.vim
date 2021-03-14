@@ -1,4 +1,5 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'SirVer/ultisnips'
