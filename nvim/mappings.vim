@@ -18,6 +18,7 @@ inoremap AA <esc>A
 nnoremap tp <ESC>viwp
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
+nnoremap <C-y> ^yg_
 nnoremap <C-j> o<Esc>
 nnoremap <C-k> O<Esc>
 nnoremap <C-n> o<Esc>O<Esc>S
