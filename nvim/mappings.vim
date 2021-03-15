@@ -58,6 +58,7 @@ nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nnoremap <silent><leader>z :Files<CR>
 nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
 nnoremap <silent><nowait> <leader>P <esc>viwp
+nnoremap <silent> <A-z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR> ggVG :normal A,<CR>ggVGJ$x0yg_
 nnoremap C ^i
 nnoremap ds diwx
 vnoremap < <gv
