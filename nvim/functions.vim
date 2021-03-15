@@ -1,3 +1,4 @@
+autocmd BufWritePre * %s/\s\+$//e
 autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
 autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
 autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
