@@ -7,6 +7,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap jj <Esc>
 inoremap pp <esc>pa
+inoremap oo <esc>o
+inoremap dd <esc>dd^i
 nnoremap <leader>n <esc>0f}i<CR><ESC>O
 nnoremap <leader>N <esc>0f}i<CR><ESC>O<ESC>
 nmap <silent> gd <Plug>(coc-definition)
