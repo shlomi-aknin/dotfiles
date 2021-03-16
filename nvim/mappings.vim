@@ -17,7 +17,13 @@ nnoremap ' -
 nnoremap ; +
 nnoremap X dGdgg
 inoremap AA <esc>A
-nnoremap tp <ESC>viwp
+nnoremap tw <ESC>viwp
+nnoremap t' <ESC>vi'p
+nnoremap t" <ESC>vi"p
+nnoremap t) <ESC>vi(p
+nnoremap t( <ESC>vi(p :s/(/( /g<CR>:s/)/ )/g<CR>:noh<CR>
+nnoremap t{ <ESC>vi{p :s/{/{ /g<CR>:s/}/ }/g<CR>:noh<CR>
+nnoremap t} <ESC>vi{p
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 nnoremap <C-y> ^yg_
@@ -60,8 +66,8 @@ nnoremap <silent><leader>x :bufdo bd!<CR>
 nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nnoremap <silent><leader>z :Files<CR>
 nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
-nnoremap <silent><nowait> <leader>P <esc>viwp
-nnoremap <silent> <A-z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR> ggVG :normal A,<CR>ggVGJ$x0yg_
+nnoremap <silent> <A-z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR>
+nnoremap <silent> <A-Z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR> ggVG :normal A,<CR>ggVGJ$x0yg_
 nnoremap C ^i
 nnoremap ds diwx
 vnoremap < <gv
