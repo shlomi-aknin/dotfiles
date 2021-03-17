@@ -15,7 +15,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap s <Plug>(easymotion-overwin-w)
 nnoremap ' -
 nnoremap ; +
-nnoremap X dGdgg
+nnoremap X :%d<CR>
 inoremap AA <esc>A
 nnoremap tw <ESC>viwp
 nnoremap t' <ESC>vi'p
