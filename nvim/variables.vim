@@ -63,13 +63,13 @@ nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impu
 nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 3.7)<CR>
 nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -3.7)<CR>
 let g:coc_global_extensions = [
-      \'coc-explorer',
-      \'coc-json',
-      \'coc-snippets',
-      \'coc-tsserver',
-      \'coc-tabnine',
-      \'coc-emmet',
-      \'coc-svelte'
+\'coc-explorer',
+\'coc-json',
+\'coc-snippets',
+\'coc-tsserver',
+\'coc-tabnine',
+\'coc-emmet',
+\'coc-svelte'
       \]
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>

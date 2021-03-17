@@ -1,10 +1,10 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'arthurxavierx/vim-caser'
 Plug 'chrisbra/Colorizer'
 Plug 'christoomey/vim-system-copy'
 Plug 'danilamihailov/beacon.nvim'
@@ -15,6 +15,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'etdev/vim-hexcolor'
 Plug 'eugen0329/vim-esearch'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'hail2u/vim-css3-syntax'
 Plug 'haishanh/night-owl.vim'
 Plug 'hlissner/vim-multiedit'
