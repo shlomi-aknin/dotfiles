@@ -91,6 +91,7 @@ command ln ln -s %f:p %D
 source ~/.config/vifm/SETUP
 command! FZFfind :set noquickview | :execute 'goto' fnameescape(term('find | fzf --height 10 2>/dev/tty'))
 command! extractfiles unzip -o %c -d %D && rm -f %c
+nnoremap XX :!unzip -o %c -d %d && rm -f %c<CR>
 " yank current directory path into the clipboard
 nnoremap yd :!echo -n %d | xclip -selection clipboard %i<cr>:echo expand('%"d') "is yanked to clipboard"<cr>
 
