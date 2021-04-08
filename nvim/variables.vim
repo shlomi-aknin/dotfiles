@@ -80,6 +80,7 @@ set clipboard+=unnamedplus
 set cursorline
 set guifont=Source\ Code\ Pro:h18
 set hidden
+set nowrap
 set number
 set termguicolors
 set lazyredraw
