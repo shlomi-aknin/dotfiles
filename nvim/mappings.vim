@@ -21,6 +21,7 @@ nnoremap t{ <ESC>vi{p :s/{/{ /g<CR>:s/}/ }/g<CR>:noh<CR>
 nnoremap t} <ESC>vi{p
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
+nnoremap <silent> <A-w> :set wrap!<CR>
 nnoremap <C-y> ^yg_
 nnoremap <C-j> o<Esc>
 nnoremap <C-k> O<Esc>
