@@ -30,6 +30,7 @@ nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
 nnoremap <leader>k <esc>V$% :TComment<cr>
+nnoremap <silent><leader>w :SudaWrite<CR> :e! %<CR>
 nnoremap <silent> <C-c> :bw<CR>
 nnoremap <silent> <C-h> :bp<CR>
 nnoremap <silent> <C-l> :bn<CR>
