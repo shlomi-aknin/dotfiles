@@ -112,6 +112,7 @@ endif
 
 set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 set number
+set relativenumber
 
 " ------------------------------------------------------------------------------
 
@@ -398,7 +399,7 @@ filextype */
 " For *nix:
 " filetype * xdg-open
 
-fileviewer *.js,*.json,*.css,*.html,*.php env -uCOLORTERM bat --color always --wrap never --pager never %c -p
+fileviewer *.js,*.json,*.css,*.html,*.php,*.svelte env -uCOLORTERM bat --color always --wrap never --pager never %c -p
 
 fileviewer * :cd %d %c<CR>
 " fileviewer .*/,*/ br -dsp %f
