@@ -68,6 +68,7 @@ let g:coc_global_extensions = [
 \'coc-snippets',
 \'coc-tsserver',
 \'coc-tabnine',
+\'coc-css',
 \'coc-emmet',
 \'coc-svelte'
       \]
