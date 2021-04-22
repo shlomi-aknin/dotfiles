@@ -83,6 +83,7 @@ set guifont=Source\ Code\ Pro:h18
 set hidden
 set nowrap
 set number
+set relativenumber
 set termguicolors
 set lazyredraw
 set smartindent
