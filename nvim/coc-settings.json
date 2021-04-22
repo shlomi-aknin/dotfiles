@@ -7,6 +7,7 @@
   "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
   "signature.maxWindowWidth": 100,
   "list.alignColumns": true,
-  "suggest.snippetIndicator": " ~> "
+  "suggest.snippetIndicator": " ~> ",
+  "javascript.suggestionActions.enabled": false
 }
 
