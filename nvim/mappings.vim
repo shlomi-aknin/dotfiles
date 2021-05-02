@@ -12,13 +12,13 @@ nmap s <Plug>(easymotion-overwin-w)
 nnoremap ' -
 nnoremap ; +
 nnoremap X :%d<CR>
-nnoremap tw <ESC>viwp
-nnoremap t' <ESC>vi'p
-nnoremap t" <ESC>vi"p
-nnoremap t) <ESC>vi(p
-nnoremap t( <ESC>vi(p :s/(/( /g<CR>:s/)/ )/g<CR>:noh<CR>
-nnoremap t{ <ESC>vi{p :s/{/{ /g<CR>:s/}/ }/g<CR>:noh<CR>
-nnoremap t} <ESC>vi{p
+" nnoremap tw <ESC>viwp
+" nnoremap t' <ESC>vi'p
+" nnoremap t" <ESC>vi"p
+" nnoremap t) <ESC>vi(p
+" nnoremap t( <ESC>vi(p :s/(/( /g<CR>:s/)/ )/g<CR>:noh<CR>
+" nnoremap t{ <ESC>vi{p :s/{/{ /g<CR>:s/}/ }/g<CR>:noh<CR>
+" nnoremap t} <ESC>vi{p
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 nnoremap <silent> <A-w> :set wrap!<CR>
@@ -38,7 +38,8 @@ nnoremap <silent> <C-l> :bn<CR>
 nnoremap <silent> <C-s> :bd!<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
-nnoremap <silent> <A-l> 0yg_
+nnoremap <silent> <A-h> i<space><esc>
+nnoremap <silent> <A-l> a<space><esc>
 nnoremap <silent><A-r> :BTags<CR>
 nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>1 :enew<CR>:e ~/.config/nvim/mappings.vim<CR>
