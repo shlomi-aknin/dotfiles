@@ -1,5 +1,9 @@
 colorscheme dracula
 
+hi CocErrorFloat guifg=#ffffff guibg=#D32F2F
+hi CocHintFloat guifg=#ffffff guibg=#009688
+hi CocInfoFloat guifg=#ffffff guibg=#03A9F4
+hi CocWarningFloat guifg=#ffffff guibg=#F57C00
 hi Comment guifg=#34a1eb
 hi CursorLine guibg=#22577A ctermbg=100 gui=NONE cterm=NONE
 hi CursorLineNr guifg=#ffff00 ctermfg=248 guibg=#112630 ctermbg=235 gui=NONE cterm=NONE
@@ -7,6 +11,7 @@ hi Folded guibg=#34a1eb guifg=#000000 gui=NONE cterm=NONE
 hi GitGutterAdd guibg=#009900 guifg=#ffffff ctermfg=2
 hi GitGutterChange guibg=#bbbb00 guifg=#ffffff ctermfg=3
 hi GitGutterDelete guibg=#ff2222 guifg=#ffffff ctermfg=1
+hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
 hi IncSearch guifg=#000000 guibg=#ffff00 gui=NONE cterm=NONE
 hi LineNr guifg=#0097A7 ctermfg=238 guibg=#000000 ctermbg=233 gui=NONE cterm=NONE
 hi MatchParen cterm=none guibg=#129AE2 guifg=#ffffff
@@ -19,8 +24,4 @@ hi javaScriptLineComment guifg=#34a1eb gui=italic
 hi javaScriptStringS guifg=#2DE1FC ctermfg=222 gui=NONE cterm=NONE
 hi jsComment guifg=#34a1eb gui=italic
 hi jsString guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
-hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
-hi CocInfoFloat guifg=#ffffff guibg=#03A9F4
-hi CocErrorFloat guifg=#ffffff guibg=#D32F2F
-hi CocWarningFloat guifg=#ffffff guibg=#F57C00
-hi CocHintFloat guifg=#ffffff guibg=#009688
+hi link Searchlight Folded

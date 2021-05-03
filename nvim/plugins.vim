@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'PeterRincker/vim-searchlight'
 Plug 'RRethy/vim-illuminate'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
