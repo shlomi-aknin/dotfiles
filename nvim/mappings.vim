@@ -1,6 +1,13 @@
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-inoremap <C-l> <C-r>=expand('%:t:r')<CR>
+inoremap <A-h> <Left>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-l> <Right>
+cnoremap <A-h> <Left>
+cnoremap <A-j> <Down>
+cnoremap <A-k> <Up>
+cnoremap <A-l> <Right>
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -12,13 +19,6 @@ nmap s <Plug>(easymotion-overwin-w)
 nnoremap ' -
 nnoremap ; +
 nnoremap X :%d<CR>
-" nnoremap tw <ESC>viwp
-" nnoremap t' <ESC>vi'p
-" nnoremap t" <ESC>vi"p
-" nnoremap t) <ESC>vi(p
-" nnoremap t( <ESC>vi(p :s/(/( /g<CR>:s/)/ )/g<CR>:noh<CR>
-" nnoremap t{ <ESC>vi{p :s/{/{ /g<CR>:s/}/ }/g<CR>:noh<CR>
-" nnoremap t} <ESC>vi{p
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 nnoremap <silent> <A-w> :set wrap!<CR>
