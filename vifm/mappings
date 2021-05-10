@@ -131,5 +131,5 @@ nnoremap > :copy<cr>
 nnoremap < :copy<cr>
 vnoremap > :copy<cr>
 vnoremap < :!mv %f %D<cr>
-nnoremap x :!rm -rf %f<cr>
 nnoremap X ggVGd
+nnoremap L :!alacritty -e vifm %d
