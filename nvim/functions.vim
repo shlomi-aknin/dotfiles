@@ -8,6 +8,7 @@ autocmd BufWritePre *.js :call SaveFileKeepPosition("JsBeautify")
 autocmd BufWritePre *.json :call SaveFileKeepPosition("JsonBeautify")
 autocmd BufWritePre *.html :call SaveFileKeepPosition("HtmlBeautify")
 autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
+au! BufNewFile,BufRead *.svelte set ft=html
 
 function! SaveFileKeepPosition(...)
     let l = line(".")
