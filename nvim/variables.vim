@@ -9,7 +9,7 @@ let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
-let g:loaded_netrw       = 1
+let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 let g:system_copy#copy_command='xclip -sel clipboard'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
@@ -31,7 +31,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:any_jump_ignored_files = ['*.json', '*ignore', 'test/**', 'node_modules', 'node_modules/**', '.git']
 let g:any_jump_results_ui_style = 'filename_last'
-let g:any_jump_colors = { "help": "Function" }
+let g:any_jump_colors = { 'help': 'Function' }
 let g:any_jump_references_only_for_current_filetype = 1
 let g:UltiSnipsExpandTrigger="<c-x>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -65,31 +65,33 @@ nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impu
 nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 3.7)<CR>
 nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -3.7)<CR>
 let g:coc_global_extensions = [
-\'coc-explorer',
-\'coc-json',
-\'coc-snippets',
-\'coc-tsserver',
-\'coc-tabnine',
 \'coc-css',
 \'coc-emmet',
-\'coc-svelte'
+\'coc-explorer',
+\'coc-html',
+\'coc-json',
+\'coc-snippets',
+\'coc-svelte',
+\'coc-tabnine',
+\'coc-tsserver',
       \]
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>y  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+set background=dark
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 set cursorline
 set guifont=Source\ Code\ Pro:h18
 set hidden
+set lazyredraw
 set nowrap
 set number
 set relativenumber
-set termguicolors
-set lazyredraw
 set smartindent
 set tabstop=4
+set termguicolors
 set shiftwidth=4
 set expandtab
 set nocompatible
@@ -131,10 +133,3 @@ function! s:show_documentation()
   endif
 endfunction
 
-function! Multiple_cursors_before()
-  call AutoPairsToggle()
-endfun
-
-function! Multiple_cursors_after()
-  call AutoPairsToggle()
-endfun
