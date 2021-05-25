@@ -16,6 +16,7 @@ nnoremap <leader>n <esc>0f}i<CR><ESC>O
 nnoremap <leader>N <esc>0f}i<CR><ESC>O<ESC>
 nmap <silent> gd <Plug>(coc-definition)
 nmap s <Plug>(easymotion-overwin-w)
+nmap <C-s> <Plug>(esearch)
 nnoremap ' -
 nnoremap ; +
 nnoremap X :%d<CR>
@@ -35,7 +36,7 @@ nnoremap <silent><leader>w :SudaWrite<CR> :e! %<CR>
 nnoremap <silent> <C-c> :bw<CR>
 nnoremap <silent> <C-h> :bp<CR>
 nnoremap <silent> <C-l> :bn<CR>
-nnoremap <silent> <C-s> :bd!<CR>
+nnoremap <silent> <C-x> :bd!<CR>
 nnoremap <silent> <C-t> :enew<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <silent> <A-h> i<space><esc>
