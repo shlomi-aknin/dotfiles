@@ -27,7 +27,8 @@ nnoremap <C-y> ^yg_
 nnoremap <C-j> o<Esc>
 nnoremap <C-k> O<Esc>
 nnoremap <C-n> o<Esc>O<Esc>S
-nnoremap <C-p> o<Esc>p==
+nnoremap <A-p> o<Esc>p==
+nnoremap <C-p> <Esc>viwp
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
