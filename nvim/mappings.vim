@@ -67,6 +67,7 @@ nnoremap <silent><leader>q :call tag_peek#ShowTag()<CR>
 nnoremap <silent><leader>x :bufdo bd!<CR>
 nnoremap <silent><leader>vy ggVGy<ESC><C-o>
 nnoremap <silent><leader>z :Files<CR>
+nnoremap <silent><leader>f :Telescope find_files<CR>
 nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
 nnoremap <silent> <A-z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR>
 nnoremap <silent> <A-Z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR> ggVG :normal A,<CR>ggVGJ$x0yg_
