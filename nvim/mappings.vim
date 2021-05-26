@@ -22,10 +22,12 @@ nnoremap ; +
 nnoremap X :%d<CR>
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
+nnoremap <silent><A-d> :DBUIToggle<CR>
 nnoremap <silent> <A-w> :set wrap!<CR>
 nnoremap <C-y> ^yg_
 nnoremap <C-j> o<Esc>
 nnoremap <C-k> O<Esc>
+nnoremap <C-m> :call MaximizeToggle()<CR>
 nnoremap <C-n> o<Esc>O<Esc>S
 nnoremap <A-p> o<Esc>p==
 nnoremap <C-p> <Esc>viwp

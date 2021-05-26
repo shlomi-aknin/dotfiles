@@ -66,6 +66,7 @@ nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impu
 nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -3.7)<CR>
 let g:coc_global_extensions = [
 \'coc-css',
+\'coc-db',
 \'coc-emmet',
 \'coc-explorer',
 \'coc-html',
