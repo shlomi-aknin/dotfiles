@@ -6,77 +6,77 @@ cnoremap <A-h> <Left>
 cnoremap <A-j> <Down>
 cnoremap <A-k> <Up>
 cnoremap <A-l> <Right>
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
+inoremap <C-j> <esc>:m .+1<cr>==gi
+inoremap <C-k> <esc>:m .-2<cr>==gi
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-nnoremap <leader>n <esc>0f}i<CR><ESC>O
-nnoremap <leader>N <esc>0f}i<CR><ESC>O<ESC>
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<cr>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<cr>\<c-r>=coc#on_enter()\<cr>"
+nnoremap <leader>n <esc>0f}i<cr><esc>O
+nnoremap <leader>N <esc>0f}i<cr><esc>O<esc>
 nmap <silent> gd <Plug>(coc-definition)
 nmap s <Plug>(easymotion-overwin-w)
 nmap <C-s> <Plug>(esearch)
 nnoremap ' -
 nnoremap ; +
-nnoremap X :%d<CR>
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-nnoremap <silent><A-d> :DBUIToggle<CR>
-nnoremap <silent> <A-w> :set wrap!<CR>
+nnoremap X :%d<cr>
+nnoremap <A-j> :m .+1<cr>==
+nnoremap <A-k> :m .-2<cr>==
+nnoremap <silent><A-d> :DBUIToggle<cr>
+nnoremap <silent> <A-w> :set wrap!<cr>
 nnoremap <C-y> ^yg_
-nnoremap <C-j> o<Esc>
-nnoremap <C-k> O<Esc>
-nnoremap <C-m> :call MaximizeToggle()<CR>
-nnoremap <C-n> o<Esc>O<Esc>S
-nnoremap <A-p> o<Esc>p==
-nnoremap <C-p> <Esc>viwp
+nnoremap <C-j> o<esc>
+nnoremap <C-k> O<esc>
+nnoremap <C-m> :call MaximizeToggle()<cr>
+nnoremap <C-n> o<esc>O<esc>S
+nnoremap <A-p> o<esc>p==
+nnoremap <C-p> <esc>viwp
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
 nnoremap <leader>k <esc>V$% :TComment<cr>
-nnoremap <silent><leader>w :SudaWrite<CR> :e! %<CR>
-nnoremap <silent> <C-c> :bw<CR>
-nnoremap <silent> <C-h> :bp<CR>
-nnoremap <silent> <C-l> :bn<CR>
-nnoremap <silent> <C-x> :bd!<CR>
-nnoremap <silent> <C-t> :enew<CR>
-nnoremap <silent> <leader>lg :LazyGit<CR>
+nnoremap <silent><leader>w :SudaWrite<cr> :e! %<cr>
+nnoremap <silent> <C-c> :bw<cr>
+nnoremap <silent> <C-h> :bp<cr>
+nnoremap <silent> <C-l> :bn<cr>
+nnoremap <silent> <C-x> :bd!<cr>
+nnoremap <silent> <C-t> :enew<cr>
+nnoremap <silent> <leader>lg :LazyGit<cr>
 nnoremap <silent> <A-h> i<space><esc>
 nnoremap <silent> <A-l> a<space><esc>
-nnoremap <silent><A-r> :BTags<CR>
-nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<CR>
-nnoremap <silent><leader>1 :enew<CR>:e ~/.config/nvim/mappings.vim<CR>
-nnoremap <silent><leader>2 :enew<CR>:e ~/.config/nvim/plugins.vim<CR>
-nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
-nnoremap <silent><leader>- :source ~/.config/nvim/init.vim \| :PlugClean<CR>
+nnoremap <silent><A-r> :BTags<cr>
+nnoremap <silent><leader>0 :source ~/.config/nvim/init.vim<cr>
+nnoremap <silent><leader>1 :enew<cr>:e ~/.config/nvim/mappings.vim<cr>
+nnoremap <silent><leader>2 :enew<cr>:e ~/.config/nvim/plugins.vim<cr>
+nnoremap <silent><leader>3 :CocCommand rest-client.request<cr>
+nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<cr>
+nnoremap <silent><leader>- :source ~/.config/nvim/init.vim \| :PlugClean<cr>
 nnoremap <silent><leader># :g/^\s*$/d<cr>
-nnoremap <leader>$ :%s/\s\+$//e<CR> :noh<CR>
-nnoremap <silent><leader>b :Buffers<CR>
-nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<CR>
-nnoremap <silent><leader>g :GFiles?<CR>
-nnoremap <silent><nowait> <leader>P :call CocAction('jumpDefinition', v:false)<CR>
-nnoremap <silent><leader>h :noh<CR>
-nnoremap <silent><leader>p :Vista finder coc<CR>
+nnoremap <leader>$ :%s/\s\+$//e<cr> :noh<cr>
+nnoremap <silent><leader>b :Telescope buffers<cr>
+nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<cr>
+nnoremap <silent><leader>g :GFiles?<cr>
+nnoremap <silent><nowait> <leader>P :call CocAction('jumpDefinition', v:false)<cr>
+nnoremap <silent><leader>h :noh<cr>
+nnoremap <silent><leader>p :Vista finder coc<cr>
 nnoremap <silent><leader>r :e!<cr>
 nnoremap <leader>R :Rg<space>
-nnoremap <leader>O :QuickFixOpenAll<CR>
-nnoremap <silent><leader>s :update<CR>
-nnoremap <silent><leader>S :bufdo wall<CR>
+nnoremap <leader>O :QuickFixOpenAll<cr>
+nnoremap <silent><leader>s :update<cr>
+nnoremap <silent><leader>S :bufdo wall<cr>
 nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR &"<cr>
 nnoremap <silent><A-g> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e lazygit &"<cr>
-nnoremap <silent><leader>q :call tag_peek#ShowTag()<CR>
-nnoremap <silent><leader>x :bufdo bd!<CR>
-nnoremap <silent><leader>vy ggVGy<ESC><C-o>
-nnoremap <silent><leader>z :Files<CR>
-nnoremap <silent><leader>f :Telescope find_files<CR>
+nnoremap <silent><leader>q :call tag_peek#ShowTag()<cr>
+nnoremap <silent><leader>x :bufdo bd!<cr>
+nnoremap <silent><leader>vy ggVGy<esc><C-o>
+nnoremap <silent><leader>z :Files<cr>
+nnoremap <silent><leader>f :Telescope find_files<cr>
 nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
-nnoremap <silent> <A-z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR>
-nnoremap <silent> <A-Z> <ESC>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<CR> ggVG :normal A,<CR>ggVGJ$x0yg_
+nnoremap <silent> <A-z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr>
+nnoremap <silent> <A-Z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr> ggVG :normal A,<cr>ggVGJ$x0yg_
 nnoremap C ^i
 nnoremap ds diwx
 vnoremap < <gv
 vnoremap > >gv
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-vnoremap <F4> :s/SEARCH/REPLACE/g | :noh
+vnoremap <A-j> :m '>+1<cr>gv=gv
+vnoremap <A-k> :m '<-2<cr>gv=gv

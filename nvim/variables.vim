@@ -71,6 +71,7 @@ let g:coc_global_extensions = [
 \'coc-explorer',
 \'coc-html',
 \'coc-json',
+\'coc-restclient',
 \'coc-snippets',
 \'coc-svelte',
 \'coc-tabnine',
