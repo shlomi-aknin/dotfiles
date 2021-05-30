@@ -5,7 +5,7 @@ hi CocHintFloat guifg=#ffffff guibg=#009688
 hi CocInfoFloat guifg=#ffffff guibg=#03A9F4
 hi CocWarningFloat guifg=#ffffff guibg=#F57C00
 hi Comment guifg=#34a1eb
-hi CursorLine guibg=#22577A ctermbg=100 gui=NONE cterm=NONE
+hi CursorLine guibg=#235789 ctermbg=100 gui=NONE cterm=NONE
 hi CursorLineNr guifg=#ffff00 ctermfg=248 guibg=#112630 ctermbg=235 gui=NONE cterm=NONE
 hi Folded guibg=#34a1eb guifg=#000000 gui=NONE cterm=NONE
 hi GitGutterAdd guibg=#009900 guifg=#ffffff ctermfg=2
