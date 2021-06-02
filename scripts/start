@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export STARSHIP_CONFIG=~/.config/starship/config.toml
+# export STARSHIP_CONFIG=~/.config/starship/config.toml
 xsetroot -cursor_name left_ptr &
 clipmenud &
 numlockx &
@@ -11,4 +11,5 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # ~/.config/polybar/launch.sh &
 ~/.fehbg &
 # xrander --output HDMI-2 --same-as eDP-1 &
-# picom -bc &         
+# picom -bc &
+mongod &

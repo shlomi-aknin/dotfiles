@@ -2,24 +2,36 @@
 # wm independent hotkeys
 #
 
+# clock
+super + shift + c
+    alacritty -t "Clock" -e /usr/local/bin/clock
+
+# neovim
+super + n
+    alacritty -t "Neovim" -e nvim
+
 # dmenu web search
 super + s
-  dmenu_websearch
+    dmenu_websearch
 
 # dswitcher
-super + space
-  dswitcher
+super + shift + space
+    dswitcher
 
 # clipmenu
 super + p
-  clipmenu
+    clipmenu && xdotool key shift+Insert
 
 # ssh to amazon
 super + a
     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 # launcher
 super + r
-  dmenu_run
+    dmenu_run_i
+
+# Remove gaps
+super + {minus,equal}
+    bspc config -d focused window_gap {0, 10}
 
 # toggle bar
 # super + shift + b
@@ -29,7 +41,7 @@ super + r
 
 # Nuke a desktop. (i.e. close all windows in it.)
 super + d ; {0-9}
-	bspc node @^{10,1-9}:/ -c
+    bspc node @^{10,1-9}:/ -c
 
 # Raise/Lower/Toggle volume
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
@@ -70,7 +82,7 @@ super + z
 
 # browser
 super + b
-	firefox
+    GTK_THEME=Mojave-dark:dark firefox
 #	chromium --force-device-scale-factor=1.5
 
 # slimlock
@@ -94,7 +106,7 @@ super + Escape
 #
 
 # set layouts
-super + shift + {t,w,g}
+super + {t,v,g}
 	bsp-layout set {tall,wide,rgrid} -- --master-size 0.5
 
 # quit/restart bspwm
@@ -106,7 +118,7 @@ super + x
 	bspc node -c
 
 # close all windows on current desktop
-super + shift + x
+super + Delete
     closewindowsoncurrent
 
 # alternate between the tiled and monocle layout
@@ -114,7 +126,7 @@ super + m
 	bspc desktop -l next
 
 # swap the current node and the biggest window
-super + g
+super + shift + Return
 	bspc node -s biggest.local.window
 
 #
@@ -153,11 +165,12 @@ super + {p,b}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous client in the current desktop
-super + {h,l}
-	bspc node -f {west,east}.local.window
+# super + {h,l}
+# 	bspc node -f {west,east}.local.window
 
 # focus the next/previous desktop in the current monitor
-super + {u,i}
+# super + control + {h,l}
+super + {h,l}
 	bspc desktop -f {prev,next}.local
 
 # move window to prev/next desktop
