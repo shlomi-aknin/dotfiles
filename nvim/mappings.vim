@@ -19,6 +19,9 @@ nmap s <Plug>(easymotion-overwin-w)
 nmap <C-s> <Plug>(esearch)
 nnoremap ' -
 nnoremap ; +
+nnoremap cw ciw
+nnoremap dw diwx
+nnoremap dW diw
 nnoremap X :%d<cr>
 nnoremap <A-j> :m .+1<cr>==
 nnoremap <A-k> :m .-2<cr>==
@@ -35,6 +38,7 @@ nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <leader>D :AnyFoldActivate<cr> zR
 nnoremap <leader>k <esc>V$% :TComment<cr>
+nnoremap <leader>/ :TComment<cr>
 nnoremap <silent><leader>w :SudaWrite<cr> :e! %<cr>
 nnoremap <silent> <C-c> :bw<cr>
 nnoremap <silent> <C-h> :bp<cr>
@@ -80,3 +84,4 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap <A-j> :m '>+1<cr>gv=gv
 vnoremap <A-k> :m '<-2<cr>gv=gv
+vnoremap <leader>/ :TComment<cr>
