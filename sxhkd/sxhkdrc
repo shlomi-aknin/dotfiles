@@ -149,8 +149,10 @@ super + {k,j}
 	bspc node -f {prev,next}.local.window
 
 # shift the node in the given direction
-super + shift + {h,j,k,l}
-	bspc node -s {west,south,north,east}
+# super + shift + {h,j,k,l}
+# 	bspc node -s {west,south,north,east}
+super + shift + {j,k}
+	bspc node -s {south,north}
 
 # focus the node in the given direction
 super + {Left,Down,Up,Right}
@@ -174,8 +176,8 @@ super + {h,l}
 	bspc desktop -f {prev,next}.local
 
 # move window to prev/next desktop
-super + shift + {u,i}
-	bspc node -d {prev,next} -f
+super + shift + {h,l}
+	bspc node -d {prev,next} --follow
 
 # focus the last node/desktop
 super + {grave,Tab}
