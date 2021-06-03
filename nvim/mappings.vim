@@ -1,3 +1,4 @@
+nnoremap <A-`> :set relativenumber!<cr>
 inoremap <A-h> <Left>
 inoremap <A-j> <Down>
 inoremap <A-k> <Up>
