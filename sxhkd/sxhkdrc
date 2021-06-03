@@ -155,8 +155,8 @@ super + shift + {j,k}
 	bspc node -s {south,north}
 
 # focus the node in the given direction
-super + {Left,Down,Up,Right}
-	bspc node -f {west,south,north,east}
+# super + {Left,Down,Up,Right}
+# 	bspc node -f {west,south,north,east}
 
 # focus the next/previous window in the current desktop
 # super + {comma,period}
@@ -169,6 +169,11 @@ super + {p,b}
 # focus the next/previous client in the current desktop
 # super + {h,l}
 # 	bspc node -f {west,east}.local.window
+
+
+# cycle through occupied desktops
+super + {u,i}
+    bspc desktop -f {prev,next}.local.occupied
 
 # focus the next/previous desktop in the current monitor
 # super + control + {h,l}
