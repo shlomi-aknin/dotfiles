@@ -22,9 +22,13 @@ super + s
 super + space
     dswitcher
 
-# clipmenu
+# clipmenu insert
 super + p
     clipmenu && xdotool key shift+Insert
+
+# clipmenu select
+super + shift + p
+    clipmenu
 
 # ssh to amazon
 super + a
