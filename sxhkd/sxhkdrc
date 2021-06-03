@@ -19,7 +19,7 @@ super + s
     dmenu_websearch
 
 # dswitcher
-super + shift + space
+super + space
     dswitcher
 
 # clipmenu
