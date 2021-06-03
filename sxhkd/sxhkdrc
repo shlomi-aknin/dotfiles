@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# toggle gaps
+super + shift + g
+    bspc config window_gap {0, 15}
+
 # clock
 super + shift + c
     alacritty -t "Clock" -e /usr/local/bin/clock
@@ -28,10 +32,6 @@ super + a
 # launcher
 super + r
     dmenu_run_i
-
-# Remove gaps
-super + {minus,equal}
-    bspc config -d focused window_gap {0, 10}
 
 # toggle bar
 # super + shift + b
