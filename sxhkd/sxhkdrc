@@ -176,12 +176,12 @@ super + {p,b}
 
 
 # cycle through occupied desktops
-super + {u,i}
+super + {h,l}
     bspc desktop -f {prev,next}.local.occupied
 
 # focus the next/previous desktop in the current monitor
 # super + control + {h,l}
-super + {h,l}
+super + {u,i}
 	bspc desktop -f {prev,next}.local
 
 # move window to prev/next desktop
