@@ -53,6 +53,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'vifm/vifm.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
