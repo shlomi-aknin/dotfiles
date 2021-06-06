@@ -6,6 +6,10 @@
 super + shift + g
     bspc config window_gap {0, 15}
 
+# toggle borders
+super + shift + b
+    bspc config border_width {2, 5}
+
 # clock
 super + shift + c
     alacritty -t "Clock" -e /usr/local/bin/clock
