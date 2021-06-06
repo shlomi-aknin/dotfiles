@@ -26,3 +26,7 @@ done
 bspc rule -a Zathura state=tiled
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
+bspc config external_rules_command /usr/local/bin/maxdesktops
+bspc subscribe node_remove | while read line; do
+    /usr/local/bin/backonempty
+done
