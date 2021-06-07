@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# focus next free desktop
+super + shift + i
+   bspc desktop -f 1 && bspc desktop -f prev.local.occupied && bspc desktop -f next.local
+
 # toggle gaps
 super + shift + g
     bspc config window_gap {0, 15}
