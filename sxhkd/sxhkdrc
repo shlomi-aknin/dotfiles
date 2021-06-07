@@ -70,7 +70,7 @@ super + shift + {F1,F2}
 
 # update mirrorlist
 super + equal
-	alacritty -e reflector | sudo tee /etc/pacman.d/mirrorlist-arc
+	alacritty -e reflector | sudo tee /etc/pacman.d/mirrorlist-arch
 
 super + c; b
 	alacritty -t "BASHRC Edit" -e nvim ~/.bashrc
@@ -189,6 +189,11 @@ super + {grave,Tab}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+# send to the given desktop and follow
+super + alt + {1-9,0}
+	bspc node -d {1-9,10} --follow
 
 #
 # move/resize
