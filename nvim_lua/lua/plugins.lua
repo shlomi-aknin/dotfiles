@@ -15,6 +15,9 @@ require('packer').startup(function(use)
         use 'kyazdani42/nvim-web-devicons'
         use 'kyazdani42/nvim-tree.lua'
         use 'romgrk/barbar.nvim'
+        use 'hoob3rt/lualine.nvim'
+        use 'neovim/nvim-lspconfig'
+        use 'nvim-lua/completion-nvim'
         use { 'dracula/vim', as = 'dracula' }
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         use {
