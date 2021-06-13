@@ -21,6 +21,22 @@ require('packer').startup(function(use)
         use 'RRethy/vim-illuminate'
         use 'eugen0329/vim-esearch'
         use 'akinsho/nvim-toggleterm.lua'
+        use 'danilamihailov/beacon.nvim'
+        use 'jiangmiao/auto-pairs'
+        use 'alvan/vim-closetag'
+        use 'tpope/vim-surround'
+        use 'AndrewRadev/tagalong.vim'
+        use 'AndrewRadev/splitjoin.vim'
+        use 'PeterRincker/vim-searchlight'
+        use 'easymotion/vim-easymotion'
+        use 'ludovicchabant/vim-gutentags'
+        use 'machakann/vim-highlightedyank'
+        use 'nacro90/numb.nvim'
+        use 'semanticart/tag-peek.vim'
+        use 'sindrets/diffview.nvim'
+        use 'tomtom/tcomment_vim'
+        use 'yuttie/comfortable-motion.vim'
+
         use { 'dracula/vim', as = 'dracula' }
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         use {
@@ -35,3 +51,4 @@ end)
 
 require('colorizer').setup()
 require'toggleterm'.setup()
+require('numb').setup()

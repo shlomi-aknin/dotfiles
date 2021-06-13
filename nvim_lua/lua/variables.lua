@@ -16,5 +16,5 @@ vim.o.tabstop = 4
 vim.o.termguicolors = true
 vim.o.updatetime = 300
 vim.opt.shortmess = vim.opt.shortmess + 'c'
-vim.opt.completeopt = {'menuone', 'noselect'}
+vim.opt.completeopt = { 'menuone', 'noselect' }
 vim.wo.relativenumber = true

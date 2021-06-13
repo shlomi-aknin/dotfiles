@@ -11,9 +11,9 @@ vim.g.nvim_tree_bindings = {
 vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_follow = 1
 vim.g.nvim_tree_highlight_opened_files = 1
-vim.g.esearch = {}
-vim.g.esearch.default_mappings = 0
-vim.g['esearch#out#win#open'] = 'enew'
+vim.g.vim_search_pulse_duration = 1000
+vim.g.beacon_timeout = 1000
+vim.g.beacon_minimal_jump = 1
 
 require('telescope').setup {
   defaults = {
