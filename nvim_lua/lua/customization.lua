@@ -2,7 +2,6 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local actions = require('telescope.actions')
 local lspconfig = require('lspconfig')
 local Terminal  = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({ cmd = 'lazygit', hidden = true, direction = 'float' })
 local vifm = Terminal:new({ cmd = 'vifm', hidden = true, direction = 'float' })
 
 vim.g.nvim_tree_bindings = {
@@ -42,11 +41,6 @@ lspconfig.tsserver.setup {
                 require 'illuminate'.on_attach(client)
         end,
 }
-
-
-function _lazygit_toggle()
-  lazygit:toggle()
-end
 
 function _vifm_toggle()
   vifm:toggle()

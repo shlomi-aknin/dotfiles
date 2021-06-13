@@ -17,7 +17,7 @@ api.nvim_set_keymap( 'n',   '<leader>b', ':Telescope buffers<cr>', { noremap = t
 api.nvim_set_keymap( 'n',   '<leader>e', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<leader>f', ':Telescope find_files<cr>', { noremap = true, silent = false })
 api.nvim_set_keymap( 'n',   '<leader>h', ':noh<cr>', { noremap = true, silent = true })
-api.nvim_set_keymap( 'n',   '<leader>g', '<cmd>lua _lazygit_toggle()<cr>', {noremap = true, silent = true })
+api.nvim_set_keymap( 'n',   '<leader>g', ':let $VIM_DIR=expand("%:p:h")<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e lazygit &"<cr>', {noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<leader>p', ':Telescope current_buffer_tags<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<leader>R', ':e!<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<leader>r', '<cmd>lua vim.lsp.buf.rename()<cr>', { noremap = true, silent = true })
