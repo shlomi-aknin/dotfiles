@@ -18,6 +18,9 @@ require('packer').startup(function(use)
         use 'hoob3rt/lualine.nvim'
         use 'neovim/nvim-lspconfig'
         use 'nvim-lua/completion-nvim'
+        use 'RRethy/vim-illuminate'
+        use 'eugen0329/vim-esearch'
+        use 'akinsho/nvim-toggleterm.lua'
         use { 'dracula/vim', as = 'dracula' }
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         use {
@@ -31,3 +34,4 @@ require('packer').startup(function(use)
 end)
 
 require('colorizer').setup()
+require'toggleterm'.setup()
