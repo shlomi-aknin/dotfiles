@@ -3,5 +3,5 @@
 node_number=$(bspc query --nodes --desktop --node .window | wc -l)
 
 case $node_number in
-    0) bspc desktop -f 1 && bspc desktop -f prev.local.occupied;;
+    0) bspc desktop -f next.local.occupied;;
 esac
