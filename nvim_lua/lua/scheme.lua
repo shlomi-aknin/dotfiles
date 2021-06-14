@@ -2,7 +2,7 @@ vim.cmd([[silent! colorscheme dracula]])
 
 vim.cmd([[
     augroup ChangeBackgroudColour
-        autocmd colorscheme * :hi normal guibg=#000000 guifg=#2DE1FC
+        autocmd colorscheme * :hi Normal guibg=#000000 guifg=#2DE1FC
         autocmd colorscheme * :hi PMenu guibg=#2176FF guifg=#ffffff 
         autocmd colorscheme * :hi PMenuSel guibg=#ffffff guifg=#000000 
         autocmd colorscheme * :hi Comment guifg=#34a1eb
@@ -23,6 +23,28 @@ vim.cmd([[
         autocmd colorscheme * :hi jsComment guifg=#34a1eb gui=italic
         autocmd colorscheme * :hi jsString guifg=#ffff00 ctermfg=222 gui=NONE cterm=NONE
         autocmd colorscheme * :hi link Searchlight Folded
+
+        autocmd colorscheme * :hi BufferCurrent guibg='#2176FF' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferCurrentIndex guibg='#2176FF' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferCurrentMod guibg='#2176FF' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferCurrentSign guibg='#2176FF' guifg='#2176FF'
+        autocmd colorscheme * :hi BufferCurrentIcon guibg='#2176FF' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferCurrentTarget guibg='#2176FF' guifg='#ff2222'
+
+        autocmd colorscheme * :hi BufferVisible guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferVisibleIndex guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferVisibleMod guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferVisibleSign guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferVisibleIcon guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferVisibleTarget guibg='#000000' guifg='#ffffff'
+
+        autocmd colorscheme * :hi BufferInactive guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferInactiveIndex guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferInactiveMod guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferInactiveSign guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferInactiveIcon guibg='#000000' guifg='#ffffff'
+        autocmd colorscheme * :hi BufferInactiveTarget guibg='#000000' guifg='#ff2222'
+
     augroup END
 ]])
 

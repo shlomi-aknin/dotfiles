@@ -31,7 +31,7 @@ api.nvim_set_keymap( 'n',   '<leader>x', ':bufdo bd!<cr>', { noremap = true, sil
 api.nvim_set_keymap( 'n',   '<leader>z', ':Telescope current_buffer_fuzzy_find<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<leader>/', ':TComment<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<leader>0', ':PackerSync<cr>', { noremap = true, silent = true })
-api.nvim_set_keymap( 'n',   '<C-b>', ':BufferPick<cr>', { noremap = true, silent = true })
+api.nvim_set_keymap( 'n',   '<A-b>', ':BufferPick<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<C-j>', 'o<esc>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<C-k>', 'O<esc>', { noremap = true, silent = true })
 api.nvim_set_keymap( 'n',   '<C-s>', '<Plug>(esearch)', { silent = true })
