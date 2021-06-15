@@ -9,6 +9,7 @@ autocmd BufWritePre *.json :call SaveFileKeepPosition("JsonBeautify")
 autocmd BufWritePre *.html :call SaveFileKeepPosition("HtmlBeautify")
 autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
 au! BufNewFile,BufRead *.svelte set ft=html
+autocmd FileType coc-explorer IndentLinesDisable
 
 function! SaveFileKeepPosition(...)
     let l = line(".")
