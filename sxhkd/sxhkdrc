@@ -22,6 +22,10 @@ super + shift + c
 super + n
     alacritty -t "Neovim" -e nvim
 
+# compose new email
+super + shift + n
+    firefox -new-window "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
+
 # dmenu web search
 super + s
     dmenu_websearch
