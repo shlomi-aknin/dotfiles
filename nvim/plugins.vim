@@ -1,4 +1,5 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
+Plug 'Yggdroot/indentLine'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'PeterRincker/vim-searchlight'
