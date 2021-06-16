@@ -63,7 +63,7 @@ nnoremap <leader>$ :%s/\s\+$//e<cr> :noh<cr>
 nnoremap <silent><leader>b :Telescope buffers<cr>
 nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<cr>
 nnoremap <silent><leader>g :GFiles?<cr>
-nnoremap <silent><nowait> <leader>P :call CocAction('jumpDefinition', v:false)<cr>
+nnoremap <silent> D :call CocAction('doHover')<cr>
 nnoremap <silent><leader>h :noh<cr>
 nnoremap <silent><leader>p :Vista finder coc<cr>
 nnoremap <silent><leader>r :e!<cr>
