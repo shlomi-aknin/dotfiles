@@ -15,7 +15,7 @@ hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
 hi IncSearch guifg=#000000 guibg=#ffff00 gui=NONE cterm=NONE
 hi LineNr guifg=#2DE1FC ctermfg=238 guibg=#000000 ctermbg=233 gui=NONE cterm=NONE
 hi MatchParen cterm=none guibg=#129AE2 guifg=#ffffff
-hi Normal guifg=#2DE1FC ctermfg=253 guibg=#000000 ctermbg=233 gui=NONE cterm=NONE
+hi Normal guifg=#B4E1FF ctermfg=253 guibg=#000000 ctermbg=233 gui=BOLD cterm=NONE
 hi PMenu guibg=#2176FF guifg=#ffffff gui=NONE cterm=NONE
 hi PMenuSel guibg=#ffffff guifg=#000000 ctermbg=176 gui=NONE cterm=NONE
 hi Search guibg=#ffff00 guifg=#000000
