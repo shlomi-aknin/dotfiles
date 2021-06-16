@@ -85,6 +85,7 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>y  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 set background=dark
+set autoindent
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 set cursorline
@@ -92,8 +93,10 @@ set guifont=Source\ Code\ Pro:h18
 set hidden
 set lazyredraw
 set nowrap
+set noswapfile
 set number
 set relativenumber
+set smartcase
 set smartindent
 set tabstop=4
 set termguicolors
@@ -103,6 +106,8 @@ set nocompatible
 set updatetime=300
 set mouse=a
 set scrolloff=999
+set wildignore+=**/node_modules/*
+set wildignore+=**/.git/*
 syntax enable
 
 command! -bang -nargs=* RgFzf

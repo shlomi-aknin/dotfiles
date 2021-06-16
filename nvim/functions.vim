@@ -10,6 +10,8 @@ autocmd BufWritePre *.html :call SaveFileKeepPosition("HtmlBeautify")
 autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
 au! BufNewFile,BufRead *.svelte set ft=html
 autocmd FileType coc-explorer IndentLinesDisable
+autocmd FileType coc-explorer set number
+autocmd FileType coc-explorer set relativenumber
 
 function! SaveFileKeepPosition(...)
     let l = line(".")
