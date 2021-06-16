@@ -73,7 +73,7 @@ nnoremap <silent><leader>s :update<cr>
 nnoremap <silent><leader>S :bufdo wall<cr>
 nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR &"<cr>
 nnoremap <silent><A-g> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e lazygit &"<cr>
-nnoremap <silent><leader>v :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e vifm . &"<cr>
+nnoremap <silent><A-v> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e vifm . &"<cr>
 nnoremap <silent><leader>q :call tag_peek#ShowTag()<cr>
 nnoremap <silent><leader>x :bufdo bd!<cr>
 nnoremap <silent><leader>z :Files<cr>
