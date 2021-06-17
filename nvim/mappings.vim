@@ -90,3 +90,7 @@ vnoremap > >gv
 vnoremap <A-j> :m '>+1<cr>gv=gv
 vnoremap <A-k> :m '<-2<cr>gv=gv
 vnoremap <leader>/ :TComment<cr>
+command WQ wq
+command Wq wq
+command W w
+command Q q
