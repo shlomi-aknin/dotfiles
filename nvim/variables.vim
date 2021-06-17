@@ -8,6 +8,7 @@ let mapleader=' '
 let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+let g:cursorhold_updatetime = 10
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
 let g:indentLine_char = '▏'
 let g:indent_blankline_char = '▏'

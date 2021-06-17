@@ -62,7 +62,8 @@ nnoremap <silent><leader>= :source ~/.config/nvim/init.vim \| :PlugInstall<cr>
 nnoremap <silent><leader>- :source ~/.config/nvim/init.vim \| :PlugClean<cr>
 nnoremap <silent><leader># :g/^\s*$/d<cr>
 nnoremap <leader>$ :%s/\s\+$//e<cr> :noh<cr>
-nnoremap <silent><leader>b :Telescope buffers<cr>
+nnoremap <silent><leader>b :Buffers<cr>
+" nnoremap <silent><leader>b :Telescope buffers<cr>
 nnoremap <silent><leader>e :CocCommand explorer --quit-on-open --open-action-strategy sourceWindow<cr>
 nnoremap <silent><leader>g :GFiles?<cr>
 nnoremap <silent> D :call CocAction('doHover')<cr>
@@ -78,13 +79,14 @@ nnoremap <silent><A-g> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty
 nnoremap <silent><A-v> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e vifm . &"<cr>
 nnoremap <silent><leader>q :call tag_peek#ShowTag()<cr>
 nnoremap <silent><leader>x :bufdo bd!<cr>
-nnoremap <silent><leader>z :Files<cr>
-nnoremap <silent><leader>f :Telescope find_files<cr>
+nnoremap <silent><leader>f :Files<cr>
+" nnoremap <silent><leader>f :Telescope find_files<cr>
 nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
 nnoremap <silent> <A-z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr>
 nnoremap <silent> <A-Z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr> ggVG :normal A,<cr>ggVGJ$x0yg_
 nnoremap C ^i
 nnoremap ds diwx
+nnoremap yy ^yg_
 vnoremap < <gv
 vnoremap > >gv
 vnoremap <A-j> :m '>+1<cr>gv=gv
