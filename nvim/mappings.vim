@@ -1,4 +1,6 @@
 nnoremap <silent><A-`> :set relativenumber!<cr>
+inoremap jj <esc>
+inoremap hh <backspace>
 inoremap <A-h> <Left>
 inoremap <A-j> <Down>
 inoremap <A-k> <Up>
