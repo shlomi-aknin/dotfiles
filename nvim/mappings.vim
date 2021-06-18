@@ -86,7 +86,7 @@ nnoremap <silent> <A-z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr>
 nnoremap <silent> <A-Z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr> ggVG :normal A,<cr>ggVGJ$x0yg_
 nnoremap C ^i
 nnoremap ds diwx
-nnoremap yy ^yg_
+nnoremap yl ^yg_
 vnoremap < <gv
 vnoremap > >gv
 vnoremap <A-j> :m '>+1<cr>gv=gv
