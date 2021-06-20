@@ -41,6 +41,7 @@ nnoremap <A-p> o<esc>p==
 nnoremap <C-p> <esc>viwp
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
+nnoremap <silent><leader>d 0Vf{%d
 nnoremap <leader>D :AnyFoldActivate<cr> zR
 nnoremap <leader>k <esc>V$% :TComment<cr>
 nnoremap <leader>/ :TComment<cr>

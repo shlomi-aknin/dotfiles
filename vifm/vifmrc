@@ -430,5 +430,4 @@ set sort=dir,-mtime,+name
 
 " ------------------------------------------------------------------------------
 
-only
 source ~/.config/vifm/mappings
