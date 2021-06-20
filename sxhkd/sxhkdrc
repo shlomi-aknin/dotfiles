@@ -196,9 +196,11 @@ super + {_,shift + }{1-9,0}
 
 
 # send to the given desktop and follow
-super + alt + {g,h,j,k,l}
-	bspc node -d {1-5} --follow
+super + alt + {1-9,0}
+	bspc node -d '^{1-9,10}' --follow
 
+super + alt + {h,j,k,l}
+	bspc node -d {1-4} --follow
 #
 # move/resize
 #
