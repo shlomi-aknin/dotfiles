@@ -10,7 +10,7 @@ autocmd BufWritePre * %s/\s\+$//e
 " autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 au! BufNewFile,BufRead *.svelte set ft=html
-autocmd FileType coc-explorer IndentLinesDisable
+autocmd FileType coc-explorer IndentGuidesDisable
 autocmd FileType coc-explorer set number
 autocmd FileType coc-explorer set relativenumber
 
