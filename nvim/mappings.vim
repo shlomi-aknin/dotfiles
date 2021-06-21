@@ -17,6 +17,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<cr>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<cr>\<c-r>=coc#on_enter()\<cr>"
 nnoremap <leader>n <esc>0f}i<cr><esc>O
 nnoremap <leader>N <esc>0f}i<cr><esc>O<esc>
+nnoremap p p==
 nmap <silent> gd <Plug>(coc-definition)
 nmap s <Plug>(easymotion-overwin-w)
 nmap <C-s> <Plug>(esearch)
@@ -37,8 +38,7 @@ nnoremap <C-k> O<esc>
 nnoremap K yyP
 nnoremap <C-m> :call MaximizeToggle()<cr>
 nnoremap <C-n> o<esc>O<esc>S
-nnoremap <A-p> o<esc>p==
-nnoremap <C-p> <esc>viwp
+nnoremap <C-p> viwp
 nnoremap <F3> :%s/<C-r><C-w>/
 nnoremap <leader>c :<c-u>up <bar> %bd <bar> e#<cr>
 nnoremap <silent><leader>d $VF{%jd
@@ -76,7 +76,7 @@ nnoremap <leader>O :QuickFixOpenAll<cr>
 nnoremap <silent><leader>s :update<cr>
 nnoremap <silent><leader>S :bufdo wall<cr>
 nnoremap <silent><leader>t :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR &"<cr>
-nnoremap <silent><A-g> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e lazygit &"<cr>
+nnoremap <silent><A-g> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR --class nvimlazygit -e lazygit &"<cr>
 nnoremap <silent><A-v> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e vifm . &"<cr>
 nnoremap <silent><leader>q :call tag_peek#ShowTag()<cr>
 nnoremap <silent><leader>x :bufdo bd!<cr>

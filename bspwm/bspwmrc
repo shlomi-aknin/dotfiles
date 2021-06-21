@@ -19,7 +19,7 @@ do
   bsp-layout set tall "$i" -- --master-size 0.5 &
 done
 
-# bspc rule -a Clock center=on state=floating
+bspc rule -a Alacritty:nvimlazygit center=on state=floating rectangle=1376x625+0+0
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
 # bspc rule -a GNvim state=tiled
