@@ -80,7 +80,8 @@ nnoremap <silent><A-g> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty
 nnoremap <silent><A-v> :let $VIM_DIR=expand('%:p:h')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e vifm . &"<cr>
 nnoremap <silent><leader>q :call tag_peek#ShowTag()<cr>
 nnoremap <silent><leader>x :bufdo bd!<cr>
-nnoremap <silent><leader>f :Files<cr>
+nnoremap <silent><leader>f :GFiles<cr>
+nnoremap <silent><leader>F :Files<cr>
 " nnoremap <silent><leader>f :Telescope find_files<cr>
 nnoremap <silent><nowait> <leader>d <esc>Vg_%d<esc>
 nnoremap <silent> <A-z> <esc>:%s/\(\s*\w\+\).*/\1/g<cr> :noh<cr>

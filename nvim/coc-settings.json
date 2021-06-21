@@ -1,4 +1,6 @@
 {
+    "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript"],
+    "eslint.autoFixOnSave": true,
     "explorer.width": 30,
     "explorer.file.showHiddenFiles": true,
     "explorer.icon.enableVimDevicons": true,

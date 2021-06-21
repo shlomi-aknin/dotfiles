@@ -19,6 +19,7 @@ let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 let g:system_copy#copy_command='xclip -sel clipboard'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:vim_json_syntax_conceal = 0
 let g:vista_sidebar_position = 'vertical topleft'
 let g:vista_cursor_delay = 50
 let g:vista_close_on_jump = 1
@@ -74,9 +75,11 @@ let g:coc_global_extensions = [
 \'coc-css',
 \'coc-db',
 \'coc-emmet',
+\'coc-eslint',
 \'coc-explorer',
 \'coc-html',
 \'coc-json',
+\'coc-prettier',
 \'coc-restclient',
 \'coc-snippets',
 \'coc-svelte',
@@ -113,6 +116,7 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
 syntax enable
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 command! -bang -nargs=* RgFzf
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
