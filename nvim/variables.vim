@@ -5,6 +5,7 @@ nnoremap <SPACE> <Nop>
 let mapleader=' '
 " let g:airline_theme='base16_spacemacs'
 " let g:airline_theme='cobalt2'
+let $FZF_PREVIEW_COMMAND="COLORTERM=truecolor bat --theme=Dracula --style=numbers --color=always --line-range :500 {}"
 let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
@@ -28,7 +29,7 @@ let g:vista_fzf_preview = ['right:50%']
 let g:gitgutter_map_keys = 0
 let g:user_emmet_install_global = 0
 let g:beacon_minimal_jump = 1
-let g:beacon_timeout = 1000
+let g:beacon_timeout = 1500
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:comfortable_motion_impulse_multiplier = 1
 let g:airline#extensions#tabline#enabled = 1
