@@ -1,13 +1,14 @@
 autocmd BufWritePre * %s/\s\+$//e
-autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
-autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
-autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <a-f> :call CSSBeautify()<cr>
-autocmd BufWritePre *.svelte :call SaveFileKeepPosition("")
-autocmd BufWritePre *.js :call SaveFileKeepPosition("JsBeautify")
-autocmd BufWritePre *.json :call SaveFileKeepPosition("JsonBeautify")
-autocmd BufWritePre *.html :call SaveFileKeepPosition("HtmlBeautify")
-autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
+" autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
+" autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
+" autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
+" autocmd FileType css noremap <buffer> <a-f> :call CSSBeautify()<cr>
+" autocmd BufWritePre *.svelte :call SaveFileKeepPosition("")
+" autocmd BufWritePre *.js :call SaveFileKeepPosition("JsBeautify")
+" autocmd BufWritePre *.json :call SaveFileKeepPosition("JsonBeautify")
+" autocmd BufWritePre *.html :call SaveFileKeepPosition("HtmlBeautify")
+" autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
+au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 au! BufNewFile,BufRead *.svelte set ft=html
 autocmd FileType coc-explorer IndentLinesDisable
 autocmd FileType coc-explorer set number

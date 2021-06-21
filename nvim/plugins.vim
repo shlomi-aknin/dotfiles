@@ -11,6 +11,7 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'arthurxavierx/vim-caser'
 Plug 'chrisbra/Colorizer'
 Plug 'christoomey/vim-system-copy'
+Plug 'codechips/coc-svelte', {'do': 'npm install'}
 Plug 'danilamihailov/beacon.nvim'
 Plug 'dkprice/vim-easygrep'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -48,6 +49,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pangloss/vim-javascript'
 Plug 'pechorin/any-jump.vim'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'pseewald/vim-anyfold'
 Plug 'ryanoasis/vim-devicons'
 Plug 'semanticart/tag-peek.vim'
