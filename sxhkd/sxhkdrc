@@ -16,7 +16,7 @@ super + shift + b
 
 # clock
 super + shift + c
-    alacritty -t "Clock" -e /usr/local/bin/clock
+    alacritty -t "Clock" --class "ttyclock" -e /usr/local/bin/clock
 
 # neovim
 super + n
