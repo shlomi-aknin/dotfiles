@@ -63,13 +63,13 @@ let php_var_selector_is_identifier = 1
 let g:highlightedyank_highlight_duration = 1200
 let g:fzf_colors = {
 \ 'fg': ['fg', 'Normal'],
-\ 'bg': ['bg', 'Normal'],
+\ 'bg': ['bg', 'FZFBg'],
 \ 'hl': ['fg', 'Keyword'],
 \ 'fg+': ['fg', 'Normal'],
 \ 'bg+': ['bg', 'Normal'],
 \ 'hl+': ['fg', 'DraculaOrange'],
 \ 'info': ['fg', 'DraculaPurple'],
-\ 'border': ['fg', 'Ignore'],
+\ 'border': ['fg', 'Normal'],
 \ 'prompt': ['fg', 'DraculaGreen'],
 \ 'pointer': ['fg', 'Exception'],
 \ 'marker': ['fg', 'Keyword'],
