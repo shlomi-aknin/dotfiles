@@ -1,31 +1,14 @@
-autocmd BufWritePre * %s/\s\+$//e
-" autocmd FileType javascript noremap <buffer>  <a-f> :call JsBeautify()<cr>
-" autocmd FileType json noremap <buffer> <a-f> :call JsonBeautify()<cr>
-" autocmd FileType html noremap <buffer> <a-f> :call HtmlBeautify()<cr>
-" autocmd FileType css noremap <buffer> <a-f> :call CSSBeautify()<cr>
-" autocmd BufWritePre *.svelte :call SaveFileKeepPosition("")
-" autocmd BufWritePre *.js :call SaveFileKeepPosition("JsBeautify")
-" autocmd BufWritePre *.json :call SaveFileKeepPosition("JsonBeautify")
-" autocmd BufWritePre *.html :call SaveFileKeepPosition("HtmlBeautify")
-" autocmd BufWritePre *.css :call SaveFileKeepPosition("CSSBeautify")
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
-au! BufNewFile,BufRead *.svelte set ft=html
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+autocmd! BufNewFile,BufRead *.svelte set ft=html
 autocmd FileType coc-explorer IndentGuidesDisable
 autocmd FileType coc-explorer set number
 autocmd FileType coc-explorer set relativenumber
 
-function! SaveFileKeepPosition(...)
+function! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
-    if a:0 == "JsBeautify"
-        call JsBeautify()
-    elseif a:0 == "JsonBeautify"
-        call JsonBeautify()
-    elseif a:0 == "HtmlBeautify"
-        call HtmlBeautify()
-    elseif a:0 == "CSSBeautify"
-        call CSSBeautify()
-    endif
+    %s/\s\+$//e
     call cursor(l, c)
 endfunction
 
