@@ -13,8 +13,8 @@ hi GitGutterChange guibg=#e100ff guifg=#ffffff ctermfg=3
 hi GitGutterDelete guibg=#ff2222 guifg=#ffffff ctermfg=1
 hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
 hi IncSearch guifg=#000000 guibg=#ffff00 gui=NONE cterm=NONE
-hi IndentGuidesOdd guibg=red
-hi IndentGuidesEven guibg=green
+hi IndentGuidesEven guibg=#9B5DE5
+hi IndentGuidesOdd guibg=#F15BB5
 hi LineNr guifg=#2DE1FC ctermfg=238 guibg=#000000 ctermbg=233 gui=NONE cterm=NONE
 hi MatchParen cterm=none guibg=#129AE2 guifg=#ffffff
 hi Normal guifg=#B4E1FF ctermfg=253 guibg=#000000 ctermbg=233 gui=BOLD cterm=NONE
