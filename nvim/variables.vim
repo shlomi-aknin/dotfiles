@@ -13,8 +13,8 @@ let g:cursorhold_updatetime = 10
 let g:esearch = {}
 let g:esearch.root_markers = ['.git', 'node_modules', '.svelte-kit']
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
-let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 " let g:indentLine_char = '▏'
@@ -102,6 +102,7 @@ set background=dark
 set autoindent
 set clipboard+=unnamed
 set clipboard+=unnamedplus
+set cpoptions+=I
 set cursorline
 set guifont=Source\ Code\ Pro:h18
 set hidden
@@ -110,11 +111,13 @@ set nowrap
 set noswapfile
 set number
 set relativenumber
+set softtabstop=0
 set smartcase
 set smartindent
 set tabstop=4
 set termguicolors
-set shiftwidth=4
+set shiftround
+set shiftwidth=0
 set expandtab
 set nocompatible
 set updatetime=300

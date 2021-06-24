@@ -1,5 +1,11 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript"],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "svelte"
+    ],
     "eslint.autoFixOnSave": true,
     "explorer.width": 30,
     "explorer.file.showHiddenFiles": true,
@@ -13,4 +19,3 @@
     "javascript.suggestionActions.enabled": false,
     "rest-client.showHeaders": false
 }
-

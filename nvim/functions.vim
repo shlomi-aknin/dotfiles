@@ -1,6 +1,8 @@
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+autocmd TextChanged,InsertLeave *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 autocmd! BufNewFile,BufRead *.svelte set ft=html
+" autocmd BufReadPre,FileReadPre * IndentGuidesEnable
 autocmd FileType coc-explorer IndentGuidesDisable
 autocmd FileType coc-explorer set number
 autocmd FileType coc-explorer set relativenumber
@@ -41,6 +43,7 @@ function! QuickFixOpenAll()
 endfunction
 
 command! QuickFixOpenAll call QuickFixOpenAll()
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 function! s:GoToDefinition()
   if CocAction('jumpDefinition')
