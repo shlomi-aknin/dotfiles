@@ -24,7 +24,7 @@ super + n
 
 # compose new email
 super + shift + n
-    firefox -new-window "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
+    firefox -new-tab "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
 
 # dmenu web search
 super + s
@@ -78,6 +78,9 @@ super + equal
 
 super + c; b
 	alacritty -t "BASHRC Edit" -e nvim ~/.bashrc
+
+super + c; m
+	alacritty -t "Mutt (Gmail)" -e mutt
 
 super + c; n
 	alacritty -t "Network Manager Config" -e nmtui
