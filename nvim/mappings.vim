@@ -33,9 +33,9 @@ nnoremap <silent><A-d> :DBUIToggle<cr>
 nnoremap <silent> <A-w> :set wrap!<cr>
 nnoremap <C-y> ^yg_
 nnoremap <C-j> o<esc>
-nnoremap J yyp
+nnoremap <tab>j yyp
 nnoremap <C-k> O<esc>
-nnoremap K yyP
+nnoremap <tab>k yyP
 nnoremap <C-m> :call MaximizeToggle()<cr>
 nnoremap <C-n> o<esc>O<esc>S
 nnoremap <C-p> viwp
