@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/site/autoload')
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'PeterRincker/vim-searchlight'
@@ -40,6 +39,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'machakann/vim-highlightedyank'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'nacro90/numb.nvim'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-lua/plenary.nvim'
@@ -61,6 +61,7 @@ Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'vifm/vifm.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
 lua require'colorizer'.setup()

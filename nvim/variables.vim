@@ -8,6 +8,10 @@ let mapleader=' '
 let $FZF_PREVIEW_COMMAND="COLORTERM=truecolor bat --theme=Dracula --style=numbers --color=always --line-range :500 {}"
 let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:cursorhold_updatetime = 10
 let g:esearch = {}

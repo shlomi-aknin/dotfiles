@@ -29,3 +29,5 @@ hi jsString guifg=#ffff00
 hi link Searchlight Folded
 hi FZFBg guibg=#480355
 hi FZFBorder guifg=#480355
+hi ALEErrorSign ctermbg=NONE ctermfg=red
+hi ALEWarningSign ctermbg=NONE ctermfg=yellow

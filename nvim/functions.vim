@@ -1,6 +1,6 @@
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-autocmd BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
-autocmd TextChanged,InsertLeave *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+" autocmd BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+" autocmd TextChanged,InsertLeave *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 autocmd! BufNewFile,BufRead *.svelte set ft=html
 " autocmd BufReadPre,FileReadPre * IndentGuidesEnable
 autocmd FileType coc-explorer IndentGuidesDisable
