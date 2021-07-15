@@ -110,6 +110,7 @@ set cpoptions+=I
 set cursorline
 set guifont=Source\ Code\ Pro:h18
 set hidden
+set ignorecase
 set lazyredraw
 set nowrap
 set noswapfile
