@@ -84,11 +84,12 @@ require('bufferline').setup{
 	offsets = {{filetype = 'NvimTree', text = 'File Explorer', highlight = 'Directory', text_align = 'left'}}
 }
 
-require'hop'.setup()
-require'lspconfig'.tsserver.setup{}
-require'lspsaga'.init_lsp_saga()
+require('hop').setup()
+require('lspconfig').tsserver.setup{}
+require('lspsaga').init_lsp_saga()
+require('spectre').setup()
 
-require'compe'.setup {
+require('compe').setup {
   enabled = true;
   autocomplete = true;
   debug = false;
