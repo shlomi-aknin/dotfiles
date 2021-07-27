@@ -1,0 +1,14 @@
+vim.g.mapleader = ' '
+vim.g.noswapfile = true
+vim.o.background = 'dark'
+vim.o.clipboard = 'unnamedplus'
+vim.o.cursorline = true
+vim.o.hidden = true
+vim.o.ignorecase = true
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.smartcase = true
+vim.o.termguicolors = true
+vim.o.updatetime = 250
+vim.wo.signcolumn = 'yes'
+vim.o.completeopt = 'menuone,noselect'
