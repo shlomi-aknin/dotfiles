@@ -1,5 +1,5 @@
 local actions = require('telescope.actions')
-local action_state = require("telescope.actions.state")
+local action_state = require('telescope.actions.state')
 local custom_actions = {}
 
 local t = function(str)
@@ -7,49 +7,49 @@ local t = function(str)
 end
 
 local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
+  local col = vim.fn.col('.') - 1
+  return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
 function custom_actions.fzf_multi_select(prompt_bufnr)
-    local picker = action_state.get_current_picker(prompt_bufnr)
-    local num_selections = table.getn(picker:get_multi_selection())
+  local picker = action_state.get_current_picker(prompt_bufnr)
+  local num_selections = table.getn(picker:get_multi_selection())
 
-    if num_selections > 1 then
-        actions.send_selected_to_qflist(prompt_bufnr)
-        actions.open_qflist()
-    else
-        actions.file_edit(prompt_bufnr)
-    end
+  if num_selections > 1 then
+    actions.send_selected_to_qflist(prompt_bufnr)
+    actions.open_qflist()
+  else
+    actions.file_edit(prompt_bufnr)
+  end
 end
 
 require('telescope').setup {
-	defaults = {
-		vimgrep_arguments = {
-			'--color=always',
-		},
-		prompt_prefix = "@ ",
-		layout_config = {
-			preview_width = 0.6
-		},
-		file_ignore_patterns = { "node_modules", ".git" },
-		mappings = { 
-			i = {
-				["<esc>"] = actions.close,
-				["<C-j>"] = actions.move_selection_next,
-				["<C-k>"] = actions.move_selection_previous,
-				["<tab>"] = actions.toggle_selection + actions.move_selection_next,
-				["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
-				["<cr>"] = custom_actions.fzf_multi_select,
-			},
-			n = {
-				["<esc>"] = actions.close,
-				["<tab>"] = actions.toggle_selection + actions.move_selection_next,
-				["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
-				["<cr>"] = custom_actions.fzf_multi_select
-			}
-		},
-	}
+  defaults = {
+    vimgrep_arguments = {
+      '--color=always',
+    },
+    prompt_prefix = "@ ",
+    layout_config = {
+      preview_width = 0.6
+    },
+    file_ignore_patterns = { "node_modules", ".git" },
+    mappings = { 
+      i = {
+        ["<esc>"] = actions.close,
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<tab>"] = actions.toggle_selection + actions.move_selection_next,
+        ["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
+        ["<cr>"] = custom_actions.fzf_multi_select,
+      },
+      n = {
+        ["<esc>"] = actions.close,
+        ["<tab>"] = actions.toggle_selection + actions.move_selection_next,
+        ["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
+        ["<cr>"] = custom_actions.fzf_multi_select
+      }
+    },
+  }
 }
 
 require'lualine'.setup {
@@ -81,7 +81,7 @@ require'lualine'.setup {
 }
 
 require('bufferline').setup{
-	offsets = {{filetype = 'NvimTree', text = 'File Explorer', highlight = 'Directory', text_align = 'left'}}
+  offsets = {{filetype = 'NvimTree', text = 'File Explorer', highlight = 'Directory', text_align = 'left'}}
 }
 
 require('nvim-autopairs').setup()
@@ -101,36 +101,36 @@ require('spectre').setup()
 require('goto-preview').setup {}
 require('autosave').setup()
 require('specs').setup{ 
-    show_jumps  = true,
-    min_jump = 5,
-    popup = {
-        delay_ms = 0, -- delay before popup displays
-        inc_ms = 10, -- time increments used for fade/resize effects 
-        blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
-        width = 100,
-        winhl = 'PMenu',
-        fader = require('specs').pulse_fader,
-        resizer = require('specs').slide_resizer
-    },
-    ignore_filetypes = {},
-    ignore_buftypes = {
-        nofile = true,
-    },
+  show_jumps  = true,
+  min_jump = 1,
+  popup = {
+    delay_ms = 0, -- delay before popup displays
+    inc_ms = 10, -- time increments used for fade/resize effects 
+    blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
+    width = 100,
+    winhl = 'PMenu',
+    fader = require('specs').pulse_fader,
+    resizer = require('specs').slide_resizer
+  },
+  ignore_filetypes = {},
+  ignore_buftypes = {
+    nofile = true,
+  },
 }
 
 require('gitsigns').setup{
-	signs = {
-		add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
-		change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-		delete       = {hl = 'GitSignsDelete', text = '-', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-		topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-		changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-	}
+  signs = {
+    add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
+    change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+    delete       = {hl = 'GitSignsDelete', text = '-', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+    topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+    changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+  }
 }
 
 require('neoscroll').setup({
-    hide_cursor = false,
-    easing_function = 'circular',
+  hide_cursor = false,
+  easing_function = 'circular',
 })
 
 require('compe').setup {
@@ -206,17 +206,17 @@ require('lspinstall').post_install_hook = function ()
 end
 
 vim.cmd([[
-  augroup highlight_yank
-  autocmd!
-  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
-  augroup END
+augroup highlight_yank
+autocmd!
+au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
+augroup END
 ]])
 
 local Terminal  = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({
-	cmd = 'lazygit',
-	hidden = true,
-	direction = 'float'
+  cmd = 'lazygit',
+  hidden = true,
+  direction = 'float'
 })
 
 function _lazygit_toggle()
