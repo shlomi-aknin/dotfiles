@@ -84,6 +84,11 @@ require('bufferline').setup{
 	offsets = {{filetype = 'NvimTree', text = 'File Explorer', highlight = 'Directory', text_align = 'left'}}
 }
 
+require('nvim-autopairs').setup()
+require('nvim-autopairs.completion.compe').setup({
+  map_cr = true,
+  map_complete = true
+})
 require('hop').setup()
 require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
@@ -134,6 +139,7 @@ _G.tab_complete = function()
     return vim.fn['compe#complete']()
   end
 end
+
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t '<C-p>'

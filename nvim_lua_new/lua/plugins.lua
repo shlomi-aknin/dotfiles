@@ -26,6 +26,7 @@ return require('packer').startup(function()
 	use 'hrsh7th/nvim-compe'
 	use 'glepnir/lspsaga.nvim'
 	use 'windwp/nvim-spectre'
+	use 'windwp/nvim-autopairs'
 	use {'phaazon/hop.nvim', as = 'hop' }
 	use {'dracula/vim', as = 'dracula'}
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

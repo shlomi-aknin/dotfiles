@@ -11,7 +11,7 @@ vim.cmd[[
 	hi IncSearch guifg=#000000 guibg=#ffff00
 	hi IndentGuidesEven guibg=#9B5DE5
 	hi IndentGuidesOdd guibg=#F15BB5
-	hi Normal guifg=#E3F2FD
+	hi Normal guifg=#E3F2FD guibg=#000000
 	hi PMenu guibg=#2176FF guifg=#ffffff
 	hi PMenuSel guibg=#ffffff guifg=#000000
 	hi Search guibg=#ffff00 guifg=#000000
