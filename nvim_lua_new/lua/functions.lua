@@ -90,6 +90,10 @@ require('nvim-autopairs.completion.compe').setup({
   map_complete = true
 })
 require('hop').setup()
+require('nvim_comment').setup({
+  comment_empty = false,
+  create_mappings = false
+})
 require('nvim-ts-autotag').setup()
 require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
