@@ -26,6 +26,7 @@ return require('packer').startup(function()
 	use 'hrsh7th/nvim-compe'
 	use 'glepnir/lspsaga.nvim'
 	use 'terrortylor/nvim-comment'
+	use 'akinsho/nvim-toggleterm.lua'
 	use 'windwp/nvim-spectre'
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'
