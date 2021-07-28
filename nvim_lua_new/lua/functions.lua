@@ -166,3 +166,10 @@ require('lspinstall').post_install_hook = function ()
   setup_servers()
   vim.cmd('bufdo e')
 end
+
+vim.cmd([[
+  augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
+  augroup END
+]])
