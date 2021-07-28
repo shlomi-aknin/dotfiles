@@ -12,3 +12,7 @@ vim.o.termguicolors = true
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 vim.o.completeopt = 'menuone,noselect'
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
