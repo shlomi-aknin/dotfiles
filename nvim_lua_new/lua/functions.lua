@@ -98,6 +98,40 @@ require('nvim-ts-autotag').setup()
 require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
 require('spectre').setup()
+require('goto-preview').setup {}
+require('autosave').setup()
+require('specs').setup{ 
+    show_jumps  = true,
+    min_jump = 5,
+    popup = {
+        delay_ms = 0, -- delay before popup displays
+        inc_ms = 10, -- time increments used for fade/resize effects 
+        blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
+        width = 100,
+        winhl = 'PMenu',
+        fader = require('specs').pulse_fader,
+        resizer = require('specs').slide_resizer
+    },
+    ignore_filetypes = {},
+    ignore_buftypes = {
+        nofile = true,
+    },
+}
+
+require('gitsigns').setup{
+	signs = {
+		add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
+		change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+		delete       = {hl = 'GitSignsDelete', text = '-', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+		topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
+		changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+	}
+}
+
+require('neoscroll').setup({
+    hide_cursor = false,
+    easing_function = 'circular',
+})
 
 require('compe').setup {
   enabled = true;

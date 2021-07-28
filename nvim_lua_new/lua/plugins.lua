@@ -14,25 +14,30 @@ vim.cmd [[autocmd BufWritePost minimal_init.lua PackerCompile]]
 vim.cmd [[autocmd BufWritePost minimal_init.lua PackerInstall]]
 
 return require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
-	use 'nvim-lua/popup.nvim'
-	use 'nvim-lua/plenary.nvim'
+	use 'Pocco81/AutoSave.nvim'
+	use 'akinsho/nvim-bufferline.lua'
+	use 'akinsho/nvim-toggleterm.lua'
+	use 'edluffy/specs.nvim'
+	use 'glepnir/lspsaga.nvim'
+	use 'hoob3rt/lualine.nvim'
+	use 'hrsh7th/nvim-compe'
+	use 'kabouzeid/nvim-lspinstall'
+	use 'karb94/neoscroll.nvim'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/nvim-web-devicons'
-	use 'nvim-telescope/telescope.nvim'
-	use 'hoob3rt/lualine.nvim'
-	use 'akinsho/nvim-bufferline.lua'
+	use 'lewis6991/gitsigns.nvim'
 	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/nvim-compe'
-	use 'glepnir/lspsaga.nvim'
+	use 'nvim-lua/plenary.nvim'
+	use 'nvim-lua/popup.nvim'
+	use 'nvim-telescope/telescope.nvim'
+	use 'rmagatti/goto-preview'
 	use 'terrortylor/nvim-comment'
-	use 'akinsho/nvim-toggleterm.lua'
-	use 'windwp/nvim-spectre'
+	use 'wbthomason/packer.nvim'
 	use 'windwp/nvim-autopairs'
+	use 'windwp/nvim-spectre'
 	use 'windwp/nvim-ts-autotag'
-	use 'kabouzeid/nvim-lspinstall'
-	use {'phaazon/hop.nvim', as = 'hop' }
 	use {'dracula/vim', as = 'dracula'}
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+	use {'phaazon/hop.nvim', as = 'hop'}
 end)
 

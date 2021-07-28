@@ -4,9 +4,6 @@ vim.cmd[[
 	hi CursorLine guibg=#235789
 	hi CursorLineNr guifg=#ffff00 guibg=#112630
 	hi Folded guibg=#34a1eb guifg=#000000
-	hi GitGutterAdd guibg=#009900 guifg=#ffffff
-	hi GitGutterChange guibg=#e100ff guifg=#ffffff
-	hi GitGutterDelete guibg=#ff2222 guifg=#ffffff
 	hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
 	hi IncSearch guifg=#000000 guibg=#ffff00
 	hi IndentGuidesEven guibg=#9B5DE5
