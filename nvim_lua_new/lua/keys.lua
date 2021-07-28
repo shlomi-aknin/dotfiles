@@ -2,6 +2,9 @@ local map = function(mode, key, value, opts)
 	vim.api.nvim_set_keymap(mode, key, value, opts or { noremap = true, silent = true });
 end
 
+map('i', '<A-h>', '<esc>i')
+map('i', '<A-l>', '<esc>la')
+map('i', '<A-k>', '<esc>0f):Lspsaga signature_help<cr>i')
 map('i', '<cr>', "compe#confirm({ 'keys': '<cr>', 'select': v:true })", { expr = true })
 map('i', '<C-j>', 'v:lua.tab_complete()', { expr = true })
 map('i', '<Tab>', 'v:lua.tab_complete()', { expr = true })
@@ -25,6 +28,7 @@ map('n', '<A-h>', 'i<space><esc>')
 map('n', '<Tab>j', 'yyp')
 map('n', '<Tab>k', 'yyP')
 map('n', '<A-l>', 'a<space><esc>')
+map('n', '<leader>=', ':PackerSync<cr>')
 map('n', '<leader>S', ':wa<cr>')
 map('n', '<leader>b', ':Telescope buffers<cr>')
 map('n', '<leader>e', ':NvimTreeToggle<cr>')

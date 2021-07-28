@@ -27,6 +27,8 @@ return require('packer').startup(function()
 	use 'glepnir/lspsaga.nvim'
 	use 'windwp/nvim-spectre'
 	use 'windwp/nvim-autopairs'
+	use 'windwp/nvim-ts-autotag'
+	use 'kabouzeid/nvim-lspinstall'
 	use {'phaazon/hop.nvim', as = 'hop' }
 	use {'dracula/vim', as = 'dracula'}
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

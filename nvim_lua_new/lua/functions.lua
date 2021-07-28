@@ -90,6 +90,7 @@ require('nvim-autopairs.completion.compe').setup({
   map_complete = true
 })
 require('hop').setup()
+require('nvim-ts-autotag').setup()
 require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
 require('spectre').setup()
@@ -149,4 +150,19 @@ _G.s_tab_complete = function()
     -- If <S-Tab> is not working in your terminal, change it to <C-h>
     return t '<S-Tab>'
   end
+end
+
+local function setup_servers()
+  require('lspinstall').setup()
+  local servers = require('lspinstall').installed_servers()
+  for _, server in pairs(servers) do
+    require('lspconfig')[server].setup{}
+  end
+end
+
+setup_servers()
+
+require('lspinstall').post_install_hook = function ()
+  setup_servers()
+  vim.cmd('bufdo e')
 end
