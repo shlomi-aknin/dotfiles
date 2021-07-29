@@ -20,10 +20,10 @@ function custom_actions.fzf_multi_select(prompt_bufnr)
     for _, entry in ipairs(picker:get_multi_selection()) do
       vim.cmd(string.format("%s %s", ":e!", entry.value))
     end
+    vim.cmd('stopinsert')
   else
     actions.file_edit(prompt_bufnr)
   end
-  vim.cmd('stopinsert')
 end
 
 require('telescope').setup {
