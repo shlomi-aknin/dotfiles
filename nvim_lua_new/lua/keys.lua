@@ -5,7 +5,7 @@ end
 map('i', '<A-h>', '<esc>i')
 map('i', '<A-j>', '<Down>')
 map('i', '<A-k>', '<Up>')
-map('i', '<A-k>', '<esc>0f):Lspsaga signature_help<cr>i')
+map('i', '<leader>/', '<esc>0f):Lspsaga signature_help<cr>i')
 map('i', '<A-l>', '<esc>la')
 map('i', '<C-j>', '<esc>:m .+1<cr>==gi')
 map('i', '<C-k>', '<esc>:m .-2<cr>==gi')

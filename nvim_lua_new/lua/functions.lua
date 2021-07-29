@@ -206,10 +206,10 @@ require('lspinstall').post_install_hook = function ()
 end
 
 vim.cmd([[
-augroup highlight_yank
-autocmd!
-au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
-augroup END
+  augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
+  augroup END
 ]])
 
 local Terminal  = require('toggleterm.terminal').Terminal
