@@ -167,6 +167,14 @@ require('compe').setup {
   };
 }
 
+local function t(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+-- function _G.smart_tab()
+--     return vim.fn.pumvisible() == 1 and t'<C-n>' or t'<Tab>'
+-- end
+
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t '<C-n>'
@@ -210,6 +218,7 @@ vim.cmd([[
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
   augroup END
+  au! BufNewFile,BufRead *.svelte set ft=html
 ]])
 
 local Terminal  = require('toggleterm.terminal').Terminal
@@ -222,3 +231,4 @@ local lazygit = Terminal:new({
 function _lazygit_toggle()
   lazygit:toggle()
 end
+

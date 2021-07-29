@@ -38,8 +38,8 @@ return require('packer').startup(function()
 	use 'windwp/nvim-ts-autotag'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
-	use {'dracula/vim', as = 'dracula'}
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-	use {'phaazon/hop.nvim', as = 'hop'}
+  use {'dracula/vim', as = 'dracula'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'phaazon/hop.nvim', as = 'hop'}
 end)
 
