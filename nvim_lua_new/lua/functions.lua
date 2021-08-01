@@ -93,19 +93,10 @@ require 'lsp_signature'.setup({
 })
 
 require('nvim-autopairs').setup()
-require('nvim-autopairs.completion.compe').setup({
-  map_cr = true,
-  map_complete = true
-})
-
+require('nvim-autopairs.completion.compe').setup({ map_cr = true, map_complete = true })
 require('hop').setup()
-require('nvim_comment').setup({
-  comment_empty = false,
-  create_mappings = false
-})
-
+require('nvim_comment').setup({ comment_empty = false, create_mappings = false })
 require('nvim-ts-autotag').setup()
-require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
 require('spectre').setup()
 require('goto-preview').setup {}
@@ -157,7 +148,7 @@ require('compe').setup({
   max_kind_width = 100;
   max_menu_width = 100;
   documentation = {
-    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
+    border = { '', '' ,'', ' ', '', '', '', '' }, -- the border option is the same as `|help nvim_open_win|`
     winhighlight = 'NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder',
     max_width = 120,
     min_width = 60,
@@ -183,9 +174,9 @@ end
 
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
-    return t '<C-n>'
+    return t('<C-n>')
   elseif check_back_space() then
-    return t '<Tab>'
+    return t('<Tab>')
   else
     return vim.fn['compe#complete']()
   end
@@ -193,10 +184,10 @@ end
 
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
-    return t '<C-p>'
+    return t('<C-p>')
   else
     -- If <S-Tab> is not working in your terminal, change it to <C-h>
-    return t '<S-Tab>'
+    return t('<S-Tab>')
   end
 end
 
