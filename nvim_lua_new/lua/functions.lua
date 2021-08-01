@@ -109,7 +109,7 @@ require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
 require('spectre').setup()
 require('goto-preview').setup {}
-require('autosave').setup()
+-- require('autosave').setup()
 require('specs').setup({ 
   show_jumps  = true,
   min_jump = 1,
@@ -243,6 +243,32 @@ require('lspkind').init({
       Struct = ''
     },
 })
+
+local prettier = function()
+  return {
+    exe = 'prettier',
+    args = {'--stdin-filepath', vim.api.nvim_buf_get_name(0), '--single-quote', '--quote-props "consistent"', '--trailing-comma "es5"'},
+    stdin = true
+  }
+end
+
+require('formatter').setup({
+  logging = false,
+  filetype = {
+    css = { prettier },
+    html = { prettier },
+    javascript = { prettier },
+    json = { prettier },
+    svelte = { prettier },
+  }
+})
+
+vim.api.nvim_exec([[
+  augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost *.css,*.html,*.javascript,*.json,*.svelte FormatWrite
+  augroup END
+]], true)
 
 vim.cmd([[
   augroup highlight_yank
