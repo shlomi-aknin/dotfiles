@@ -26,7 +26,7 @@ function custom_actions.fzf_multi_select(prompt_bufnr)
   end
 end
 
-require('telescope').setup {
+require('telescope').setup({
   defaults = {
     vimgrep_arguments = {
       '--color=always',
@@ -53,9 +53,9 @@ require('telescope').setup {
       }
     },
   }
-}
+})
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     icons_enabled = true,
     theme = 'dracula',
@@ -66,7 +66,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {'filename'},
+    lualine_c = {'filename', 'diff'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
@@ -81,29 +81,36 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {}
-}
+})
 
-require('bufferline').setup{
-  offsets = {{filetype = 'NvimTree', text = 'File Explorer', highlight = 'Directory', text_align = 'left'}}
-}
+require('bufferline').setup()
+require 'lsp_signature'.setup({
+  bind = true,
+  hi_parameter = 'PMenuSel',
+  handler_opts = {
+    border = 'shadow'
+  },
+})
 
 require('nvim-autopairs').setup()
 require('nvim-autopairs.completion.compe').setup({
   map_cr = true,
   map_complete = true
 })
+
 require('hop').setup()
 require('nvim_comment').setup({
   comment_empty = false,
   create_mappings = false
 })
+
 require('nvim-ts-autotag').setup()
 require('lspconfig').tsserver.setup{}
 require('lspsaga').init_lsp_saga()
 require('spectre').setup()
 require('goto-preview').setup {}
 require('autosave').setup()
-require('specs').setup{ 
+require('specs').setup({ 
   show_jumps  = true,
   min_jump = 1,
   popup = {
@@ -119,9 +126,9 @@ require('specs').setup{
   ignore_buftypes = {
     nofile = true,
   },
-}
+})
 
-require('gitsigns').setup{
+require('gitsigns').setup({
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
     change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
@@ -129,22 +136,22 @@ require('gitsigns').setup{
     topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
     changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
   }
-}
+})
 
 require('neoscroll').setup({
   hide_cursor = false,
   easing_function = 'circular',
 })
 
-require('compe').setup {
+require('compe').setup({
   enabled = true;
   autocomplete = true;
   debug = false;
   min_length = 1;
   preselect = 'enable';
-  throttle_time = 80;
+  throttle_time = 10;
   source_timeout = 200;
-  resolve_timeout = 800;
+  resolve_timeout = 10;
   incomplete_delay = 400;
   max_abbr_width = 100;
   max_kind_width = 100;
@@ -168,15 +175,11 @@ require('compe').setup {
     ultisnips = true;
     luasnip = true;
   };
-}
+})
 
 local function t(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
-
--- function _G.smart_tab()
---     return vim.fn.pumvisible() == 1 and t'<C-n>' or t'<Tab>'
--- end
 
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
@@ -215,6 +218,31 @@ require('lspinstall').post_install_hook = function ()
   setup_servers()
   vim.cmd('bufdo e')
 end
+
+require('lspkind').init({
+    symbol_map = {
+      Text = '',
+      Method = 'ƒ',
+      Function = '',
+      Constructor = '',
+      Variable = '',
+      Class = '',
+      Interface = 'ﰮ',
+      Module = '',
+      Property = '',
+      Unit = '',
+      Value = '',
+      Enum = '了',
+      Keyword = '',
+      Snippet = '﬌',
+      Color = '',
+      File = '',
+      Folder = '',
+      EnumMember = '',
+      Constant = '',
+      Struct = ''
+    },
+})
 
 vim.cmd([[
   augroup highlight_yank

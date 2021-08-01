@@ -6,8 +6,8 @@ vim.cmd[[
 	hi Folded guibg=#34a1eb guifg=#000000
 	hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
 	hi IncSearch guifg=#000000 guibg=#ffff00
-	hi IndentGuidesEven guibg=#9B5DE5
-	hi IndentGuidesOdd guibg=#F15BB5
+	hi IndentEven guibg=NONE
+	hi IndentOdd guibg=#001f33
 	hi Normal guifg=#E3F2FD guibg=#000000
 	hi PMenu guibg=#2176FF guifg=#ffffff
 	hi PMenuSel guibg=#ffffff guifg=#000000
