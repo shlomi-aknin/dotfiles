@@ -184,8 +184,6 @@ end
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t '<C-n>'
-  elseif vim.fn['vsnip#available'](1) == 1 then
-    return t '<Plug>(vsnip-expand-or-jump)'
   elseif check_back_space() then
     return t '<Tab>'
   else
@@ -196,8 +194,6 @@ end
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t '<C-p>'
-  elseif vim.fn['vsnip#jumpable'](-1) == 1 then
-    return t '<Plug>(vsnip-jump-prev)'
   else
     -- If <S-Tab> is not working in your terminal, change it to <C-h>
     return t '<S-Tab>'
@@ -243,32 +239,6 @@ require('lspkind').init({
       Struct = ''
     },
 })
-
-local prettier = function()
-  return {
-    exe = 'prettier',
-    args = {'--stdin-filepath', vim.api.nvim_buf_get_name(0), '--single-quote', '--quote-props "consistent"', '--trailing-comma "es5"'},
-    stdin = true
-  }
-end
-
-require('formatter').setup({
-  logging = false,
-  filetype = {
-    css = { prettier },
-    html = { prettier },
-    javascript = { prettier },
-    json = { prettier },
-    svelte = { prettier },
-  }
-})
-
-vim.api.nvim_exec([[
-  augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost *.css,*.html,*.javascript,*.json,*.svelte FormatWrite
-  augroup END
-]], true)
 
 vim.cmd([[
   augroup highlight_yank
