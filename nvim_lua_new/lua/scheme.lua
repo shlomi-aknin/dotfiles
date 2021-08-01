@@ -18,6 +18,6 @@ vim.cmd[[
 	hi jsComment guifg=#34a1eb gui=italic
 	hi jsString guifg=#ffff00
 	hi link Searchlight Folded
-  hi TelescopeMultiSelection gui=bold
+  hi TelescopeMultiSelection gui=bold guibg=#6272a4
   hi TelescopeNormal guibg=#282a36
 ]]
