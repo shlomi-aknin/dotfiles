@@ -41,6 +41,7 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'onsails/lspkind-nvim'
   use 'ray-x/lsp_signature.nvim'
+  use 'yamatsum/nvim-cursorline'
   use {'dracula/vim', as = 'dracula'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'phaazon/hop.nvim', as = 'hop'}

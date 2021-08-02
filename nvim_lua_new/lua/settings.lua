@@ -1,3 +1,4 @@
+vim.g.cursorword_highlight = false
 vim.g.mapleader = ' '
 vim.g.noswapfile = true
 vim.o.background = 'dark'

@@ -99,7 +99,7 @@ require('nvim_comment').setup({ comment_empty = false, create_mappings = false }
 require('nvim-ts-autotag').setup()
 require('lspsaga').init_lsp_saga()
 require('spectre').setup()
-require('goto-preview').setup {}
+require('goto-preview').setup()
 -- require('autosave').setup()
 require('specs').setup({ 
   show_jumps  = true,
