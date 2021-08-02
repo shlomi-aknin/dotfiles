@@ -14,6 +14,7 @@ vim.cmd [[autocmd BufWritePost minimal_init.lua PackerCompile]]
 vim.cmd [[autocmd BufWritePost minimal_init.lua PackerInstall]]
 
 return require('packer').startup(function()
+  use 'AndrewRadev/tagalong.vim'
 	use 'Pocco81/AutoSave.nvim'
 	use 'akinsho/nvim-bufferline.lua'
 	use 'akinsho/nvim-toggleterm.lua'
