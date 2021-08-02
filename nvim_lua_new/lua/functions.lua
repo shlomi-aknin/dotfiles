@@ -270,6 +270,6 @@ require('formatter').setup({
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.css,*.html,*.js FormatWrite
+  autocmd BufWritePost *.css,*.html,*.js,*.svelte FormatWrite
 augroup END
 ]], true)
