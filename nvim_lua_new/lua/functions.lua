@@ -250,3 +250,26 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
+local prettier = function()
+  return {
+    exe = 'prettier',
+    args = {'--stdin-filepath', vim.api.nvim_buf_get_name(0), '--single-quote'},
+    stdin = true
+  }
+end
+
+require('formatter').setup({
+  logging = false,
+  filetype = {
+    css = { prettier },
+    html = { prettier },
+    javascript = { prettier },
+  }
+})
+
+vim.api.nvim_exec([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost *.css,*.html,*.js FormatWrite
+augroup END
+]], true)
