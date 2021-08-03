@@ -273,3 +273,42 @@ augroup FormatAutogroup
   autocmd BufWritePost *.css,*.html,*.js,*.svelte FormatWrite
 augroup END
 ]], true)
+
+local NvimTreeSelectedFiles = {}
+
+function NvimTreeToggleFileSelected(pressed)
+  local lib = require('nvim-tree.lib')
+  local node = lib.get_node_at_cursor()
+  local line = vim.api.nvim_win_get_cursor(0)[1] - 1
+  local hl = {}
+  if node then
+    if NvimTreeSelectedFiles[node.name] == nil then
+      vim.api.nvim_buf_add_highlight(0, 0, 'NvimTreeOpenedFile', line, 0, -1)
+      NvimTreeSelectedFiles[node.name] = node.absolute_path
+    else
+      NvimTreeSelectedFiles[node.name] = nil
+      vim.api.nvim_buf_add_highlight(0, 0, 'Normal', line, 0, -1)
+    end
+  end
+  if pressed == 'j' then
+    vim.cmd('normal j')
+  elseif pressed == 'k' then
+    vim.cmd('normal k')
+  end
+end
+
+function NvimTreeOpenFiles()
+  local lib = require('nvim-tree.lib')
+  local node = lib.get_node_at_cursor()
+  local count = 0
+  for _,file in pairs(NvimTreeSelectedFiles) do
+    count = count + 1
+    vim.cmd(string.format('%s %s', ':e!', file))
+  end
+  if count == 0 then
+    vim.cmd(string.format('%s %s', ':e!', node.absolute_path))
+  end
+  NvimTreeSelectedFiles = {}
+  vim.cmd('NvimTreeClose')
+end
+
