@@ -9,7 +9,7 @@ vim.cmd[[
 	hi IncSearch guifg=#000000 guibg=#ffff00
 	hi IndentEven guibg=NONE
 	hi IndentOdd guibg=#001f33
-	hi Normal guifg=#E3F2FD guibg=#000000
+	hi Normal guifg=#E3F2FD guibg=#000000 gui=none cterm=none
 	hi PMenu guibg=#2176FF guifg=#ffffff
 	hi PMenuSel guibg=#ffffff guifg=#000000
 	hi Search guibg=#ffff00 guifg=#000000

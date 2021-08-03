@@ -301,14 +301,14 @@ function NvimTreeOpenFiles()
   local lib = require('nvim-tree.lib')
   local node = lib.get_node_at_cursor()
   local count = 0
+  vim.cmd('NvimTreeClose')
+  vim.cmd('enew')
   for _,file in pairs(NvimTreeSelectedFiles) do
     count = count + 1
     vim.cmd(string.format('%s %s', ':e!', file))
   end
   if count == 0 then
-    vim.cmd(string.format('%s %s', ':e!', node.absolute_path))
+    lib.open_file_in_tab(node.absolute_path)
   end
   NvimTreeSelectedFiles = {}
-  vim.cmd('NvimTreeClose')
 end
-

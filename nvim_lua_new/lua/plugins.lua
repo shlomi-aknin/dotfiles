@@ -41,7 +41,7 @@ return require('packer').startup(function()
 	use 'windwp/nvim-ts-autotag'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
-  use 'lukas-reineke/indent-blankline.nvim'
+  -- use 'lukas-reineke/indent-blankline.nvim'
   use 'onsails/lspkind-nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'yamatsum/nvim-cursorline'
