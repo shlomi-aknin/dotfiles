@@ -276,6 +276,12 @@ augroup END
 
 local NvimTreeSelectedFiles = {}
 
+function tablelength(T)
+  local count = 0
+  for _ in pairs(T) do count = count + 1 end
+  return count
+end
+
 function NvimTreeToggleFileSelected(pressed)
   local lib = require('nvim-tree.lib')
   local node = lib.get_node_at_cursor()
@@ -283,11 +289,11 @@ function NvimTreeToggleFileSelected(pressed)
   local hl = {}
   if node then
     if NvimTreeSelectedFiles[node.name] == nil then
-      vim.api.nvim_buf_add_highlight(0, 0, 'NvimTreeOpenedFile', line, 0, -1)
+      vim.api.nvim_buf_add_highlight(0, 0, 'NormalSelected', line, 0, -1)
       NvimTreeSelectedFiles[node.name] = node.absolute_path
     else
-      NvimTreeSelectedFiles[node.name] = nil
       vim.api.nvim_buf_add_highlight(0, 0, 'Normal', line, 0, -1)
+      NvimTreeSelectedFiles[node.name] = nil
     end
   end
   if pressed == 'j' then
@@ -299,16 +305,22 @@ end
 
 function NvimTreeOpenFiles()
   local lib = require('nvim-tree.lib')
+  local view = require('nvim-tree.view')
   local node = lib.get_node_at_cursor()
-  local count = 0
-  vim.cmd('NvimTreeClose')
-  vim.cmd('enew')
-  for _,file in pairs(NvimTreeSelectedFiles) do
-    count = count + 1
-    vim.cmd(string.format('%s %s', ':e!', file))
-  end
+  local count = tablelength(NvimTreeSelectedFiles)
+
   if count == 0 then
-    lib.open_file_in_tab(node.absolute_path)
+    if node.has_children ~= nil then
+      lib.unroll_dir(node)
+    else
+      lib.open_file_in_tab(node.absolute_path)
+    end
+  else
+    view.close()
+    vim.cmd('enew')
+    for _,file in pairs(NvimTreeSelectedFiles) do
+      vim.cmd(string.format('%s %s', ':e!', file))
+    end
+    NvimTreeSelectedFiles = {}
   end
-  NvimTreeSelectedFiles = {}
 end
