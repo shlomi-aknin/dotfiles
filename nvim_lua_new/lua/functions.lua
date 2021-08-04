@@ -286,13 +286,15 @@ function NvimTreeToggleFileSelected(pressed)
   local lib = require('nvim-tree.lib')
   local node = lib.get_node_at_cursor()
   local line = vim.api.nvim_win_get_cursor(0)[1] - 1
+  local linecolor = 'NormalSelected' .. tostring(line)
   local hl = {}
   if node then
     if NvimTreeSelectedFiles[node.name] == nil then
-      vim.api.nvim_buf_add_highlight(0, 0, 'NormalSelected', line, 0, -1)
+      vim.cmd('hi! '..linecolor..' guifg=#50fa7b gui=bold')
+      vim.api.nvim_buf_add_highlight(0, 0, linecolor, line, 0, -1)
       NvimTreeSelectedFiles[node.name] = node.absolute_path
     else
-      vim.api.nvim_buf_add_highlight(0, 0, 'Normal', line, 0, -1)
+      vim.cmd('hi! clear '..linecolor)
       NvimTreeSelectedFiles[node.name] = nil
     end
   end
