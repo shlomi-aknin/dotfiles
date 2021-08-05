@@ -14,7 +14,6 @@ vim.cmd [[autocmd BufWritePost minimal_init.lua PackerCompile]]
 vim.cmd [[autocmd BufWritePost minimal_init.lua PackerInstall]]
 
 return require('packer').startup(function()
-  use 'AndrewRadev/tagalong.vim'
 	use 'Pocco81/AutoSave.nvim'
 	use 'akinsho/nvim-bufferline.lua'
 	use 'akinsho/nvim-toggleterm.lua'
@@ -22,6 +21,8 @@ return require('packer').startup(function()
 	use 'glepnir/lspsaga.nvim'
 	use 'hoob3rt/lualine.nvim'
 	use 'hrsh7th/nvim-compe'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jose-elias-alvarez/nvim-lsp-ts-utils'
 	use 'kabouzeid/nvim-lspinstall'
 	use 'karb94/neoscroll.nvim'
 	use 'kyazdani42/nvim-tree.lua'
@@ -41,7 +42,7 @@ return require('packer').startup(function()
 	use 'windwp/nvim-ts-autotag'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
-  -- use 'lukas-reineke/indent-blankline.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
   use 'onsails/lspkind-nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'yamatsum/nvim-cursorline'
