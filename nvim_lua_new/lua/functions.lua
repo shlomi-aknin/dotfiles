@@ -26,6 +26,18 @@ function custom_actions.fzf_multi_select(prompt_bufnr)
   end
 end
 
+function custom_actions.yank_file()
+  local action_state = require('telescope.actions.state')
+  local entry = action_state.get_selected_entry()
+  copy_to_clipboard(entry.path)
+end
+
+function copy_to_clipboard(content)
+  vim.fn.setreg('+', content);
+  vim.fn.setreg('"', content);
+  return print(string.format('Copied %s to system clipboard! \n', content))
+end
+
 require('telescope').setup({
   defaults = {
     vimgrep_arguments = {
@@ -41,6 +53,7 @@ require('telescope').setup({
         ['<esc>'] = actions.close,
         ['<C-j>'] = actions.move_selection_next,
         ['<C-k>'] = actions.move_selection_previous,
+        ['<C-y>'] = custom_actions.yank_file,
         ['<tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<s-tab>'] = actions.toggle_selection + actions.move_selection_previous,
         ['<cr>'] = custom_actions.fzf_multi_select,
