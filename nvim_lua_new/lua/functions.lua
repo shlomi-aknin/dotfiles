@@ -172,15 +172,18 @@ require('compe').setup({
   };
 
   source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = true;
-    luasnip = true;
-    tabnine = true;
+    sort = { priority = 500; };
+    tags = { priority = 500; };
+    path = { priority = 500; };
+    buffer = { priority = 500; };
+    calc = { priority = 500; };
+    tabnine = { priority = 500; };
+    nvim_lsp = { priority = 500; };
+    nvim_lua = { priority = 500; };
+    ultisnips = { priority = 500; };
+    luasnip = { priority = 500; };
+    nvim_treesitter = { priority = 500; };
+    spell = { priority = 500; };
   };
 })
 
