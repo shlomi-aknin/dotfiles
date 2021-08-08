@@ -42,6 +42,7 @@ return require('packer').startup(function()
 	use 'windwp/nvim-spectre'
 	use 'windwp/nvim-ts-autotag'
   use 'SirVer/ultisnips'
+  use 'tzachar/compe-tabnine'
   use 'honza/vim-snippets'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'onsails/lspkind-nvim'
