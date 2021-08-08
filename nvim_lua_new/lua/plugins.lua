@@ -20,6 +20,7 @@ return require('packer').startup(function()
 	use 'edluffy/specs.nvim'
 	use 'glepnir/lspsaga.nvim'
 	use 'hoob3rt/lualine.nvim'
+  use 'honza/vim-snippets'
 	use 'hrsh7th/nvim-compe'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'jose-elias-alvarez/nvim-lsp-ts-utils'
