@@ -1,55 +1,52 @@
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
-local install_path = '~/.local/share/nvim/site/pack/packer/opt/'
-local install_fpath = install_path .. 'packer.nvim'
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
-if fn.empty(fn.glob(install_fpath)) > 0 then
-  execute('!mkdir -p ' .. install_path)
-  execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_fpath)
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+  execute('packadd packer.nvim')
 end
 
-vim.cmd [[packadd packer.nvim]]
-vim.cmd [[autocmd BufWritePost minimal_init.lua PackerCompile]]
-vim.cmd [[autocmd BufWritePost minimal_init.lua PackerInstall]]
+local packer = require('packer')
+local use = packer.use
 
-return require('packer').startup(function()
-	use 'Pocco81/AutoSave.nvim'
-	use 'akinsho/nvim-bufferline.lua'
-	use 'akinsho/nvim-toggleterm.lua'
-	use 'edluffy/specs.nvim'
-	use 'glepnir/lspsaga.nvim'
-	use 'hoob3rt/lualine.nvim'
-  use 'honza/vim-snippets'
-	use 'hrsh7th/nvim-compe'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'jose-elias-alvarez/nvim-lsp-ts-utils'
-	use 'kabouzeid/nvim-lspinstall'
-	use 'karb94/neoscroll.nvim'
-	use 'kyazdani42/nvim-tree.lua'
-	use 'kyazdani42/nvim-web-devicons'
-  use 'leafOfTree/vim-matchtag'
-	use 'lewis6991/gitsigns.nvim'
-  use 'mhartington/formatter.nvim'
-	use 'neovim/nvim-lspconfig'
-	use 'nvim-lua/plenary.nvim'
-	use 'nvim-lua/popup.nvim'
-	use 'nvim-telescope/telescope.nvim'
-	use 'rmagatti/goto-preview'
-	use 'terrortylor/nvim-comment'
-	use 'wbthomason/packer.nvim'
-	use 'windwp/nvim-autopairs'
-	use 'windwp/nvim-spectre'
-	use 'windwp/nvim-ts-autotag'
-  use 'SirVer/ultisnips'
-  use 'tzachar/compe-tabnine'
-  use 'honza/vim-snippets'
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'onsails/lspkind-nvim'
-  use 'ray-x/lsp_signature.nvim'
-  use 'yamatsum/nvim-cursorline'
+packer.startup(function()
+	use {'akinsho/nvim-bufferline.lua'}
+	use {'akinsho/nvim-toggleterm.lua'}
+	use {'edluffy/specs.nvim'}
+	use {'glepnir/lspsaga.nvim'}
+	use {'hoob3rt/lualine.nvim'}
+	use {'hrsh7th/nvim-compe'}
+	use {'kabouzeid/nvim-lspinstall'}
+	use {'karb94/neoscroll.nvim'}
+	use {'kyazdani42/nvim-tree.lua'}
+	use {'kyazdani42/nvim-web-devicons'}
+	use {'lewis6991/gitsigns.nvim'}
+	use {'neovim/nvim-lspconfig'}
+	use {'nvim-lua/plenary.nvim'}
+	use {'nvim-lua/popup.nvim'}
+	use {'nvim-telescope/telescope.nvim'}
+	use {'pocco81/autosave.nvim'}
+	use {'rmagatti/goto-preview'}
+	use {'terrortylor/nvim-comment'}
+	use {'wbthomason/packer.nvim'}
+	use {'windwp/nvim-autopairs'}
+	use {'windwp/nvim-spectre'}
+	use {'windwp/nvim-ts-autotag'}
   use {'dracula/vim', as = 'dracula'}
+  use {'honza/vim-snippets'}
+  use {'jose-elias-alvarez/null-ls.nvim'}
+  use {'jose-elias-alvarez/nvim-lsp-ts-utils'}
+  use {'leafoftree/vim-matchtag'}
+  use {'lukas-reineke/indent-blankline.nvim'}
+  use {'mhartington/formatter.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'onsails/lspkind-nvim'}
   use {'phaazon/hop.nvim', as = 'hop'}
+  use {'ray-x/lsp_signature.nvim'}
+  use {'sirver/ultisnips'}
+  use {'tzachar/compe-tabnine'}
+  use {'yamatsum/nvim-cursorline'}
 end)
 
