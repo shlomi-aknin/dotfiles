@@ -19,6 +19,8 @@ packer.startup(function()
 	use {'glepnir/lspsaga.nvim'}
 	use {'hoob3rt/lualine.nvim'}
 	use {'hrsh7th/nvim-compe'}
+  use {'hrsh7th/vim-vsnip'}
+  use {'hrsh7th/vim-vsnip-integ'}
 	use {'kabouzeid/nvim-lspinstall'}
 	use {'karb94/neoscroll.nvim'}
 	use {'kyazdani42/nvim-tree.lua'}
@@ -29,6 +31,7 @@ packer.startup(function()
 	use {'nvim-lua/popup.nvim'}
 	use {'nvim-telescope/telescope.nvim'}
 	use {'pocco81/autosave.nvim'}
+	use {'rafamadriz/friendly-snippets'}
 	use {'rmagatti/goto-preview'}
   use {'stevearc/aerial.nvim'}
 	use {'terrortylor/nvim-comment'}
