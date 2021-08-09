@@ -29,6 +29,7 @@ packer.startup(function()
 	use {'nvim-telescope/telescope.nvim'}
 	use {'pocco81/autosave.nvim'}
 	use {'rmagatti/goto-preview'}
+  use {'stevearc/aerial.nvim'}
 	use {'terrortylor/nvim-comment'}
 	use {'wbthomason/packer.nvim'}
 	use {'windwp/nvim-autopairs'}
