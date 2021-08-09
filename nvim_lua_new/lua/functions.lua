@@ -98,6 +98,7 @@ require('lualine').setup({
   extensions = {}
 })
 
+require('stay-centered')
 require('bufferline').setup()
 require 'lsp_signature'.setup({
   bind = true,

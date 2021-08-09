@@ -14,6 +14,7 @@ local use = packer.use
 packer.startup(function()
 	use {'akinsho/nvim-bufferline.lua'}
 	use {'akinsho/nvim-toggleterm.lua'}
+  use {'arnamak/stay-centered.nvim'}
 	use {'edluffy/specs.nvim'}
 	use {'glepnir/lspsaga.nvim'}
 	use {'hoob3rt/lualine.nvim'}
