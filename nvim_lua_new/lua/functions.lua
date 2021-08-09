@@ -180,7 +180,7 @@ require('compe').setup({
     vsnip = { priority = 500; };
     ultisnips = { priority = 500; };
     tabnine = { priority = 500; };
-    -- nvim_lsp = { priority = 500; };
+    nvim_lsp = { priority = 500; };
     -- nvim_lua = { priority = 500; };
     -- luasnip = { priority = 500; };
     -- nvim_treesitter = { priority = 500; };
