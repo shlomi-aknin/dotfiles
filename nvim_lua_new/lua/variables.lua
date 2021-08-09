@@ -16,7 +16,7 @@ vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_ignore = {'.git', 'node_modules', '.cache'}
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_quit_on_open = 1
-vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets/**/snippets'
+vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 vim.g.nvim_tree_bindings = {
   { key = 'l', cb = tree_cb('edit') },
   { key = 'h', cb = tree_cb('close_node') },
