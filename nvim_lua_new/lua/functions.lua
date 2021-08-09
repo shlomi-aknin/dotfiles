@@ -329,6 +329,7 @@ vim.cmd([[
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
   augroup END
+  autocmd BufWritePre * :%s/\s\+$//e
 ]])
 
 require('nvim-treesitter.configs').setup({
