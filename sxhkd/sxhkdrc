@@ -103,7 +103,7 @@ super + z
 
 # browser
 super + b
-  chromium-browser --force-device-scale-factor=1.5
+  chromium-browser --force-device-scale-factor=1.2
   # GTK_THEME=Mojave-dark:dark firefox
 
 # slimlock
