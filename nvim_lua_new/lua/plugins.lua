@@ -50,6 +50,7 @@ packer.startup(function()
   use {'phaazon/hop.nvim', as = 'hop'}
   use {'prettier/vim-prettier', run = 'npm i'}
   use {'ray-x/lsp_signature.nvim'}
+  use {'rrethy/vim-hexokinasel', run = 'make hexokinase'}
   use {'sirver/ultisnips'}
   use {'tzachar/compe-tabnine'}
   use {'yamatsum/nvim-cursorline'}

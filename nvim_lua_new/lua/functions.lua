@@ -341,6 +341,15 @@ vim.cmd([[
   autocmd BufWritePre * :%s/\s\+$//e
   autocmd BufEnter *.{css,html,js,svelte} :syntax sync fromstart
   autocmd BufLeave *.{css,html,js,svelte} :syntax sync clear
+  let g:prettier#autoformat_require_pragma = 0
+  let g:prettier#exec_cmd_async = 1
+  let g:prettier#quickfix_enabled = 0
+  let g:Hexokinase_highlighters = ['backgroundfull']
+  let g:Hexokinase_optInPatterns = [ 'full_hex', 'triple_hex', 'rgb', 'rgba', 'hsl', 'hsla', 'colour_names' ]
+  augroup FormatAutogroup
+  autocmd BufWritePost *.{css,html,js,svelte} PrettierAsync
+  autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
+  augroup END
 ]])
 
 require('nvim-treesitter.configs').setup({
@@ -366,18 +375,6 @@ local lazygit = Terminal:new({
 function _lazygit_toggle()
   lazygit:toggle()
 end
-
-vim.api.nvim_exec([[
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#exec_cmd_async = 1
-let g:prettier#quickfix_enabled = 0
-augroup FormatAutogroup
-  autocmd BufWritePost *.css,*.html,*.js,*.svelte PrettierAsync
-  autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
-augroup END
-]], true)
-
-
 
 local NvimTreeSelectedFiles = {}
 
