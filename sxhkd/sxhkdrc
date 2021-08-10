@@ -24,7 +24,8 @@ super + n
 
 # compose new email
 super + shift + n
-    firefox -new-tab "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
+    alacritty -e neomutt
+    # firefox -new-tab "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
 
 # dmenu web search
 super + s
@@ -66,7 +67,7 @@ super + d ; {0-9}
 
 # gmail, drive
 {XF86Mail,XF86HomePage}
-	firefox {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
+	chromium-browser {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
 
 # reboot, poweroff
 super + shift + {F1,F2}
@@ -102,8 +103,8 @@ super + z
 
 # browser
 super + b
-    GTK_THEME=Mojave-dark:dark firefox
-#	chromium --force-device-scale-factor=1.5
+  chromium-browser --force-device-scale-factor=1.5
+  # GTK_THEME=Mojave-dark:dark firefox
 
 # slimlock
 super + shift + BackSpace
