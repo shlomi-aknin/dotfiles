@@ -48,7 +48,7 @@ require('telescope').setup({
       preview_width = 0.6
     },
     file_ignore_patterns = { "node_modules", ".git" },
-    mappings = { 
+    mappings = {
       i = {
         ['<esc>'] = actions.close,
         ['<C-j>'] = actions.move_selection_next,
@@ -119,12 +119,12 @@ require('goto-preview').setup()
 require('null-ls').config({})
 require('lspconfig')['null-ls'].setup({})
 -- require('autosave').setup()
-require('specs').setup({ 
+require('specs').setup({
   show_jumps  = true,
   min_jump = 1,
   popup = {
     delay_ms = 0, -- delay before popup displays
-    inc_ms = 10, -- time increments used for fade/resize effects 
+    inc_ms = 10, -- time increments used for fade/resize effects
     blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
     width = 100,
     winhl = 'PMenu',
@@ -223,18 +223,18 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
 
-if not lspconfig.emmet_ls then    
-  configs.emmet_ls = {    
-    default_config = {    
+if not lspconfig.emmet_ls then
+  configs.emmet_ls = {
+    default_config = {
       cmd = {'emmet-ls', '--stdio'},
       filetypes = {'html', 'css', 'svelte'},
-      root_dir = function(fname)    
+      root_dir = function(fname)
         return vim.loop.cwd()
       end,
       settings = {},
     }
   }
-end    
+end
 lspconfig.emmet_ls.setup({ capabilities = capabilities; })
 
 require('lspconfig').tsserver.setup({
@@ -344,7 +344,7 @@ vim.cmd([[
 ]])
 
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'typescript' }, 
+  ensure_installed = { 'typescript' },
   highlight = {
     enable = true,
   },
@@ -367,30 +367,17 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-local prettier = function()
-  return {
-    exe = 'prettier',
-    args = {'--stdin-filepath', vim.api.nvim_buf_get_name(0), '--single-quote'},
-    stdin = true
-  }
-end
-
-require('formatter').setup({
-  logging = false,
-  filetype = {
-    css = { prettier },
-    html = { prettier },
-    javascript = { prettier },
-    svelte = { prettier },
-  }
-})
-
 vim.api.nvim_exec([[
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#exec_cmd_async = 1
+let g:prettier#quickfix_enabled = 0
 augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost *.css,*.html,*.js,*.svelte FormatWrite
+  autocmd BufWritePost *.css,*.html,*.js,*.svelte PrettierAsync
+  autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
 augroup END
 ]], true)
+
+
 
 local NvimTreeSelectedFiles = {}
 

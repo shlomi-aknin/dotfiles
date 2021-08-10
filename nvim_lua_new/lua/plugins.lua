@@ -45,10 +45,10 @@ packer.startup(function()
   use {'jose-elias-alvarez/nvim-lsp-ts-utils'}
   use {'leafoftree/vim-matchtag'}
   use {'lukas-reineke/indent-blankline.nvim'}
-  use {'mhartington/formatter.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'onsails/lspkind-nvim'}
   use {'phaazon/hop.nvim', as = 'hop'}
+  use {'prettier/vim-prettier', run = 'npm i'}
   use {'ray-x/lsp_signature.nvim'}
   use {'sirver/ultisnips'}
   use {'tzachar/compe-tabnine'}
