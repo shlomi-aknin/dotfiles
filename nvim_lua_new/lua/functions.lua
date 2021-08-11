@@ -354,6 +354,9 @@ vim.cmd([[
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = { 'typescript' },
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+  },
   highlight = {
     enable = true,
   },
