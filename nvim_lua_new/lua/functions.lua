@@ -108,6 +108,7 @@ require 'lsp_signature'.setup({
   },
 })
 
+require('colorizer').setup()
 require('nvim-autopairs').setup()
 require('nvim-autopairs.completion.compe').setup({ map_cr = true, map_complete = true })
 require('hop').setup()
@@ -344,8 +345,6 @@ vim.cmd([[
   let g:prettier#autoformat_require_pragma = 0
   let g:prettier#exec_cmd_async = 1
   let g:prettier#quickfix_enabled = 0
-  let g:Hexokinase_highlighters = ['backgroundfull']
-  let g:Hexokinase_optInPatterns = [ 'full_hex', 'triple_hex', 'rgb', 'rgba', 'hsl', 'hsla', 'colour_names' ]
   augroup FormatAutogroup
   autocmd BufWritePost *.{css,html,js,svelte} PrettierAsync
   autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
