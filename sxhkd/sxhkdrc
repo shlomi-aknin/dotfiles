@@ -103,7 +103,7 @@ super + z
 
 # browser
 super + b
-  GTK_THEME=Arc-Dark:dark google-chrome-stable --force-device-scale-factor=1.2
+  google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
   # GTK_THEME=Mojave-dark:dark firefox
 
 # slimlock
