@@ -33,6 +33,7 @@ packer.startup(function()
 	use {'nvim-lua/popup.nvim'}
 	use {'nvim-telescope/telescope.nvim'}
 	use {'pocco81/autosave.nvim'}
+	use {'pseewald/vim-anyfold'}
 	use {'rafamadriz/friendly-snippets'}
 	use {'rmagatti/goto-preview'}
   use {'stevearc/aerial.nvim'}

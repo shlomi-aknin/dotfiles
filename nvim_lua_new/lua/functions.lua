@@ -336,11 +336,13 @@ require('lspkind').init({
 })
 
 vim.cmd([[
+  set foldlevel=99
   augroup highlight_yank
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
   augroup END
   autocmd BufWritePre * :%s/\s\+$//e
+  autocmd Filetype * AnyFoldActivate
   autocmd BufEnter *.{css,html,js,svelte} :syntax sync fromstart
   autocmd BufLeave *.{css,html,js,svelte} :syntax sync clear
   let g:prettier#autoformat_require_pragma = 0
