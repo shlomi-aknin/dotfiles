@@ -108,6 +108,7 @@ require 'lsp_signature'.setup({
   },
 })
 
+require('numb').setup()
 require('colorizer').setup()
 require('nvim-autopairs').setup()
 require('nvim-autopairs.completion.compe').setup({ map_cr = true, map_complete = true })
