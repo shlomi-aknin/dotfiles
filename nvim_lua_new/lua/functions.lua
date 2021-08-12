@@ -99,8 +99,49 @@ require('lualine').setup({
 })
 
 require('stay-centered')
-require('bufferline').setup()
-require 'lsp_signature'.setup({
+require('bufferline').setup({
+  options = {
+    indicator_icon = '',
+    separator_style = { '', '' },
+    enforce_regular_tabs = true,
+    show_close_icon = false,
+    buffer_close_icon = '',
+    offsets = {{filetype = 'NvimTree', text = 'File Explorer', text_align = 'center'}},
+  },
+  highlights = {
+    tab = {
+      guifg = '#ffffff',
+      guibg = '#000000'
+    },
+    tab_selected = {
+      guifg = 'MatchParen',
+      guibg = 'MatchParen'
+    },
+    buffer_visible = {
+      guifg = '#ffffff',
+      guibg = '#000000'
+    },
+    buffer_selected = {
+      guifg = '#ffffff',
+      guibg = '#2176FF',
+      gui = 'bold,italic'
+    },
+    separator_selected = {
+      guifg = '#2176FF',
+      guibg = '#2176FF',
+    },
+    separator_visible = {
+      guifg = '#2176FF',
+      guibg = '#2176FF',
+    },
+    separator = {
+      guifg = '#2176FF',
+      guibg = '#2176FF',
+    },
+  }
+})
+
+require('lsp_signature').setup({
   bind = true,
   hi_parameter = 'PMenuSel',
   handler_opts = {
