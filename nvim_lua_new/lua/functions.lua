@@ -424,6 +424,13 @@ vim.cmd([[
   autocmd BufWritePost *.{css,html,js,svelte} PrettierAsync
   autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
   augroup END
+  function! ToggleQuickFix()
+      if empty(filter(getwininfo(), 'v:val.quickfix'))
+          copen
+      else
+          cclose
+      endif
+  endfunction
 ]])
 
 require('nvim-treesitter.configs').setup({
