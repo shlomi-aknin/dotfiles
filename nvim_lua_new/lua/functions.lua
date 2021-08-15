@@ -38,6 +38,13 @@ function copy_to_clipboard(content)
   return print(string.format('Copied %s to system clipboard! \n', content))
 end
 
+function spectre_open_all()
+  local entries = require('spectre.actions').get_all_entries()
+  for _,entry in pairs(entries) do
+    vim.cmd(string.format('%s %s', ':e!', entry.filename))
+  end
+end
+
 require('spectre').setup({
   color_devicons = true,
   line_sep_start = '******************************************',
@@ -53,6 +60,11 @@ require('spectre').setup({
         map = 'R',
         cmd = '<cmd>lua require("spectre.actions").run_replace()<CR>',
         desc = 'replace all'
+    },
+    ['enter_file'] = {
+        map = '<cr>',
+        cmd = '<cmd>lua spectre_open_all()<cr>',
+        desc = 'goto current file'
     },
   },
 })
