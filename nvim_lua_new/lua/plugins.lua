@@ -16,9 +16,7 @@ packer.startup(function()
 	use {'akinsho/nvim-toggleterm.lua'}
 	use {'andymass/vim-matchup'}
   use {'arnamak/stay-centered.nvim'}
-  use {'dyng/ctrlsf.vim'}
 	use {'edluffy/specs.nvim'}
-  use {'eugen0329/vim-esearch'}
 	use {'glepnir/lspsaga.nvim'}
 	use {'hoob3rt/lualine.nvim'}
 	use {'hrsh7th/nvim-compe'}
@@ -57,6 +55,7 @@ packer.startup(function()
   use {'norcalli/nvim-colorizer.lua'}
   use {'sirver/ultisnips'}
   use {'tzachar/compe-tabnine'}
+  use {'windwp/nvim-spectre'}
   use {'yamatsum/nvim-cursorline'}
 end)
 

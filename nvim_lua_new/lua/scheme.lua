@@ -6,7 +6,7 @@ vim.cmd[[
   hi CursorWord gui=NONE guibg=#6272a4
   hi Folded guibg=#34a1eb guifg=#000000
   hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
-  hi IncSearch guifg=#000000 guibg=#ffff00
+  hi IncSearch guifg=#000000 guibg=#FEA82F
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold,underline
@@ -14,14 +14,15 @@ vim.cmd[[
   hi NormalSelected guifg=#50fa7b gui=bold
   hi PMenu guibg=#2176FF guifg=#ffffff
   hi PMenuSel guibg=#ffffff guifg=#000000
-  hi Search guibg=#ffff00 guifg=#000000
+  hi Search guifg=#000000 guibg=#FEA82F
   hi String guifg=#34a1eb
+  hi TelescopeNormal guibg=#282a36
   hi javaScriptLineComment guifg=#34a1eb gui=italic
   hi javaScriptStringS guifg=#2DE1FC
   hi jsComment guifg=#34a1eb gui=italic
   hi jsString guifg=#ffff00
   hi link Searchlight Folded
   hi link TelescopeMultiSelection NormalSelected
-  hi TelescopeNormal guibg=#282a36
 ]]
+
 

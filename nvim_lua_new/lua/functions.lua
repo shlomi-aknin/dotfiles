@@ -38,16 +38,35 @@ function copy_to_clipboard(content)
   return print(string.format('Copied %s to system clipboard! \n', content))
 end
 
+require('spectre').setup({
+  color_devicons = true,
+  line_sep_start = '******************************************',
+  result_padding = '~>  ',
+  line_sep       = '******************************************',
+  highlight = {
+      ui = 'String',
+      search = 'Search',
+      replace = 'Folded'
+  },
+  mapping = {
+    ['run_replace'] = {
+        map = 'R',
+        cmd = '<cmd>lua require("spectre.actions").run_replace()<CR>',
+        desc = 'replace all'
+    },
+  },
+})
+
 require('telescope').setup({
   defaults = {
     vimgrep_arguments = {
       '--color=always',
     },
-    prompt_prefix = "@ ",
+    prompt_prefix = '@ ',
     layout_config = {
       preview_width = 0.6
     },
-    file_ignore_patterns = { "node_modules", ".git" },
+    file_ignore_patterns = { 'node_modules', '.git' },
     mappings = {
       i = {
         ['<esc>'] = actions.close,
@@ -186,7 +205,8 @@ require('gitsigns').setup({
     delete       = {hl = 'GitSignsDelete', text = '-', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
     topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
     changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-  }
+  },
+  keymaps = {}
 })
 
 require('neoscroll').setup({
