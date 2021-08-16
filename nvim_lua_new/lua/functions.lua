@@ -99,8 +99,6 @@ require('telescope').setup({
   }
 })
 
-require('telescope').load_extension('aerial')
-
 require('lualine').setup({
   options = {
     icons_enabled = true,
@@ -314,7 +312,6 @@ lspconfig.emmet_ls.setup({ capabilities = capabilities; })
 require('lspconfig').tsserver.setup({
   capabilities = capabilities,
   on_attach = function(client, bufnr)
-    require('aerial').on_attach(client)
     client.resolved_capabilities.document_formatting = false
 
     local ts_utils = require('nvim-lsp-ts-utils')
