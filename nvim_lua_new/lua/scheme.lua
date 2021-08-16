@@ -6,6 +6,9 @@ vim.cmd[[
   hi CursorWord gui=underline
   hi Folded guibg=#34a1eb guifg=#000000
   hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
+  hi HopNextKey guifg=#f7wf38
+  hi HopNextKey1 guifg=#f7wf38
+  hi HopNextKey2 guifg=#f7wf38
   hi IncSearch guifg=#000000 guibg=#FEA82F
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
