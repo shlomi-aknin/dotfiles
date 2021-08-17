@@ -192,11 +192,11 @@ require('lspconfig')['null-ls'].setup({})
 -- require('autosave').setup()
 require('specs').setup({
   show_jumps  = true,
-  min_jump = 1,
+  min_jump = 5,
   popup = {
     delay_ms = 0, -- delay before popup displays
-    inc_ms = 10, -- time increments used for fade/resize effects
-    blend = 10, -- starting blend, between 0-100 (fully transparent), see :h winblend
+    inc_ms = 15, -- time increments used for fade/resize effects
+    blend = 5, -- starting blend, between 0-100 (fully transparent), see :h winblend
     width = 100,
     winhl = 'PMenu',
     fader = require('specs').pulse_fader,
