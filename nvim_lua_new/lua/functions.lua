@@ -419,7 +419,6 @@ vim.cmd([[
   let g:prettier#quickfix_enabled = 0
   augroup FormatAutogroup
   autocmd BufWritePost *.{css,html,js,svelte} PrettierAsync
-  autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
   augroup END
   function! ToggleQuickFix()
       if empty(filter(getwininfo(), 'v:val.quickfix'))
@@ -429,6 +428,8 @@ vim.cmd([[
       endif
   endfunction
 ]])
+
+-- autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = { 'typescript' },
