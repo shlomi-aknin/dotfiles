@@ -127,20 +127,15 @@ require('lualine').setup({
   extensions = {}
 })
 
-require('stay-centered')
 require('buftabline').setup({
-  tab_format = ' #{i} #{b}#{f} ',
+  tab_format = ' #{i} #{b}#{f}  ',
+  icon_colors = 'normal',
   go_to_maps = false,
   hlgroups = {
     current = 'TabLineSel',
     normal = 'TabLine',
-    active = 'TabLineActive',
-    spacing = nil,
     modified_current = 'TabLineModCur',
     modified_normal = 'TabLineModNorm',
-    modified_active = nil,
-    tabpage_current = nil,
-    tabpage_normal = nil
   },
 })
 
@@ -152,6 +147,7 @@ require('lsp_signature').setup({
   },
 })
 
+require('stay-centered')
 require('numb').setup()
 require('colorizer').setup()
 require('nvim-autopairs').setup()
