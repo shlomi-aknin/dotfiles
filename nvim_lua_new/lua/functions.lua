@@ -128,46 +128,20 @@ require('lualine').setup({
 })
 
 require('stay-centered')
-require('bufferline').setup({
-  options = {
-    indicator_icon = '',
-    separator_style = { '', '' },
-    enforce_regular_tabs = true,
-    show_close_icon = false,
-    buffer_close_icon = '',
-    offsets = {{filetype = 'NvimTree', text = 'File Explorer', text_align = 'center'}},
+require('buftabline').setup({
+  tab_format = ' #{i} #{b}#{f} ',
+  go_to_maps = false,
+  hlgroups = {
+    current = 'TabLineSel',
+    normal = 'TabLine',
+    active = 'TabLineActive',
+    spacing = nil,
+    modified_current = 'TabLineModCur',
+    modified_normal = 'TabLineModNorm',
+    modified_active = nil,
+    tabpage_current = nil,
+    tabpage_normal = nil
   },
-  highlights = {
-    tab = {
-      guifg = '#ffffff',
-      guibg = '#000000'
-    },
-    tab_selected = {
-      guifg = 'MatchParen',
-      guibg = 'MatchParen'
-    },
-    buffer_visible = {
-      guifg = '#ffffff',
-      guibg = '#000000'
-    },
-    buffer_selected = {
-      guifg = '#ffffff',
-      guibg = '#2176FF',
-      gui = 'bold,italic'
-    },
-    separator_selected = {
-      guifg = '#2176FF',
-      guibg = '#2176FF',
-    },
-    separator_visible = {
-      guifg = '#2176FF',
-      guibg = '#2176FF',
-    },
-    separator = {
-      guifg = '#2176FF',
-      guibg = '#2176FF',
-    },
-  }
 })
 
 require('lsp_signature').setup({

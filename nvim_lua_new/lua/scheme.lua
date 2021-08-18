@@ -19,6 +19,9 @@ vim.cmd[[
   hi PMenuSel guibg=#ffffff guifg=#000000
   hi Search guifg=#000000 guibg=#FEA82F
   hi String guifg=#34a1eb
+  hi TabLineModCur guibg=#50fa7b guifg=#000000 gui=bold
+  hi TabLineModNorm guibg=#50fa7b guifg=#000000 gui=bold
+  hi TabLineSel guibg=#34a1eb guifg=#000000
   hi TelescopeNormal guibg=#282a36
   hi javaScriptLineComment guifg=#34a1eb gui=italic
   hi javaScriptStringS guifg=#2DE1FC
