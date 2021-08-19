@@ -32,6 +32,7 @@ packer.startup(function()
 	use {'pseewald/vim-anyfold'}
 	use {'rafamadriz/friendly-snippets'}
 	use {'rmagatti/goto-preview'}
+  use {'tpope/vim-surround'}
 	use {'terrortylor/nvim-comment'}
 	use {'wbthomason/packer.nvim'}
 	use {'windwp/nvim-autopairs'}
