@@ -159,6 +159,7 @@ require('lspsaga').init_lsp_saga()
 require('goto-preview').setup()
 require('null-ls').config({})
 require('lspconfig')['null-ls'].setup({})
+require('nvim-tree.view').View.winopts.relativenumber = true
 -- require('autosave').setup()
 require('specs').setup({
   show_jumps  = true,
@@ -376,6 +377,7 @@ require('lspkind').init({
 
 vim.cmd([[
   set foldlevel=99
+  au BufWinEnter NvimTree setlocal rnu
   augroup highlight_yank
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
