@@ -142,6 +142,9 @@ require('buftabline').setup({
 require('lsp_signature').setup({
   bind = true,
   hi_parameter = 'PMenuSel',
+  fix_pos = true,
+  padding = ' ',
+  zindex = 50,
   handler_opts = {
     border = 'shadow'
   },
@@ -284,7 +287,6 @@ require('lspconfig').tsserver.setup({
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
-
     local ts_utils = require('nvim-lsp-ts-utils')
 
     -- defaults
@@ -334,6 +336,8 @@ require('lspconfig').tsserver.setup({
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', ':TSLspImportAll<CR>', opts)
   end
 })
+
+
 
 local function setup_servers()
   require('lspinstall').setup()

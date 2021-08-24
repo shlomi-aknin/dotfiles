@@ -46,7 +46,7 @@ packer.startup(function()
   use {'jose-elias-alvarez/null-ls.nvim'}
   use {'jose-elias-alvarez/nvim-lsp-ts-utils'}
   use {'leafoftree/vim-matchtag'}
-  use {'lukas-reineke/indent-blankline.nvim'}
+  -- use {'lukas-reineke/indent-blankline.nvim'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'onsails/lspkind-nvim'}
