@@ -129,6 +129,8 @@ require('lualine').setup({
 
 require('tabline').setup({
   enable = true,
+  tabline_show_devicons = true,
+  tabline_show_filename_only = true,
   options = {
     section_separators = {'', ''},
     component_separators = {'', ''},
