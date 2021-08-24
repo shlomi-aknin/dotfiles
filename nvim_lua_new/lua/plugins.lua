@@ -20,6 +20,7 @@ packer.startup(function()
 	use {'hrsh7th/nvim-compe'}
 	use {'kabouzeid/nvim-lspinstall'}
 	use {'karb94/neoscroll.nvim'}
+  use {'kdheepak/tabline.nvim'}
 	use {'kyazdani42/nvim-tree.lua'}
 	use {'kyazdani42/nvim-web-devicons'}
 	use {'lewis6991/gitsigns.nvim'}
@@ -42,7 +43,6 @@ packer.startup(function()
   use {'honza/vim-snippets'}
   use {'hrsh7th/vim-vsnip'}
   use {'hrsh7th/vim-vsnip-integ'}
-  use {'jose-elias-alvarez/buftabline.nvim'}
   use {'jose-elias-alvarez/null-ls.nvim'}
   use {'jose-elias-alvarez/nvim-lsp-ts-utils'}
   use {'leafoftree/vim-matchtag'}

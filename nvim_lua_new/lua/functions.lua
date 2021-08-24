@@ -127,16 +127,12 @@ require('lualine').setup({
   extensions = {}
 })
 
-require('buftabline').setup({
-  tab_format = ' #{i} #{b}#{f}  ',
-  icon_colors = 'normal',
-  go_to_maps = false,
-  hlgroups = {
-    current = 'TabLineSel',
-    normal = 'TabLine',
-    modified_current = 'TabLineModCur',
-    modified_normal = 'TabLineModNorm',
-  },
+require('tabline').setup({
+  enable = true,
+  options = {
+    section_separators = {'', ''},
+    component_separators = {'', ''},
+  }
 })
 
 require('lsp_signature').setup({
