@@ -30,6 +30,7 @@
   "vim.highlightedyank.textColor": "#000000",
   "vim.hlsearch": true,
   "vim.smartRelativeLine": true,
+  "vim.searchHighlightColor": "#34a1eb90",
   "vim.useSystemClipboard": true,
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 2,
@@ -40,6 +41,14 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d", "w"],
+      "after": ["d", "i", "w"],
+    },
+    {
+      "before": ["c", "w"],
+      "after": ["c", "i", "w"],
+    },
     {
       "before": ["%"],
       "commands": ["extension.matchitJumpItems"],
@@ -62,7 +71,7 @@
     },
     {
       "before": ["<space>", "t"],
-      "commands": ["workbench.action.terminal.toggleTerminal"]
+      "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus"]
     },
     {
       "before": ["<space>", "e"],
@@ -74,7 +83,15 @@
     },
     {
       "before": ["<space>", "g"],
-      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.view.scm"]
+      // "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus", "lazygit"]
+        "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus", "workbench.action.terminal.sendSequence"],
+        "args": "lazygit"
+      }]
+      // "commands": ["workbench.action.toggleSidebarVisibility", "workbench.view.scm"]
+    },
+    {
+      "before": ["<space>", "x"],
+      "commands": ["workbench.action.closeAllEditors"]
     },
     {
       "before": ["<space>", "/"],
