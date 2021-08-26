@@ -1,0 +1,108 @@
+{
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorSurroundingLines": 999,
+  "editor.fontFamily": "'SauceCodePro Nerd Font','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "explorer.compactFolders": false,
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "explorer.openEditors.visible": 30,
+  "find-it-faster.general.showMaximizedTerminal": true,
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "block-outline",
+  "vim.cursorStylePerMode.visual": "underline",
+  "vim.cursorStylePerMode.visualblock": "underline",
+  "vim.cursorStylePerMode.visualline": "underline",
+  "vim.easymotion": true,
+  "vim.easymotionIncSearchForegroundColor": "#f7wf38",
+  "vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#ffff00",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#ffff00",
+  "vim.highlightedyank.color": "#34a1eb",
+  "vim.highlightedyank.duration": 1200,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "#000000",
+  "vim.hlsearch": true,
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 2,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Dracula At Night",
+  "workbench.list.smoothScrolling": true,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["%"],
+      "commands": ["extension.matchitJumpItems"],
+    },
+    {
+      "before": ["<space>", "s"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["<space>", "x"],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    {
+      "before": ["<space>", "S"],
+      "commands": ["workbench.action.files.saveAll"]
+    },
+    {
+      "before": ["<space>", "h"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<space>", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["<space>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.explorer.fileView.focus"]
+    },
+    {
+      "before": ["<space>", "f"],
+      "commands": ["find-it-faster.findFiles"]
+    },
+    {
+      "before": ["<space>", "g"],
+      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.view.scm"]
+    },
+    {
+      "before": ["<space>", "/"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<C-o>"],
+      "commands": ["workbench.action.files.openFolder"]
+    },
+    {
+      "before": ["<C-x>"],
+      "commands": [":q!"]
+    },
+    {
+      "before": ["<C-t>"],
+      "commands": [":enew"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<space>", "/"],
+      "commands": ["editor.action.commentLine"]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+  ],
+}
