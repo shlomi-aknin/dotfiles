@@ -82,4 +82,12 @@
     "key": "ctrl+c",
     "command": "workbench.action.closeSidebar",
   },
+  {
+    "key": "ctrl+x",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.files.newUntitledFile",
+  },
 ]
