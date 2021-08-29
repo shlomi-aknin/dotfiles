@@ -90,14 +90,6 @@
       "commands": ["find-it-faster.findFiles"]
     },
     {
-      "before": ["<space>", "g"],
-      // "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus", "lazygit"]
-        "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus", "workbench.action.terminal.sendSequence"],
-        "args": "lazygit"
-      }]
-      // "commands": ["workbench.action.toggleSidebarVisibility", "workbench.view.scm"]
-    },
-    {
       "before": ["<space>", "x"],
       "commands": ["workbench.action.closeAllEditors"]
     },
