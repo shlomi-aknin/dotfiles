@@ -162,23 +162,23 @@ require('null-ls').config({})
 require('lspconfig')['null-ls'].setup({})
 require('nvim-tree.view').View.winopts.relativenumber = true
 -- require('autosave').setup()
-require('specs').setup({
-  show_jumps  = true,
-  min_jump = 5,
-  popup = {
-    delay_ms = 0, -- delay before popup displays
-    inc_ms = 15, -- time increments used for fade/resize effects
-    blend = 5, -- starting blend, between 0-100 (fully transparent), see :h winblend
-    width = 100,
-    winhl = 'PMenu',
-    fader = require('specs').pulse_fader,
-    resizer = require('specs').slide_resizer
-  },
-  ignore_filetypes = {},
-  ignore_buftypes = {
-    nofile = true,
-  },
-})
+-- require('specs').setup({
+--   show_jumps  = true,
+--   min_jump = 5,
+--   popup = {
+--     delay_ms = 0, -- delay before popup displays
+--     inc_ms = 15, -- time increments used for fade/resize effects
+--     blend = 5, -- starting blend, between 0-100 (fully transparent), see :h winblend
+--     width = 100,
+--     winhl = 'PMenu',
+--     fader = require('specs').pulse_fader,
+--     resizer = require('specs').slide_resizer
+--   },
+--   ignore_filetypes = {},
+--   ignore_buftypes = {
+--     nofile = true,
+--   },
+-- })
 
 require('gitsigns').setup({
   signs = {
@@ -267,6 +267,21 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
 
+-- local function setup_servers()
+--   require('lspinstall').setup()
+--   local servers = require('lspinstall').installed_servers()
+--   for _, server in pairs(servers) do
+--     require('lspconfig')[server].setup{}
+--   end
+-- end
+
+-- setup_servers()
+
+-- require('lspinstall').post_install_hook = function ()
+--   setup_servers()
+--   vim.cmd('bufdo e')
+-- end
+
 if not lspconfig.emmet_ls then
   configs.emmet_ls = {
     default_config = {
@@ -282,6 +297,7 @@ end
 lspconfig.emmet_ls.setup({ capabilities = capabilities; })
 
 require('lspconfig').tsserver.setup({
+  cmd = {'typescript-language-server', '--stdio'},
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
@@ -335,22 +351,22 @@ require('lspconfig').tsserver.setup({
   end
 })
 
+lspconfig.svelte.setup({
+  cmd = { 'svelteserver', '--stdio' };
+  on_attach = on_attach;
+  settings = {
+    svelte = {
+      plugin = {
+        svelte = {
+          compilerWarnings = {
+            ['a11y-no-onchange'] = 'ignore'
+          }
+        }
+      }
+    }
+  }
+})
 
-
-local function setup_servers()
-  require('lspinstall').setup()
-  local servers = require('lspinstall').installed_servers()
-  for _, server in pairs(servers) do
-    require('lspconfig')[server].setup{}
-  end
-end
-
-setup_servers()
-
-require('lspinstall').post_install_hook = function ()
-  setup_servers()
-  vim.cmd('bufdo e')
-end
 
 require('lspkind').init({
     symbol_map = {
