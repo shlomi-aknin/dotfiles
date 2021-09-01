@@ -40,8 +40,6 @@
   },
   "workbench.colorCustomizations": {
     "editorGroupHeader.tabsBackground": "#000000",
-    "tab.activeBackground": "#34a1eb",
-    "tab.activeForeground": "#000000",
     "editorLineNumber.activeForeground": "#ffff00",
     "editor.lineHighlightBackground": "#235789",
     "editorBracketMatch.background": "#2176FF",
@@ -156,6 +154,13 @@
   "editor.tokenColorCustomizations": {
     "[Dracula At Night]": {
       "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "fontStyle": "italic",
+            "foreground": "#C69650",
+          }
+        },
         {
           "settings": {
             "foreground": "#ff79c6",
