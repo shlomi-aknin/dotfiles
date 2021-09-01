@@ -204,9 +204,9 @@ require('compe').setup({
   min_length = 1;
   preselect = 'enable';
   throttle_time = 10;
-  source_timeout = 200;
-  resolve_timeout = 10;
-  incomplete_delay = 400;
+  source_timeout = 100;
+  resolve_timeout = 100;
+  incomplete_delay = 100;
   max_abbr_width = 40;
   max_kind_width = 40;
   max_menu_width = 40;
@@ -220,12 +220,12 @@ require('compe').setup({
   };
 
   source = {
-    path = { priority = 500; };
-    buffer = { priority = 500; };
-    vsnip = { priority = 500; };
-    ultisnips = { priority = 500; };
-    tabnine = { priority = 500; };
     nvim_lsp = { priority = 500; };
+    tabnine = { priority = 500; };
+    vsnip = { priority = 500; };
+    buffer = { priority = 500; };
+    path = { priority = 500; };
+    -- ultisnips = { priority = 500; };
     -- nvim_lua = { priority = 500; };
     -- luasnip = { priority = 500; };
     -- nvim_treesitter = { priority = 500; };
