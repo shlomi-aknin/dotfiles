@@ -1,5 +1,10 @@
 [
   {
+    "key": "alt+l",
+    "command": "-toggleFindInSelection",
+    "when": "editorFocus"
+  },
+  {
     "key": "ctrl+shift+k",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
@@ -28,6 +33,14 @@
     "key": "ctrl+k",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.moveEditorRightInGroup"
   },
   {
     "key": "alt+j",
@@ -87,10 +100,14 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
-  },
   {
     "key": "ctrl+c",
     "command": "workbench.action.closeSidebar",
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.closeQuickOpen",
+    "when": "inQuickOpen"
   },
   {
     "key": "ctrl+x",
@@ -99,5 +116,13 @@
   {
     "key": "ctrl+t",
     "command": "workbench.action.files.newUntitledFile",
+  },
+  {
+    "key": "shift+win+x",
+    "command": "workbench.action.closeWindow"
+  },
+  {
+    "key": "alt+f4",
+    "command": "-workbench.action.closeWindow"
   },
 ]

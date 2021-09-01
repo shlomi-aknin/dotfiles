@@ -3,7 +3,6 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorStyle": "line-thin",
-  "editor.cursorSurroundingLines": 999,
   "editor.fontFamily": "'SauceCodePro Nerd Font','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
@@ -19,7 +18,6 @@
   "vim.cursorStylePerMode.visual": "underline",
   "vim.cursorStylePerMode.visualblock": "underline",
   "vim.cursorStylePerMode.visualline": "underline",
-  "vim.easymotion": true,
   "vim.easymotionIncSearchForegroundColor": "#f7wf38",
   "vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
   "vim.easymotionMarkerForegroundColorTwoCharFirst": "#ffff00",
@@ -50,12 +48,24 @@
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["s"],
+      "after": ["\\", "\\", "\\", "j"]
+    },
+    {
       "before": ["d", "w"],
       "after": ["d", "i", "w"],
     },
     {
       "before": ["c", "w"],
       "after": ["c", "i", "w"],
+    },
+    {
+      "before": ["X"],
+      "after": ["g", "g", "d", "G"],
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"],
     },
     {
       "before": ["%"],
@@ -78,6 +88,18 @@
       "commands": [":nohl"]
     },
     {
+      "before": ["<tab>", "l"],
+      "after": ["a", "<space>", "<esc>"],
+    },
+    {
+      "before": ["<tab>", "h"],
+      "after": ["i", "<space>", "<esc>"],
+    },
+    {
+      "before": ["<space>", "r"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
       "before": ["<space>", "t"],
       "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus"]
     },
@@ -87,7 +109,7 @@
     },
     {
       "before": ["<space>", "f"],
-      "commands": ["find-it-faster.findFiles"]
+      "commands": ["workbench.action.quickOpen"]
     },
     {
       "before": ["<space>", "x"],
@@ -114,4 +136,29 @@
       "after": ["<Esc>"]
     },
   ],
+  "tabnine.experimentalAutoImports": true,
+  "php-cs-fixer.lastDownload": 1630388604811,
+  "sync.autoDownload": true,
+  "sync.forceUpload": true,
+  "sync.autoUpload": true,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "vim.easymotion": true,
+  "sync.gist": "2e47474f8b6b139d6d1e2a491314795e",
+  "settingsSync.ignoredExtensions": [
+    "shan.code-settings-sync"
+  ],
+  "editor.tokenColorCustomizations": {
+    "[Dracula At Night]": {
+      "textMateRules": [
+        {
+          "settings": {
+            "foreground": "#ff79c6",
+          },
+          "scope": "support.class.component.svelte"
+        }
+      ],
+    },
+  }
 }
