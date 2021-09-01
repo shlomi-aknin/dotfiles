@@ -72,6 +72,10 @@
       "commands": ["extension.matchitJumpItems"],
     },
     {
+      "before": ["<space>", "l"],
+      "commands": [":e!"]
+    },
+    {
       "before": ["<space>", "s"],
       "commands": [":w"]
     },
