@@ -28,7 +28,7 @@ vim.cmd[[
   hi javaScriptStringS guifg=#2DE1FC
   hi jsComment guifg=#34a1eb gui=italic
   hi jsString guifg=#ffff00
-  hi link Searchlight Folded
+  hi link Searchlight TabLineSel
   hi link TelescopeMultiSelection NormalSelected
 ]]
 
