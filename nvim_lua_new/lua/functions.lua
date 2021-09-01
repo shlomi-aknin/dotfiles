@@ -143,6 +143,7 @@ require('lsp_signature').setup({
   fix_pos = true,
   padding = ' ',
   zindex = 50,
+  floating_window_above_first = true,
   handler_opts = {
     border = 'shadow'
   },
