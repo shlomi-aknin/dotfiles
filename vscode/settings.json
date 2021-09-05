@@ -111,7 +111,7 @@
     },
     {
       "before": ["<space>", "g"],
-      "commands": [":!alacritty -e lazygit"]
+      "commands": [":!alacritty -e lazygit $PWD"]
     },
     {
       "before": ["<space>", "f"],
