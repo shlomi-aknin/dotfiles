@@ -1,5 +1,7 @@
 " Open file in VS code
-nnoremap C :!code %f<cr>
+nnoremap Cf :!code %f<cr>
+vnoremap Cf :!code %f<cr>
+nnoremap Co :!code %d<cr>
 
 " Start shell in current directory
 nnoremap s :!devour alacritty -t "Alacritty %d" --working-directory %d<cr>
