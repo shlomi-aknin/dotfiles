@@ -72,13 +72,19 @@ require('spectre').setup({
 require('telescope').setup({
   defaults = {
     vimgrep_arguments = {
-      '--color=always',
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case'
     },
     prompt_prefix = '@ ',
     layout_config = {
       preview_width = 0.6
     },
-    file_ignore_patterns = { 'node_modules', '.git' },
+    file_ignore_patterns = { 'node_modules', '.git', 'package.json', 'package-lock.json' },
     mappings = {
       i = {
         ['<esc>'] = actions.close,
