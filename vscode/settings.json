@@ -114,6 +114,10 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
+      "before": ["<space>", "g"],
+      "commands": [":!alacritty -e lazygit"]
+    },
+    {
       "before": ["<space>", "x"],
       "commands": ["workbench.action.closeAllEditors"]
     },
