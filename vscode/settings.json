@@ -110,16 +110,20 @@
       "commands": ["workbench.action.toggleSidebarVisibility", "workbench.explorer.fileView.focus"]
     },
     {
-      "before": ["<space>", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
       "before": ["<space>", "g"],
       "commands": [":!alacritty -e lazygit"]
     },
     {
+      "before": ["<space>", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
       "before": ["<space>", "x"],
       "commands": ["workbench.action.closeAllEditors"]
+    },
+    {
+      "before": ["<space>", "o"],
+      "commands": [":!alacritty -e fzfcode --working-directory $PWD"]
     },
     {
       "before": ["<space>", "z"],
@@ -177,5 +181,8 @@
         }
       ],
     },
-  }
+  },
+  "extensions.ignoreRecommendations": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
 }
