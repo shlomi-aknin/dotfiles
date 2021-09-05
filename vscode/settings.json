@@ -122,6 +122,10 @@
       "commands": ["workbench.action.closeAllEditors"]
     },
     {
+      "before": ["<space>", "z"],
+      "commands": [":!alacritty -e vifmrun $PWD"]
+    },
+    {
       "before": ["<space>", "/"],
       "commands": ["editor.action.commentLine"]
     },
