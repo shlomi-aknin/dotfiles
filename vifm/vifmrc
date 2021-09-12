@@ -364,7 +364,7 @@ filetype *.tudu tudu -f %c
 " Qt projects
 filextype *.pro qtcreator %f &
 
-filextype *.ddd,*.DDD,*.TGD,*V1B readesm -f html %c /tmp/"%c.html" && sed -i 's@body		{ font-family:sans-serif; }@a\t\t{ color: yellow; }\nsvg\t\t{ background-color: #fff; }\nbody\t\t{ background-color: #000; color: #fff; font-family:sans-serif; }@' /tmp/"%c.html" && sed -i 's@tr:hover 	{border-style:outset; background-color:#eeeeee; }@tr:hover 	{border-style:outset; background-color:#eeeeee; color: #000; }@' /tmp/"%c.html" && firefox /tmp/"%c.html"
+filextype *.ddd,*.DDD,*.TGD,*V1B readesm -f html %c /tmp/"%c.html" && sed -i 's@body		{ font-family:sans-serif; }@a\t\t{ color: yellow; }\nsvg\t\t{ background-color: #fff; }\nbody\t\t{ background-color: #000; color: #fff; font-family:sans-serif; }@' /tmp/"%c.html" && sed -i 's@tr:hover 	{border-style:outset; background-color:#eeeeee; }@tr:hover 	{border-style:outset; background-color:#eeeeee; color: #000; }@' /tmp/"%c.html" && google-chrome-stable /tmp/"%c.html"
 
 filextype *.vim nvim -p %f
 " Directories
@@ -429,5 +429,5 @@ set sort=dir,-mtime,+name
 " filter! /^.*\.(lo|o|d|class|py[co])$|.*~$/
 
 " ------------------------------------------------------------------------------
-
+let $PATH .= ':/usr/local/lib/node_modules/bin'
 source ~/.config/vifm/mappings

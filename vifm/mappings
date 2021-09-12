@@ -3,6 +3,7 @@ nnoremap i :!code -n %f<cr>
 vnoremap i :!code -n %f<cr>
 nnoremap o :!code %d<cr>
 nnoremap O :!code %c<cr>
+nnoremap E :!code %f<cr>:q<cr>
 
 " Start shell in current directory
 nnoremap s :!devour alacritty -t "Alacritty %d" --working-directory %d<cr>
