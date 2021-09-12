@@ -107,11 +107,11 @@
     },
     {
       "before": ["<space>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.explorer.fileView.focus"]
+      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.explorer.fileView.focus", "revealInExplorer"]
     },
     {
       "before": ["<space>", "g"],
-      "commands": [":!alacritty -e lazygit $PWD"]
+      "commands": [":!alacritty -e lazygit $PWD &"]
     },
     {
       "before": ["<space>", "f"],
@@ -123,11 +123,11 @@
     },
     {
       "before": ["<space>", "o"],
-      "commands": [":!alacritty -e fzfcode --working-directory $PWD"]
+      "commands": [":!alacritty -e fzfcode --working-directory $PWD &"]
     },
     {
       "before": ["<space>", "z"],
-      "commands": [":!alacritty -e vifmrun +only $PWD"]
+      "commands": [":!alacritty -e vifmrun +only $PWD &"]
     },
     {
       "before": ["<space>", "/"],
@@ -184,5 +184,8 @@
   },
   "extensions.ignoreRecommendations": true,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "openMultipleFiles.exclude": "node_modules/**",
+  "workbench.editor.enablePreview": false,
+  "security.workspace.trust.untrustedFiles": "open"
 }
