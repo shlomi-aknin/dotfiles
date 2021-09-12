@@ -107,7 +107,7 @@
     },
     {
       "before": ["<space>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility", "workbench.explorer.fileView.focus", "revealInExplorer"]
+      "commands": ["workbench.action.toggleSidebarVisibility",  "revealInExplorer", "workbench.files.action.focusFilesExplorer"]
     },
     {
       "before": ["<space>", "g"],
