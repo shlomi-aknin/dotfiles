@@ -31,7 +31,7 @@
   "vim.searchHighlightColor": "#34a1eb90",
   "vim.useSystemClipboard": true,
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 2.5,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Dracula At Night",
   "workbench.list.smoothScrolling": true,
@@ -119,7 +119,7 @@
     },
     {
       "before": ["<space>", "x"],
-      "commands": ["workbench.action.closeAllEditors"]
+      "commands": ["workbench.action.closeAllEditors", "workbench.action.files.newUntitledFile" ]
     },
     {
       "before": ["<space>", "o"],
@@ -127,7 +127,7 @@
     },
     {
       "before": ["<space>", "z"],
-      "commands": [":!alacritty -e vifmrun $PWD"]
+      "commands": [":!alacritty -e vifmrun +only $PWD"]
     },
     {
       "before": ["<space>", "/"],
