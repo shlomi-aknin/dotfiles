@@ -135,7 +135,7 @@ super + x
 	bspc node -c
 
 # close all windows on current desktop
-super + Delete
+super + shift + x
     closewindowsoncurrent
 
 # alternate between the tiled and monocle layout
