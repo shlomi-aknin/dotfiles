@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # export STARSHIP_CONFIG=~/.config/starship/config.toml
-export PATH="~/bin:/usr/local/bin:/usr/local/lib/node_modules/bin:~/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:~/.dotnet/tools:~/Programs/fzf/bin"
+export PATH="~/bin:/usr/local/bin:~/.cargo/bin:/usr/bin:/bin:/snap/bin:~/.dotnet/tools:~/Programs/fzf/bin"
 xsetroot -cursor_name left_ptr &
 clipmenud &
 numlockx &

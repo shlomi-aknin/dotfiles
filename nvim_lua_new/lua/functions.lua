@@ -401,6 +401,7 @@ require('lspkind').init({
 })
 
 vim.cmd([[
+  let $PATH .= ':/usr/local/lib/node_modules/bin'
   set foldlevel=99
   au BufWinEnter NvimTree setlocal rnu
   augroup highlight_yank
