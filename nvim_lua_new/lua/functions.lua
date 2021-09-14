@@ -387,6 +387,36 @@ vim.cmd([[
     call setqflist([])
   endfunction
   command! ClearQuickfixList cexpr []
+
+  function! DeleteEmptyBuffers()
+      let [i, n; empty] = [1, bufnr('$')]
+      while i <= n
+          if bufexists(i) && bufname(i) == ''
+              call add(empty, i)
+          endif
+          let i += 1
+      endwhile
+      if len(empty) > 0
+          exe 'bdelete' join(empty)
+      endif
+  endfunction
+
+  function QuickFixOpenAll()
+    if empty(getqflist())
+        return
+    endif
+    let prev_val = ""
+    for d in getqflist()
+        let curr_val = bufname(d.bufnr)
+        if (curr_val != prev_val)
+            exec "edit " . curr_val
+        endif
+        let prev_val = curr_val
+    endfor
+    :silent call DeleteEmptyBuffers()
+  endfunction
+
+  command! QuickFixOpenAll call QuickFixOpenAll()
 ]])
 
 -- autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
