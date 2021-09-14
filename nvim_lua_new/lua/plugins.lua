@@ -24,6 +24,7 @@ packer.startup(function()
 	use {'kyazdani42/nvim-tree.lua'}
 	use {'kyazdani42/nvim-web-devicons'}
 	use {'lewis6991/gitsigns.nvim'}
+  use {'mhartington/formatter.nvim'}
 	use {'nacro90/numb.nvim'}
 	use {'neovim/nvim-lspconfig'}
 	use {'nvim-lua/plenary.nvim'}
@@ -52,7 +53,6 @@ packer.startup(function()
   use {'onsails/lspkind-nvim'}
   use {'peterrincker/vim-searchlight'}
   use {'phaazon/hop.nvim', as = 'hop'}
-  use {'prettier/vim-prettier', run = 'npm i'}
   use {'ray-x/lsp_signature.nvim'}
   use {'stefandtw/quickfix-reflector.vim'}
   use {'tzachar/compe-tabnine'}

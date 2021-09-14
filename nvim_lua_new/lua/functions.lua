@@ -200,6 +200,20 @@ require('compe').setup({
   };
 })
 
+require('formatter').setup({
+  filetype = {
+    javascript = {
+      function()
+        return {
+          exe = 'prettier',
+          args = {'--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+          stdin = true
+        }
+      end
+    },
+  }
+})
+
 local function t(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
@@ -370,12 +384,12 @@ vim.cmd([[
   autocmd Filetype * AnyFoldActivate
   autocmd BufEnter *.{css,html,js,svelte} :syntax sync fromstart
   autocmd BufLeave *.{css,html,js,svelte} :syntax sync clear
-  let g:prettier#autoformat_require_pragma = 0
-  let g:prettier#exec_cmd_async = 1
-  let g:prettier#quickfix_enabled = 0
+
   augroup FormatAutogroup
-  autocmd BufWritePost *.{css,html,js,svelte} PrettierAsync
+    autocmd!
+    autocmd BufWritePost *.js FormatWrite
   augroup END
+
   function! ToggleQuickFix()
       if empty(filter(getwininfo(), 'v:val.quickfix'))
           copen
@@ -418,8 +432,6 @@ vim.cmd([[
 
   command! QuickFixOpenAll call QuickFixOpenAll()
 ]])
-
--- autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = { 'typescript' },
