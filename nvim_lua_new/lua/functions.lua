@@ -38,48 +38,8 @@ function copy_to_clipboard(content)
   return print(string.format('Copied %s to system clipboard! \n', content))
 end
 
-function spectre_open_all()
-  local entries = require('spectre.actions').get_all_entries()
-  for _,entry in pairs(entries) do
-    vim.cmd(string.format('%s %s', ':e!', entry.filename))
-  end
-end
-
-require('spectre').setup({
-  color_devicons = true,
-  line_sep_start = '******************************************',
-  result_padding = '~>  ',
-  line_sep       = '******************************************',
-  highlight = {
-      ui = 'String',
-      search = 'Search',
-      replace = 'Folded'
-  },
-  mapping = {
-    ['run_replace'] = {
-        map = 'R',
-        cmd = '<cmd>lua require("spectre.actions").run_replace()<CR>',
-        desc = 'replace all'
-    },
-    ['enter_file'] = {
-        map = '<cr>',
-        cmd = '<cmd>lua spectre_open_all()<cr>',
-        desc = 'goto current file'
-    },
-  },
-})
-
 require('telescope').setup({
   defaults = {
-    vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case'
-    },
     prompt_prefix = '@ ',
     layout_config = {
       preview_width = 0.6
@@ -425,6 +385,10 @@ vim.cmd([[
           cclose
       endif
   endfunction
+  function ClearQuickfixList()
+    call setqflist([])
+  endfunction
+  command! ClearQuickfixList cexpr []
 ]])
 
 -- autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
