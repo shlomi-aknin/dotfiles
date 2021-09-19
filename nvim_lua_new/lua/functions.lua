@@ -63,10 +63,13 @@ require('telescope').setup({
   }
 })
 
+local custom_dracula = require'lualine.themes.dracula'
+custom_dracula.normal.c.bg = '#000000' -- rgb colors are supported
+
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'dracula',
+    theme = custom_dracula,
     section_separators = {'', ''},
     component_separators = {'', ''},
     disabled_filetypes = {}
@@ -419,13 +422,8 @@ vim.cmd([[
     if empty(getqflist())
         return
     endif
-    let prev_val = ""
-    for d in getqflist()
-        let curr_val = bufname(d.bufnr)
-        if (curr_val != prev_val)
-            exec "edit " . curr_val
-        endif
-        let prev_val = curr_val
+    for f in getqflist()
+        exec "edit " . bufname(f.bufnr)
     endfor
     :silent call DeleteEmptyBuffers()
   endfunction
