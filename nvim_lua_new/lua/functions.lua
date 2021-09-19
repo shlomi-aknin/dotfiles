@@ -63,18 +63,20 @@ require('telescope').setup({
   }
 })
 
-local custom_dracula = require('lualine.themes.dracula')
-custom_dracula.normal.c.bg = '#000000'
-custom_dracula.insert.c.bg = '#000000'
-custom_dracula.visual.c.bg = '#000000'
-custom_dracula.replace.c.bg = '#000000'
-custom_dracula.command.c.bg = '#000000'
-custom_dracula.inactive.c.bg = '#000000'
+local dracula = require('lualine.themes.dracula')
+dracula.normal.b.bg = '#f1fa8c'
+dracula.normal.b.fg = '#000000'
+dracula.normal.c.bg = '#000000'
+dracula.insert.c.bg = '#000000'
+dracula.visual.c.bg = '#000000'
+dracula.replace.c.bg = '#000000'
+dracula.command.c.bg = '#000000'
+dracula.inactive.c.bg = '#000000'
 
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = custom_dracula,
+    theme = dracula,
     section_separators = {'', ''},
     component_separators = {'', ''},
     disabled_filetypes = {}
