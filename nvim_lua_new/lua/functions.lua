@@ -210,18 +210,18 @@ require('compe').setup({
   };
 })
 
+local prettier = {
+  function()
+    return {
+      exe = 'prettier',
+      args = {'--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+      stdin = true
+    }
+  end
+}
+
 require('formatter').setup({
-  filetype = {
-    javascript = {
-      function()
-        return {
-          exe = 'prettier',
-          args = {'--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-          stdin = true
-        }
-      end
-    },
-  }
+  filetype = { css = prettier, javascript = prettier, svelte =  prettier },
 })
 
 local function t(str)
@@ -397,7 +397,7 @@ vim.cmd([[
 
   augroup FormatAutogroup
     autocmd!
-    autocmd BufWritePost *.js FormatWrite
+    autocmd BufWritePost *.css,*.js,*.svelte FormatWrite
   augroup END
 
   function! ToggleQuickFix()
