@@ -63,8 +63,13 @@ require('telescope').setup({
   }
 })
 
-local custom_dracula = require'lualine.themes.dracula'
-custom_dracula.normal.c.bg = '#000000' -- rgb colors are supported
+local custom_dracula = require('lualine.themes.dracula')
+custom_dracula.normal.c.bg = '#000000'
+custom_dracula.insert.c.bg = '#000000'
+custom_dracula.visual.c.bg = '#000000'
+custom_dracula.replace.c.bg = '#000000'
+custom_dracula.command.c.bg = '#000000'
+custom_dracula.inactive.c.bg = '#000000'
 
 require('lualine').setup({
   options = {
