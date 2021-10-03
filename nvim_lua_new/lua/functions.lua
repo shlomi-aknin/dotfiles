@@ -1,6 +1,7 @@
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local custom_actions = {}
+local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -117,7 +118,7 @@ require('lsp_signature').setup({
   fix_pos = true,
   padding = ' ',
   zindex = 50,
-  floating_window_above_first = true,
+  floating_window_above_cur_line = true,
   handler_opts = {
     border = 'shadow'
   },
@@ -132,9 +133,28 @@ require('hop').setup()
 require('nvim_comment').setup({ comment_empty = false, create_mappings = false })
 require('nvim-ts-autotag').setup()
 require('lspsaga').init_lsp_saga()
-require('goto-preview').setup()
 require('null-ls').config({})
 require('lspconfig')['null-ls'].setup({})
+require('nvim-tree').setup({
+  auto_close          = true,
+  hijack_cursor       = true,
+  lsp_diagnostics     = true,
+  update_focused_file = { enable = true },
+  view = {
+    width = 30,
+    side = 'left',
+    auto_resize = true,
+    mappings = {
+      list = {
+        { key = 'l', cb = tree_cb('edit') },
+        { key = 'h', cb = tree_cb('close_node') },
+        { key = '<Tab>', mode = 'n', cb = ':lua NvimTreeToggleFileSelected("j")<cr>'},
+        { key = '<S-Tab>', mode = 'n', cb = ':lua NvimTreeToggleFileSelected("k")<cr>'},
+        { key = '<cr>', mode = 'n', cb = ':lua NvimTreeOpenFiles()<cr>'},
+      }
+    }
+  },
+})
 require('nvim-tree.view').View.winopts.relativenumber = true
 -- require('autosave').setup()
 -- require('specs').setup({
@@ -221,7 +241,7 @@ local prettier = {
 }
 
 require('formatter').setup({
-  filetype = { css = prettier, javascript = prettier, svelte =  prettier },
+  filetype = { css = prettier, html = prettier, javascript = prettier, svelte =  prettier },
 })
 
 local function t(str)
@@ -385,7 +405,6 @@ require('lspkind').init({
 vim.cmd([[
   let $PATH .= ':/usr/local/lib/node_modules/bin'
   set foldlevel=99
-  au BufWinEnter NvimTree setlocal rnu
   augroup highlight_yank
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
@@ -397,7 +416,7 @@ vim.cmd([[
 
   augroup FormatAutogroup
     autocmd!
-    autocmd BufWritePost *.css,*.js,*.svelte FormatWrite
+    autocmd BufWritePost *.css,*.html,*.js,*.svelte FormatWrite
   augroup END
 
   function! ToggleQuickFix()
