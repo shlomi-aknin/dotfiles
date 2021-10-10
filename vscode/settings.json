@@ -42,7 +42,7 @@
     "editorGroupHeader.tabsBackground": "#000000",
     "editorLineNumber.activeForeground": "#ffff00",
     "editor.lineHighlightBackground": "#235789",
-    "editorBracketMatch.background": "#2176FF",
+    "editorBracketMatch.background": "#2176FF"
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -51,23 +51,23 @@
     },
     {
       "before": ["d", "w"],
-      "after": ["d", "i", "w"],
+      "after": ["d", "i", "w"]
     },
     {
       "before": ["c", "w"],
-      "after": ["c", "i", "w"],
+      "after": ["c", "i", "w"]
     },
     {
       "before": ["X"],
-      "after": ["g", "g", "d", "G"],
+      "after": ["g", "g", "d", "G"]
     },
     {
       "before": ["K"],
-      "commands": ["editor.action.showDefinitionPreviewHover"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
     {
       "before": ["%"],
-      "commands": ["extension.matchitJumpItems"],
+      "commands": ["extension.matchitJumpItems"]
     },
     {
       "before": ["<space>", "l"],
@@ -75,7 +75,7 @@
     },
     {
       "before": ["<space>", "s"],
-      "commands": [":w"]
+      "commands": ["workbench.action.files.save"]
     },
     {
       "before": ["<space>", "x"],
@@ -91,11 +91,11 @@
     },
     {
       "before": ["<tab>", "l"],
-      "after": ["a", "<space>", "<esc>"],
+      "after": ["a", "<space>", "<esc>"]
     },
     {
       "before": ["<tab>", "h"],
-      "after": ["i", "<space>", "<esc>"],
+      "after": ["i", "<space>", "<esc>"]
     },
     {
       "before": ["<space>", "r"],
@@ -103,11 +103,18 @@
     },
     {
       "before": ["<space>", "t"],
-      "commands": ["workbench.action.terminal.toggleTerminal", "workbench.action.terminal.focus"]
+      "commands": [
+        "workbench.action.terminal.toggleTerminal",
+        "workbench.action.terminal.focus"
+      ]
     },
     {
       "before": ["<space>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility",  "revealInExplorer", "workbench.files.action.focusFilesExplorer"]
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "revealInExplorer",
+        "workbench.files.action.focusFilesExplorer"
+      ]
     },
     {
       "before": ["<space>", "g"],
@@ -119,7 +126,10 @@
     },
     {
       "before": ["<space>", "x"],
-      "commands": ["workbench.action.closeAllEditors", "workbench.action.files.newUntitledFile" ]
+      "commands": [
+        "workbench.action.closeAllEditors",
+        "workbench.action.files.newUntitledFile"
+      ]
     },
     {
       "before": ["<space>", "o"],
@@ -136,19 +146,19 @@
     {
       "before": ["<C-o>"],
       "commands": ["workbench.action.files.openFolder"]
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": ["<space>", "/"],
       "commands": ["editor.action.commentLine"]
-    },
+    }
   ],
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
       "after": ["<Esc>"]
-    },
+    }
   ],
   "tabnine.experimentalAutoImports": true,
   "php-cs-fixer.lastDownload": 1633618399698,
@@ -160,9 +170,7 @@
   },
   "vim.easymotion": true,
   "sync.gist": "2e47474f8b6b139d6d1e2a491314795e",
-  "settingsSync.ignoredExtensions": [
-    "shan.code-settings-sync"
-  ],
+  "settingsSync.ignoredExtensions": ["shan.code-settings-sync"],
   "editor.tokenColorCustomizations": {
     "[Dracula At Night]": {
       "textMateRules": [
@@ -170,17 +178,17 @@
           "scope": "comment",
           "settings": {
             "fontStyle": "italic",
-            "foreground": "#C69650",
+            "foreground": "#C69650"
           }
         },
         {
           "settings": {
-            "foreground": "#ff79c6",
+            "foreground": "#ff79c6"
           },
           "scope": "support.class.component.svelte"
         }
-      ],
-    },
+      ]
+    }
   },
   "extensions.ignoreRecommendations": true,
   "editor.formatOnSave": true,
@@ -191,5 +199,6 @@
   "security.workspace.trust.banner": "never",
   "explorer.confirmDelete": false,
   "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/local/bin/nvim"
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
