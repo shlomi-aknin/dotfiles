@@ -150,6 +150,11 @@
     "when": "inQuickOpen"
   },
   {
+    "key": "shift+h",
+    "command": "list.collapseAll",
+    "when": "listFocus && !inputFocus"
+  },
+  {
     "key": "ctrl+s",
     "command": "workbench.action.findInFiles"
   },

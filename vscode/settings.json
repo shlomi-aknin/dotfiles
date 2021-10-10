@@ -205,5 +205,9 @@
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "svelte.enable-ts-plugin": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
