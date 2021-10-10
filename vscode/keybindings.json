@@ -54,11 +54,11 @@
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.nextEditor",
+    "command": "workbench.action.nextEditor"
   },
   {
     "key": "ctrl+h",
-    "command": "workbench.action.previousEditor",
+    "command": "workbench.action.previousEditor"
   },
   {
     "key": "ctrl+h",
@@ -142,7 +142,7 @@
   },
   {
     "key": "ctrl+c",
-    "command": "workbench.action.closeSidebar",
+    "command": "workbench.action.closeSidebar"
   },
   {
     "key": "ctrl+c",
@@ -151,11 +151,11 @@
   },
   {
     "key": "ctrl+x",
-    "command": "workbench.action.closeActiveEditor",
+    "command": "workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+t",
-    "command": "workbench.action.files.newUntitledFile",
+    "command": "workbench.action.files.newUntitledFile"
   },
   {
     "key": "shift+win+x",
@@ -164,5 +164,5 @@
   {
     "key": "alt+f4",
     "command": "-workbench.action.closeWindow"
-  },
+  }
 ]

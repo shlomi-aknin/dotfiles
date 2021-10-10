@@ -90,11 +90,11 @@
       "commands": [":nohl"]
     },
     {
-      "before": ["<tab>", "l"],
+      "before": ["<S-l>"],
       "after": ["a", "<space>", "<esc>"]
     },
     {
-      "before": ["<tab>", "h"],
+      "before": ["<S-h>"],
       "after": ["i", "<space>", "<esc>"]
     },
     {
