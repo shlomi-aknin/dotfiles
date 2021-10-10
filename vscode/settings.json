@@ -20,8 +20,8 @@
   "vim.cursorStylePerMode.visualline": "underline",
   "vim.easymotionIncSearchForegroundColor": "#f7wf38",
   "vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
-  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#ffff00",
-  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#ffff00",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#34a1eb",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#ffffff",
   "vim.highlightedyank.color": "#34a1eb",
   "vim.highlightedyank.duration": 1200,
   "vim.highlightedyank.enable": true,
@@ -151,7 +151,7 @@
     },
   ],
   "tabnine.experimentalAutoImports": true,
-  "php-cs-fixer.lastDownload": 1630388604811,
+  "php-cs-fixer.lastDownload": 1633618399698,
   "sync.autoDownload": true,
   "sync.forceUpload": true,
   "sync.autoUpload": true,
@@ -187,5 +187,9 @@
   "editor.formatOnPaste": true,
   "openMultipleFiles.exclude": "node_modules/**",
   "workbench.editor.enablePreview": false,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.banner": "never",
+  "explorer.confirmDelete": false,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim"
 }
