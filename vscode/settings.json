@@ -191,7 +191,7 @@
     {
       "before": [
         "<space>",
-        "r"
+        "d"
       ],
       "commands": [
         "workbench.action.showCommands"
