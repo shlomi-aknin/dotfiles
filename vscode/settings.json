@@ -90,6 +90,10 @@
       "commands": [":nohl"]
     },
     {
+      "before": ["<space>", "l"],
+      "commands": [":set relativenumber!"]
+    },
+    {
       "before": ["<S-l>"],
       "after": ["a", "<space>", "<esc>"]
     },
@@ -200,5 +204,6 @@
   "explorer.confirmDelete": false,
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.lineNumbers": "relative"
 }
