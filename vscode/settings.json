@@ -46,74 +46,172 @@
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["s"],
-      "after": ["\\", "\\", "\\", "j"]
+      "before": [
+        "s"
+      ],
+      "after": [
+        "\\",
+        "\\",
+        "\\",
+        "j"
+      ]
     },
     {
-      "before": ["d", "w"],
-      "after": ["d", "i", "w"]
+      "before": [
+        "d",
+        "w"
+      ],
+      "after": [
+        "d",
+        "i",
+        "w"
+      ]
     },
     {
-      "before": ["c", "w"],
-      "after": ["c", "i", "w"]
+      "before": [
+        "c",
+        "w"
+      ],
+      "after": [
+        "c",
+        "i",
+        "w"
+      ]
     },
     {
-      "before": ["X"],
-      "after": ["g", "g", "d", "G"]
+      "before": [
+        "X"
+      ],
+      "after": [
+        "g",
+        "g",
+        "d",
+        "G"
+      ]
     },
     {
-      "before": ["K"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showDefinitionPreviewHover"
+      ]
     },
     {
-      "before": ["%"],
-      "commands": ["extension.matchitJumpItems"]
+      "before": [
+        "%"
+      ],
+      "commands": [
+        "extension.matchitJumpItems"
+      ]
     },
     {
-      "before": ["<space>", "l"],
-      "commands": [":e!"]
+      "before": [
+        "<space>",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.showAllEditors"
+      ]
     },
     {
-      "before": ["<space>", "s"],
-      "commands": ["workbench.action.files.save"]
+      "before": [
+        "<space>",
+        "r"
+      ],
+      "commands": [
+        ":e!"
+      ]
     },
     {
-      "before": ["<space>", "x"],
-      "commands": ["workbench.action.closeAllEditors"]
+      "before": [
+        "<space>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
     },
     {
-      "before": ["<space>", "S"],
-      "commands": ["workbench.action.files.saveAll"]
+      "before": [
+        "<space>",
+        "x"
+      ],
+      "commands": [
+        "workbench.action.closeAllEditors"
+      ]
     },
     {
-      "before": ["<space>", "h"],
-      "commands": [":nohl"]
+      "before": [
+        "<space>",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll"
+      ]
     },
     {
-      "before": ["<space>", "l"],
-      "commands": [":set relativenumber!"]
+      "before": [
+        "<space>",
+        "h"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
     {
-      "before": ["<S-l>"],
-      "after": ["a", "<space>", "<esc>"]
+      "before": [
+        "<space>",
+        "l"
+      ],
+      "commands": [
+        ":set relativenumber!"
+      ]
     },
     {
-      "before": ["<S-h>"],
-      "after": ["i", "<space>", "<esc>"]
+      "before": [
+        "<S-l>"
+      ],
+      "after": [
+        "a",
+        "<space>",
+        "<esc>"
+      ]
     },
     {
-      "before": ["<space>", "r"],
-      "commands": ["workbench.action.showCommands"]
+      "before": [
+        "<S-h>"
+      ],
+      "after": [
+        "i",
+        "<space>",
+        "<esc>"
+      ]
     },
     {
-      "before": ["<space>", "t"],
+      "before": [
+        "<space>",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "t"
+      ],
       "commands": [
         "workbench.action.terminal.toggleTerminal",
         "workbench.action.terminal.focus"
       ]
     },
     {
-      "before": ["<space>", "e"],
+      "before": [
+        "<space>",
+        "e"
+      ],
       "commands": [
         "workbench.action.toggleSidebarVisibility",
         "revealInExplorer",
@@ -121,47 +219,89 @@
       ]
     },
     {
-      "before": ["<space>", "g"],
-      "commands": [":!alacritty -e lazygit $PWD &"]
+      "before": [
+        "<space>",
+        "g"
+      ],
+      "commands": [
+        ":!alacritty -e lazygit $PWD &"
+      ]
     },
     {
-      "before": ["<space>", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": [
+        "<space>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     },
     {
-      "before": ["<space>", "x"],
+      "before": [
+        "<space>",
+        "x"
+      ],
       "commands": [
         "workbench.action.closeAllEditors",
         "workbench.action.files.newUntitledFile"
       ]
     },
     {
-      "before": ["<space>", "o"],
-      "commands": [":!alacritty -e fzfcode --working-directory $PWD &"]
+      "before": [
+        "<space>",
+        "o"
+      ],
+      "commands": [
+        ":!alacritty -e fzfcode --working-directory $PWD &"
+      ]
     },
     {
-      "before": ["<space>", "z"],
-      "commands": [":!alacritty -e vifmrun +only $PWD &"]
+      "before": [
+        "<space>",
+        "z"
+      ],
+      "commands": [
+        ":!alacritty -e vifmrun +only $PWD &"
+      ]
     },
     {
-      "before": ["<space>", "/"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "<space>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     {
-      "before": ["<C-o>"],
-      "commands": ["workbench.action.files.openFolder"]
+      "before": [
+        "<C-o>"
+      ],
+      "commands": [
+        "workbench.action.files.openFolder"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": ["<space>", "/"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "<space>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     }
   ],
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "tabnine.experimentalAutoImports": true,
@@ -174,7 +314,9 @@
   },
   "vim.easymotion": true,
   "sync.gist": "2e47474f8b6b139d6d1e2a491314795e",
-  "settingsSync.ignoredExtensions": ["shan.code-settings-sync"],
+  "settingsSync.ignoredExtensions": [
+    "shan.code-settings-sync"
+  ],
   "editor.tokenColorCustomizations": {
     "[Dracula At Night]": {
       "textMateRules": [
