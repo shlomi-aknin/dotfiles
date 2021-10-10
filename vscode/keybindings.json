@@ -150,6 +150,10 @@
     "when": "inQuickOpen"
   },
   {
+    "key": "ctrl+s",
+    "command": "workbench.action.findInFiles"
+  },
+  {
     "key": "ctrl+x",
     "command": "workbench.action.closeActiveEditor"
   },
