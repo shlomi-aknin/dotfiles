@@ -15,17 +15,14 @@ packer.startup(function()
 	use {'akinsho/nvim-toggleterm.lua'}
 	use {'andymass/vim-matchup'}
 	use {'edluffy/specs.nvim'}
-  use {'fedepujol/move.nvim'}
 	use {'glepnir/lspsaga.nvim'}
 	use {'hoob3rt/lualine.nvim'}
 	use {'hrsh7th/nvim-compe'}
 	use {'kabouzeid/nvim-lspinstall'}
 	use {'karb94/neoscroll.nvim'}
-  use {'kdheepak/tabline.nvim'}
 	use {'kyazdani42/nvim-tree.lua'}
 	use {'kyazdani42/nvim-web-devicons'}
 	use {'lewis6991/gitsigns.nvim'}
-  use {'mhartington/formatter.nvim'}
 	use {'nacro90/numb.nvim'}
 	use {'neovim/nvim-lspconfig'}
 	use {'nvim-lua/plenary.nvim'}
@@ -34,20 +31,24 @@ packer.startup(function()
 	use {'pocco81/autosave.nvim'}
 	use {'pseewald/vim-anyfold'}
 	use {'rafamadriz/friendly-snippets'}
-  use {'tpope/vim-surround'}
 	use {'terrortylor/nvim-comment'}
 	use {'wbthomason/packer.nvim'}
 	use {'windwp/nvim-autopairs'}
 	use {'windwp/nvim-ts-autotag'}
+  -- use {'lukas-reineke/indent-blankline.nvim'}
+  use { 'ibhagwan/fzf-lua' }
+  use { 'vijaymarupudi/nvim-fzf' }
   use {'arnamak/stay-centered.nvim'}
   use {'dracula/vim', as = 'dracula'}
+  use {'fedepujol/move.nvim'}
   use {'honza/vim-snippets'}
   use {'hrsh7th/vim-vsnip'}
   use {'hrsh7th/vim-vsnip-integ'}
   use {'jose-elias-alvarez/null-ls.nvim'}
   use {'jose-elias-alvarez/nvim-lsp-ts-utils'}
+  use {'kdheepak/tabline.nvim'}
   use {'leafoftree/vim-matchtag'}
-  -- use {'lukas-reineke/indent-blankline.nvim'}
+  use {'mhartington/formatter.nvim'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'onsails/lspkind-nvim'}
@@ -55,6 +56,7 @@ packer.startup(function()
   use {'phaazon/hop.nvim', as = 'hop'}
   use {'ray-x/lsp_signature.nvim'}
   use {'stefandtw/quickfix-reflector.vim'}
+  use {'tpope/vim-surround'}
   use {'tzachar/compe-tabnine'}
   use {'yamatsum/nvim-cursorline'}
 end)
