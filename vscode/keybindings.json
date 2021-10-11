@@ -10,6 +10,11 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "ctrl+shift+s",
+    "command": "vim-search-and-replace.start",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "key": "ctrl+shift+j",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"

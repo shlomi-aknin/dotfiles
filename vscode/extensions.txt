@@ -14,6 +14,7 @@ code --install-extension junstyle.php-cs-fixer
 code --install-extension LaurentTreguier.vscode-simple-icons
 code --install-extension leizongmin.node-module-intellisense
 code --install-extension naumovs.color-highlight
+code --install-extension nlehmann.vscode-vim-search-and-replace
 code --install-extension redguardtoo.matchit
 code --install-extension sourcegraph.javascript-typescript
 code --install-extension svelte.svelte-vscode
