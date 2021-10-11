@@ -47,6 +47,24 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
+        "m"
+      ],
+      "after": [
+        "o",
+        "<esc>"
+      ]
+    },
+    {
+      "before": [
+        "M"
+      ],
+      "after": [
+        "O",
+        "<esc>"
+      ]
+    },
+    {
+      "before": [
         "s"
       ],
       "after": [
