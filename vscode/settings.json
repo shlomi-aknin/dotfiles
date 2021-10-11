@@ -135,6 +135,15 @@
     {
       "before": [
         "<space>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
         "r"
       ],
       "commands": [
@@ -242,7 +251,7 @@
         "g"
       ],
       "commands": [
-        ":!alacritty -e lazygit $PWD &"
+        ":!alacritty -e lazygit ${workspaceFolder} &"
       ]
     },
     {
@@ -270,7 +279,7 @@
         "o"
       ],
       "commands": [
-        ":!alacritty -e fzfcode --working-directory $PWD &"
+        ":!alacritty -e fzfcode --working-directory ${workspaceFolder} &"
       ]
     },
     {
@@ -365,7 +374,7 @@
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "svelte.enable-ts-plugin": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
