@@ -231,5 +231,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "json.format.enable": false
+  "json.format.enable": false,
+  "files.autoSave": "onFocusChange"
 }
