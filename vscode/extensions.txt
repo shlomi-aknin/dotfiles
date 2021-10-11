@@ -10,6 +10,7 @@ code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension GrapeCity.gc-excelviewer
 code --install-extension HookyQR.beautify
+code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension junstyle.php-cs-fixer
 code --install-extension LaurentTreguier.vscode-simple-icons
 code --install-extension leizongmin.node-module-intellisense

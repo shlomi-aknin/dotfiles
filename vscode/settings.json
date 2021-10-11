@@ -109,10 +109,6 @@
       "commands": [ ":nohl" ]
     },
     {
-      "before": [ "<space>", "l" ],
-      "commands": [ ":set relativenumber!" ]
-    },
-    {
       "before": [ "<S-l>" ],
       "after": [ "a", "<space>", "<esc>" ]
     },
@@ -226,7 +222,7 @@
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "svelte.enable-ts-plugin": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
