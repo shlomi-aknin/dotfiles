@@ -161,6 +161,16 @@
       "commands": [ "workbench.action.files.openFolder" ]
     },
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
   "vim.visualModeKeyBindings": [
     {
       "before": [ "<space>", "/" ],
