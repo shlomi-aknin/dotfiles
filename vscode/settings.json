@@ -151,7 +151,7 @@
     },
     {
       "before": [ "<space>", "z" ],
-      "commands": [ ":!alacritty -e vifmrun +only $PWD &" ]
+      "commands": [ ":!alacritty -e vifm +only ${workspaceFolder} &" ]
     },
     {
       "before": [ "<space>", "/" ],
