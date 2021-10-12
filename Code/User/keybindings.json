@@ -168,7 +168,13 @@
   },
   {
     "key": "ctrl+c",
-    "command": "workbench.action.closeSidebar"
+    "command": "extension.vim_escape",
+    "when": "editorFocus && vim.active && vim.mode == 'Insert'"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.closeSidebar",
+    "when": "vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+c",
@@ -191,10 +197,6 @@
   {
     "key": "ctrl+t",
     "command": "workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "shift+win+x",
-    "command": "workbench.action.closeWindow"
   },
   {
     "key": "alt+f4",
