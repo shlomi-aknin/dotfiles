@@ -3,8 +3,8 @@
 " vnoremap i :!code -n %f<cr>
 " nnoremap o :!code %d<cr>
 " nnoremap O :!code %c<cr>
-nnoremap E :!code %f<cr>:q<cr>
-nnoremap C :!code %d<cr>:q<cr>
+nnoremap E :!code %f<cr>
+nnoremap C :!code %d<cr>
 
 " Start shell in current directory
 nnoremap s :!devour alacritty -t "Alacritty %d" --working-directory %d<cr>
@@ -97,7 +97,7 @@ nnoremap <f8> :delete<cr>
 
 command ln ln -s %f:p %D
 source ~/.config/vifm/SETUP
-command! FZFfind :set noquickview | :execute 'goto' fnameescape(term('find | fzf --height 10 2>/dev/tty'))
+nnoremap <C-c> :!$(fd --type f | fzf -m --cycle | xargs -r code)<cr>
 command! extractfiles unzip -o %c -d %D && rm -f %c
 nnoremap XX :!unzip -o %c -d %d && rm -f %c<CR>
 " yank current directory path into the clipboard
