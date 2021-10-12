@@ -82,6 +82,21 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "key": "shift+y",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus"
@@ -93,7 +108,7 @@
   },
   {
     "key": "d",
-    "command": "deleteFile",
+    "command": "moveFileToTrash",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {

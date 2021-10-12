@@ -173,12 +173,7 @@
       "commands": [ "editor.action.commentLine" ]
     },
   ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [ "j", "j" ],
-      "after": [ "<Esc>" ]
-    },
-  ],
+  "vim.insertModeKeyBindings": [],
   "tabnine.experimentalAutoImports": true,
   "php-cs-fixer.lastDownload": 1633618399698,
   "sync.autoDownload": true,
