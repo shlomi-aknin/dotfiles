@@ -1,10 +1,8 @@
-mark P ~/Programs
-mark b ~/bin/
+mark b /usr/local/bin/
 mark c ~/.config
 mark d ~/Downloads
 mark h ~/
-mark l /usr/local/bin/
-mark n /var/nodejs
-mark p /var/www/html
+mark p ~/programs
 mark r /
 mark t ~/dotfiles
+mark w ~/workspace
