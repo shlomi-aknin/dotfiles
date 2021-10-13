@@ -99,7 +99,7 @@
   {
     "key": "r",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" 
   },
   {
     "key": "enter",
@@ -114,7 +114,7 @@
   {
     "key": "a",
     "command": "workbench.files.action.createFileFromExplorer",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" 
   },
   {
     "key": "shift+a",
