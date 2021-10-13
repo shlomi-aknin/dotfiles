@@ -43,15 +43,6 @@
     "editor.lineHighlightBackground": "#235789",
     "editorBracketMatch.background": "#2176FF"
   },
-  "multiCommand.commands": [
-      {
-          "command": "multiCommand.fzfcode",
-          "sequence": [
-              "workbench.action.terminal.new",
-              { "command": "workbench.action.terminal.sendSequence", "args": { "text": "fzfcode\u000D" } }
-          ]
-      },
-  ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [ "m" ],
@@ -143,7 +134,7 @@
     },
     {
       "before": [ "<space>", "f" ],
-      "commands": [ "workbench.action.quickOpen" ]
+      "commands": [ ":!alacritty -e fzfsearchforcode &" ]
     },
     {
       "before": [ "<space>", "o" ],
@@ -155,7 +146,7 @@
     },
     {
       "before": [ "<space>", "z" ],
-      "commands": [ ":!alacritty -e vifm +only ${workspaceFolder} &" ]
+      "commands": [ ":!alacritty -e vifm +only $(cat /tmp/lastdir) &" ]
     },
     {
       "before": [ "<space>", "/" ],

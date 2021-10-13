@@ -187,10 +187,6 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+z",
-    "command": "multiCommand.fzfcode",
-  },
-  {
     "key": "ctrl+s",
     "command": "workbench.action.findInFiles"
   },

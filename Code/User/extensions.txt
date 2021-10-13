@@ -17,7 +17,6 @@ code --install-extension leizongmin.node-module-intellisense
 code --install-extension naumovs.color-highlight
 code --install-extension nlehmann.vscode-vim-search-and-replace
 code --install-extension redguardtoo.matchit
-code --install-extension ryuta46.multi-command
 code --install-extension sourcegraph.javascript-typescript
 code --install-extension svelte.svelte-vscode
 code --install-extension TabNine.tabnine-vscode
