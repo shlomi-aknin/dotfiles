@@ -1,0 +1,8 @@
+#!/bin/bash
+
+LAST=/tmp/lastdir
+PROJECTDIR=/home/shlomo/workspace
+cd $PROJECTDIR
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | fzf --cycle)
+[ "$SELECTED" == "" ] && exit 0
+echo $SELECTED > $LAST
