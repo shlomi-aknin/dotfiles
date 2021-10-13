@@ -223,5 +223,6 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "json.format.enable": false,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "editor.cursorSurroundingLines": 999
 }
