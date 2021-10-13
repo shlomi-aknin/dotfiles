@@ -2,4 +2,4 @@
 
 PROJECTDIR=/home/shlomo/workspace
 cd $PROJECTDIR
-code $(fd --type d -d 1 . $PROJECTDIR | fzf --cycle)
+fd --type d -d 1 . $PROJECTDIR | fzf --cycle | xargs -r code
