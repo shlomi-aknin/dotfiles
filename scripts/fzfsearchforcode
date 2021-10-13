@@ -1,5 +1,5 @@
 #!/bin/bash
 
 LASTDIR=$(cat /tmp/lastdir)
-cd $LASTDIR
-fd --type f . $LASTDIR | fzf -m --cycle | xargs -r code
+LEN=${#LASTDIR}
+(cd $LASTDIR && fd --type f . $LASTDIR) | cut -c "$((LEN+2))"- | fzf -m --cycle | xargs -r code
