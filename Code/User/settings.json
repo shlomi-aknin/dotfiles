@@ -130,7 +130,7 @@
     },
     {
       "before": [ "<space>", "g" ],
-      "commands": [ ":!alacritty -e lazygit ${workspaceFolder} &" ]
+      "commands": [ ":!alacritty -e lazygit -p $(cat /tmp/lastdir) &" ]
     },
     {
       "before": [ "<space>", "f" ],
