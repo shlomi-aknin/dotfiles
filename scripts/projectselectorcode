@@ -1,5 +1,9 @@
 #!/bin/bash
 
+LASTDIR=/tmp/lastdir
 PROJECTDIR=/home/shlomo/workspace
+touch $LASTDIR
 cd $PROJECTDIR
-fd --type d -d 1 . $PROJECTDIR | fzf --cycle | xargs -r code
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | fzf --cycle)
+echo $SELECTED > $LASTDIR
+code $SELECTED
