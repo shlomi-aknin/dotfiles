@@ -1,0 +1,5 @@
+#!/bin/bash
+
+LASTDIR=$(cat /tmp/lastdir)
+cd $LASTDIR
+fd --type f . $LASTDIR | fzf -m --cycle | xargs -r code
