@@ -3,7 +3,7 @@
 " vnoremap i :!code -n %f<cr>
 " nnoremap o :!code %d<cr>
 " nnoremap O :!code %c<cr>
-nnoremap E :!code %f<cr>
+nnoremap E :!code %f<cr>:q<cr>
 nnoremap C :!code %d<cr>
 
 " Start shell in current directory
