@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PROJECTDIR=/home/shlomo/workspace
+cd $PROJECTDIR
+nvim $(fd --type d -d 1 . $PROJECTDIR | fzf --cycle)
