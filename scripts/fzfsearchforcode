@@ -2,4 +2,4 @@
 
 LASTDIR=$(cat /tmp/lastdir)
 LEN=${#LASTDIR}
-(cd $LASTDIR && fd --type f . $LASTDIR) | cut -c "$((LEN+2))"- | fzf -m --cycle | xargs -r code
+(cd $LASTDIR && fd --type f . $LASTDIR) | cut -c "$((LEN+2))"- | fzf -m -d / --cycle | while read line; do echo "$LASTDIR/$line"; done | xargs -r code
