@@ -71,12 +71,6 @@
   "vim.statusBarColors.easymotionmode": ["#ffff00", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [":"],
-      "commands": [
-          "workbench.action.showCommands",
-      ]
-    },
-    {
       "before": [ "m" ],
       "after": [ "o", "<esc>" ]
     },
