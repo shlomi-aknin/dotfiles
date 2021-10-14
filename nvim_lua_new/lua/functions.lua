@@ -1,4 +1,5 @@
 local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
 local custom_actions = {}
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
@@ -25,7 +26,6 @@ function custom_actions.fzf_multi_select(prompt_bufnr)
 end
 
 function custom_actions.yank_file()
-  local action_state = require('telescope.actions.state')
   local entry = action_state.get_selected_entry()
   copy_to_clipboard(entry.path)
 end
