@@ -2,7 +2,9 @@
 
 LAST=/tmp/lastdir
 PROJECTDIR=/home/shlomo/workspace
+LEN=${#PROJECTDIR}
+COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 cd $PROJECTDIR
-SELECTED=$(fd --type d -d 1 . $PROJECTDIR | fzf --cycle)
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
 [ "$SELECTED" == "" ] && exit 0
-echo $SELECTED > $LAST
+echo "$PROJECTDIR/$SELECTED" > $LAST
