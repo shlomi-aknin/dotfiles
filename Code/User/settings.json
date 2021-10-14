@@ -248,4 +248,5 @@
   "json.format.enable": false,
   "files.autoSave": "onFocusChange",
   "editor.cursorSurroundingLines": 999,
+  "workbench.editor.tabCloseButton": "off",
 }
