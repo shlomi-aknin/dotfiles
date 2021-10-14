@@ -229,7 +229,8 @@
   },
   {
     "key": "ctrl+o",
-    "command": "workbench.action.navigateBack"
+    "command": "workbench.action.navigateBack",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'" 
   },
   {
     "key": "ctrl+i",
