@@ -1,5 +1,4 @@
 local actions = require('telescope.actions')
-local action_state = require('telescope.actions.state')
 local custom_actions = {}
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
@@ -455,6 +454,12 @@ vim.cmd([[
   endfunction
 
   command! QuickFixOpenAll call QuickFixOpenAll()
+  let g:esearch = {}
+  let g:esearch.regex   = 1
+  let g:esearch.textobj = 0
+  let g:esearch.case    = 'smart'
+  let g:esearch.prefill = ['hlsearch', 'last', 'clipboard']
+  let g:esearch.default_mappings = 0
 ]])
 
 require('nvim-treesitter.configs').setup({

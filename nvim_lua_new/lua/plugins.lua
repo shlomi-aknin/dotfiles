@@ -15,6 +15,7 @@ packer.startup(function()
 	use {'akinsho/nvim-toggleterm.lua'}
 	use {'andymass/vim-matchup'}
 	use {'edluffy/specs.nvim'}
+  use {'eugen0329/vim-esearch'}
 	use {'glepnir/lspsaga.nvim'}
 	use {'hoob3rt/lualine.nvim'}
 	use {'hrsh7th/nvim-compe'}
