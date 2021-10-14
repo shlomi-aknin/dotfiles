@@ -41,7 +41,10 @@
     "editorGroupHeader.tabsBackground": "#000000",
     "editorLineNumber.activeForeground": "#ffff00",
     "editor.lineHighlightBackground": "#235789",
-    "editorBracketMatch.background": "#2176FF"
+    "editorBracketMatch.background": "#2176FF",
+    "tab.activeBackground": "#34a1eb",
+    "tab.activeForeground": "#000000",
+    "tab.inactiveForeground": "#ffffff"
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
