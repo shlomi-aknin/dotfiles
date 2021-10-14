@@ -3,4 +3,4 @@
 PROJECTDIR=/home/shlomo/workspace
 cd $PROJECTDIR
 COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
-nvim $(fd --type d -d 1 . $PROJECTDIR | dmenu -l $COUNT)
+alacritty -e nvim $(fd --type d -d 1 . $PROJECTDIR | dmenu -l $COUNT)
