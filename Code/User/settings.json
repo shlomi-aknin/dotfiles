@@ -84,6 +84,10 @@
       "commands": [ "workbench.action.showAllEditors" ]
     },
     {
+      "before": [ "<space>", "c" ],
+      "commands": [ "workbench.action.toggleStatusbarVisibility" ]
+    },
+    {
       "before": [ "<space>", "p" ],
       "commands": [ "workbench.action.gotoSymbol" ]
     },
@@ -227,5 +231,6 @@
   },
   "json.format.enable": false,
   "files.autoSave": "onFocusChange",
-  "editor.cursorSurroundingLines": 999
+  "editor.cursorSurroundingLines": 999,
+  "workbench.statusBar.visible": false
 }
