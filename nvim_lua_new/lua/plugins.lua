@@ -35,9 +35,6 @@ packer.startup(function()
 	use {'wbthomason/packer.nvim'}
 	use {'windwp/nvim-autopairs'}
 	use {'windwp/nvim-ts-autotag'}
-  -- use {'lukas-reineke/indent-blankline.nvim'}
-  use { 'ibhagwan/fzf-lua' }
-  use { 'vijaymarupudi/nvim-fzf' }
   use {'arnamak/stay-centered.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'fedepujol/move.nvim'}

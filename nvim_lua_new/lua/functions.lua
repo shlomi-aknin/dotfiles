@@ -1,5 +1,5 @@
--- local actions = require('telescope.actions')
--- local action_state = require('telescope.actions.state')
+local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
 local custom_actions = {}
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
@@ -25,11 +25,11 @@ function custom_actions.fzf_multi_select(prompt_bufnr)
   end
 end
 
--- function custom_actions.yank_file()
---   local action_state = require('telescope.actions.state')
---   local entry = action_state.get_selected_entry()
---   copy_to_clipboard(entry.path)
--- end
+function custom_actions.yank_file()
+  local action_state = require('telescope.actions.state')
+  local entry = action_state.get_selected_entry()
+  copy_to_clipboard(entry.path)
+end
 
 function copy_to_clipboard(content)
   vim.fn.setreg('+', content);
@@ -37,32 +37,32 @@ function copy_to_clipboard(content)
   return print(string.format('Copied %s to system clipboard! \n', content))
 end
 
--- require('telescope').setup({
---   defaults = {
---     prompt_prefix = '@ ',
---     layout_config = {
---       preview_width = 0.6
---     },
---     file_ignore_patterns = { 'node_modules', '.git', 'package.json', 'package-lock.json' },
---     mappings = {
---       i = {
---         ['<esc>'] = actions.close,
---         ['<C-j>'] = actions.move_selection_next,
---         ['<C-k>'] = actions.move_selection_previous,
---         ['<C-y>'] = custom_actions.yank_file,
---         ['<tab>'] = actions.toggle_selection + actions.move_selection_next,
---         ['<s-tab>'] = actions.toggle_selection + actions.move_selection_previous,
---         ['<cr>'] = custom_actions.fzf_multi_select,
---       },
---       n = {
---         ['<esc>'] = actions.close,
---         ['<tab>'] = actions.toggle_selection + actions.move_selection_next,
---         ['<s-tab>'] = actions.toggle_selection + actions.move_selection_previous,
---         ['<cr>'] = custom_actions.fzf_multi_select
---       }
---     },
---   }
--- })
+require('telescope').setup({
+  defaults = {
+    prompt_prefix = '@ ',
+    layout_config = {
+      preview_width = 0.6
+    },
+    file_ignore_patterns = { 'node_modules', '.git', 'package.json', 'package-lock.json' },
+    mappings = {
+      i = {
+        ['<esc>'] = actions.close,
+        ['<C-j>'] = actions.move_selection_next,
+        ['<C-k>'] = actions.move_selection_previous,
+        ['<C-y>'] = custom_actions.yank_file,
+        ['<tab>'] = actions.toggle_selection + actions.move_selection_next,
+        ['<s-tab>'] = actions.toggle_selection + actions.move_selection_previous,
+        ['<cr>'] = custom_actions.fzf_multi_select,
+      },
+      n = {
+        ['<esc>'] = actions.close,
+        ['<tab>'] = actions.toggle_selection + actions.move_selection_next,
+        ['<s-tab>'] = actions.toggle_selection + actions.move_selection_previous,
+        ['<cr>'] = custom_actions.fzf_multi_select
+      }
+    },
+  }
+})
 
 local dracula = require('lualine.themes.dracula')
 dracula.normal.b.bg = '#f1fa8c'
@@ -401,15 +401,16 @@ require('lspkind').init({
     },
 })
 
+-- autocmd Filetype * AnyFoldActivate
 vim.cmd([[
   let $PATH .= ':/usr/local/lib/node_modules/bin'
   set foldlevel=99
+  filetype plugin indent on
   augroup highlight_yank
   autocmd!
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="HighlightedyankRegion", timeout=1200}
   augroup END
   autocmd BufWritePre * :%s/\s\+$//e
-  autocmd Filetype * AnyFoldActivate
   autocmd BufEnter *.{css,html,js,svelte} :syntax sync fromstart
   autocmd BufLeave *.{css,html,js,svelte} :syntax sync clear
 
