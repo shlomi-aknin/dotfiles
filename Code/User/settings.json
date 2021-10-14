@@ -49,7 +49,16 @@
     "statusBar.noFolderBackground": "#00BBF9",
     "statusBar.debuggingBackground": "#00BBF9",
     "statusBar.foreground": "#000000",
-    "statusBar.debuggingForeground": "#000000"
+    "statusBar.debuggingForeground": "#000000",
+    "badge.foreground": "#000000",
+    "badge.background": "#00BBF9",
+    "quickInputList.focusBackground": "#00BBF9",
+    "quickInputList.focusForeground": "#000000",
+    "editorSuggestWidget.highlightForeground": "#F15BB5",
+    "editorSuggestWidget.selectedBackground": "#00BBF9",
+    "editorSuggestWidget.foreground": "#ffffff",
+    "editorSuggestWidget.selectedForeground": "#000000",
+    "editorSuggestWidget.focusHighlightForeground": "#2C0972"
   },
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": ["#00BBF9", "#000000"],
