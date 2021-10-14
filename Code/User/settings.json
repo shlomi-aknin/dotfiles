@@ -44,9 +44,29 @@
     "editorBracketMatch.background": "#2176FF",
     "tab.activeBackground": "#34a1eb",
     "tab.activeForeground": "#000000",
-    "tab.inactiveForeground": "#ffffff"
+    "tab.inactiveForeground": "#ffffff",
+    "statusBar.background": "#00BBF9",
+    "statusBar.noFolderBackground": "#00BBF9",
+    "statusBar.debuggingBackground": "#00BBF9",
+    "statusBar.foreground": "#000000",
+    "statusBar.debuggingForeground": "#000000"
   },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#00BBF9", "#000000"],
+  "vim.statusBarColors.insert": ["#44AF69", "#000000"],
+  "vim.statusBarColors.visual": ["#FCAB10", "#000000"],
+  "vim.statusBarColors.visualline": ["#FCAB10", "#000000"],
+  "vim.statusBarColors.visualblock": ["#FCAB10", "#000000"],
+  "vim.statusBarColors.replace": ["#F15BB5", "#000000"],
+  "vim.statusBarColors.searchinprogressmode": ["#007ACC", "#ffffff"],
+  "vim.statusBarColors.easymotionmode": ["#ffff00", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [":"],
+      "commands": [
+          "workbench.action.showCommands",
+      ]
+    },
     {
       "before": [ "m" ],
       "after": [ "o", "<esc>" ]
@@ -84,10 +104,6 @@
       "commands": [ "workbench.action.showAllEditors" ]
     },
     {
-      "before": [ "<space>", "c" ],
-      "commands": [ "workbench.action.toggleStatusbarVisibility" ]
-    },
-    {
       "before": [ "<space>", "p" ],
       "commands": [ "workbench.action.gotoSymbol" ]
     },
@@ -122,10 +138,6 @@
     {
       "before": [ "<S-h>" ],
       "after": [ "i", "<space>", "<esc>" ]
-    },
-    {
-      "before": [ "<space>", "d" ],
-      "commands": [ "workbench.action.showCommands" ]
     },
     {
       "before": [ "<space>", "t" ],
@@ -172,6 +184,10 @@
     {
       "before": ["<"],
       "after": ["<", "g", "v"]
+    },
+    {
+      "before": ["p"],
+      "after": ["p","g","v","y"]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -232,5 +248,4 @@
   "json.format.enable": false,
   "files.autoSave": "onFocusChange",
   "editor.cursorSurroundingLines": 999,
-  "workbench.statusBar.visible": false
 }
