@@ -2,9 +2,11 @@
 
 LASTDIR=/tmp/lastdir
 PROJECTDIR=/home/shlomo/workspace
+LEN=${#PROJECTDIR}
+COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 touch $LASTDIR
 cd $PROJECTDIR
-SELECTED=$(fd --type d -d 1 . $PROJECTDIR | fzf --delimiter / --with-nth -1 --cycle)
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
 [ "$SELECTED" = "" ] && exit 0
 echo $SELECTED > $LASTDIR
 code $SELECTED
