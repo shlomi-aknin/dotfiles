@@ -1,6 +1,9 @@
 #!/bin/bash
 
 PROJECTDIR=/home/shlomo/workspace
+LEN=${#PROJECTDIR}
 cd $PROJECTDIR
 COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
-alacritty -e nvim $(fd --type d -d 1 . $PROJECTDIR | dmenu -l $COUNT)
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
+[ "$SELECTED" = "" ] && exit 0
+alacritty -e nvim $SELECTED
