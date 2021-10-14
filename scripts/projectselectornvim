@@ -2,4 +2,5 @@
 
 PROJECTDIR=/home/shlomo/workspace
 cd $PROJECTDIR
-nvim $(fd --type d -d 1 . $PROJECTDIR | fzf --cycle)
+COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
+nvim $(fd --type d -d 1 . $PROJECTDIR | dmenu -l $COUNT)
