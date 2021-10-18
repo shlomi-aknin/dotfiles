@@ -120,7 +120,7 @@
     },
     {
       "before": [ "<space>", "s" ],
-      "commands": [ "workbench.action.files.save" ]
+      "commands": [ ":w" ]
     },
     {
       "before": [ "<space>", "x" ],
