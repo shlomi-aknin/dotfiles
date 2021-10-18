@@ -156,7 +156,7 @@
     },
     {
       "before": [ "<space>", "f" ],
-      "commands": [ ":!alacritty -e fzfsearchforcode &" ]
+      "commands": [ ":!alacritty -t 'FZFCODE' --class 'fzfcode' -e fzfsearchforcode &" ]
     },
     {
       "before": [ "<space>", "o" ],
