@@ -154,6 +154,7 @@ require('nvim-tree').setup({
   },
 })
 require('nvim-tree.view').View.winopts.relativenumber = true
+require('nvim-tree.view').View.winopts.number = true
 -- require('autosave').setup()
 -- require('specs').setup({
 --   show_jumps  = true,
