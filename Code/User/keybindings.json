@@ -31,6 +31,16 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "ctrl+shift+j",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "key": "ctrl+j",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"

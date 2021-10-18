@@ -32,7 +32,6 @@
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 2.5,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Dracula At Night",
   "workbench.list.smoothScrolling": true,
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
@@ -252,4 +251,5 @@
   "files.autoSave": "onFocusChange",
   "editor.cursorSurroundingLines": 999,
   "workbench.editor.tabCloseButton": "off",
+  "workbench.colorTheme": "Dracula At Night",
 }
