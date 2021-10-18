@@ -152,7 +152,7 @@
     },
     {
       "before": [ "<space>", "g" ],
-      "commands": [ ":!alacritty -e lazygit -p $(cat /tmp/lastdir) &" ]
+      "commands": [ ":!alacritty -t 'LAZYGITCODE' --class 'lazygitcode' -e lazygit -p $(cat /tmp/lastdir) &" ]
     },
     {
       "before": [ "<space>", "f" ],
@@ -168,7 +168,7 @@
     },
     {
       "before": [ "<space>", "z" ],
-      "commands": [ ":!alacritty -e vifm +only $(cat /tmp/lastdir) &" ]
+      "commands": [ ":!alacritty -t 'VIFMCODE' --class 'vifmcode' -e vifm +only $(cat /tmp/lastdir) &" ]
     },
     {
       "before": [ "<space>", "/" ],
