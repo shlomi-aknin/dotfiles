@@ -112,6 +112,16 @@
       "commands": ["workbench.action.gotoSymbol"]
     },
     {
+      "before": ["<space>", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["<space>", "s"],
+      "commands": ["workbench.action.files.save"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
       "before": ["<space>", "1"],
       "commands": ["workbench.action.openSettingsJson"]
     },
