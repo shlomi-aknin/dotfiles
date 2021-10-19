@@ -85,7 +85,8 @@
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.nextEditor"
+    "command": "workbench.action.nextEditor",
+    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+h",
