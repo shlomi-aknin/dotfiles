@@ -276,5 +276,13 @@
   {
     "key": "ctrl+i",
     "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "workbench.action.moveEditorRightInGroup"
   }
 ]
