@@ -17,18 +17,18 @@
   "vim.cursorStylePerMode.visual": "underline",
   "vim.cursorStylePerMode.visualblock": "underline",
   "vim.cursorStylePerMode.visualline": "underline",
-  "vim.easymotionKeys": "hjklasdf",
   "vim.easymotionIncSearchForegroundColor": "#ffff00",
+  "vim.easymotionKeys": "hjklasdf",
   "vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
-  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#ffff00",
-  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#34a1eb",
-  "vim.highlightedyank.color": "#34a1eb",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#50fa7b",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#ff79c6",
+  "vim.highlightedyank.color": "#50fa7b",
   "vim.highlightedyank.duration": 1200,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "#000000",
   "vim.hlsearch": true,
+  "vim.searchHighlightColor": "#50fa7b",
   "vim.smartRelativeLine": true,
-  "vim.searchHighlightColor": "#34a1eb90",
   "vim.useSystemClipboard": true,
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 2.5,
@@ -80,7 +80,7 @@
     },
     {
       "before": ["s"],
-      "after": ["\\", "\\", "\\", "j"]
+      "after": ["\\", "\\", "\\", "b", "d", "w"]
     },
     {
       "before": ["d", "w"],
@@ -267,5 +267,6 @@
   "editor.cursorSurroundingLines": 999,
   "workbench.editor.tabCloseButton": "off",
   "workbench.colorTheme": "Dracula At Night",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "vim.searchHighlightTextColor": "#000000"
 }
