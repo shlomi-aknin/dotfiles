@@ -112,16 +112,8 @@
       "commands": ["workbench.action.gotoSymbol"]
     },
     {
-      "before": ["<space>", "r"],
-      "commands": [":e!"]
-    },
-    {
       "before": ["<space>", "1"],
       "commands": ["workbench.action.openSettingsJson"]
-    },
-    {
-      "before": ["<space>", "s"],
-      "commands": [":w"]
     },
     {
       "before": ["<space>", "x"],
