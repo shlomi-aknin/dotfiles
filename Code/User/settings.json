@@ -45,21 +45,21 @@
     "editorGroupHeader.tabsBackground": "#000000",
     "editorLineNumber.activeForeground": "#ffff00",
     "editorLineNumber.foreground": "#ffffff",
-    "editorSuggestWidget.focusHighlightForeground": "#2C0972"
+    "editorSuggestWidget.focusHighlightForeground": "#2C0972",
     "editorSuggestWidget.foreground": "#ffffff",
     "editorSuggestWidget.highlightForeground": "#F15BB5",
     "editorSuggestWidget.selectedBackground": "#00BBF9",
     "editorSuggestWidget.selectedForeground": "#000000",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#007acc",
-    "statusBar.debuggingBackground": "#007acc",
+    "statusBar.background": "#00BBF9",
+    "statusBar.debuggingBackground": "#00BBF9",
     "statusBar.debuggingForeground": "#000000",
     "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#007acc",
+    "statusBar.noFolderBackground": "#00BBF9",
     "tab.activeBackground": "#34a1eb",
     "tab.activeForeground": "#000000",
-    "tab.inactiveForeground": "#ffffff",
+    "tab.inactiveForeground": "#ffffff"
   },
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.easymotionmode": ["#ffff00", "#000000"],
@@ -266,8 +266,8 @@
   "editor.cursorSurroundingLines": 999,
   "files.autoSave": "onFocusChange",
   "json.format.enable": false,
-  "vim.searchHighlightTextColor": "#000000"
+  "vim.searchHighlightTextColor": "#000000",
   "workbench.colorTheme": "Dracula At Night",
   "workbench.editor.tabCloseButton": "off",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "material-icon-theme"
 }
