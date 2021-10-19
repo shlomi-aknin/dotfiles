@@ -1,19 +1,19 @@
 [
   {
-      "key": "alt+`",
-      "command": "settings.cycle",
-      "when": "editorTextFocus",
-      "args": {
-          "id": "relativeLineNumbers",
-          "values": [
-              {
-                  "editor.lineNumbers": "on"
-              },
-              {
-                  "editor.lineNumbers": "relative"
-              }
-          ]
-      }
+    "key": "alt+`",
+    "command": "settings.cycle",
+    "when": "editorTextFocus",
+    "args": {
+      "id": "relativeLineNumbers",
+      "values": [
+        {
+          "editor.lineNumbers": "on"
+        },
+        {
+          "editor.lineNumbers": "relative"
+        }
+      ]
+    }
   },
   {
     "key": "alt+l",
@@ -34,6 +34,16 @@
     "key": "ctrl+shift+j",
     "command": "editor.action.insertCursorBelow",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+j",
+    "command": "list.expandSelectionDown",
+    "when": "listFocus && listSupportsMultiselect && !inputFocus"
+  },
+  {
+    "key": "shift+k",
+    "command": "list.expandSelectionUp",
+    "when": "listFocus && listSupportsMultiselect && !inputFocus"
   },
   {
     "key": "ctrl+shift+k",
@@ -109,7 +119,7 @@
   {
     "key": "r",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" 
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "enter",
@@ -124,7 +134,7 @@
   {
     "key": "a",
     "command": "workbench.files.action.createFileFromExplorer",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" 
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "shift+a",
@@ -240,10 +250,10 @@
   {
     "key": "ctrl+o",
     "command": "workbench.action.navigateBack",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'" 
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+i",
     "command": "workbench.action.navigateForward"
-  },
+  }
 ]
