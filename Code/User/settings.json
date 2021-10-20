@@ -220,7 +220,7 @@
   ],
   "vim.insertModeKeyBindings": [],
   "tabnine.experimentalAutoImports": true,
-  "php-cs-fixer.lastDownload": 1633618399698,
+  "php-cs-fixer.lastDownload": 1634718817112,
   "sync.autoDownload": true,
   "sync.forceUpload": true,
   "sync.autoUpload": true,
@@ -297,5 +297,6 @@
   "breadcrumbs.showTypeParameters": false,
   "breadcrumbs.showVariables": false,
   "breadcrumbs.showNamespaces": false,
-  "notebook.breadcrumbs.showCodeCells": false
+  "notebook.breadcrumbs.showCodeCells": false,
+  "git.decorations.enabled": false
 }
