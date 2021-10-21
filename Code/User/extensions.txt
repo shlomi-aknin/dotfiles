@@ -1,18 +1,16 @@
 code --install-extension ardenivanov.svelte-intellisense
 code --install-extension bceskavich.theme-dracula-at-night
 code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension Bruce.rona
 code --install-extension christian-kohler.path-intellisense
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension esbenp.prettier-vscode
-code --install-extension fabiospampinato.vscode-open-multiple-files
 code --install-extension fivethree.vscode-svelte-snippets
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
-code --install-extension GrapeCity.gc-excelviewer
 code --install-extension HookyQR.beautify
 code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension junstyle.php-cs-fixer
-code --install-extension LaurentTreguier.vscode-simple-icons
 code --install-extension leizongmin.node-module-intellisense
 code --install-extension naumovs.color-highlight
 code --install-extension nlehmann.vscode-vim-search-and-replace
@@ -22,7 +20,6 @@ code --install-extension sourcegraph.javascript-typescript
 code --install-extension svelte.svelte-vscode
 code --install-extension TabNine.tabnine-vscode
 code --install-extension Tino.simple-rest-client
-code --install-extension TomRijndorp.find-it-faster
 code --install-extension vincaslt.highlight-matching-tag
 code --install-extension vscodevim.vim
 code --install-extension xabikos.JavaScriptSnippets
