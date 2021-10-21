@@ -9,7 +9,6 @@
   "explorer.compactFolders": false,
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.openEditors.visible": 30,
-  "find-it-faster.general.showMaximizedTerminal": true,
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
@@ -17,9 +16,9 @@
   "vim.cursorStylePerMode.visual": "underline",
   "vim.cursorStylePerMode.visualblock": "underline",
   "vim.cursorStylePerMode.visualline": "underline",
-  "vim.easymotionIncSearchForegroundColor": "#ffff00",
+  "vim.easymotionIncSearchForegroundColor": "#50fa7b",
   "vim.easymotionKeys": "hjklasdf",
-  "vim.easymotionMarkerForegroundColorOneChar": "#ffff00",
+  "vim.easymotionMarkerForegroundColorOneChar": "#50fa7b",
   "vim.easymotionMarkerForegroundColorTwoCharFirst": "#50fa7b",
   "vim.easymotionMarkerForegroundColorTwoCharSecond": "#ff79c6",
   "vim.highlightedyank.color": "#50fa7b",
@@ -62,7 +61,7 @@
     "tab.inactiveForeground": "#ffffff"
   },
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.easymotionmode": ["#ffff00", "#000000"],
+  "vim.statusBarColors.easymotionmode": ["#F15BB5", "#000000"],
   "vim.statusBarColors.insert": ["#44AF69", "#000000"],
   "vim.statusBarColors.normal": ["#00BBF9", "#000000"],
   "vim.statusBarColors.replace": ["#F15BB5", "#000000"],
@@ -225,7 +224,7 @@
   "sync.forceUpload": true,
   "sync.autoUpload": true,
   "[html]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vim.easymotion": true,
   "sync.gist": "2e47474f8b6b139d6d1e2a491314795e",
@@ -236,8 +235,8 @@
         {
           "scope": "comment",
           "settings": {
-            "fontStyle": "italic",
-            "foreground": "#C69650"
+            "fontStyle": "bold",
+            "foreground": "#34a1eb"
           }
         },
         {
@@ -255,11 +254,9 @@
   "editor.lineNumbers": "relative",
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": true,
-  "openMultipleFiles.exclude": "node_modules/**",
   "security.workspace.trust.banner": "never",
   "security.workspace.trust.untrustedFiles": "open",
   "svelte.enable-ts-plugin": true,
-  "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "workbench.editor.enablePreview": false,
   "[jsonc]": {
@@ -298,5 +295,7 @@
   "breadcrumbs.showVariables": false,
   "breadcrumbs.showNamespaces": false,
   "notebook.breadcrumbs.showCodeCells": false,
-  "git.decorations.enabled": false
+  "git.decorations.enabled": false,
+  "terminal.external.linuxExec": "alacritty",
+  "vim.enableNeovim": true
 }
