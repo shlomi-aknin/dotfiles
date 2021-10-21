@@ -100,6 +100,22 @@
       "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
+      "before": ["g", "("],
+      "after": ["$", "F", "(", "a", "<cr>"]
+    },
+    {
+      "before": ["g", "{"],
+      "after": ["$", "F", "{", "a", "<cr>"]
+    },
+    {
+      "before": ["g", "["],
+      "after": ["$", "F", "[", "a", "<cr>"]
+    },
+    {
+      "before": ["g", "m"],
+      "after": ["o", "<esc>", "O", "<esc>"]
+    },
+    {
       "before": ["m"],
       "after": ["o", "<esc>"]
     },
