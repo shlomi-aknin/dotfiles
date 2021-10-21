@@ -95,6 +95,11 @@
       "after": ["$", "F", "[", "2", "x", "f", "]", "h", "2", "x"]
     },
     {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"],
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
       "before": ["m"],
       "after": ["o", "<esc>"]
     },
