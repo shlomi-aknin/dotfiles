@@ -71,6 +71,18 @@
   "vim.statusBarColors.visualline": ["#FCAB10", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["v", "i", "{"],
+      "after": ["$", "F", "{", "l", "v", "t", "}"]
+    },
+    {
+      "before": ["v", "i", "["],
+      "after": ["$", "F", "[", "l", "v", "t", "]"]
+    },
+    {
+      "before": ["v", "i", "("],
+      "after": ["$", "F", "(", "l", "v", "t", ")"]
+    },
+    {
       "before": ["c", "i", "{"],
       "after": ["$", "F", "{", "l", "v", "t", "}", "x", "i"]
     },
