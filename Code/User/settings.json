@@ -136,6 +136,18 @@
       "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
+      "before": ["g", ")"],
+      "after": ["$", "F", "(", "a"]
+    },
+    {
+      "before": ["g", "}"],
+      "after": ["$", "F", "{", "a"]
+    },
+    {
+      "before": ["g", "]"],
+      "after": ["$", "F", "[", "a"]
+    },
+    {
       "before": ["g", "("],
       "after": ["$", "F", "(", "a", "<cr>"]
     },
