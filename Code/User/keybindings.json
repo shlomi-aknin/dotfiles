@@ -254,6 +254,12 @@
   },
   {
     "key": "ctrl+l",
+    "command": "workbench.action.acceptSelectedQuickOpenItem",
+    "when": "inQuickOpen"
+  },
+
+  {
+    "key": "ctrl+l",
     "command": "acceptSelectedSuggestion",
     "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
