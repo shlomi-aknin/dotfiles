@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CONFIGDIR=/home/shlomo/.config
+LEN=${#CONFIGDIR}
+cd $CONFIGDIR
+COUNT=$(fd --type d -d 1 . $CONFIGDIR | wc -l)
+SELECTED=$(fd --type d -d 1 . $CONFIGDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
+[ "$SELECTED" = "" ] && exit 0
+alacritty -e nvim $SELECTED
