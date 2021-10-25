@@ -249,11 +249,6 @@
   },
   {
     "key": "ctrl+l",
-    "command": "acceptSelectedSuggestion",
-    "when": "suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "ctrl+l",
     "command": "workbench.action.acceptSelectedQuickOpenItem",
     "when": "inQuickOpen"
   },
@@ -309,5 +304,16 @@
   {
     "key": "ctrl+.",
     "command": "workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.closeQuickOpen",
+        "workbench.action.quickOpen"
+      ]
+    },
+    "when": "inQuickOpen"
   }
 ]
