@@ -391,5 +391,6 @@
   "git.decorations.enabled": false,
   "terminal.external.linuxExec": "alacritty",
   "vim.enableNeovim": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.trimTrailingWhitespace": true
 }
