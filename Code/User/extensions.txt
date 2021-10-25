@@ -23,4 +23,3 @@ code --install-extension Tino.simple-rest-client
 code --install-extension vincaslt.highlight-matching-tag
 code --install-extension vscodevim.vim
 code --install-extension xabikos.JavaScriptSnippets
-code --install-extension Zignd.html-css-class-completion
