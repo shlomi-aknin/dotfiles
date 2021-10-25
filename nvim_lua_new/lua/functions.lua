@@ -401,7 +401,7 @@ require('lspkind').init({
     },
 })
 
--- autocmd Filetype * AnyFoldActivate
+  -- autocmd Filetype * AnyFoldActivate
 vim.cmd([[
   let $PATH .= ':/usr/local/lib/node_modules/bin'
   set foldlevel=99

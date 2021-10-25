@@ -1,6 +1,6 @@
 vim.cmd[[
   silent! colorscheme dracula
-  hi Comment guifg=#34a1eb
+  hi Comment guifg=#34a1eb gui=bold
   hi CursorLine guibg=#235789
   hi CursorLineNr guifg=#ffff00
   hi CursorWord gui=underline
@@ -18,6 +18,7 @@ vim.cmd[[
   hi PMenu guibg=#2176FF guifg=#ffffff
   hi PMenuSel guibg=#ffffff guifg=#000000
   hi Search guifg=#000000 guibg=#FEA82F
+  hi SignColumn guibg=#000000
   hi String guifg=#34a1eb
   hi TabLine guibg=#000000 guifg=#ffff00 gui=NONE
   hi TabLineModCur guibg=#50fa7b guifg=#000000 gui=bold
