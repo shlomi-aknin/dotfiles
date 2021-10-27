@@ -203,6 +203,16 @@
     "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   },
   {
+    "key": "ctrl+j",
+    "command": "search.focus.nextInputBox",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "search.action.focusSearchFromResults",
+    "when": "firstMatchFocus && searchViewletVisible"
+  },
+  {
     "key": "ctrl+n",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus && terminalProcessSupported && !editorFocus"
