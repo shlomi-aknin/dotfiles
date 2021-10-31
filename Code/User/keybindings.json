@@ -66,14 +66,6 @@
     "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   },
   {
-    "key": "alt+h",
-    "command": "workbench.action.moveEditorLeftInGroup"
-  },
-  {
-    "key": "alt+l",
-    "command": "workbench.action.moveEditorRightInGroup"
-  },
-  {
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
