@@ -230,12 +230,21 @@
       "commands": [":nohl"]
     },
     {
-      "before": ["<S-l>"],
+      "before": ["<S-i>"],
       "after": ["a", "<space>", "<esc>"]
     },
     {
-      "before": ["<S-h>"],
+      "before": ["<S-u>"],
       "after": ["i", "<space>", "<esc>"]
+    },
+    {
+      "before": ["<S-l>"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["<S-h>"],
+      "after": ["^"]
+      // "after": ["i", "<space>", "<esc>"]
     },
     {
       "before": ["<space>", "t"],
