@@ -69,15 +69,15 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["autosave.nvim"] = {
-    loaded = true,
-    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/autosave.nvim",
-    url = "https://github.com/pocco81/autosave.nvim"
-  },
   dracula = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/dracula",
     url = "https://github.com/dracula/vim"
+  },
+  ["format.nvim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/format.nvim",
+    url = "https://github.com/lukas-reineke/format.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,

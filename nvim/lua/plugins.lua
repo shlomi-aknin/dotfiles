@@ -21,6 +21,7 @@ packer.startup(function()
   use {'kyazdani42/nvim-tree.lua'}
   use {'kyazdani42/nvim-web-devicons'}
   use {'lewis6991/gitsigns.nvim'}
+  use {'lukas-reineke/format.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-lua/plenary.nvim'}
@@ -28,9 +29,7 @@ packer.startup(function()
   use {'nvim-telescope/telescope.nvim'}
   use {'nvim-treesitter/nvim-treesitter'}
   use {'phaazon/hop.nvim'}
-  use {'pocco81/autosave.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-spectre'}
 end)
-
