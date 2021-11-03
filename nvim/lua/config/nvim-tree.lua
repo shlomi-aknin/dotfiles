@@ -5,7 +5,7 @@ winopts.relativenumber = true
 winopts.number = true
 
 require('nvim-tree').setup({
-  ignore_ft_on_setup = {'.git', 'node_modules', '.cache'},
+  ignore_ft_on_setup  = {'.git', 'node_modules', '.cache'},
   auto_close          = true,
   hijack_cursor       = true,
   update_focused_file = { enable = true },
