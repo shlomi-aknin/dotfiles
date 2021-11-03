@@ -16,6 +16,7 @@ packer.startup(function()
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'fedepujol/move.nvim'}
+  use {'karb94/neoscroll.nvim'}
   use {'kdheepak/tabline.nvim'}
   use {'kyazdani42/nvim-tree.lua'}
   use {'kyazdani42/nvim-web-devicons'}

@@ -1,6 +1,7 @@
 require('config/autosave')
 require('config/hop')
 require('config/lualine')
+require('config/neoscroll')
 require('config/nvim-colorizer')
 require('config/nvim-comment')
 require('config/nvim-lspconfig')

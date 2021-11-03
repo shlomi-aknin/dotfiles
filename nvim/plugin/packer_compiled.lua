@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/move.nvim",
     url = "https://github.com/fedepujol/move.nvim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
