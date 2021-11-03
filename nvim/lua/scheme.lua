@@ -11,9 +11,9 @@ vim.cmd([[
   hi GitSignsDelete guifg=#ff5555
   hi GitSignsChange guifg=#FEA82F
   hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
-  hi HopNextKey guifg=#f7wf38
-  hi HopNextKey1 guifg=#f7wf38
-  hi HopNextKey2 guifg=#f7wf38
+  hi HopNextKey guifg=#50fa7b
+  hi HopNextKey1 guifg=#50fa7b
+  hi HopNextKey2 guifg=#50fa7b
   hi IncSearch guifg=#000000 guibg=#FEA82F
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33

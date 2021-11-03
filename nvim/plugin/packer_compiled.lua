@@ -79,15 +79,30 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
+  ["cmp-fuzzy-buffer"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/cmp-fuzzy-buffer",
+    url = "https://github.com/tzachar/cmp-fuzzy-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-document-symbol"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-document-symbol",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["cmp-rg"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/cmp-rg",
+    url = "https://github.com/lukas-reineke/cmp-rg"
   },
   ["cmp-tabnine"] = {
     loaded = true,
@@ -108,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/format.nvim",
     url = "https://github.com/lukas-reineke/format.nvim"
+  },
+  ["fuzzy.nvim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/fuzzy.nvim",
+    url = "https://github.com/tzachar/fuzzy.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -193,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/tabline.nvim",
     url = "https://github.com/kdheepak/tabline.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

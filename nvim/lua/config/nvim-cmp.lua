@@ -4,13 +4,13 @@ local lspkind = require('lspkind')
 cmp.setup({
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
-      buffer = "[Buf]",
-      nvim_lsp = "[LSP]",
-      luasnip = "[Snip]",
-      nvim_lua = "[Lua]",
-      latex_symbols = "[Latex]",
-      cmp_tabnine = "[TN]",
-      path = "[Path]",
+      buffer = '[Buf]',
+      nvim_lsp = '[LSP]',
+      luasnip = '[Snip]',
+      nvim_lua = '[Lua]',
+      latex_symbols = '[Latex]',
+      cmp_tabnine = '[TN]',
+      path = '[Path]',
     })}),
   },
   snippet = {
@@ -38,6 +38,8 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'vsnip' },
+    { name = 'fuzzy_buffer' },
+    { name = 'rg' }
   }, {
     { name = 'buffer' },
   })
@@ -46,7 +48,9 @@ cmp.setup({
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
   sources = {
-    { name = 'buffer' }
+    { name = 'buffer' },
+    { name = 'nvim_lsp_document_symbol' },
+    { name = 'fuzzy_buffer' }
   }
 })
 

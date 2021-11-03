@@ -19,6 +19,7 @@ packer.startup(function()
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-nvim-lsp-document-symbol'}
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-vsnip'}
   use {'hrsh7th/nvim-cmp'}
@@ -29,16 +30,19 @@ packer.startup(function()
   use {'kyazdani42/nvim-web-devicons'}
   use {'lewis6991/gitsigns.nvim'}
   use {'lukas-reineke/format.nvim'}
+  use {'lukas-reineke/cmp-rg'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-lua/plenary.nvim'}
   use {'nvim-lualine/lualine.nvim'}
   use {'nvim-telescope/telescope.nvim'}
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use {'nvim-treesitter/nvim-treesitter'}
   use {'onsails/lspkind-nvim'}
   use {'phaazon/hop.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
+  use {'tzachar/cmp-fuzzy-buffer', requires = {'tzachar/fuzzy.nvim'}}
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-spectre'}
 end)
