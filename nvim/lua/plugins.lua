@@ -12,6 +12,7 @@ local packer = require('packer')
 local use = packer.use
 
 packer.startup(function()
+  use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'fedepujol/move.nvim'}
   use {'kdheepak/tabline.nvim'}
