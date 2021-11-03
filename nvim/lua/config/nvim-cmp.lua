@@ -1,6 +1,8 @@
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
@@ -32,6 +34,7 @@ cmp.setup({
       c = cmp.mapping.close(),
     }),
     ['<C-l>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   },
   sources = cmp.config.sources({
     { name = 'cmp_tabnine' },
