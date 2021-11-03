@@ -1,4 +1,5 @@
 require('config/autosave')
+require('config/gitsigns')
 require('config/hop')
 require('config/lualine')
 require('config/neoscroll')
