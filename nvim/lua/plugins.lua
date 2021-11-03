@@ -16,6 +16,13 @@ packer.startup(function()
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'fedepujol/move.nvim'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-cmdline'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-vsnip'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/vim-vsnip'}
   use {'karb94/neoscroll.nvim'}
   use {'kdheepak/tabline.nvim'}
   use {'kyazdani42/nvim-tree.lua'}
@@ -28,8 +35,10 @@ packer.startup(function()
   use {'nvim-lualine/lualine.nvim'}
   use {'nvim-telescope/telescope.nvim'}
   use {'nvim-treesitter/nvim-treesitter'}
+  use {'onsails/lspkind-nvim'}
   use {'phaazon/hop.nvim'}
   use {'terrortylor/nvim-comment'}
+  use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-spectre'}
 end)

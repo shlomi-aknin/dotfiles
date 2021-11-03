@@ -1,6 +1,7 @@
 local prettier = {
   simple = {'prettier --single-quote --arrow-parents always -w'},
-  javascript = {'prettier --single-quote --arrow-parents always -w'}
+  javascript = {'prettier --single-quote --arrow-parents always -w'},
+  svelte = {'prettier --single-quote --arrow-parents --parser svelte always -w'}
 }
 
 require('format').setup({
@@ -12,5 +13,8 @@ require('format').setup({
     },
     html = {
         {cmd = prettier.simple}
+    },
+    svelte = {
+        {cmd = prettier.svelte}
     },
 })
