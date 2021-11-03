@@ -40,6 +40,7 @@ packer.startup(function()
   use {'nvim-treesitter/nvim-treesitter'}
   use {'onsails/lspkind-nvim'}
   use {'phaazon/hop.nvim'}
+  use {'ray-x/lsp_signature.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'tzachar/cmp-fuzzy-buffer', requires = {'tzachar/fuzzy.nvim'}}
