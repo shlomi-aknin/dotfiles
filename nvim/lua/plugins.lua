@@ -47,4 +47,5 @@ packer.startup(function()
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-autopairs'}
   use {'windwp/nvim-spectre'}
+  use {'windwp/nvim-ts-autotag'}
 end)
