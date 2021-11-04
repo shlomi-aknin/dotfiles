@@ -5,11 +5,9 @@ vim.cmd([[
   hi CursorLineNr guifg=#ffff00
   hi CursorWord gui=underline
   hi Folded guibg=#34a1eb guifg=#000000
-  hi GitSignsAdd guifg=#50fa7b
-  hi GitSignsChange guifg=#FEA82F
-  hi GitSignsDelete guifg=#ff5555
-  hi GitSignsDelete guifg=#ff5555
-  hi GitSignsChange guifg=#FEA82F
+  hi GitSignsAdd guifg=#50fa7b guibg=#000000
+  hi GitSignsChange guifg=#ff79c6 guibg=#000000
+  hi GitSignsDelete guifg=#ff5555 guibg=#000000
   hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
   hi HopNextKey guifg=#50fa7b
   hi HopNextKey1 guifg=#50fa7b
