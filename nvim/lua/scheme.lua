@@ -21,8 +21,8 @@ vim.cmd([[
   hi Normal guifg=#E3F2FD guibg=#000000 gui=NONE
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue
-  hi PMenu guibg=#2176FF guifg=#ffffff
-  hi PMenuSel guibg=#ffffff guifg=#000000
+  hi PMenu guibg=#282a36 guifg=#ffffff
+  hi PMenuSel guibg=#34a1eb guifg=#000000
   hi Search guifg=#000000 guibg=#FEA82F
   hi SignColumn guibg=#000000
   hi String guifg=#34a1eb

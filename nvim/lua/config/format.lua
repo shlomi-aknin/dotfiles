@@ -1,5 +1,5 @@
 local prettier = {
-  simple = {'prettier --single-quote --arrow-parents always -w'},
+  simple = {'prettier -w'},
   javascript = {'prettier --single-quote --arrow-parents always -w'},
   svelte = {'prettier --single-quote --arrow-parents --parser svelte always -w'}
 }
