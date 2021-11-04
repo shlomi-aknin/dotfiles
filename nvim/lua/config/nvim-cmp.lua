@@ -5,6 +5,9 @@ vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
+  completion = {
+    completeopt = 'menu,menuone,noinsert,noseelect,preview'
+  },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
       buffer = '[Buf]',

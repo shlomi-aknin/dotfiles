@@ -20,7 +20,7 @@ vim.cmd([[
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue
   hi PMenu guibg=#282a36 guifg=#ffffff
-  hi PMenuSel guibg=#34a1eb guifg=#000000
+  hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#FEA82F
   hi SignColumn guibg=#000000
   hi String guifg=#34a1eb

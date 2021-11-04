@@ -1,9 +1,9 @@
 vim.g.cursorword_highlight = false
+vim.o.pumblend = 15
 vim.g.mapleader = ' '
 vim.g.noswapfile = true
 vim.o.background = 'dark'
 vim.o.clipboard = 'unnamedplus'
-vim.o.completeopt = 'menuone,preview,noinsert,noselect'
 vim.o.cursorline = true
 vim.o.expandtab = true
 vim.o.hidden = true
