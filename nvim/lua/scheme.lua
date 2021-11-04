@@ -15,7 +15,7 @@ vim.cmd([[
   hi IncSearch guifg=#000000 guibg=#FEA82F
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
-  hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold,underline
+  hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
   hi Normal guifg=#E3F2FD guibg=#000000 gui=NONE
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue

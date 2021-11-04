@@ -1,9 +1,11 @@
 #!/bin/bash
 
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules/bin:$PATH
 PROJECTDIR=/home/shlomo/workspace
 LEN=${#PROJECTDIR}
 cd $PROJECTDIR
 COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
 [ "$SELECTED" = "" ] && exit 0
-alacritty -e nvim $SELECTED
+cd $SELECTED
+alacritty -e nvim "$PROJECTDIR/$SELECTED"

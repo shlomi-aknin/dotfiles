@@ -13,6 +13,10 @@ require('nvim-tree').setup({
   auto_close          = true,
   hijack_cursor       = true,
   update_focused_file = { enable = true },
+  update_to_buf_dir   = {
+    enable = false,
+    auto_open = false,
+  },
   view = {
     auto_resize = true,
     mappings = {
