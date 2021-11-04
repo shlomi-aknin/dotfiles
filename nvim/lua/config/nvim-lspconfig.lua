@@ -1,5 +1,7 @@
 local nvim_lsp = require('lspconfig')
+local configs = require('lspconfig/configs')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -36,3 +38,16 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+configs.ls_emmet = {
+  default_config = {
+    cmd = { 'ls_emmet', '--stdio' };
+    filetypes = { 'html', 'css' };
+    root_dir = function(fname)
+      return vim.loop.cwd()
+    end;
+    settings = {};
+  };
+}
+
+nvim_lsp.ls_emmet.setup{ capabilities = capabilities }
