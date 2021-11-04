@@ -1,6 +1,7 @@
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
 local lspkind = require('lspkind')
+vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
@@ -9,6 +10,7 @@ cmp.setup({
       buffer = '[Buf]',
       nvim_lsp = '[LSP]',
       luasnip = '[Snip]',
+      vsnip = '[Snip]',
       nvim_lua = '[Lua]',
       latex_symbols = '[Latex]',
       cmp_tabnine = '[TN]',
