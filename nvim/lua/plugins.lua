@@ -16,6 +16,7 @@ packer.startup(function()
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'fedepujol/move.nvim'}
+  use {'folke/lsp-colors.nvim'}
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
