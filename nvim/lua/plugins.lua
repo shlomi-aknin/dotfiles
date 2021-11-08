@@ -27,6 +27,7 @@ packer.startup(function()
   use {'hrsh7th/nvim-cmp'}
   use {'hrsh7th/vim-vsnip'}
   use {'jiangmiao/auto-pairs'}
+  use {'JoosepAlviste/nvim-ts-context-commentstring'}
   use {'karb94/neoscroll.nvim'}
   use {'kdheepak/tabline.nvim'}
   use {'kyazdani42/nvim-tree.lua'}
