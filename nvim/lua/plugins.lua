@@ -16,6 +16,7 @@ packer.startup(function()
   use {'blackCauldron7/surround.nvim'}
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
+  use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
   use {'hrsh7th/cmp-buffer'}

@@ -204,6 +204,11 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-reload"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/nvim-reload",
+    url = "https://github.com/famiu/nvim-reload"
+  },
   ["nvim-spectre"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/nvim-spectre",
