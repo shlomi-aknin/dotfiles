@@ -1,6 +1,9 @@
 vim.cmd([[
   let $PATH .= ':/usr/local/lib/node_modules/bin'
-  autocmd BufWritePost ~/.config/nvim/lua/plugins.lua PackerSync
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-j> :QFNext<cr><C-w>j
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-k> :QFPrev<cr><C-w>j
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-l> <cr>
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-u> :call setqflist([])<cr>:cclose<cr>
   augroup highlight_yank
       autocmd!
       au TextYankPost * silent! lua vim.highlight.on_yank{ higroup='Folded', timeout=800 }

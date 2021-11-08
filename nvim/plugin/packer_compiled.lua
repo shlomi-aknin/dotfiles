@@ -244,6 +244,11 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["qf_helper.nvim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/qf_helper.nvim",
+    url = "https://github.com/stevearc/qf_helper.nvim"
+  },
   ["surround.nvim"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/surround.nvim",
