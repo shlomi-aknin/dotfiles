@@ -63,7 +63,7 @@ map('n', 'cw', 'ciw')
 map('n', 'd', '"_d')
 map('n', 'dw', 'diwx')
 map('n', 'm', 'o<esc>')
-map('n', 's', ':HopWord<cr>')
+map('n', "'", ':HopWord<cr>')
 
 map('s', '<C-j>', 'v:lua.tab_complete()', {expr = true})
 map('s', '<C-k>', 'v:lua.s_tab_complete()', {expr = true})

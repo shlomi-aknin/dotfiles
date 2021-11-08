@@ -13,6 +13,7 @@ local use = packer.use
 
 packer.startup(function()
   use {'akinsho/toggleterm.nvim'}
+  use {'blackCauldron7/surround.nvim'}
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'fedepujol/move.nvim'}
