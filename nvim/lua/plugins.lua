@@ -36,6 +36,7 @@ packer.startup(function()
   use {'lewis6991/gitsigns.nvim'}
   use {'lukas-reineke/format.nvim'}
   use {'lukas-reineke/cmp-rg'}
+  use {'mfussenegger/nvim-dap'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-lua/plenary.nvim'}
@@ -46,6 +47,7 @@ packer.startup(function()
   use {'onsails/lspkind-nvim'}
   use {'phaazon/hop.nvim'}
   use {'ray-x/lsp_signature.nvim'}
+  use {'rcarriga/nvim-dap-ui'}
   use {'stevearc/qf_helper.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
