@@ -264,6 +264,11 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/qf_helper.nvim",
     url = "https://github.com/stevearc/qf_helper.nvim"
   },
+  ["quickfix-reflector.vim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/quickfix-reflector.vim",
+    url = "https://github.com/stefandtw/quickfix-reflector.vim"
+  },
   ["surround.nvim"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/surround.nvim",

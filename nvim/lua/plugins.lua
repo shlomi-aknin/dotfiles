@@ -49,6 +49,7 @@ packer.startup(function()
   use {'phaazon/hop.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
+  use {'stefandtw/quickfix-reflector.vim'}
   use {'stevearc/qf_helper.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
