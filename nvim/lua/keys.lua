@@ -68,6 +68,7 @@ map('n', '<leader>m', ':Telescope lsp_document_symbols default_text=:method:<cr>
 map('n', '<leader>o', ':QuickFixOpenAll<cr>')
 map('n', '<leader>p', ':Telescope lsp_document_symbols<cr>')
 map('n', '<leader>q', ':QFToggle<cr>')
+map('n', '<leader>rw', ':lua require("spectre").open_visual({select_word=true})<CR>')
 map('n', '<leader>s', ':up<cr>')
 map('n', '<leader>t', ':let $VIM_DIR=expand(\'%:p:h\')<cr>:silent exec "!alacritty --working-directory $VIM_DIR &"<cr>')
 map('n', '<leader>v', ':let $VIM_DIR=expand(\'%:p:h\')<cr>:silent exec "!alacritty --working-directory $VIM_DIR -e vifm . &"<cr>')
