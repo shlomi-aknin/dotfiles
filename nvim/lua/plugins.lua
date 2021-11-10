@@ -34,6 +34,7 @@ packer.startup(function()
   use {'kyazdani42/nvim-tree.lua'}
   use {'kyazdani42/nvim-web-devicons'}
   use {'lewis6991/gitsigns.nvim'}
+  use {'lewis6991/impatient.nvim'}
   use {'lukas-reineke/format.nvim'}
   use {'lukas-reineke/cmp-rg'}
   use {'mfussenegger/nvim-dap'}
@@ -57,3 +58,5 @@ packer.startup(function()
   use {'windwp/nvim-spectre'}
   use {'windwp/nvim-ts-autotag'}
 end)
+
+require('impatient')
