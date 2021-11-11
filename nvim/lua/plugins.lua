@@ -54,6 +54,7 @@ packer.startup(function()
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'tzachar/cmp-fuzzy-buffer', requires = {'tzachar/fuzzy.nvim'}}
+  use {'vifm/vifm.vim'}
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-autopairs'}
   use {'windwp/nvim-spectre'}

@@ -299,6 +299,11 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/trim.nvim",
     url = "https://github.com/cappyzawa/trim.nvim"
   },
+  ["vifm.vim"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/vifm.vim",
+    url = "https://github.com/vifm/vifm.vim"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/vim-vsnip",
