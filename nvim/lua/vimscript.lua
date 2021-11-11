@@ -1,5 +1,6 @@
 vim.cmd([[
   let $PATH .= ':/usr/local/lib/node_modules/bin'
+  au BufEnter *.{css,html,js,php} :norm zX<CR>
   autocmd BufReadPost quickfix nnoremap <buffer> <C-j> :QFNext<cr><C-w>j
   autocmd BufReadPost quickfix nnoremap <buffer> <C-k> :QFPrev<cr><C-w>j
   autocmd BufReadPost quickfix nnoremap <buffer> <C-l> <cr>
