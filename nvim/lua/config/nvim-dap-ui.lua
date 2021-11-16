@@ -2,7 +2,7 @@ require('dapui').setup({
   icons = { expanded = '▾', collapsed = '▸' },
   mappings = {
     -- Use a table to apply multiple mappings
-    expand = {'<CR>', 'l', 'h'},
+    expand = {'<CR>', 'i'},
     open = 'o',
     remove = 'd',
     edit = 'e',

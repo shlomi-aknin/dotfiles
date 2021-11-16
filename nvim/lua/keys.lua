@@ -59,7 +59,7 @@ map('n',    '<leader>dwc',      ':lua local widgets=require("dap.ui.widgets");wi
 map('n',    '<leader>dwh',      ':lua require("dap.ui.widgets").hover()<cr>')
 map('n',    '<leader>e',        ':NvimTreeToggle<cr>')
 map('n',    '<leader>f',        ':Telescope find_files<cr>')
-map('n',    '<leader>g',        ':lua _lazygit_toggle()<cr>')
+map('n',    '<leader>g',        ':lua LazygitToggle()<cr>')
 map('n',    '<leader>h',        ':noh<cr>')
 map('n',    '<leader>j',        'o<esc>')
 map('n',    '<leader>k',        'O<esc>')
