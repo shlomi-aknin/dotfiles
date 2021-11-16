@@ -10,44 +10,44 @@ cmp.setup({
   },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
-      buffer = '[Buf]',
-      nvim_lsp = '[LSP]',
-      luasnip = '[Snip]',
-      vsnip = '[Snip]',
-      nvim_lua = '[Lua]',
+      buffer        = '[Buf]',
+      cmp_tabnine   = '[TN]',
       latex_symbols = '[Latex]',
-      cmp_tabnine = '[TN]',
-      path = '[Path]',
+      luasnip       = '[Snip]',
+      nvim_lsp      = '[LSP]',
+      nvim_lua      = '[Lua]',
+      path          = '[Path]',
+      vsnip         = '[Snip]',
     })}),
+  },
+  mapping = {
+    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    ['<C-c>']     = cmp.mapping({
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close(),
+    }),
+    ['<C-i>']     = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+    ['<C-j>']     = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's', 'c' }),
+    ['<C-k>']     = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
+    ['<C-l>']     = cmp.mapping.confirm({ select = true }),
+    ['<C-u>']     = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+    ['<C-y>']     = cmp.config.disable,
+    ['<CR>']      = cmp.mapping.confirm({ select = true }),
+    ['<S-Tab>']   = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
+    ['<Tab>']     = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's', 'c' }),
   },
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
-  mapping = {
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's', 'c' }),
-    ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's', 'c' }),
-    ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
-    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's', 'c' }),
-    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    ['<C-i>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ['<C-c>'] = cmp.mapping({
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
-    }),
-    ['<C-l>'] = cmp.mapping.confirm({ select = true }),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-  },
   sources = cmp.config.sources({
     { name = 'cmp_tabnine' },
+    { name = 'vsnip' },
     { name = 'nvim_lsp' },
     { name = 'path' },
-    { name = 'vsnip' },
     { name = 'fuzzy_buffer' },
-    { name = 'rg' }
+    { name = 'rg' },
   }, {
     { name = 'buffer' },
   })
@@ -65,7 +65,7 @@ cmp.setup.cmdline('/', {
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = 'path' },
   }, {
     { name = 'cmdline' }
   })
