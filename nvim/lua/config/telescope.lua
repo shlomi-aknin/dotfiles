@@ -40,12 +40,14 @@ require('telescope').setup({
         ['<C-y>'] = yank_file,
         ['<s-tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<tab>'] = actions.toggle_selection + actions.move_selection_previous,
+        ['<cr>'] = multi_select,
         ['<C-l>'] = multi_select,
       },
       n = {
         ['<esc>'] = actions.close,
         ['<s-tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<tab>'] = actions.toggle_selection + actions.move_selection_previous,
+        ['<cr>'] = multi_select,
         ['<C-l>'] = multi_select
       }
     },
