@@ -15,8 +15,8 @@ cmp.setup({
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
       cmp_tabnine   = '[TN]',
-      nvim_lsp      = '[LSP]',
       vsnip         = '[Snip]',
+      nvim_lsp      = '[LSP]',
       path          = '[Path]',
       buffer        = '[Buf]',
       luasnip       = '[Snip]',
@@ -47,10 +47,10 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = 'cmp_tabnine' },
-    { name = 'nvim_lsp' },
     { name = 'vsnip' },
     { name = 'path' },
     { name = 'fuzzy_buffer' },
+    { name = 'nvim_lsp' },
     { name = 'rg' },
   }, {
     { name = 'buffer' },
