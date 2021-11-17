@@ -2,6 +2,10 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
+vim.cmd([[
+  let g:vsnip_filetypes = {}
+  let g:vsnip_filetypes.svelte = ['javascript']
+]])
 
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
@@ -10,14 +14,14 @@ cmp.setup({
   },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
-      buffer        = '[Buf]',
       cmp_tabnine   = '[TN]',
-      latex_symbols = '[Latex]',
-      luasnip       = '[Snip]',
       nvim_lsp      = '[LSP]',
-      nvim_lua      = '[Lua]',
-      path          = '[Path]',
       vsnip         = '[Snip]',
+      path          = '[Path]',
+      buffer        = '[Buf]',
+      luasnip       = '[Snip]',
+      nvim_lua      = '[Lua]',
+      latex_symbols = '[Latex]',
     })}),
   },
   mapping = {
@@ -43,8 +47,8 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = 'cmp_tabnine' },
-    { name = 'vsnip' },
     { name = 'nvim_lsp' },
+    { name = 'vsnip' },
     { name = 'path' },
     { name = 'fuzzy_buffer' },
     { name = 'rg' },
