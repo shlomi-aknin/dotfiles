@@ -1,11 +1,11 @@
 vim.cmd([[
   let $PATH .= ':/usr/local/lib/node_modules/bin'
-  autocmd BufEnter *.{css,html,js,php} :norm zX<CR>
+  autocmd BufEnter *.{css,html,js,php} <cmd>norm zX<CR>
   autocmd Syntax css,html,js,php normal zR
-  autocmd BufReadPost quickfix nnoremap <buffer> <C-j> :QFNext<cr><C-w>j
-  autocmd BufReadPost quickfix nnoremap <buffer> <C-k> :QFPrev<cr><C-w>j
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-j> <cmd>QFNext<cr><C-w>j
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-k> <cmd>QFPrev<cr><C-w>j
   autocmd BufReadPost quickfix nnoremap <buffer> <C-l> <cr>
-  autocmd BufReadPost quickfix nnoremap <buffer> <C-u> :call setqflist([])<cr>:cclose<cr>
+  autocmd BufReadPost quickfix nnoremap <buffer> <C-u> <cmd>call setqflist([])<cr><cmd>cclose<cr>
 
   augroup highlight_yank
       autocmd!
