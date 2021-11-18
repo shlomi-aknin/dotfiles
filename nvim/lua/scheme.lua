@@ -2,7 +2,7 @@ vim.cmd([[
   silent! colorscheme dracula
   hi Comment guifg=#34a1eb gui=bold
   hi CursorLine guibg=#235789
-  hi CursorLineNr guifg=#ffff00
+  hi CursorLineNr guifg=#ffff00 guibg=#235789
   hi CursorWord gui=underline
   hi Folded guibg=#34a1eb guifg=#000000
   hi GitSignsAdd guifg=#50fa7b guibg=#000000
@@ -15,8 +15,10 @@ vim.cmd([[
   hi IncSearch guifg=#000000 guibg=#50fa7b
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
+  hi LineNr guifg=#000000 guibg=#34a1eb gui=bold
+  hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
-  hi Normal guifg=#E3F2FD guibg=#000000 gui=NONE
+  hi Normal guifg=#ffffff guibg=#000000 gui=bold
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue
   hi PMenu guibg=#282a36 guifg=#ffffff
@@ -28,7 +30,10 @@ vim.cmd([[
   hi TabLineModCur guibg=#50fa7b guifg=#000000 gui=bold
   hi TabLineModNorm guibg=#6272a4 guifg=#ffffff gui=bold
   hi TabLineSel guibg=#34a1eb guifg=#000000
-  hi TelescopeNormal guibg=#282a36
+  hi TelescopeBorder guifg=#34a1eb
+  hi TelescopeNormal guibg=#000000
+  hi TelescopeMatching guifg=#ffffff gui=bold
+  hi TelescopeSelection guibg=#34a1eb guifg=#000000 gui=bold
   hi javaScriptLineComment guifg=#34a1eb gui=italic
   hi javaScriptStringS guifg=#2DE1FC
   hi jsComment guifg=#34a1eb gui=italic
