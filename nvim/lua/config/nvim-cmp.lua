@@ -10,7 +10,7 @@ vim.cmd([[
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
   completion = {
-    completeopt = 'menu,menuone,noinsert,noseelect,preview'
+    completeopt = 'menu,menuone,noinsert,preview'
   },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
