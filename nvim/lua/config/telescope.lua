@@ -1,5 +1,6 @@
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
+local action_layout = require('telescope.actions.layout')
 
 function multi_select(prompt_bufnr)
   local picker = action_state.get_current_picker(prompt_bufnr)
@@ -27,6 +28,9 @@ end
 
 require('telescope').setup({
   defaults = {
+    preview = {
+      hide_on_startup = true
+    },
     prompt_prefix = '~> ',
     layout_config = {
       preview_width = 0.6
@@ -42,6 +46,7 @@ require('telescope').setup({
         ['<tab>'] = actions.toggle_selection + actions.move_selection_previous,
         ['<cr>'] = multi_select,
         ['<C-l>'] = multi_select,
+        ['<C-h>'] = action_layout.toggle_preview,
         ['<C-q>'] = actions.smart_send_to_qflist,
       },
       n = {
@@ -50,6 +55,7 @@ require('telescope').setup({
         ['<tab>'] = actions.toggle_selection + actions.move_selection_previous,
         ['<cr>'] = multi_select,
         ['<C-l>'] = multi_select,
+        ['<C-h>'] = action_layout.toggle_preview,
         ['<C-q>'] = actions.smart_send_to_qflist,
       }
     },
