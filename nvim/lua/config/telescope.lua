@@ -42,13 +42,15 @@ require('telescope').setup({
         ['<tab>'] = actions.toggle_selection + actions.move_selection_previous,
         ['<cr>'] = multi_select,
         ['<C-l>'] = multi_select,
+        ['<C-q>'] = actions.smart_send_to_qflist,
       },
       n = {
         ['<esc>'] = actions.close,
         ['<s-tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<tab>'] = actions.toggle_selection + actions.move_selection_previous,
         ['<cr>'] = multi_select,
-        ['<C-l>'] = multi_select
+        ['<C-l>'] = multi_select,
+        ['<C-q>'] = actions.smart_send_to_qflist,
       }
     },
   }
