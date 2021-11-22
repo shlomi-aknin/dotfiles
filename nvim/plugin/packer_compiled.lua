@@ -304,6 +304,11 @@ _G.packer_plugins = {
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/vifm.vim",
     url = "https://github.com/vifm/vifm.vim"
   },
+  ["vim-searchlight"] = {
+    loaded = true,
+    path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/vim-searchlight",
+    url = "https://github.com/PeterRincker/vim-searchlight"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/shlomo/.local/share/nvim/site/pack/packer/start/vim-vsnip",
