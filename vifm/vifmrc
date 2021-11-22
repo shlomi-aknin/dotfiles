@@ -250,7 +250,6 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 	\ {View in feh}
 	\ feh -Zx %c,
 
-
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
 	\ vifmimg draw %px %py %pw %ph %c
 	\ %pc
@@ -424,6 +423,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " set viewcolumns=-{name}..,6{}.
 set viewcolumns=-{name}..,-16{mtime},7{}.
 set sort=dir,-mtime,+name
+set syncregs=general
 " Filter-out build and temporary files
 "
 " filter! /^.*\.(lo|o|d|class|py[co])$|.*~$/
