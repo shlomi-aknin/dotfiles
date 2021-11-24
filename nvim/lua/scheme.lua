@@ -18,26 +18,27 @@ vim.cmd([[
   hi LineNr guifg=#000000 guibg=#34a1eb gui=bold
   hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
-  hi Normal guifg=#ffffff guibg=#000000 gui=bold
+  hi Normal guifg=#ffffc6 guibg=#000000 gui=bold
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue
   hi PMenu guibg=#282a36 guifg=#ffffff
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#ff5555
-  hi SignColumn guibg=#000000
-  hi String guifg=#34a1eb
-  hi TabLine guibg=#000000 guifg=#ffff00 gui=NONE
-  hi TabLineModCur guibg=#50fa7b guifg=#000000 gui=bold
-  hi TabLineModNorm guibg=#6272a4 guifg=#ffffff gui=bold
-  hi TabLineSel guibg=#34a1eb guifg=#000000
+  hi SignColumn guibg=#000000 guifg=#34a1eb gui=bold
+  hi String guifg=#ff79c6 gui=bold
   hi TelescopeBorder guifg=#34a1eb
   hi TelescopeNormal guibg=#000000
   hi TelescopeMatching guifg=#ffffff gui=bold
   hi TelescopeSelection guibg=#34a1eb guifg=#000000 gui=bold
   hi javaScriptLineComment guifg=#34a1eb gui=italic
-  hi javaScriptStringS guifg=#34a1eb gui=bold
-  hi jsComment guifg=#34a1eb gui=italic
-  hi jsString guifg=#ffff00
+  hi link jsComment Comment
   hi link Searchlight IncSearch
   hi link TelescopeMultiSelection NormalSelected
+  hi link javaScriptStringS String
+  hi link jsString String
 ]])
+
+  -- hi TabLine guibg=#000000 guifg=#ffff00 gui=NONE
+  -- hi TabLineModCur guibg=#50fa7b guifg=#000000 gui=bold
+  -- hi TabLineModNorm guibg=#6272a4 guifg=#ffffff gui=bold
+  -- hi TabLineSel guibg=#34a1eb guifg=#000000
