@@ -9,16 +9,17 @@ vim.cmd([[
 
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
+  preselect = cmp.PreselectMode.None,
   completion = {
     completeopt = 'menu,menuone,noinsert,preview'
   },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
+      buffer        = '[Buf]',
       cmp_tabnine   = '[TN]',
       vsnip         = '[Snip]',
       nvim_lsp      = '[LSP]',
       path          = '[Path]',
-      buffer        = '[Buf]',
       luasnip       = '[Snip]',
       nvim_lua      = '[Lua]',
       latex_symbols = '[Latex]',
@@ -46,17 +47,15 @@ cmp.setup({
     end,
   },
   sources = cmp.config.sources({
+    { name = 'buffer' },
     { name = 'cmp_tabnine' },
-    { name = 'vsnip' },
-    { name = 'path' },
-    { name = 'fuzzy_buffer' },
     { name = 'nvim_lsp' },
-    { name = 'rg' },
+    { name = 'path' },
+    { name = 'vsnip' },
   }, {
     { name = 'buffer' },
-  })
+  }),
 })
-
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
   sources = {

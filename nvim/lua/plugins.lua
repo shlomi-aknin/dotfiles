@@ -63,4 +63,4 @@ packer.startup(function()
   use {'windwp/nvim-ts-autotag'}
 end)
 
-require('impatient')
+-- require('impatient')
