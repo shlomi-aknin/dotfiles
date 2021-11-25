@@ -142,5 +142,7 @@ nnoremap < :copy<cr>
 vnoremap > :copy<cr>
 vnoremap < :!mv %f %D<cr>
 nnoremap <C-l> :!alacritty -e vifm %d &<cr>
+nnoremap <A-l> :!cp -r %f %D<cr>
+nnoremap <A-h> :!cp -r %f %D<cr>
 nnoremap <space> tj
 nnoremap q :q<cr>
