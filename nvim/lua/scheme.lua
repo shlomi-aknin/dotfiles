@@ -5,9 +5,9 @@ vim.cmd([[
   hi CursorLineNr guifg=#ffff00 guibg=#235789
   hi CursorWord gui=underline
   hi Folded guibg=#34a1eb guifg=#000000
-  hi GitSignsAdd guifg=#50fa7b guibg=#000000
-  hi GitSignsChange guifg=#ff79c6 guibg=#000000
-  hi GitSignsDelete guifg=#ff5555 guibg=#000000
+  hi GitSignsAdd guifg=#50fa7b guibg=#000000 gui=bold
+  hi GitSignsChange guifg=#ff79c6 guibg=#000000 gui=bold
+  hi GitSignsDelete guifg=#ff5555 guibg=#000000 gui=bold
   hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
   hi HopNextKey guifg=#50fa7b
   hi HopNextKey1 guifg=#50fa7b
@@ -16,9 +16,9 @@ vim.cmd([[
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
   hi LineNr guifg=#000000 guibg=#34a1eb gui=bold
-  hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb
+  hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb gui=bold
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
-  hi Normal guifg=#ffffc6 guibg=#000000 gui=bold
+  hi Normal guifg=#ffffff guibg=#000000 gui=bold
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue
   hi PMenu guibg=#282a36 guifg=#ffffff
