@@ -26,7 +26,7 @@ vim.cmd([[
   hi Search guifg=#000000 guibg=#ff5555
   hi SignColumn guibg=#000000 guifg=#34a1eb gui=bold
   hi String guifg=#ff79c6 gui=bold
-  hi TelescopeBorder guifg=#34a1eb
+  hi TelescopeBorder guifg=#34a1eb gui=bold
   hi TelescopeNormal guibg=#000000
   hi TelescopeMatching guifg=#ffffff gui=bold
   hi TelescopeSelection guibg=#34a1eb guifg=#000000 gui=bold
