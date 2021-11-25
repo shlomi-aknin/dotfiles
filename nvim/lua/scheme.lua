@@ -8,7 +8,6 @@ vim.cmd([[
   hi GitSignsAdd guifg=#50fa7b guibg=#000000 gui=bold
   hi GitSignsChange guifg=#ff79c6 guibg=#000000 gui=bold
   hi GitSignsDelete guifg=#ff5555 guibg=#000000 gui=bold
-  hi HighlightedyankRegion guifg=#ffffff guibg=#129AE2
   hi HopNextKey guifg=#50fa7b
   hi HopNextKey1 guifg=#50fa7b
   hi HopNextKey2 guifg=#50fa7b
