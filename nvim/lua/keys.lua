@@ -2,9 +2,9 @@ local map = function(mode, key, value, opts)
 	vim.api.nvim_set_keymap(mode, key, value, opts or { noremap = true, silent = true });
 end
 
-map('c',    '<C-j>',            '<Down>')
-map('c',    '<C-l>',            '<cr>')
-map('c',    '<C-k>',            '<Up>')
+map('c',    '<C-j>',            '<down>')
+map('c',    '<C-k>',            '<up>')
+map('c',    '<S-l>',            '<cr>')
 
 map('i',    '<A-h>',            '<esc>i')
 map('i',    '<A-j>',            '<esc>:MoveLine(1)<cr>gi')
