@@ -20,7 +20,7 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
-nnoremap i :!nvim %c<cr>
+nnoremap i :!nvim %f<cr>
 nnoremap o :!nvim<cr>
 " Open file in new instance of gvim
 nnoremap O :!devour alacritty -t "Neovim %c" --working-directory %c -e nvim<cr>

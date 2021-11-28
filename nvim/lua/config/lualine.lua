@@ -28,10 +28,10 @@ local bubbles_theme = {
   },
 }
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     theme = bubbles_theme,
-    component_separators = '|',
+    component_separators = '',
     section_separators = { left = '', right = '' },
   },
   sections = {
@@ -56,4 +56,4 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {},
-}
+})
