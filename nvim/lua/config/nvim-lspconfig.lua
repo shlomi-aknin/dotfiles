@@ -28,7 +28,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'cssls', 'html', 'svelte', 'intelephense' }
+local servers = { 'tsserver', 'cssls', 'html', 'svelte', 'intelephense', 'emmet_ls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     capabilities = capabilities,
@@ -38,16 +38,3 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
-configs.ls_emmet = {
-  default_config = {
-    cmd = { 'ls_emmet', '--stdio' };
-    filetypes = { 'html', 'css' };
-    root_dir = function(fname)
-      return vim.loop.cwd()
-    end;
-    settings = {};
-  };
-}
-
-nvim_lsp.ls_emmet.setup{ capabilities = capabilities }
