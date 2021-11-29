@@ -1,5 +1,6 @@
 local colors = {
   blue   = '#34a1eb',
+  blue2  = '#035397',
   cyan   = '#79dac8',
   green  = '#50fa7b',
   black  = '#000000',
@@ -13,7 +14,7 @@ local colors = {
 local bubbles_theme = {
   normal = {
     a = { fg = colors.black, bg = colors.blue },
-    b = { fg = colors.blue, bg = colors.black },
+    b = { fg = colors.white, bg = colors.blue2 },
     c = { fg = colors.black, bg = colors.black },
   },
 
