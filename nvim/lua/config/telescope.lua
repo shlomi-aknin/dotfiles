@@ -8,6 +8,8 @@ function multi_select(prompt_bufnr)
   if num_selections > 1 then
     for _, entry in ipairs(picker:get_multi_selection()) do
       vim.cmd(string.format('%s %s', ':e!', entry.value))
+      vim.cmd('set number')
+      vim.cmd('set relativenumber')
     end
     vim.cmd('stopinsert')
   else
