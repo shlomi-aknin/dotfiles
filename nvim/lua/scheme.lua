@@ -17,7 +17,7 @@ vim.cmd([[
   hi LineNr guifg=#000000 guibg=#34a1eb gui=bold
   hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb gui=bold
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
-  hi Normal guifg=#ffffff guibg=#000000 gui=bold
+  hi Normal guifg=#ffffff guibg=#000000
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=blue
   hi PMenu guibg=#00509d guifg=#ffffff gui=bold
