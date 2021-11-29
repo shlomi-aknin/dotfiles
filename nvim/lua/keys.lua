@@ -4,7 +4,7 @@ end
 
 map('c',    '<C-j>',            '<down>')
 map('c',    '<C-k>',            '<up>')
-map('c',    '<S-l>',            '<cr>')
+map('c',    '<A-l>',            '<cr>')
 
 map('i',    '<A-h>',            '<esc>i')
 map('i',    '<A-j>',            '<esc>:MoveLine(1)<cr>gi')
