@@ -8,8 +8,9 @@ function multi_select(prompt_bufnr)
   if num_selections > 1 then
     for _, entry in ipairs(picker:get_multi_selection()) do
       vim.cmd(string.format('%s %s', ':e!', entry.value))
-      vim.cmd('set number')
-      vim.cmd('set relativenumber')
+      vim.cmd('luafile ~/.config/nvim/lua/settings.lua')
+      vim.cmd('luafile ~/.config/nvim/lua/scheme.lua')
+      vim.cmd('luafile ~/.config/nvim/lua/vimscript.lua')
     end
     vim.cmd('stopinsert')
   else
