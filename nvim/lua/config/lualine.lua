@@ -1,6 +1,6 @@
 local colors = {
   blue   = '#34a1eb',
-  blue2  = '#035397',
+  blue2  = '#00509d',
   cyan   = '#79dac8',
   green  = '#50fa7b',
   black  = '#000000',
