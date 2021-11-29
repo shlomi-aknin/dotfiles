@@ -1,8 +1,6 @@
 local NvimTreeSelectedFiles = {}
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local winopts = require('nvim-tree.view').View.winopts
-winopts.relativenumber = true
-winopts.number = true
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_quit_on_open = 1
@@ -28,7 +26,9 @@ require('nvim-tree').setup({
         { key = '<S-Tab>', mode = 'n', cb = ':lua NvimTreeToggleFileSelected("k")<cr>'},
         { key = '<C-l>', mode = 'n', cb = ':lua NvimTreeOpenFiles()<cr>'},
       }
-    }
+    },
+    number = true,
+    relativenumber = true
   },
 })
 
