@@ -19,7 +19,7 @@ vim.cmd([[
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
   hi Normal guifg=#ffffff guibg=#000000
   hi NormalSelected guifg=#50fa7b gui=bold
-  hi NvimTreeFolderIcon guibg=blue
+  hi NvimTreeFolderIcon guibg=#34a1eb
   hi PMenu guibg=#00509d guifg=#ffffff gui=bold
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#ff5555

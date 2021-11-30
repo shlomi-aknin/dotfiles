@@ -66,6 +66,7 @@ function NvimTreeOpenFiles()
   local view = require('nvim-tree.view')
   local node = lib.get_node_at_cursor()
   local count = tablelength(NvimTreeSelectedFiles)
+  vim.cmd('bw!')
 
   if count == 0 then
     if node.has_children ~= nil then
@@ -75,7 +76,6 @@ function NvimTreeOpenFiles()
     end
   else
     view.close()
-    vim.cmd('enew')
     for _,file in pairs(NvimTreeSelectedFiles) do
       vim.cmd(string.format('%s %s', ':e!', file))
     end
