@@ -6,6 +6,7 @@ function multi_select(prompt_bufnr)
   local picker = action_state.get_current_picker(prompt_bufnr)
   local num_selections = table.getn(picker:get_multi_selection())
   if num_selections > 1 then
+    vim.cmd('bw!')
     for _, entry in ipairs(picker:get_multi_selection()) do
       vim.cmd(string.format('%s %s', ':e!', entry.value))
       vim.cmd('luafile ~/.config/nvim/lua/settings.lua')
