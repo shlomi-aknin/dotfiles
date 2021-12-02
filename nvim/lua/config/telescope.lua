@@ -15,7 +15,7 @@ function multi_select(prompt_bufnr)
     end
     vim.cmd('stopinsert')
   else
-    actions.file_edit(prompt_bufnr)
+    actions.select_default(prompt_bufnr)
   end
 end
 

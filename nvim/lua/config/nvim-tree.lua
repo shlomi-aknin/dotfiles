@@ -10,7 +10,7 @@ require('nvim-tree').setup({
   open_on_setup       = false,
   ignore_ft_on_setup  = {'.git', 'node_modules', '.cache'},
   auto_close          = true,
-  hijack_cursor       = true,
+  hijack_cursor       = false,
   update_focused_file = { enable = true },
   update_to_buf_dir   = {
     enable = false,
