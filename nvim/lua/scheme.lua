@@ -1,8 +1,8 @@
 vim.cmd([[
   silent! colorscheme dracula
   hi Comment guifg=#34a1eb gui=bold
-  hi CursorLine guibg=#235789
-  hi CursorLineNr guifg=#ffff00 guibg=#235789
+  hi CursorLine guibg=#00509d
+  hi CursorLineNr guifg=#ffff00 guibg=#00509d
   hi CursorWord gui=underline
   hi Folded guibg=#34a1eb guifg=#000000
   hi GitSignsAdd guifg=#50fa7b guibg=#000000 gui=bold
