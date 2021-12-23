@@ -1,3 +1,3 @@
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-  startx
+  exec startx -- vt1 &> /dev/null
 fi
