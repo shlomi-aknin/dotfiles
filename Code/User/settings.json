@@ -172,7 +172,7 @@
       "after": ["O", "<esc>"]
     },
     {
-      "before": ["s"],
+      "before": ["'"],
       "after": ["\\", "\\", "\\", "b", "d", "w"]
     },
     {
@@ -401,5 +401,6 @@
   "terminal.external.linuxExec": "alacritty",
   "vim.enableNeovim": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "workbench.startupEditor": "none"
 }
