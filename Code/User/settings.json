@@ -166,12 +166,12 @@
     {
       "before": ["<space>", "j"],
       "commands": ["editor.action.insertLineAfter"],
-      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
       "before": ["<space>", "k"],
       "commands": ["editor.action.insertLineBefore"],
-      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Normal'"
     },
     {
       "before": ["'"],
@@ -404,5 +404,6 @@
   "vim.enableNeovim": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "files.trimTrailingWhitespace": true,
-  "workbench.startupEditor": "none"
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.startupEditor": "newUntitledFile"
 }
