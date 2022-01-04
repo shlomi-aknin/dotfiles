@@ -212,7 +212,7 @@
   {
     "key": "ctrl+d",
     "command": "workbench.action.terminal.kill",
-    "when": "terminalProcessSupported"
+    "when": "terminalFocus && terminalProcessSupported && !editorFocus"
   },
   {
     "key": "ctrl+k",

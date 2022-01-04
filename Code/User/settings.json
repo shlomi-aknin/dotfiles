@@ -164,12 +164,14 @@
       "after": ["o", "<esc>", "O", "<esc>"]
     },
     {
-      "before": ["m"],
-      "after": ["o", "<esc>"]
+      "before": ["<space>", "j"],
+      "commands": ["editor.action.insertLineAfter"],
+      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-      "before": ["M"],
-      "after": ["O", "<esc>"]
+      "before": ["<space>", "k"],
+      "commands": ["editor.action.insertLineBefore"],
+      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
       "before": ["'"],
