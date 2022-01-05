@@ -33,6 +33,7 @@ packer.startup(function()
   use {'kdheepak/tabline.nvim'}
   use {'kyazdani42/nvim-tree.lua'}
   use {'kyazdani42/nvim-web-devicons'}
+  use {'leafOfTree/vim-matchtag'}
   use {'lewis6991/gitsigns.nvim'}
   use {'lewis6991/impatient.nvim'}
   use {'lukas-reineke/format.nvim'}
