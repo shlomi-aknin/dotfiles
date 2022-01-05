@@ -405,5 +405,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "files.trimTrailingWhitespace": true,
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.occurrencesHighlight": false
 }
