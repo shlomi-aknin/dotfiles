@@ -1,22 +1,18 @@
-#
-# wm independent hotkeys
-#
-
 # focus next free desktop
 super + shift + i
    bspc desktop -f 1 && bspc desktop -f prev.local.occupied && bspc desktop -f next.local
 
 # toggle gaps
-super + shift + g
-    bspc config window_gap {0, 15}
+# super + shift + g
+#     bspc config window_gap {0, 15}
 
 # toggle borders
-super + shift + b
-    bspc config border_width {2, 5}
+# super + shift + b
+#     bspc config border_width {2, 5}
 
 # clock
 super + c
-    alacritty -t "Clock" --class "ttyclock" -e /usr/local/bin/clock
+    alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
 
 # neovim
 super + n
@@ -28,12 +24,12 @@ super + shift + n
     # firefox -new-tab "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
 
 # dmenu web search
-super + s
-    dmenu_websearch
+# super + s
+#     dmenu_websearch
 
 # dswitcher
-super + space
-    dswitcher
+# super + space
+#     dswitcher
 
 # clipmenu insert
 super + p
@@ -49,13 +45,13 @@ super + a
 #
 # launcher
 super + r
-    dmenu_run_i
+    dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=20"
+    # dmenu_run_i
 
 # toggle bar
 # super + shift + b
 # 	{polybar-msg cmd toggle; bspc config top_padding +0, \
 # 	polybar-msg cmd toggle; bspc config top_padding 40}
-
 
 # Nuke a desktop. (i.e. close all windows in it.)
 super + d ; {0-9}
@@ -81,7 +77,7 @@ super + o
 	alacritty -t "htop" -e htop
 
 super + z
-	alacritty -t "vifm" -e vifmrun
+  alacritty -t "vifm" -e vifmrun
 
 # browser
 super + b
@@ -118,11 +114,12 @@ super + x
 
 # close all windows on current desktop
 super + shift + x
-    closewindowsoncurrent
+  bspc node '@/' -c
+  # closewindowsoncurrent
 
 # alternate between the tiled and monocle layout
 super + m
-	bspc desktop -l next
+  bsp-layout set {tall,monocle}
 
 # swap the current node and the biggest window
 super + shift + Return
@@ -151,14 +148,6 @@ super + {k,j}
 super + shift + {j,k}
 	bspc node -s {south,north}
 
-# focus the node in the given direction
-super + {Left,Down,Up,Right}
-	bspc node -f {west,south,north,east}
-
-# focus the node for the given path jump
-super + {p,b}
-	bspc node -f @{parent,brother,first,second}
-
 # cycle through occupied desktops
 super + {h,l}
     bspc desktop -f {prev,next}.local.occupied
@@ -179,7 +168,6 @@ super + {grave,Tab}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
 
 # send to the given desktop and follow
 super + alt + {1-9,0}
