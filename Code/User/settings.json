@@ -174,10 +174,10 @@
       "commands": ["editor.action.insertLineBefore"],
       "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Normal'"
     },
-    // {
-    //   "before": ["'"],
-    //   "after": ["\\", "\\", "\\", "b", "d", "w"]
-    // },
+    {
+      "before": ["'"],
+      "after": ["\\", "\\", "\\", "b", "d", "w"]
+    },
     {
       "before": ["d", "w"],
       "after": ["d", "i", "w"]

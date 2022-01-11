@@ -342,10 +342,5 @@
       ]
     },
     "when": "inQuickOpen"
-  },
-  {
-    "key": "'",
-    "command": "metaGo.gotoSmartActive",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
   }
 ]

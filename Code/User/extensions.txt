@@ -12,7 +12,6 @@ code --install-extension HookyQR.beautify
 code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension junstyle.php-cs-fixer
 code --install-extension leizongmin.node-module-intellisense
-code --install-extension metaseed.MetaJump
 code --install-extension naumovs.color-highlight
 code --install-extension nlehmann.vscode-vim-search-and-replace
 code --install-extension PKief.material-icon-theme
