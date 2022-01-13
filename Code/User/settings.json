@@ -297,10 +297,6 @@
     {
       "before": ["<space>", "/"],
       "commands": ["editor.action.commentLine"]
-    },
-    {
-      "before": ["<C-o>"],
-      "commands": ["workbench.action.files.openFolder"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [

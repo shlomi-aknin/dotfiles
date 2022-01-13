@@ -299,7 +299,7 @@
     "command": "workbench.action.findInFiles"
   },
   {
-    "key": "ctrl+c",
+    "key": "alt+c",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode != 'Insert'"
   },
