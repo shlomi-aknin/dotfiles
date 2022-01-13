@@ -408,5 +408,6 @@
   "workbench.editor.untitled.hint": "hidden",
   "workbench.startupEditor": "newUntitledFile",
   "editor.occurrencesHighlight": false,
-  "workbench.colorTheme": "Dracula At Night"
+  "workbench.colorTheme": "Dracula At Night",
+  "vim.foldfix": true
 }
