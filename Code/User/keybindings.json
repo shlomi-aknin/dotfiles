@@ -342,5 +342,9 @@
       ]
     },
     "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.actions.view.toggleProblems"
   }
 ]
