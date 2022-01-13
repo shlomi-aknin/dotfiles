@@ -17,7 +17,7 @@
   "vim.cursorStylePerMode.visualblock": "block",
   "vim.cursorStylePerMode.visualline": "block",
   "vim.easymotionIncSearchForegroundColor": "#50fa7b",
-  "vim.easymotionKeys": "gasdfhjkl",
+  "vim.easymotionKeys": "yuiogasdfhjkl",
   "vim.easymotionMarkerForegroundColorOneChar": "#50fa7b",
   "vim.easymotionMarkerForegroundColorTwoCharFirst": "#50fa7b",
   "vim.easymotionMarkerForegroundColorTwoCharSecond": "#ff79c6",
