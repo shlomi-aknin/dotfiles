@@ -301,7 +301,7 @@
   {
     "key": "ctrl+c",
     "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus && !inDebugRepl"
+    "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+x",
