@@ -11,6 +11,6 @@ setxkbmap us,il ,, grp:alt_shift_toggle &
 # pgrep -x sxhkd > /dev/null || sxhkd &
 # ~/.config/polybar/launch.sh &
 ~/.fehbg &
-# xrander --output HDMI-2 --same-as eDP-1 &
+xrandr --output HDMI-2 --same-as eDP-1 &
 # picom -bc &
 # mongod &
