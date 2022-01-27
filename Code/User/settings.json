@@ -231,7 +231,7 @@
       "commands": ["workbench.action.files.saveAll"]
     },
     {
-      "before": ["<space>", "h"],
+      "before": ["<space>", "c"],
       "commands": [":nohl"]
     },
     {
@@ -331,7 +331,7 @@
   ],
   "vim.insertModeKeyBindings": [],
   "tabnine.experimentalAutoImports": true,
-  "php-cs-fixer.lastDownload": 1641457270509,
+  "php-cs-fixer.lastDownload": 1642512617058,
   "sync.autoDownload": true,
   "sync.forceUpload": true,
   "sync.autoUpload": true,
@@ -414,6 +414,6 @@
   "workbench.editor.untitled.hint": "hidden",
   "workbench.startupEditor": "newUntitledFile",
   "editor.occurrencesHighlight": false,
-  "workbench.colorTheme": "Dracula At Night",
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "workbench.colorTheme": "Dracula At Night"
 }
