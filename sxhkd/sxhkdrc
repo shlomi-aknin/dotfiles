@@ -1,3 +1,11 @@
+# project select for vs code
+super + shift + e
+  projectselectorcode
+
+# project select for neovim
+super + shift + o
+  projectselectornvim
+
 # focus next free desktop
 super + shift + i
    bspc desktop -f 1 && bspc desktop -f prev.local.occupied && bspc desktop -f next.local
@@ -77,7 +85,7 @@ super + o
 	alacritty -t "htop" -e htop
 
 super + z
-  alacritty -t "vifm" -e vifmrun
+  alacritty -t "vifm" -e vifm
 
 # browser
 super + b
