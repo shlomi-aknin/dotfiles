@@ -31,9 +31,7 @@
   "vim.searchHighlightColor": "#50fa7b",
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
-  "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 2.5,
-  "workbench.activityBar.visible": false,
   "workbench.list.smoothScrolling": true,
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
@@ -335,7 +333,7 @@
   ],
   "vim.insertModeKeyBindings": [],
   "tabnine.experimentalAutoImports": true,
-  "php-cs-fixer.lastDownload": 1642512617058,
+  "php-cs-fixer.lastDownload": 1643539449583,
   "sync.autoDownload": true,
   "sync.forceUpload": true,
   "sync.autoUpload": true,
@@ -419,5 +417,11 @@
   "workbench.startupEditor": "newUntitledFile",
   "editor.occurrencesHighlight": false,
   "vim.foldfix": true,
-  "workbench.colorTheme": "Dracula At Night"
+  "workbench.colorTheme": "Dracula At Night",
+  "window.menuBarVisibility": "toggle",
+  "workbench.activityBar.visible": false,
+  "svelte.plugin.svelte.compilerWarnings": {
+    "a11y-invalid-attribute": "ignore",
+    "a11y-mouse-events-have-key-events": "ignore"
+  }
 }
