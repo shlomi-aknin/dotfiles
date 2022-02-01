@@ -1,6 +1,6 @@
 " Open file in VS code
-" nnoremap i :!code -n %f<cr>
-" vnoremap i :!code -n %f<cr>
+nnoremap i :!code -n %f<cr>:q<cr>
+vnoremap i :!code -n %f<cr>:q<cr>
 " nnoremap o :!code %d<cr>
 " nnoremap O :!code %c<cr>
 
@@ -24,7 +24,7 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
-nnoremap i :!nvim %f<cr>
+nnoremap f :!nvim %f<cr>
 nnoremap o :!alacritty -e nvim %d &<cr>:q<cr>
 " nnoremap O :!alacritty -t "Neovim %c" --working-directory %c -e nvim<cr>
 nnoremap O :!alacritty --working-directory %c -e nvim &<cr>:q<cr>

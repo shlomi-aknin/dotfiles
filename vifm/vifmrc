@@ -260,30 +260,34 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in sxiv}
-        \ sxiv %f,
-        \ {View in gpicview}
-        \ gpicview %c,
-        \ {View in shotwell}
-        \ shotwell,
-	\ {View in feh}
-	\ feh -Zx %c,
+" filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+"         \ {View in sxiv}
+"         \ sxiv %f,
+"         \ {View in gpicview}
+"         \ gpicview %c,
+"         \ {View in shotwell}
+"         \ shotwell,
+" 	\ {View in feh}
+" 	\ feh -Zx %c,
 
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
-	\ vifmimg draw %px %py %pw %ph %c
-	\ %pc
-	\ vifmimg clear
+" filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+"     \ {View in feh}
+"     \ feh -d %d --start-at %d/%c 2> /dev/null
 
-fileviewer *.gif
-	\ vifmimg gifpreview %px %py %pw %ph %c
-	\ %pc
-	\ vifmimg clear
-
-fileviewer *.ico
-	\ vifmimg magickpreview %px %py %pw %ph %c
-	\ %pc
-	\ vifmimg clear
+" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+"  \ vifmimg draw %px %py %pw %ph %c
+"  \ %pc
+"  \ vifmimg clear
+"
+" fileviewer *.gif
+" 	\ vifmimg gifpreview %px %py %pw %ph %c
+" 	\ %pc
+" 	\ vifmimg clear
+"
+" fileviewer *.ico
+" 	\ vifmimg magickpreview %px %py %pw %ph %c
+" 	\ %pc
+" 	\ vifmimg clear
 " fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "          \ identify %f
 
