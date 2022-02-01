@@ -3,10 +3,13 @@ code --install-extension bceskavich.theme-dracula-at-night
 code --install-extension bmewburn.vscode-intelephense-client
 code --install-extension Bruce.rona
 code --install-extension christian-kohler.path-intellisense
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension cweijan.vscode-mysql-client2
 code --install-extension esbenp.prettier-vscode
 code --install-extension fivethree.vscode-svelte-snippets
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
+code --install-extension GitHub.copilot
 code --install-extension HookyQR.beautify
 code --install-extension hoovercj.vscode-settings-cycler
 code --install-extension junstyle.php-cs-fixer
