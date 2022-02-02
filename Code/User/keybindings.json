@@ -351,5 +351,15 @@
   {
     "key": "alt+p",
     "command": "workbench.actions.view.toggleProblems"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "workbench.action.nextPanelView",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.previousPanelView",
+    "when": "!editorFocus"
   }
 ]
