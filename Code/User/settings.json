@@ -233,14 +233,6 @@
       "commands": [":nohl"]
     },
     {
-      "before": ["<S-i>"],
-      "after": ["a", "<space>", "<esc>"]
-    },
-    {
-      "before": ["<S-u>"],
-      "after": ["i", "<space>", "<esc>"]
-    },
-    {
       "before": ["<S-l>"],
       "after": ["g", "_"]
     },
@@ -419,9 +411,9 @@
   "vim.foldfix": true,
   "workbench.colorTheme": "Dracula At Night",
   "window.menuBarVisibility": "toggle",
-  "workbench.activityBar.visible": false,
   "svelte.plugin.svelte.compilerWarnings": {
     "a11y-invalid-attribute": "ignore",
     "a11y-mouse-events-have-key-events": "ignore"
-  }
+  },
+  "workbench.activityBar.visible": false
 }
