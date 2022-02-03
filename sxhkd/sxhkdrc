@@ -127,7 +127,7 @@ super + shift + x
 
 # alternate between the tiled and monocle layout
 super + m
-  bsp-layout set {tall,monocle}
+  bspc desktop -l next
 
 # swap the current node and the biggest window
 super + shift + Return
