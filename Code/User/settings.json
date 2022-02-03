@@ -423,6 +423,6 @@
     "a11y-invalid-attribute": "ignore",
     "a11y-mouse-events-have-key-events": "ignore"
   },
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Dracula At Night"
+  "workbench.colorTheme": "Dracula At Night",
+  "workbench.activityBar.visible": false
 }
