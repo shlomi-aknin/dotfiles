@@ -91,7 +91,7 @@
   },
   {
     "key": "l",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !explorerResourceIsFolder",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": ["list.select", "workbench.action.closeSidebar"]
