@@ -10,7 +10,7 @@
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
   "explorer.openEditors.sortOrder": "alphabetical",
-  "explorer.openEditors.visible": 30,
+  "explorer.openEditors.visible": 0,
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
