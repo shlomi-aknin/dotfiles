@@ -1,3 +1,7 @@
+" Rename file(s)
+nnoremap R :rename<cr>
+vnoremap R :rename<cr>
+
 " Open file in VS code
 nnoremap i :!code -n %f<cr>:q<cr>
 vnoremap i :!code -n %f<cr>:q<cr>
