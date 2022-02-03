@@ -90,6 +90,11 @@
     "when": "listFocus && !inputFocus"
   },
   {
+    "key": "shift+l",
+    "command": "list.selectAndPreserveFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
     "key": "l",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !explorerResourceIsFolder",
     "command": "extension.multiCommand.execute",
