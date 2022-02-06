@@ -50,6 +50,7 @@
     "editorGutter.background": "#000000",
     "editorBracketMatch.background": "#00000000",
     "editorBracketMatch.border": "#ffffff",
+    "editorGhostText.foreground": "#ff79c6",
     "editorGroupHeader.tabsBackground": "#000000",
     "editorGutter.addedBackground": "#50fa7b",
     "editorGutter.modifiedBackground": "#00BBF9",
