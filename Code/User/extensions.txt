@@ -5,6 +5,7 @@ code --install-extension Bruce.rona
 code --install-extension christian-kohler.path-intellisense
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension cweijan.vscode-mysql-client2
+code --install-extension Equinusocio.vsc-material-theme
 code --install-extension esbenp.prettier-vscode
 code --install-extension fivethree.vscode-svelte-snippets
 code --install-extension formulahendry.auto-close-tag
