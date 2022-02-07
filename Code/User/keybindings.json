@@ -213,6 +213,11 @@
     "when": "firstMatchFocus && searchViewletVisible"
   },
   {
+    "key": "ctrl+l",
+    "command": "search.action.focusSearchList",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
     "key": "ctrl+n",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus && terminalProcessSupported && !editorFocus"
