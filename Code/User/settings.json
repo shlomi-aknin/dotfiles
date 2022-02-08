@@ -439,5 +439,6 @@
   "editor.inlineSuggest.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.color": "#00BBF9",
-  "clock.alignment": "Right"
+  "clock.alignment": "Right",
+  "clock.format": "HH:MM"
 }
