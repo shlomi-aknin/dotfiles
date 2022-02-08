@@ -1,3 +1,4 @@
+code --install-extension angelo-breuer.clock
 code --install-extension ardenivanov.svelte-intellisense
 code --install-extension bceskavich.theme-dracula-at-night
 code --install-extension bmewburn.vscode-intelephense-client

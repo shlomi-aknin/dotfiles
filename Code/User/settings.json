@@ -438,5 +438,6 @@
   "workbench.activityBar.visible": false,
   "editor.inlineSuggest.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.color": "#00BBF9"
+  "material-icon-theme.folders.color": "#00BBF9",
+  "clock.alignment": "Right"
 }
