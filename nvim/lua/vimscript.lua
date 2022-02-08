@@ -19,4 +19,14 @@ vim.cmd([[
       autocmd BufWritePost * FormatWrite
       autocmd BufWritePost * TSBufEnable highlight
   augroup END
+
+  function! s:QuickFixOpenAll()
+    let files = {}
+    for entry in getqflist()
+    let filename = bufname(entry.bufnr)
+    silent exe "edit " . filename
+    endfor
+  endfunction
+
+  command! QuickFixOpenAll call s:QuickFixOpenAll()
 ]])
