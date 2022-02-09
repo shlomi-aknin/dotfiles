@@ -28,13 +28,33 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'cssls', 'html', 'svelte', 'intelephense', 'emmet_ls' }
+-- local servers = { 'tsserver', 'cssls', 'html', 'svelte', 'intelephense', 'emmet_ls' }
+local servers = { 'tsserver', 'cssls', 'html', 'intelephense', 'emmet_ls' }
 for _, lsp in ipairs(servers) do
+  local settings = {}
+  if (lsp == 'svelte') then
+    settings = {
+      svelte = {
+        plugin = {
+          svelte = {
+            compilerWarnings = {
+              ['a11y-no-onchange'] = 'ignore',
+              ['a11y-missing-attribute'] = 'ignore',
+              ['a11y-mouse-events-have-key-events'] = 'ignore',
+              ['a11y-invalid-attribute'] = 'ignore'
+            }
+          }
+        }
+      }
+    }
+  end
+
   nvim_lsp[lsp].setup {
     capabilities = capabilities,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
-    }
+    },
+    settings = settings
   }
 end
