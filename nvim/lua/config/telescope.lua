@@ -2,6 +2,16 @@ local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local action_layout = require('telescope.actions.layout')
 
+local open_filtered = function(prompt_bufnr)
+  local picker = action_state.get_current_picker(prompt_bufnr)
+  local manager = picker.manager
+
+  for entry in manager:iter() do
+    vim.cmd(string.format('%s %s', ':e!', entry.value))
+  end
+  vim.cmd('stopinsert')
+end
+
 function multi_select(prompt_bufnr)
   local picker = action_state.get_current_picker(prompt_bufnr)
   local num_selections = #picker:get_multi_selection()
@@ -51,6 +61,7 @@ require('telescope').setup({
         ['<cr>'] = multi_select,
         ['<C-l>'] = multi_select,
         ['<C-h>'] = action_layout.toggle_preview,
+        ['<C-o>'] = open_filtered,
         ['<C-q>'] = actions.smart_send_to_qflist,
       },
       n = {
