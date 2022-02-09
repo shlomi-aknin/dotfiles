@@ -1,3 +1,4 @@
+-- require('config/autosave')
 require('config/format')
 require('config/gitsigns')
 require('config/hop')

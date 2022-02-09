@@ -48,8 +48,9 @@ packer.startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use {'nvim-treesitter/nvim-treesitter'}
   use {'onsails/lspkind-nvim'}
-  use {'PeterRincker/vim-searchlight'}
+  use {'peterrincker/vim-searchlight'}
   use {'phaazon/hop.nvim'}
+  use {'pocco81/autosave.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
   use {'stefandtw/quickfix-reflector.vim'}
