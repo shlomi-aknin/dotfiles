@@ -19,6 +19,7 @@ packer.startup(function()
   use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
+  use {'folke/trouble.nvim'}
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
@@ -58,6 +59,7 @@ packer.startup(function()
   use {'tzachar/cmp-fuzzy-buffer'}
   use {'tzachar/fuzzy.nvim'}
   use {'vifm/vifm.vim'}
+  use {'whoissethdaniel/toggle-lsp-diagnostics.nvim'}
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-autopairs'}
   use {'windwp/nvim-spectre'}
