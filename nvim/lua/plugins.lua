@@ -36,9 +36,9 @@ packer.startup(function()
   use {'leafOfTree/vim-matchtag'}
   use {'lewis6991/gitsigns.nvim'}
   use {'lewis6991/impatient.nvim'}
-  use {'lukas-reineke/format.nvim'}
   use {'lukas-reineke/cmp-rg'}
   use {'mfussenegger/nvim-dap'}
+  use {'mhartington/formatter.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-lua/plenary.nvim'}

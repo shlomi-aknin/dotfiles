@@ -1,4 +1,4 @@
-vim.cmd([[
+vim.api.nvim_exec([[
   let $PATH .= ':/usr/local/lib/node_modules/bin:~/.local/share/nvim/lsp_servers'
   let g:vim_matchtag_enable_by_default = 1
   let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp'
@@ -29,4 +29,4 @@ vim.cmd([[
   endfunction
 
   command! QuickFixOpenAll call s:QuickFixOpenAll()
-]])
+]], true)

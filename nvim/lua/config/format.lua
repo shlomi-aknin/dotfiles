@@ -1,20 +1,18 @@
-local prettier = {
-  simple = {'prettier -w'},
-  javascript = {'prettier --single-quote --arrow-parents always -w'},
-  svelte = {'prettier --single-quote --arrow-parents --parser svelte always -w'}
+local config = {
+    function()
+    return {
+        exe = 'prettier',
+        args = {'--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote', '--arrow-parents'},
+        stdin = true
+    }
+    end
 }
 
-require('format').setup({
-    javascript = {
-        {cmd = prettier.javascript}
-    },
-    css = {
-        {cmd = prettier.simple}
-    },
-    html = {
-        {cmd = prettier.simple}
-    },
-    svelte = {
-        {cmd = prettier.svelte}
-    },
+require('formatter').setup({
+  filetype = {
+    css = config,
+    html = config,
+    javascript = config,
+    svelte = config,
+  }
 })
