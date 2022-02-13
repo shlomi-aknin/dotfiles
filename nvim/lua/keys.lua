@@ -10,6 +10,7 @@ map('i',    '<A-h>',            '<esc>i')
 map('i',    '<A-j>',            '<esc>:MoveLine(1)<cr>gi')
 map('i',    '<A-k>',            '<esc>:MoveLine(-1)<cr>gi')
 map('i',    '<A-l>',            '<esc>la')
+map('i',    '<A-x>',            '<esc>xi')
 map('i',    '<C-c>',            '<esc>')
 
 map('n',    "'",                ':HopWord<cr>')
