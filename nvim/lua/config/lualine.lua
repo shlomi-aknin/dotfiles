@@ -39,7 +39,20 @@ require('lualine').setup({
     lualine_a = {
       { 'mode', separator = { left = '' }, right_padding = 2 },
     },
-    lualine_b = { 'filename', 'branch', 'diff', { 'diagnostics', sources = { 'nvim_diagnostic' } } },
+    -- lualine_b = { 'filename', 'branch', 'diff', { 'diagnostics', sources = { 'nvim_diagnostic' } } },
+    lualine_b = {
+      {
+        'filename',
+        file_status = true,
+        path = 1,
+        shorting_target = 40,
+        symbols = {
+          modified = '[+]',
+          readonly = '[-]',
+          unnamed = '[No Name]',
+        }
+      }
+    },
     lualine_c = { 'fileformat' },
     lualine_x = {},
     lualine_y = { 'filetype', 'progress' },
