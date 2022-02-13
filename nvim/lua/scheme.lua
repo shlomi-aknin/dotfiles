@@ -4,6 +4,9 @@ vim.cmd([[
   hi CursorLine guibg=#00509d
   hi CursorLineNr guifg=#ffff00 guibg=#000000
   hi CursorWord gui=underline
+  hi DraculaFg guifg=#ffffff gui=bold
+  hi DraculaGreen guifg=#50fa7b gui=bold
+  hi DraculaPink guifg=#ff79c6 gui=bold
   hi Folded guibg=#34a1eb guifg=#000000
   hi GitSignsAdd guifg=#50fa7b guibg=#000000 gui=bold
   hi GitSignsChange guifg=#ff79c6 guibg=#000000 gui=bold
@@ -17,14 +20,14 @@ vim.cmd([[
   hi LineNr guifg=#34a1eb guibg=#000000 gui=bold
   hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb gui=bold
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
-  hi Normal guifg=#ffffff guibg=#000000
+  hi Normal guifg=#ffffff guibg=#000000 gui=bold
   hi NormalSelected guifg=#50fa7b gui=bold
   hi NvimTreeFolderIcon guibg=#34a1eb
   hi PMenu guibg=#00509d guifg=#ffffff gui=bold
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#ff79c6 gui=bold
   hi SignColumn guibg=#000000 guifg=#34a1eb gui=bold
-  hi String guifg=#ff79c6 gui=bold
+  hi String guifg=#fff9c6 gui=bold
   hi TelescopeBorder guifg=#34a1eb gui=bold
   hi TelescopeNormal guibg=#000000
   hi TelescopeMatching guifg=#ffffff gui=bold
