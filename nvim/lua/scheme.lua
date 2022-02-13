@@ -11,7 +11,7 @@ vim.cmd([[
   hi HopNextKey guifg=#50fa7b
   hi HopNextKey1 guifg=#50fa7b
   hi HopNextKey2 guifg=#50fa7b
-  hi IncSearch guibg=#000000 guifg=#50fa7b
+  hi IncSearch guibg=#50fa7b guifg=#000000 gui=bold
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
   hi LineNr guifg=#34a1eb guibg=#000000 gui=bold
@@ -22,7 +22,7 @@ vim.cmd([[
   hi NvimTreeFolderIcon guibg=#34a1eb
   hi PMenu guibg=#00509d guifg=#ffffff gui=bold
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
-  hi Search guifg=#000000 guibg=#ff5555
+  hi Search guifg=#000000 guibg=#ff79c6 gui=bold
   hi SignColumn guibg=#000000 guifg=#34a1eb gui=bold
   hi String guifg=#ff79c6 gui=bold
   hi TelescopeBorder guifg=#34a1eb gui=bold
