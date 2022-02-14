@@ -13,9 +13,12 @@ local colors = {
 
 local bubbles_theme = {
   normal = {
-    a = { fg = colors.black, bg = colors.blue },
-    b = { fg = colors.white, bg = colors.blue2 },
-    c = { fg = colors.black, bg = colors.black },
+    a = { fg = colors.black,  bg = colors.blue },
+    b = { fg = colors.white,  bg = colors.blue2 },
+    c = { fg = colors.yellow, bg = colors.black },
+    x = { fg = colors.black,  bg = colors.blue },
+    y = { fg = colors.white,  bg = colors.blue2 },
+    z = { fg = colors.black,  bg = colors.blue },
   },
 
   insert = { a = { fg = colors.black, bg = colors.green } },
@@ -53,11 +56,11 @@ require('lualine').setup({
         }
       }
     },
-    lualine_c = { 'fileformat' },
-    lualine_x = {},
-    lualine_y = { 'filetype', 'progress' },
+    lualine_c = {},
+    lualine_x = { { 'filetype', separator = { left = '' } } },
+    lualine_y = { { 'location', separator = { left = '' } }, 'progress' },
     lualine_z = {
-      { 'location', separator = { right = '' }, left_padding = 2 },
+      { 'os.date("%H:%M:%S", os.time())', separator = { right = '', left = '' }, left_padding = 2 },
     },
   },
   inactive_sections = {
@@ -71,3 +74,12 @@ require('lualine').setup({
   tabline = {},
   extensions = {},
 })
+
+-- Trigger rerender of status line every second for clock
+if _G.Statusline_timer == nil then
+    _G.Statusline_timer = vim.loop.new_timer()
+else
+    _G.Statusline_timer:stop()
+end
+_G.Statusline_timer:start(0, 1000, vim.schedule_wrap(
+                              function() vim.api.nvim_command('redrawstatus') end))
