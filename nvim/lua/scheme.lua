@@ -7,6 +7,7 @@ vim.cmd([[
   hi DraculaFg guifg=#ffffff gui=bold
   hi DraculaGreen guifg=#50fa7b gui=bold
   hi DraculaPink guifg=#ff79c6 gui=bold
+  hi DraculaPurple guifg=#ffa0a0 gui=bold
   hi Folded guibg=#34a1eb guifg=#000000
   hi GitSignsAdd guifg=#50fa7b guibg=#000000 gui=bold
   hi GitSignsChange guifg=#ff79c6 guibg=#000000 gui=bold
