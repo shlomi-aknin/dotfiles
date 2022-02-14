@@ -34,6 +34,7 @@ vim.cmd([[
   hi TelescopeNormal guibg=#000000
   hi TelescopeMatching guifg=#ffffff gui=bold
   hi TelescopeSelection guibg=#34a1eb guifg=#000000 gui=bold
+  hi TSVariable guifg=#ffff00 gui=bold
   hi javaScriptLineComment guifg=#34a1eb gui=italic
   hi link jsComment Comment
   hi link Searchlight IncSearch
