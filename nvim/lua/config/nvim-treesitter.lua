@@ -8,8 +8,11 @@ require('nvim-treesitter.configs').setup({
     enable = true,
   },
   highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = {},  -- list of language that will be disabled
+    enable = true,
+    disable = {},
     additional_vim_regex_highlighting = false,
+  },
+  matchup = {
+    enable = true,
   },
 })

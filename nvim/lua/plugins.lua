@@ -12,6 +12,7 @@ local packer = require('packer')
 local use = packer.use
 
 packer.startup(function()
+  use {'andymass/vim-matchup'}
   use {'akinsho/toggleterm.nvim'}
   use {'blackCauldron7/surround.nvim'}
   use {'cappyzawa/trim.nvim'}
