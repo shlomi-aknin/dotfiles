@@ -17,12 +17,15 @@ require('nvim-tree').setup({
     auto_open = false,
   },
   view = {
+    width = 35,
+    height = 35,
     auto_resize = true,
     mappings = {
       list = {
         { key = 'l', cb = tree_cb('edit') },
         { key = 'h', cb = tree_cb('close_node') },
         { key = '<Tab>', mode = 'n', cb = ':lua NvimTreeToggleFileSelected("j")<cr>'},
+        { key = '<S-h>', mode = 'n', cb = ':lua require("nvim-tree.lib").collapse_all()<cr>gg' },
         { key = '<S-Tab>', mode = 'n', cb = ':lua NvimTreeToggleFileSelected("k")<cr>'},
         { key = '<C-l>', mode = 'n', cb = ':lua NvimTreeOpenFiles()<cr>'},
       }
