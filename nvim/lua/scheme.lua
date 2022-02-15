@@ -2,7 +2,7 @@ vim.cmd([[
   silent! colorscheme dracula
   hi Comment guifg=#34a1eb gui=bold
   hi CursorLine guibg=#00509d
-  hi CursorLineNr guifg=#ffff00 guibg=#000000
+  hi CursorLineNr guifg=#ffff00 guibg=#00509d
   hi CursorWord gui=underline
   hi DraculaFg guifg=#ffffff gui=bold
   hi DraculaGreen guifg=#50fa7b gui=bold
@@ -18,7 +18,7 @@ vim.cmd([[
   hi IncSearch guibg=#50fa7b guifg=#000000 gui=bold
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
-  hi LineNr guifg=#34a1eb guibg=#000000 gui=bold
+  hi LineNr guibg=#34a1eb guifg=#000000 gui=bold
   hi LspSignatureActiveParameter guifg=#000000 guibg=#34a1eb gui=bold
   hi MatchParen guibg=#2176FF guifg=#ffffff gui=bold
   hi NonText guifg=#34a1eb guibg=#000000 gui=bold
