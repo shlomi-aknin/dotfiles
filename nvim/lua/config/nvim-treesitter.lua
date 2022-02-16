@@ -5,7 +5,7 @@ require('nvim-treesitter.configs').setup({
     enable = true
   },
   autotag = {
-    enable = true,
+    enable = true
   },
   highlight = {
     enable = true,
@@ -13,6 +13,6 @@ require('nvim-treesitter.configs').setup({
     additional_vim_regex_highlighting = false,
   },
   matchup = {
-    enable = true,
+    enable = true
   },
 })

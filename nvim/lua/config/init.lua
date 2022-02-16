@@ -1,6 +1,7 @@
 -- require('config/autosave')
 require('config/format')
 require('config/gitsigns')
+require('config/goto-preview')
 require('config/hop')
 require('config/lualine')
 require('config/lsp-colors')

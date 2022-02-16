@@ -14,7 +14,6 @@ local use = packer.use
 packer.startup(function()
   use {'andymass/vim-matchup'}
   use {'akinsho/toggleterm.nvim'}
-  use {'blackCauldron7/surround.nvim'}
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'famiu/nvim-reload'}
@@ -54,12 +53,14 @@ packer.startup(function()
   use {'pocco81/autosave.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
+  use {'rmagatti/goto-preview'}
   use {'stefandtw/quickfix-reflector.vim'}
   use {'stevearc/qf_helper.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'tzachar/cmp-fuzzy-buffer'}
   use {'tzachar/fuzzy.nvim'}
+  use {'ur4ltz/surround.nvim'}
   use {'vifm/vifm.vim'}
   use {'whoissethdaniel/toggle-lsp-diagnostics.nvim'}
   use {'williamboman/nvim-lsp-installer'}
