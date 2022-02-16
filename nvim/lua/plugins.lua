@@ -16,6 +16,7 @@ packer.startup(function()
   use {'akinsho/toggleterm.nvim'}
   use {'cappyzawa/trim.nvim'}
   use {'dracula/vim', as = 'dracula'}
+  use {'gbprod/cutlass.nvim'}
   use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}

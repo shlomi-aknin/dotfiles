@@ -1,4 +1,5 @@
 -- require('config/autosave')
+require('config/cutlass')
 require('config/format')
 require('config/gitsigns')
 require('config/goto-preview')
