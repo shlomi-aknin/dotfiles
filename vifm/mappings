@@ -108,8 +108,9 @@ nnoremap <f8> :delete<cr>
 command ln ln -s %f:p %D
 source ~/.config/vifm/SETUP
 nnoremap <C-c> :!$(fd --type f | fzf -m --cycle | xargs -r code)<cr>
-command! extractfiles unzip -o %c -d %D && rm -f %c
-nnoremap XX :!unzip -o %c -d %d && rm -f %c<CR>
+" command! extractfiles unzip -o %c -d %D && rm -f %c
+nnoremap x :!ouch c %f archive.zip<CR>
+nnoremap X :!ouch d %c && rm -f %c<CR>
 " yank current directory path into the clipboard
 nnoremap yd :!echo -n %d | xclip -selection clipboard %i<cr>:echo expand('%"d') "is yanked to clipboard"<cr>
 
