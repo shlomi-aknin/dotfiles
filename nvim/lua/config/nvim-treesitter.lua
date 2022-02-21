@@ -7,6 +7,10 @@ require('nvim-treesitter.configs').setup({
   autotag = {
     enable = true
   },
+	autopairs = {
+		enable = true,
+	},
+	indent = { enable = true },
   highlight = {
     enable = true,
     disable = {},

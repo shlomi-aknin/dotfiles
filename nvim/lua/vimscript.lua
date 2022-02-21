@@ -7,6 +7,7 @@ vim.api.nvim_exec([[
   autocmd BufReadPost quickfix nnoremap <buffer> <C-k> <cmd>QFPrev<cr><C-w>j
   autocmd BufReadPost quickfix nnoremap <buffer> <C-l> <cr>
   autocmd BufReadPost quickfix nnoremap <buffer> <C-u> <cmd>call setqflist([])<cr><cmd>cclose<cr>
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
   au! BufNewFile,BufRead *.svelte set ft=svelte
 
   augroup highlight_yank

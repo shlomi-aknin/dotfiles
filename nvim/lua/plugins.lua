@@ -8,8 +8,23 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute('packadd packer.nvim')
 end
 
-local packer = require('packer')
+-- local packer = require('packer')
+
+local status_ok, packer = pcall(require, 'packer')
+if not status_ok then
+  return
+end
+
 local use = packer.use
+
+-- Have packer use a popup window
+packer.init({
+  display = {
+    open_fn = function()
+      return require('packer.util').float { border = 'rounded' }
+    end,
+  },
+})
 
 packer.startup(function()
   use {'andymass/vim-matchup'}
@@ -37,7 +52,6 @@ packer.startup(function()
   use {'kyazdani42/nvim-web-devicons'}
   use {'leafOfTree/vim-matchtag'}
   use {'lewis6991/gitsigns.nvim'}
-  use {'lewis6991/impatient.nvim'}
   use {'lukas-reineke/cmp-rg'}
   use {'mfussenegger/nvim-dap'}
   use {'mhartington/formatter.nvim'}
@@ -69,5 +83,3 @@ packer.startup(function()
   use {'windwp/nvim-spectre'}
   use {'windwp/nvim-ts-autotag'}
 end)
-
--- require('impatient')
