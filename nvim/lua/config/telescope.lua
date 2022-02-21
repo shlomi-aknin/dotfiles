@@ -8,6 +8,9 @@ local open_filtered = function(prompt_bufnr)
 
   for entry in manager:iter() do
     vim.cmd(string.format('%s %s', ':e!', entry.value))
+    vim.cmd('set number')
+    vim.cmd('set relativenumber')
+    vim.cmd('set cursorline')
   end
   vim.cmd('stopinsert')
 end
