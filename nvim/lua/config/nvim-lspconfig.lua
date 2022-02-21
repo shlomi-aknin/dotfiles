@@ -1,4 +1,8 @@
-local nvim_lsp = require('lspconfig')
+local status_ok, lspconfig = pcall(require, 'lspconfig')
+if not status_ok then
+  return
+end
+
 local configs = require('lspconfig/configs')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -28,11 +32,11 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
--- local servers = { 'tsserver', 'cssls', 'html', 'svelte', 'intelephense', 'emmet_ls' }
+
 local servers = { 'tsserver', 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
-for _, lsp in ipairs(servers) do
+for _, server in ipairs(servers) do
   local settings = {}
-  if (lsp == 'svelte') then
+  if (server == 'svelte') then
     settings = {
       svelte = {
         plugin = {
@@ -49,12 +53,12 @@ for _, lsp in ipairs(servers) do
     }
   end
 
-  nvim_lsp[lsp].setup {
+  lspconfig[server].setup({
     capabilities = capabilities,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
     },
     settings = settings
-  }
+  })
 end

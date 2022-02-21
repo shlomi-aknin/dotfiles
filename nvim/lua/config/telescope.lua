@@ -1,3 +1,8 @@
+local status_ok, telescope = pcall(require, 'telescope')
+if not status_ok then
+  return
+end
+
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local action_layout = require('telescope.actions.layout')
@@ -43,7 +48,7 @@ function copy_to_clipboard(content)
   return print(string.format('Copied %s to system clipboard! \n', content))
 end
 
-require('telescope').setup({
+telescope.setup({
   defaults = {
     preview = {
       hide_on_startup = true

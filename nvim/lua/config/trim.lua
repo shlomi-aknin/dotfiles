@@ -1,3 +1,8 @@
+local status_ok, trim = pcall(require, 'trim')
+if not status_ok then
+  return
+end
+
 local config = {
   disable = {},
   patterns = {
@@ -8,4 +13,4 @@ local config = {
   },
 }
 
-require('trim').setup(config)
+trim.setup(config)

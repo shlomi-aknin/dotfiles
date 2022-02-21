@@ -1,6 +1,11 @@
+local status_ok, goto_preview = pcall(require, 'goto-preview')
+if not status_ok then
+  return
+end
+
 local themes = require('telescope/themes')
 
-require('goto-preview').setup({
+goto_preview.setup({
   width = 120; -- Width of the floating window
   height = 15; -- Height of the floating window
   border = {'↖', '─' ,'┐', '│', '┘', '─', '└', '│'}; -- Border characters of the floating window

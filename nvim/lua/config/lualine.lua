@@ -1,3 +1,8 @@
+local status_ok, lualine = pcall(require, 'lualine')
+if not status_ok then
+  return
+end
+
 local colors = {
   blue   = '#34a1eb',
   blue2  = '#00509d',
@@ -32,7 +37,7 @@ local bubbles_theme = {
   },
 }
 
-require('lualine').setup({
+lualine.setup({
   options = {
     theme = bubbles_theme,
     component_separators = '',

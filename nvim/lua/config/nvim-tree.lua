@@ -1,3 +1,8 @@
+local status_ok, nvim_tree = pcall(require, 'nvim-tree')
+if not status_ok then
+  return
+end
+
 local NvimTreeSelectedFiles = {}
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local winopts = require('nvim-tree.view').View.winopts
@@ -6,7 +11,7 @@ vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_root_folder_modifier = ':t'
 
-require('nvim-tree').setup({
+nvim_tree.setup({
   open_on_setup       = false,
   ignore_ft_on_setup  = {'.git', 'node_modules', '.cache'},
   auto_close          = true,

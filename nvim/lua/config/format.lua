@@ -1,3 +1,8 @@
+local status_ok, formatter = pcall(require, 'formatter')
+if not status_ok then
+  return
+end
+
 local config = {
     function()
     return {
@@ -8,7 +13,7 @@ local config = {
     end
 }
 
-require('formatter').setup({
+formatter.setup({
   filetype = {
     css = config,
     html = config,
