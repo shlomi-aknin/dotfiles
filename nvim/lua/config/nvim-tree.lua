@@ -8,7 +8,6 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local winopts = require('nvim-tree.view').View.winopts
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
-vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_root_folder_modifier = ':t'
 
 nvim_tree.setup({
@@ -36,8 +35,13 @@ nvim_tree.setup({
       }
     },
     number = true,
-    relativenumber = true
+    relativenumber = true,
   },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
+  }
 })
 
 function tablelength(T)
