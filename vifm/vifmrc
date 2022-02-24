@@ -260,15 +260,15 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
-" filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "         \ {View in sxiv}
 "         \ sxiv %f,
 "         \ {View in gpicview}
 "         \ gpicview %c,
 "         \ {View in shotwell}
 "         \ shotwell,
-" 	\ {View in feh}
-" 	\ feh -Zx %c,
+	\ {View in feh}
+	\ feh -Zx %c,
 
 " filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "     \ {View in feh}
