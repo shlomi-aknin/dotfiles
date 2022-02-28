@@ -54,6 +54,7 @@ packer.startup(function()
   use {'lewis6991/gitsigns.nvim'}
   use {'lukas-reineke/cmp-rg'}
   use {'mfussenegger/nvim-dap'}
+  use {'mg979/vim-visual-multi'}
   use {'mhartington/formatter.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}

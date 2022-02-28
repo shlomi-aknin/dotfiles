@@ -24,6 +24,12 @@ map('n',    '<A-k>',            '<esc>:MoveLine(-1)<cr>')
 map('n',    '<A-l>',            'a<space><esc>')
 map('n',    '<A-u>',            ':BufferLineMovePrev<cr>')
 map('n',    '<A-t>',            ':ToggleTerm<cr>')
+
+-- map('n',    '<C-A-j>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
+-- map('n',    '<C-A-k>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
+-- map('n',    '<C-A-l>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
+-- map('n',    '<C-A-h>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
+
 map('n',    '<C-A-s>',          ':Telescope live_grep<cr>')
 map('n',    '<C-c>',            ':bd<cr>')
 map('n',    '<C-h>',            ':bp<cr>')

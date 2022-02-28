@@ -1,7 +1,12 @@
 vim.api.nvim_exec([[
+  let g:VM_maps = {}
   let $PATH .= ':/usr/local/lib/node_modules/bin:~/.local/share/nvim/lsp_servers'
   let g:vim_matchtag_enable_by_default = 1
   let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp'
+  let g:VM_maps['Add Cursor Down']    = '<C-A-j>'   " new cursor down
+  let g:VM_maps['Add Cursor Up']      = '<C-A-k>'   " new cursor up
+  let g:VM_maps['Select l']           = '<C-A-l>'   " select right
+  let g:VM_maps['Select h']           = '<C-A-h>'   " select left
   autocmd Syntax css,html,js,php normal zR
   autocmd BufReadPost quickfix nnoremap <buffer> <C-j> <cmd>QFNext<cr><C-w>j
   autocmd BufReadPost quickfix nnoremap <buffer> <C-k> <cmd>QFPrev<cr><C-w>j

@@ -63,9 +63,9 @@ lualine.setup({
     },
     lualine_c = {},
     lualine_x = { { 'filetype', separator = { left = '' } } },
-    lualine_y = { { 'location', separator = { left = '' } }, 'progress' },
+    lualine_y = { 'location', 'progress' },
     lualine_z = {
-      { 'os.date("%H:%M:%S", os.time())', separator = { right = '', left = '' }, left_padding = 2 },
+      { 'os.date("%H:%M:%S", os.time())', separator = { right = '' }, left_padding = 2 },
     },
   },
   inactive_sections = {
