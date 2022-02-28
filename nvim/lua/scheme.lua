@@ -41,6 +41,9 @@ vim.cmd([[
   hi link TelescopeMultiSelection NormalSelected
   hi link javaScriptStringS String
   hi link jsString String
+  hi TSParameter guifg=#8be9fd gui=bold,italic
+  hi TSParameterReference guifg=#8be9fd gui=bold,italic
+  hi TSField guifg=#8be9fd gui=bold,italic
 ]])
 
   -- hi TabLine guibg=#000000 guifg=#ffff00 gui=NONE
