@@ -5,6 +5,7 @@ vim.api.nvim_exec([[
   let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp'
   let g:VM_maps['Add Cursor Down']    = '<C-A-j>'   " new cursor down
   let g:VM_maps['Add Cursor Up']      = '<C-A-k>'   " new cursor up
+  let g:VM_maps['Add Cursor At Pos']  = '<C-A-g>'   " add cursor at position
   let g:VM_maps['Select l']           = '<C-A-l>'   " select right
   let g:VM_maps['Select h']           = '<C-A-h>'   " select left
   autocmd Syntax css,html,js,php normal zR
