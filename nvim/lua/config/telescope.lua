@@ -7,6 +7,8 @@ local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local action_layout = require('telescope.actions.layout')
 
+require('plenary.filetype').add_file('svelte')
+
 local open_filtered = function(prompt_bufnr)
   local picker = action_state.get_current_picker(prompt_bufnr)
   local manager = picker.manager
@@ -51,7 +53,7 @@ end
 telescope.setup({
   defaults = {
     preview = {
-      hide_on_startup = true
+      hide_on_startup = true,
     },
     prompt_prefix = '~> ',
     layout_config = {
