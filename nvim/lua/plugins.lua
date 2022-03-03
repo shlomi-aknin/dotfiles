@@ -21,7 +21,7 @@ local use = packer.use
 packer.init({
   display = {
     open_fn = function()
-      return require('packer.util').float { border = 'rounded' }
+      return require('packer.util').float({ border = 'rounded' })
     end,
   },
 })
