@@ -69,6 +69,7 @@ packer.startup(function()
   use {'pocco81/autosave.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
+  use {'rmagatti/auto-session'}
   use {'rmagatti/goto-preview'}
   use {'stefandtw/quickfix-reflector.vim'}
   use {'stevearc/qf_helper.nvim'}

@@ -62,7 +62,7 @@ lualine.setup({
       },
       { 'diagnostics' }
     },
-    lualine_c = {},
+    lualine_c = { require('auto-session-library').current_session_name },
     lualine_x = { { 'filetype', separator = { left = '' } } },
     lualine_y = { 'location', 'progress' },
     lualine_z = {
