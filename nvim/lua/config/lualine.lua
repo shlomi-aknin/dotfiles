@@ -59,7 +59,8 @@ lualine.setup({
           readonly = '[-]',
           unnamed = '[No Name]',
         }
-      }
+      },
+      { 'diagnostics' }
     },
     lualine_c = {},
     lualine_x = { { 'filetype', separator = { left = '' } } },
