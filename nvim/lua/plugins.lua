@@ -56,6 +56,7 @@ packer.startup(function()
   use {'mfussenegger/nvim-dap'}
   use {'mg979/vim-visual-multi'}
   use {'mhartington/formatter.nvim'}
+  use {'nmac427/guess-indent.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
   use {'nvim-lua/plenary.nvim'}
