@@ -8,8 +8,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute('packadd packer.nvim')
 end
 
--- local packer = require('packer')
-
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
