@@ -1,3 +1,8 @@
+local status_ok, autoSession = pcall(require, 'auto-session')
+if not status_ok then
+  return
+end
+
 local opts = {
   log_level = 'info',
   auto_session_enable_last_session = false,
@@ -9,4 +14,4 @@ local opts = {
   bypass_session_save_file_types = nil
 }
 
-require('auto-session').setup(opts)
+autoSession.setup(opts)
