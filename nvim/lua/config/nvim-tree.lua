@@ -84,7 +84,7 @@ function NvimTreeOpenFiles()
     if node.has_children ~= nil then
       lib.unroll_dir(node)
     else
-      lib.open_file_in_tab(node.absolute_path)
+      vim.cmd('edit ' .. vim.fn.fnameescape(node.absolute_path))
     end
   else
     view.close()
