@@ -123,11 +123,8 @@ nnoremap yn :!echo -n %c | xclip -selection clipboard %i<cr>:echo expand('%"c') 
 " yank root of current file's name into the clipboard
 nnoremap yr :!echo -n %c:r | xclip -selection clipboard %i<cr>:echo expand('%"c:r') "is yanked to clipboard"<cr>
 
-" single pane view
-nnoremap zx :only<cr>
-
-" split view into 2 panes horizontally
-nnoremap zc :vsplit<cr>
+" toggle single pane view and 2 panes horizontally
+nnoremap zz :vsplit!<cr>
 
 " open current directory in other pane
 nnoremap zo :sync<CR><Tab>
@@ -135,7 +132,6 @@ nnoremap zo :sync<CR><Tab>
 " open current directory in dotfiles
 nnoremap zp :!opendirindots %d<CR>
 
-nnoremap zz :cd %d %c<CR>
 nnoremap . za
 nnoremap T :!lazygit %d<CR>
 nnoremap W :!feh --bg-scale %f<CR>:!cp %f /usr/share/slim/themes/default/background.jpg<CR>
