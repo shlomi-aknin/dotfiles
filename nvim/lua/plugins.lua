@@ -72,6 +72,7 @@ packer.startup(function()
   use {'rmagatti/auto-session'}
   use {'rmagatti/goto-preview'}
   use {'stefandtw/quickfix-reflector.vim'}
+  use {'stevearc/dressing.nvim'}
   use {'stevearc/qf_helper.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
