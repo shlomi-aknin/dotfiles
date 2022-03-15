@@ -11,6 +11,8 @@ local colors = {
   black  = '#000000',
   white  = '#ffffff',
   red    = '#ff5555',
+  pink   = '#ff79c6',
+  purple = '#6272a4',
   violet = '#bd93f9',
   grey   = '#303030',
   yellow = '#ffff00',
@@ -64,9 +66,10 @@ lualine.setup({
     },
     lualine_c = { require('auto-session-library').current_session_name },
     lualine_x = { { 'filetype', separator = { left = '' } } },
-    lualine_y = { 'location', 'progress' },
+    lualine_y = { {'location', separator = { left = '' } } },
     lualine_z = {
-      { 'os.date("%H:%M:%S", os.time())', separator = { right = '' }, left_padding = 2 },
+      -- { 'os.date("%H:%M", os.time())', separator = { right = '' }, left_padding = 2 },
+      { 'progress', separator = { right = '' }, left_padding = 2 },
     },
   },
   inactive_sections = {
@@ -82,10 +85,10 @@ lualine.setup({
 })
 
 -- Trigger rerender of status line every second for clock
-if _G.Statusline_timer == nil then
-    _G.Statusline_timer = vim.loop.new_timer()
-else
-    _G.Statusline_timer:stop()
-end
-_G.Statusline_timer:start(0, 1000, vim.schedule_wrap(
-                              function() vim.api.nvim_command('redrawstatus') end))
+-- if _G.Statusline_timer == nil then
+--     _G.Statusline_timer = vim.loop.new_timer()
+-- else
+--     _G.Statusline_timer:stop()
+-- end
+-- _G.Statusline_timer:start(0, 1000, vim.schedule_wrap(
+--                               function() vim.api.nvim_command('redrawstatus') end))
