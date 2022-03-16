@@ -3,4 +3,6 @@ if not status_ok then
   return
 end
 
-neoscroll.setup()
+neoscroll.setup({
+    hide_cursor = false,
+})
