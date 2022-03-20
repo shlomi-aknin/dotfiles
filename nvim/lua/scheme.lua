@@ -25,7 +25,7 @@ vim.cmd([[
   hi NonText guifg=#34a1eb guibg=#000000 gui=bold
   hi Normal guifg=#ffffff guibg=#000000 gui=bold
   hi NormalSelected guifg=#50fa7b gui=bold
-  hi NvimTreeFolderIcon guibg=#34a1eb
+  hi NvimTreeFolderIcon guifg=#34a1eb
   hi PMenu guibg=#00509d guifg=#ffffff gui=bold
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#ff79c6 gui=bold
