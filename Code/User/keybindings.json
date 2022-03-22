@@ -194,16 +194,6 @@
   },
   {
     "key": "ctrl+j",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-  },
-  {
-    "key": "ctrl+j",
     "command": "search.focus.nextInputBox",
     "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
   },
