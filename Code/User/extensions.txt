@@ -24,6 +24,7 @@ code --install-extension sourcegraph.javascript-typescript
 code --install-extension svelte.svelte-vscode
 code --install-extension TabNine.tabnine-vscode
 code --install-extension Tino.simple-rest-client
+code --install-extension TomRijndorp.find-it-faster
 code --install-extension vincaslt.highlight-matching-tag
 code --install-extension vscodevim.vim
 code --install-extension xabikos.JavaScriptSnippets
