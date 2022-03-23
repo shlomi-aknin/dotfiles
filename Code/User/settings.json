@@ -72,11 +72,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#FCAB10",
-    "statusBar.debuggingBackground": "#FCAB10",
-    "statusBar.debuggingForeground": "#000000",
-    "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#FCAB10",
+    "statusBar.background": "#007ACC",
+    "statusBar.debuggingBackground": "#007ACC",
+    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.noFolderBackground": "#007ACC",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -93,6 +93,42 @@
   "vim.statusBarColors.visualblock": ["#FCAB10", "#000000"],
   "vim.statusBarColors.visualline": ["#FCAB10", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    {
+      "before": ["X"],
+      "after": ["\"", "_", "X"]
+    },
+    {
+      "before": ["m"],
+      "after": ["x"]
+    },
+    {
+      "before": ["M"],
+      "after": ["d"]
+    },
     {
       "before": ["v", "i", "}"],
       "after": ["$", "F", "{", "l", "v", "t", "}"]
@@ -347,6 +383,38 @@
     {
       "before": ["p"],
       "after": ["p", "g", "v", "y"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["s"],
+      "after": ["\"", "_", "s"]
+    },
+    {
+      "before": ["S"],
+      "after": ["\"", "_", "S"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    {
+      "before": ["m"],
+      "after": ["x"]
+    },
+    {
+      "before": ["M"],
+      "after": ["d"]
     }
   ],
   "vim.visualModeKeyBindings": [
