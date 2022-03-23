@@ -1,2 +1,2 @@
 #!/usr/bin/env zsh
-print -rl -- ${(ko)commands} | fzf | (nohup ${SHELL:-"/bin/sh"} &) >/dev/null 2>&1
+print -rl -- ${(ko)commands} | fzf --bind=ctrl-l:accept | (nohup ${SHELL:-"/bin/sh"} &) >/dev/null 2>&1
