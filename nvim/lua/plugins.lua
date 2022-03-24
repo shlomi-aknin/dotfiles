@@ -71,6 +71,7 @@ packer.startup(function()
   use {'rcarriga/nvim-dap-ui'}
   use {'rmagatti/auto-session'}
   use {'rmagatti/goto-preview'}
+  use {'sindrets/diffview.nvim'}
   use {'stefandtw/quickfix-reflector.vim'}
   use {'stevearc/dressing.nvim'}
   use {'stevearc/qf_helper.nvim'}
