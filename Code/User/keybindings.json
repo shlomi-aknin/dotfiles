@@ -356,6 +356,11 @@
     "command": "workbench.actions.view.toggleProblems"
   },
   {
+    "key": "alt+o",
+    "command": "workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
     "key": "ctrl+]",
     "command": "workbench.action.nextPanelView",
     "when": "!editorFocus"
