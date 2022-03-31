@@ -367,11 +367,11 @@
       "commands": ["editor.action.commentLine"]
     },
     {
-      "before": ["<space>", "l"],
+      "before": ["g", "l"],
       "after": ["a", "<space>", "<esc>"]
     },
     {
-      "before": ["<space>", "h"],
+      "before": ["g", "h"],
       "after": ["i", "<space>", "<esc>"]
     },
     {
@@ -433,7 +433,7 @@
   ],
   "vim.insertModeKeyBindings": [],
   "tabnine.experimentalAutoImports": true,
-  "php-cs-fixer.lastDownload": 1647764879200,
+  "php-cs-fixer.lastDownload": 1648650525211,
   "sync.autoDownload": true,
   "sync.forceUpload": true,
   "sync.autoUpload": true,
