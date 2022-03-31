@@ -16,12 +16,8 @@ map('i',    '<C-c>',            '<esc>')
 map('n',    "'",                ':HopWord<cr>')
 map('n',    ',',                '<cmd>set fdm=manual<cr>0f{zf%')
 map('n',    '<A-`>',            ':set relativenumber!<cr>')
-map('n',    '<A-b>',            ':BufferLinePick<cr>')
-map('n',    '<A-i>',            ':BufferLineMoveNext<cr>')
 map('n',    '<A-j>',            '<esc>:MoveLine(1)<cr>')
 map('n',    '<A-k>',            '<esc>:MoveLine(-1)<cr>')
-map('n',    '<A-u>',            ':BufferLineMovePrev<cr>')
-map('n',    '<A-t>',            ':ToggleTerm<cr>')
 
 -- map('n',    '<C-A-g>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
 -- map('n',    '<C-A-h>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
@@ -109,6 +105,7 @@ map('n',    'gpd',              ':lua require("goto-preview").goto_preview_defin
 map('n',    'gpi',              ':lua require("goto-preview").goto_preview_implementation()<CR>')
 map('n',    'gpx',              ':lua require("goto-preview").close_all_win()<CR>')
 map('n',    'gpr',              ':Telescope lsp_references<CR>')
+map('n',    'gt',               ':ToggleTerm<cr>')
 map('n',    'y)',               '0f(lyi(')
 map('n',    'y]',               '0f[lyi[')
 map('n',    'y}',               '0f{lyi{')
