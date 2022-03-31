@@ -1,2 +1,6 @@
 #!/usr/bin/env zsh
-print -rl -- ${(ko)commands} | fzf --bind=ctrl-l:accept | (nohup ${SHELL:-"/bin/sh"} &) >/dev/null 2>&1
+print -rl -- ${(ko)commands} | fzf --bind=ctrl-l:accept \
+      --cycle \
+      --multi \
+      --bind=alt-j:down,alt-k:up,alt-l:accept,tab:toggle+up,shift-tab:toggle+down \
+  | (nohup ${SHELL:-"/bin/sh"} &) >/dev/null 2>&1
