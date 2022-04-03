@@ -1,0 +1,26 @@
+#!/bin/bash
+
+PROJECTDIR="$HOME/workspace"
+LEN=${#PROJECTDIR}
+COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
+[ "$SELECTED" = "" ] && exit 0
+APP=$(echo -e "neovim\ncode\nvifm\n" | dmenu -l 3)
+PROJECTPATH="$PROJECTDIR/$SELECTED"
+case $APP in
+  neovim)
+    alacritty -e /usr/local/bin/nvim $PROJECTPATH
+    ;;
+
+  code)
+    code $PROJECTPATH
+    ;;
+
+  vifm)
+    alacritty -e /usr/local/bin/vifm $PROJECTPATH
+    ;;
+
+  *)
+    echo "Invalid"
+    ;;
+esac
