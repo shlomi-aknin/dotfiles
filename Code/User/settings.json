@@ -373,10 +373,6 @@
     {
       "before": ["g", "h"],
       "after": ["i", "<space>", "<esc>"]
-    },
-    {
-      "before": ["<space>", "q"],
-      "commands": ["workbench.action.showCommands"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [

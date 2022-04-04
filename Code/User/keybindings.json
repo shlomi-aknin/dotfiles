@@ -369,5 +369,9 @@
     "key": "ctrl+[",
     "command": "workbench.action.previousPanelView",
     "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "workbench.action.showCommands"
   }
 ]
