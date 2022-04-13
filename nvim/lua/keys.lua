@@ -4,20 +4,20 @@ end
 
 map('c',    '<C-j>',            '<down>')
 map('c',    '<C-k>',            '<up>')
-map('c',    '<A-l>',            '<cr>')
+-- map('c',    '<A-l>',            '<cr>')
 
-map('i',    '<A-h>',            '<esc>i')
-map('i',    '<A-j>',            '<esc>:MoveLine(1)<cr>gi')
-map('i',    '<A-k>',            '<esc>:MoveLine(-1)<cr>gi')
-map('i',    '<A-l>',            '<esc>la')
-map('i',    '<A-x>',            '<esc>xi')
+-- map('i',    '<A-h>',            '<esc>i')
+-- map('i',    '<A-j>',            '<esc>:MoveLine(1)<cr>gi')
+-- map('i',    '<A-k>',            '<esc>:MoveLine(-1)<cr>gi')
+-- map('i',    '<A-l>',            '<esc>la')
+-- map('i',    '<A-x>',            '<esc>xi')
 map('i',    '<C-c>',            '<esc>')
 
 map('n',    "'",                ':HopWord<cr>')
 map('n',    ',',                '<cmd>set fdm=manual<cr>0f{zf%')
 map('n',    '<A-`>',            ':set relativenumber!<cr>')
-map('n',    '<A-j>',            '<esc>:MoveLine(1)<cr>')
-map('n',    '<A-k>',            '<esc>:MoveLine(-1)<cr>')
+map('n',    '<C-u>',            '<esc>:MoveLine(1)<cr>')
+map('n',    '<C-i>',            '<esc>:MoveLine(-1)<cr>')
 
 -- map('n',    '<C-A-g>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
 -- map('n',    '<C-A-h>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
@@ -114,8 +114,8 @@ map('s',    '<C-j>',            'v:lua.tab_complete()', {expr = true})
 map('s',    '<C-k>',            'v:lua.s_tab_complete()', {expr = true})
 
 map('v',    '<',                '<gv')
-map('v',    '<A-j>',            ':MoveBlock(1)<cr>')
-map('v',    '<A-k>',            ':MoveBlock(-1)<cr>')
+map('v',    '<C-u>',            ':MoveBlock(1)<cr>')
+map('v',    '<C-i>',            ':MoveBlock(-1)<cr>')
 map('v',    '<leader>/',        ':CommentToggle<cr>')
 map('v',    '>',                '>gv')
 map('v',    'S',                '"_S')
