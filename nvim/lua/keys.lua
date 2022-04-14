@@ -15,9 +15,9 @@ map('i',    '<C-c>',            '<esc>')
 
 map('n',    "'",                ':HopWord<cr>')
 map('n',    ',',                '<cmd>set fdm=manual<cr>0f{zf%')
-map('n',    '<A-`>',            ':set relativenumber!<cr>')
-map('n',    '<C-u>',            '<esc>:MoveLine(1)<cr>')
-map('n',    '<C-i>',            '<esc>:MoveLine(-1)<cr>')
+map('n',    'z`',               ':set relativenumber!<cr>')
+map('n',    'zj',               ':m+', { noremap = true, silent = false })
+map('n',    'zk',               ':m-', { noremap = true, silent = false })
 
 -- map('n',    '<C-A-g>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
 -- map('n',    '<C-A-h>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
@@ -114,8 +114,8 @@ map('s',    '<C-j>',            'v:lua.tab_complete()', {expr = true})
 map('s',    '<C-k>',            'v:lua.s_tab_complete()', {expr = true})
 
 map('v',    '<',                '<gv')
-map('v',    '<C-u>',            ':MoveBlock(1)<cr>')
-map('v',    '<C-i>',            ':MoveBlock(-1)<cr>')
+map('v',    'zj',               ':m+', { noremap = true, silent = false })
+map('v',    'zk',               ':m-', { noremap = true, silent = false })
 map('v',    '<leader>/',        ':CommentToggle<cr>')
 map('v',    '>',                '>gv')
 map('v',    'S',                '"_S')
