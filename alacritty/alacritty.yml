@@ -370,12 +370,12 @@ dynamic_title: true
 #  program: /bin/bash
 #  args:
 #    - --login
-shell:
-  program: /bin/bash
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+# shell:
+#   program: /bin/bash
+#   args:
+#     - -l
+#     - -c
+#     - "tmux attach || tmux"
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
