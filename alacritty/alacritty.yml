@@ -647,6 +647,10 @@ key_bindings:
   #- { key: C,        mods: Control|Shift,           action: Copy             }
   #- { key: C,        mods: Control|Shift, mode: Vi, action: ClearSelection   }
   #- { key: Insert,   mods: Shift,                   action: PasteSelection   }
+   - { key: PageUp,   mods: Shift, action: ScrollPageUp,   mode: ~Alt       }
+   - { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt       }
+   - { key: Home,     mods: Shift, action: ScrollToTop,    mode: ~Alt       }
+   - { key: End,      mods: Shift, action: ScrollToBottom, mode: ~Alt       }
    - { key: Key0,     mods: Control,                 action: ResetFontSize    }
    - { key: Equals,   mods: Control,                 action: IncreaseFontSize }
    - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
