@@ -13,17 +13,13 @@ vim.g.nvim_tree_root_folder_modifier = ':t'
 nvim_tree.setup({
   open_on_setup       = false,
   ignore_ft_on_setup  = {'.git', 'node_modules', '.cache'},
-  auto_close          = true,
   hijack_cursor       = false,
+  hijack_unnamed_buffer_when_opening = false,
   update_focused_file = { enable = true },
-  update_to_buf_dir   = {
-    enable = false,
-    auto_open = false,
-  },
+  update_cwd = false,
   view = {
     width = 35,
     height = 35,
-    auto_resize = true,
     mappings = {
       list = {
         { key = 'l', cb = tree_cb('edit') },
