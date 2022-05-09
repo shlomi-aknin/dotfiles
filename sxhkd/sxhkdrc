@@ -36,8 +36,8 @@ super + shift + n
 #     dmenu_websearch
 
 # dswitcher
-# super + space
-#     dswitcher
+super + space
+    dswitcher
 
 # clipmenu insert
 super + p
@@ -48,8 +48,8 @@ super + shift + p
     clipmenu
 
 # ssh to amazon
-super + a
-    alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
+# super + a
+#     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
 #
 # launcher
 super + r
@@ -64,6 +64,9 @@ super + r
 # Nuke a desktop. (i.e. close all windows in it.)
 super + d ; {0-9}
     bspc node @^{10,1-9}:/ -c
+
+super + shift + d
+    alacritty -t "lazydocker" -e lazydocker
 
 # Raise/Lower/Toggle volume
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
@@ -85,7 +88,7 @@ super + o
 	alacritty -t "htop" -e htop
 
 super + z
-  alacritty -t "vifm" -e vifm
+  alacritty -t "vifm" -e vifm ~/workspace
 
 # browser
 super + b
