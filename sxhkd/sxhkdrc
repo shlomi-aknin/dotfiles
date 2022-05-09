@@ -62,10 +62,10 @@ super + r
 # 	polybar-msg cmd toggle; bspc config top_padding 40}
 
 # Nuke a desktop. (i.e. close all windows in it.)
-super + d ; {0-9}
+super + shift + d ; {0-9}
     bspc node @^{10,1-9}:/ -c
 
-super + shift + d
+super + d
     alacritty -t "lazydocker" -e lazydocker
 
 # Raise/Lower/Toggle volume
