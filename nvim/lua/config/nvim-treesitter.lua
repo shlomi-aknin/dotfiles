@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'css', 'html', 'javascript', 'php', 'svelte' },
+  ensure_installed = { 'css', 'html', 'javascript', 'php', 'svelte', 'json' },
   ignore_install = {},
   context_commentstring = {
     enable = true

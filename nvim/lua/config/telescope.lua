@@ -52,9 +52,9 @@ end
 
 telescope.setup({
   defaults = {
-    preview = {
-      hide_on_startup = true,
-    },
+    -- preview = {
+    --   hide_on_startup = true,
+    -- },
     prompt_prefix = '~> ',
     layout_config = {
       preview_width = 0.6

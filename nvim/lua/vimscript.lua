@@ -1,6 +1,6 @@
 vim.api.nvim_exec([[
   let g:VM_maps = {}
-  let $PATH .= ':/usr/local/lib/node_modules/bin:~/.local/share/nvim/lsp_servers'
+  let $PATH .= ':/usr/local/lib/node_modules/bin:~/.local/share/nvim/lsp_servers:~/.local/bin'
   let g:vim_matchtag_enable_by_default = 1
   let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp'
   let g:VM_maps['Add Cursor Down']    = '<C-A-j>'   " new cursor down
