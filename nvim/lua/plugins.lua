@@ -29,6 +29,7 @@ packer.startup(function()
   use {'andymass/vim-matchup'}
   use {'akinsho/toggleterm.nvim'}
   use {'cappyzawa/trim.nvim'}
+  use {'David-Kunz/jester'}
   use {'dracula/vim', as = 'dracula'}
   use {'gbprod/cutlass.nvim'}
   use {'famiu/nvim-reload'}
