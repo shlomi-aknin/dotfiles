@@ -238,8 +238,8 @@
     "when": "editorFocus && vim.active && vim.mode == 'Insert'"
   },
   {
-    "key": "ctrl+c",
-    "command": "workbench.action.closeSidebar",
+    "key": "alt+c",
+    "command": "workbench.action.toggleSidebarVisibility",
     "when": "vim.mode != 'Insert'"
   },
   {
@@ -302,7 +302,7 @@
     "command": "workbench.action.findInFiles"
   },
   {
-    "key": "alt+c",
+    "key": "ctrl+c",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode != 'Insert'"
   },

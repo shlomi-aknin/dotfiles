@@ -73,11 +73,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#FCAB10",
-    "statusBar.debuggingBackground": "#FCAB10",
-    "statusBar.debuggingForeground": "#000000",
-    "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#FCAB10",
+    "statusBar.background": "#007ACC",
+    "statusBar.debuggingBackground": "#007ACC",
+    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.noFolderBackground": "#007ACC",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -325,14 +325,14 @@
         "workbench.action.terminal.focus"
       ]
     },
-    {
-      "before": ["<space>", "e"],
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "revealInExplorer",
-        "workbench.files.action.focusFilesExplorer"
-      ]
-    },
+    // {
+    //   "before": ["<space>", "e"],
+    //   "commands": [
+    //     "workbench.action.toggleSidebarVisibility",
+    //     "revealInExplorer",
+    //     "workbench.files.action.focusFilesExplorer"
+    //   ]
+    // },
     {
       "before": ["<space>", "g"],
       "commands": [
@@ -342,8 +342,8 @@
     {
       "before": ["<space>", "f"],
       "commands": [
-        "workbench.action.quickOpen"
-        // ":!alacritty -t 'FZFCODE' --  "vim.highlightedyank.duration": 1200,class 'fzfcode' -e fzfsearchforcode &"
+        // "workbench.action.quickOpen"
+        ":!alacritty -t 'FZFCODE' --class 'fzfcode' -e fzfsearchforcode &"
       ]
     },
     {
@@ -358,7 +358,7 @@
       ]
     },
     {
-      "before": ["<space>", "z"],
+      "before": ["<space>", "e"],
       "commands": [
         ":!alacritty -t 'VIFMCODE' --class 'vifmcode' -e vifm +only $(cat /tmp/lastdir) &"
       ]
