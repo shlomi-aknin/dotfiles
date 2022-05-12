@@ -194,10 +194,10 @@
       "before": ["g", "e"],
       "commands": ["find-it-faster.findFiles"]
     },
-    {
-      "before": ["g", "s"],
-      "commands": ["find-it-faster.findWithinFiles"]
-    },
+    // {
+    //   "before": ["g", "s"],
+    //   "commands": ["find-it-faster.findWithinFiles"]
+    // },
     {
       "before": ["g", "d"],
       "commands": ["editor.action.revealDefinition"],
@@ -345,6 +345,10 @@
         // "workbench.action.quickOpen"
         ":!alacritty -t 'FZFCODE' --class 'fzfcode' -e fzfsearchforcode &"
       ]
+    },
+    {
+      "before": ["g", "s"],
+      "commands": [":!alacritty -t 'FZFCODE' --class 'fzfcode' -e rgfzf &"]
     },
     {
       "before": ["<space>", "o"],
