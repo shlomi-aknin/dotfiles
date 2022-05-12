@@ -1,0 +1,24 @@
+#!/bin/bash
+
+##
+# Interactive search.
+# Usage: `ff` or `ff <folder>`.
+#
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+LASTDIR=$(cat /tmp/lastdir)
+cd $LASTDIR
+RG_DEFAULT_COMMAND="rg -i -l --hidden --no-ignore-vcs"
+
+selected=$(
+FZF_DEFAULT_COMMAND="rg --files" fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' \
+  -m \
+  --cycle \
+  -e \
+  --ansi \
+  --bind "ctrl-a:select-all" \
+  --bind "ctrl-l:accept" \
+  --bind "tab:select+up" \
+  --bind "shift-tab:select+down"
+)
+
+[[ -n $selected ]] && code $selected # open multiple files in editor
