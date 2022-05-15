@@ -12,9 +12,8 @@ require('plenary.filetype').add_file('svelte')
 local open_filtered = function(prompt_bufnr)
   local picker = action_state.get_current_picker(prompt_bufnr)
   local manager = picker.manager
-
   for entry in manager:iter() do
-    vim.cmd(string.format('%s %s', ':e!', entry.value))
+    vim.cmd(string.format('%s +%s %s', ':find!', entry.lnum, entry.filename))
     vim.cmd('set number')
     vim.cmd('set relativenumber')
     vim.cmd('set cursorline')
