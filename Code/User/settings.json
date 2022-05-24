@@ -194,14 +194,14 @@
       "before": ["g", "e"],
       "commands": ["find-it-faster.findFiles"]
     },
-    // {
-    //   "before": ["g", "s"],
-    //   "commands": ["find-it-faster.findWithinFiles"]
-    // },
     {
       "before": ["g", "s"],
-      "commands": [":!alacritty -t 'FZFCODE' --class 'fzfcode' -e rgfzf &"]
+      "commands": ["find-it-faster.findWithinFiles"]
     },
+    // {
+    //   "before": ["g", "s"],
+    //   "commands": [":!alacritty -t 'FZFCODE' --class 'fzfcode' -e rgfzf &"]
+    // },
     {
       "before": ["g", "d"],
       "commands": ["editor.action.revealDefinition"],
@@ -346,8 +346,8 @@
     {
       "before": ["<space>", "f"],
       "commands": [
-        // "workbench.action.quickOpen"
-        ":!alacritty -t 'FZFCODE' --class 'fzfcode' -e fzfsearchforcode &"
+        "workbench.action.quickOpen"
+        // ":!alacritty -t 'FZFCODE' --class 'fzfcode' -e fzfsearchforcode &"
       ]
     },
     {
@@ -364,7 +364,9 @@
     {
       "before": ["<space>", "e"],
       "commands": [
-        ":!alacritty -t 'VIFMCODE' --class 'vifmcode' -e vifm +only $(cat /tmp/lastdir) &"
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer",
+        "revealInExplorer"
       ]
     },
     {
@@ -522,10 +524,11 @@
     "a11y-mouse-events-have-key-events": "ignore"
   },
   "workbench.colorTheme": "Dracula At Night",
-  "workbench.activityBar.visible": false,
   "editor.inlineSuggest.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.color": "#00BBF9",
   "clock.alignment": "Right",
-  "clock.format": "HH:MM"
+  "clock.format": "HH:MM",
+  "editor.fontSize": 18,
+  "workbench.activityBar.visible": false
 }
