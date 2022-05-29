@@ -6,9 +6,6 @@ end
 local NvimTreeSelectedFiles = {}
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local winopts = require('nvim-tree.view').View.winopts
-vim.g.nvim_tree_git_hl = 1
-vim.g.nvim_tree_highlight_opened_files = 1
-vim.g.nvim_tree_root_folder_modifier = ':t'
 
 nvim_tree.setup({
   open_on_setup       = false,
@@ -17,6 +14,11 @@ nvim_tree.setup({
   hijack_unnamed_buffer_when_opening = false,
   update_focused_file = { enable = true },
   update_cwd = false,
+  renderer = {
+    highlight_git = true,
+    highlight_opened_files = "name",
+    root_folder_modifier = ":t",
+  },
   view = {
     width = 35,
     height = 35,
