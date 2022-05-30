@@ -20,7 +20,7 @@ nvim_tree.setup({
     root_folder_modifier = ":t",
   },
   view = {
-    width = 35,
+    width = 45,
     height = 35,
     mappings = {
       list = {

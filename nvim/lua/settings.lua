@@ -1,6 +1,7 @@
 vim.g.cursorword_highlight = false
 vim.g.mapleader = ' '
 vim.g.noswapfile = true
+vim.g.fileformat = 'unix,dos'
 vim.o.background = 'dark'
 vim.o.clipboard = 'unnamedplus'
 vim.o.cursorline = true

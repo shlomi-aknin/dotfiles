@@ -19,5 +19,6 @@ formatter.setup({
     html = config,
     javascript = config,
     svelte = config,
+    typescript = config,
   }
 })
