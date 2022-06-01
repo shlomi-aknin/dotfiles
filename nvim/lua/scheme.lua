@@ -30,6 +30,7 @@ vim.cmd([[
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#ff79c6 gui=bold
   hi SignColumn guibg=#000000 guifg=#34a1eb gui=bold
+  hi StatusLine guifg=#000000 guibg=#ffff00
   hi String guifg=#fff9c6 gui=bold
   hi TelescopeBorder guifg=#34a1eb gui=bold
   hi TelescopeNormal guibg=#000000

@@ -8,7 +8,7 @@ vim.api.nvim_exec([[
   let g:VM_maps['Add Cursor At Pos']  = '<C-A-g>'   " add cursor at position
   let g:VM_maps['Select l']           = '<C-A-l>'   " select right
   let g:VM_maps['Select h']           = '<C-A-h>'   " select left
-  set statusline=%f%m%R%=%y\ %l/%L\ (%p%%),\ %c
+  set statusline=\ %f%m%R%=%y\ %l/%L\ (%p%%),\ %c
   autocmd Syntax css,html,js,php normal zR
   autocmd BufReadPost quickfix nnoremap <buffer> <C-j> <cmd>QFNext<cr><C-w>j
   autocmd BufReadPost quickfix nnoremap <buffer> <C-k> <cmd>QFPrev<cr><C-w>j
