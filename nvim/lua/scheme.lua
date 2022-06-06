@@ -30,7 +30,7 @@ vim.cmd([[
   hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
   hi Search guifg=#000000 guibg=#ff79c6 gui=bold
   hi SignColumn guibg=#000000 guifg=#34a1eb gui=bold
-  hi StatusLine guifg=#000000 guibg=#ffff00
+  hi StatusLine guifg=#ffffff guibg=#6272a4
   hi String guifg=#fff9c6 gui=bold
   hi TelescopeBorder guifg=#34a1eb gui=bold
   hi TelescopeNormal guibg=#000000
@@ -51,7 +51,6 @@ vim.cmd([[
 
   -- hi CursorLineNr guifg=#ffff00 guibg=#00509d
   -- hi LineNr guibg=#34a1eb guifg=#000000 gui=bold
-
   -- hi TabLine guibg=#000000 guifg=#ffff00 gui=NONE
   -- hi TabLineModCur guibg=#50fa7b guifg=#000000 gui=bold
   -- hi TabLineModNorm guibg=#6272a4 guifg=#ffffff gui=bold
