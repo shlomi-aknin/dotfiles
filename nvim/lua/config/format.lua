@@ -6,7 +6,7 @@ end
 local config = {
     function()
     return {
-        exe = 'prettier-eslint',
+        exe = 'prettier',
         args = {'--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--single-quote', '--arrow-parents', '--config-precedence', 'prefer-file'},
         stdin = true
     }
