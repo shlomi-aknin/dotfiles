@@ -1,4 +1,8 @@
 # project select for vs code
+super + shift + g
+  lazygitselector
+
+# project select for vs code
 super + shift + e
   projectselectorcode
 
