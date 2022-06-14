@@ -1,6 +1,14 @@
 local cb = require('diffview.config').diffview_callback
 local last_tabpage = vim.api.nvim_get_current_tabpage()
 local isopen = false
+local log_options = {
+  max_count = 256,
+  follow = false,
+  all = false,
+  merges = false,
+  no_merges = false,
+  reverse = false,
+}
 
 function DiffviewToggle()
   if isopen then
@@ -43,12 +51,8 @@ require('diffview').setup({
       height = 16,
     },
     log_options = {
-      max_count = 256,
-      follow = false,
-      all = false,
-      merges = false,
-      no_merges = false,
-      reverse = false,
+      single_file = log_options,
+      multi_file = log_options,
     },
   },
   default_args = {
