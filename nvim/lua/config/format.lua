@@ -13,13 +13,23 @@ local config = {
     end
 }
 
+local tsconfig = {
+    function()
+    return {
+        exe = 'eslint_d',
+        args = {'--stdin-filename', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--stdin' , '--fix-to-stdout'},
+        stdin = true
+    }
+    end
+}
+
 formatter.setup({
   filetype = {
     css = config,
     html = config,
     javascript = config,
     svelte = config,
-    typescript = config,
+    typescript = tsconfig,
     json = config,
   }
 })
