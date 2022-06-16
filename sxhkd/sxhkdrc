@@ -92,7 +92,7 @@ super + o
 	alacritty -t "htop" -e htop
 
 super + z
-  alacritty -t "vifm" -e vifm ~/workspace
+  alacritty -t "vifm" -e vifmrun ~/workspace
 
 # browser
 super + b

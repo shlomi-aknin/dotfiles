@@ -200,6 +200,11 @@ command! reload :write | restart
 " You can also add %CLEAR if you want to clear screen before running FUSE
 " program.
 
+fileviewer <image/*>
+   \ vifmimg draw %px %py %pw %ph %c
+   \ %pc
+   \ vifmimg clear
+
 " Pdf
 filextype *.pdf devour zathura %c %i &, apvlv %c, devour okular %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
@@ -260,33 +265,33 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+" filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "         \ {View in sxiv}
 "         \ sxiv %f,
 "         \ {View in gpicview}
 "         \ gpicview %c,
 "         \ {View in shotwell}
 "         \ shotwell,
-	\ {View in feh}
-	\ feh -Zx %c,
+"	\ {View in feh}
+"	\ feh -Zx %c,
 
 " filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "     \ {View in feh}
 "     \ feh -d %d --start-at %d/%c 2> /dev/null
 
-" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
-"  \ vifmimg draw %px %py %pw %ph %c
-"  \ %pc
-"  \ vifmimg clear
-"
-" fileviewer *.gif
-" 	\ vifmimg gifpreview %px %py %pw %ph %c
-" 	\ %pc
-" 	\ vifmimg clear
-"
-" fileviewer *.ico
-" 	\ vifmimg magickpreview %px %py %pw %ph %c
-" 	\ %pc
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+ \ vifmimg draw %px %py %pw %ph %c
+ \ %pc
+ \ vifmimg clear
+
+fileviewer *.gif
+	\ vifmimg gifpreview %px %py %pw %ph %c
+	\ %pc
+	\ vifmimg clear
+
+fileviewer *.ico
+	\ vifmimg magickpreview %px %py %pw %ph %c
+	\ %pc
 " 	\ vifmimg clear
 " fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "          \ identify %f
