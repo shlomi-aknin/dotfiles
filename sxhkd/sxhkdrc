@@ -1,3 +1,10 @@
+# toggle focused window floating
+super + f
+    if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
 # project select for vs code
 super + shift + g
   lazygitselector
