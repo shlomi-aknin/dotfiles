@@ -53,7 +53,8 @@ lualine.setup({
       { 'mode', separator = { left = '' }, right_padding = 2 },
     },
     -- lualine_b = { 'filename', 'branch', 'diff', { 'diagnostics', sources = { 'nvim_diagnostic' } } },
-    lualine_b = {
+    lualine_b = { 'branch' },
+    lualine_c = {
       {
         'filename',
         file_status = true,
@@ -67,7 +68,7 @@ lualine.setup({
       },
       { 'diagnostics' }
     },
-    lualine_c = { require('auto-session-library').current_session_name },
+    -- lualine_c = { require('auto-session-library').current_session_name },
     -- lualine_x = { { 'filetype', separator = { left = '' } } },
     lualine_x = { { 'filetype', separator = { left = '' } } },
     lualine_y = { {'location', separator = { left = '' } } },
