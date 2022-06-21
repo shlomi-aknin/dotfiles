@@ -6,8 +6,8 @@ end
 dapui.setup({
   icons = { expanded = '▾', collapsed = '▸' },
   mappings = {
-    expand = { '<CR>', '<l>' },
-    open = { 'o', '<C-l>' },
+    expand = { '<CR>', 'x' },
+    open = { 'o' },
     remove = 'd',
     edit = 'e',
     repl = 'r',
@@ -17,18 +17,20 @@ dapui.setup({
   layouts = {
     {
       elements = {
-        { id = 'scopes', size = 0.25 },
+        -- { id = 'scopes', size = 0.25 },
         'breakpoints',
-        'stacks',
         'watches',
+        'stacks',
+        -- 'watches',
       },
       size = 40,
       position = 'left',
     },
     {
       elements = {
-        'repl',
-        'console',
+        'scopes',
+        -- 'repl',
+        -- 'console',
       },
       size = 10,
       position = 'bottom',
