@@ -6,38 +6,44 @@ end
 dapui.setup({
   icons = { expanded = '▾', collapsed = '▸' },
   mappings = {
-    -- Use a table to apply multiple mappings
-    expand = {'<CR>', 'i'},
-    open = 'o',
+    expand = { '<CR>', '<l>' },
+    open = { 'o', '<C-l>' },
     remove = 'd',
     edit = 'e',
     repl = 'r',
+    toggle = 't',
   },
-  sidebar = {
-    -- You can change the order of elements in the sidebar
-    elements = {
-      -- Provide as ID strings or tables with 'id' and 'size' keys
-      { id = 'breakpoints', size = 0.25 },
-      { id = 'stacks', size = 0.65 },
-      -- { id = 'scopes', size = 0.45 },
-      { id = 'repl', size = 0.10 },
-      -- { id = 'watches', size = 0.25 },
+  expand_lines = vim.fn.has('nvim-0.7'),
+  layouts = {
+    {
+      elements = {
+        { id = 'scopes', size = 0.25 },
+        'breakpoints',
+        'stacks',
+        'watches',
+      },
+      size = 40,
+      position = 'left',
     },
-    size = 30,
-    position = 'left', -- Can be 'left', 'right', 'top', 'bottom'
-  },
-  tray = {
-    elements = { 'scopes' },
-    size = 10,
-    position = 'bottom', -- Can be 'left', 'right', 'top', 'bottom'
+    {
+      elements = {
+        'repl',
+        'console',
+      },
+      size = 10,
+      position = 'bottom',
+    },
   },
   floating = {
-    max_height = nil, -- These can be integers or a float between 0 and 1.
-    max_width = nil, -- Floats will be treated as percentage of your screen.
-    border = 'single', -- Border style. Can be 'single', 'double' or 'rounded'
+    max_height = nil,
+    max_width = nil,
+    border = 'single',
     mappings = {
       close = { 'q', '<Esc>' },
     },
   },
   windows = { indent = 1 },
+  render = {
+    max_type_length = nil,
+  }
 })
