@@ -1,3 +1,15 @@
+# browser
+super + b
+  google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
+
+# clock
+super + c
+    alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
+
+# lazydocker
+super + d
+    alacritty -t "lazydocker" -e lazydocker
+
 # toggle focused window floating
 super + f
     if [ -z "$(bspc query -N -n focused.floating)" ]; then \
@@ -5,187 +17,78 @@ super + f
     else \
         bspc node focused -t tiled; \
     fi
-# project select for vs code
-super + shift + g
-  lazygitselector
 
-# project select for vs code
-super + shift + e
-  projectselectorcode
-
-# project select for neovim
-super + shift + o
-  projectselectornvim
-
-# focus next free desktop
-super + shift + i
-   bspc desktop -f 1 && bspc desktop -f prev.local.occupied && bspc desktop -f next.local
-
-# toggle gaps
-# super + shift + g
-#     bspc config window_gap {0, 15}
-
-# toggle borders
-# super + shift + b
-#     bspc config border_width {2, 5}
-
-# clock
-super + c
-    alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
-
-# neovim
-super + n
-    alacritty -t "Neovim" -e nvim
-
-# compose new email
-super + shift + n
-    alacritty -e neomutt
-    # firefox -new-tab "https://mail.google.com/mail/?view=cm&fs=1&tf=1"
-
-# dmenu web search
-# super + s
-#     dmenu_websearch
-
-# dswitcher
-super + space
-    dswitcher
-
-# clipmenu insert
-super + p
-    clipmenu && xdotool key shift+Insert
-
-# clipmenu select
-super + shift + p
-    clipmenu
-
-# ssh to amazon
-# super + a
-#     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
-#
-# launcher
-super + r
-    dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=20"
-    # dmenu_run_i
-
-# toggle bar
-# super + shift + b
-# 	{polybar-msg cmd toggle; bspc config top_padding +0, \
-# 	polybar-msg cmd toggle; bspc config top_padding 40}
-
-# Nuke a desktop. (i.e. close all windows in it.)
-super + shift + d ; {0-9}
-    bspc node @^{10,1-9}:/ -c
-
-super + d
-    alacritty -t "lazydocker" -e lazydocker
-
-# Raise/Lower/Toggle volume
-{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
-	amixer set Master {5%+,5%-,toggle}
-
-# gmail, drive
-{XF86Mail,XF86HomePage}
-	google-chrome-stable {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
-
-# reboot, poweroff
-super + shift + {F1,F2}
-	sudo {reboot,poweroff}
-
-# update mirrorlist
-super + equal
-	alacritty -e reflector | sudo tee /etc/pacman.d/mirrorlist-arch
-
-super + o
-	alacritty -t "htop" -e htop
-
-super + z
-  alacritty -t "vifm" -e vifmrun ~/workspace/cymbio-api-3
-
-# browser
-super + b
-  google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
-  # GTK_THEME=Mojave-dark:dark firefox
-
-# slimlock
-super + shift + BackSpace
-	slimlock
-
-# terminal emulator
-super + Return
-	alacritty
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
-#
-# bspwm hotkeys
-#
-
-# set layouts
-super + {t,v,g}
-	bsp-layout set {tall,wide,rgrid} -- --master-size 0.5
-
-# quit/restart bspwm
-super + shift + {q,r}
-	bspc {quit,wm -r}
-
-# close
-super + x
-	bspc node -c
-
-# close all windows on current desktop
-super + shift + x
-  bspc node '@/' -c
-  # closewindowsoncurrent
-
-# alternate between the tiled and monocle layout
-super + m
-  bspc desktop -l next
-
-# swap the current node and the biggest window
-super + shift + Return
-	bspc node -s biggest.local.window
-
-#
-# state/flags
-#
-
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
-#
-# focus/swap
-#
-
-# focus the node in the given direction
-super + {k,j}
-  bspc node -f {prev,next}.local.window
-
-# shift the node in the given direction
-super + shift + {j,k}
-	bspc node -s {south,north}
+# focus the last node/desktop
+super + {grave,Tab}
+    bspc {node,desktop} -f last
 
 # cycle through occupied desktops
 super + {h,l}
     bspc desktop -f {prev,next}.local.occupied
 
+# focus the node in the given direction
+super + {j,k}
+  bspc node -f {next,prev}.local.window
+
+# neovim
+super + n
+    alacritty -t "Neovim" -e nvim
+
+# alternate between the tiled and monocle layout
+super + m
+  bspc desktop -l next
+
+# htop
+super + o
+	alacritty -t "htop" -e htop
+
+# clipmenu select
+super + p
+    clipmenu
+
+# launcher
+super + r
+    dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=20"
+
+# dswitcher
+super + space
+    dswitcher
+
+# set layouts
+super + {t,v,g}
+	bsp-layout set {tall,wide,rgrid} -- --master-size 0.5
+
 # focus the next/previous desktop in the current monitor
-# super + control + {h,l}
 super + {u,i}
-	bspc desktop -f {prev,next}.local
+    bspc desktop -f {prev,next}.local
 
-# move window to prev/next desktop
-super + shift + {h,l}
-	bspc node -d {prev,next} --follow
+# change mode to window selection
+super + w : {h,j,k,l}
+  bspc node -f {west,south,north,east}.local.window
 
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+# close
+super + x
+	bspc node -c
+
+# vifm
+super + z
+  alacritty -t "vifm" -e vifmrun ~/workspace/cymbio-api-3
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Raise/Lower/Toggle volume
+super + {F3,F2,F1}
+	amixer set Master {5%+,5%-,toggle}
+
+# terminal emulator
+super + Return
+	alacritty
+
+# gmail, drive
+{XF86Mail,XF86HomePage}
+	google-chrome-stable {"https://mail.google.com/mail/u/0/","https://drive.google.com/drive/my-drive"}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
@@ -197,18 +100,55 @@ super + alt + {1-9,0}
 
 super + alt + {h,j,k,l}
 	bspc node -d {1-4} --follow
-#
-# move/resize
-#
 
 # expand a window by moving one of its side outward
 super + control + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# change mode to window selection
-super + w : {h,j,k,l}
-  bspc node -f {west,south,north,east}.local.window
+# project select for vs code
+super + shift + e
+  projectselectorcode
+
+# project select for lazygit
+super + shift + g
+  lazygitselector
+
+# move window to prev/next desktop
+super + shift + {h,l}
+	bspc node -d {prev,next} --follow
+
+# shift the node in the given direction
+super + shift + {j,k}
+  bspc node -s {next,prev}.local.window
+
+# compose new email
+super + shift + m
+    google-chrome-stable "https://mail.google.com/mail/u/0/"
+
+# project select for neovim
+super + shift + o
+  projectselectornvim
+
+# clipmenu insert
+super + shift + p
+    clipmenu && xdotool key shift+Insert
+
+# quit/restart bspwm
+super + shift + {q,r}
+	bspc {quit,wm -r}
 
 # window shift mode
 super + shift + w : {h,j,k,l}
   bspc node -s {west,south,north,east}.local.window
+
+# close all windows on current desktop
+super + shift + x
+  bspc node '@/' -c
+
+# reboot, poweroff
+super + shift + {F1,F2}
+	sudo {reboot,poweroff}
+
+# swap the current node and the biggest window
+super + shift + Return
+	bspc node -s biggest.local.window

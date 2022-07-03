@@ -1,0 +1,42 @@
+# toggle gaps
+# super + shift + g
+#     bspc config window_gap {0, 15}
+
+# toggle borders
+# super + shift + b
+#     bspc config border_width {2, 5}
+#
+#
+# focus next free desktop
+# super + shift + i
+#    bspc desktop -f 1 && bspc desktop -f prev.local.occupied && bspc desktop -f next.local
+#
+#
+# dmenu web search
+# super + s
+#     dmenu_websearch
+#
+# ssh to amazon
+# super + a
+#     alacritty -t "SSH AWS" -e ssh -i ~/Documents/carmeter_aws_keypair_11062017.pem ubuntu@car-meter.com
+#
+# toggle bar
+# super + shift + b
+# 	{polybar-msg cmd toggle; bspc config top_padding +0, \
+# 	polybar-msg cmd toggle; bspc config top_padding 40}
+#
+# Nuke a desktop. (i.e. close all windows in it.)
+# super + shift + d ; {0-9}
+#     bspc node @^{10,1-9}:/ -c
+#
+# update mirrorlist
+# super + equal
+# 	alacritty -e reflector | sudo tee /etc/pacman.d/mirrorlist-arch
+#
+# slimlock
+# super + shift + BackSpace
+# 	slimlock
+# set the node flags
+# super + ctrl + {m,x,y,z}
+# 	bspc node -g {marked,locked,sticky,private}
+#
