@@ -99,7 +99,7 @@ super + o
 	alacritty -t "htop" -e htop
 
 super + z
-  alacritty -t "vifm" -e vifmrun ~/workspace
+  alacritty -t "vifm" -e vifmrun ~/workspace/cymbio-api-3
 
 # browser
 super + b

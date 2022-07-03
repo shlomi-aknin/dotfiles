@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/shlomo/.oh-my-zsh"
-
+export ZSH="$HOME/.oh-my-zsh"
+export SHRLL=/bin/zsh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -70,7 +70,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	zsh-vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,14 +88,16 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-export EDITOR='nvim'
+#   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
+export NPM_TOKEN=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
+export NODE_ENV=development
+export TS_NODE_TRANSPILE_ONLY=true
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,8 +106,6 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
-alias ls="exa -l --icons --color=always"
+alias ls='exa -l --color always --icons'
+alias dockdbimp='docker exec -i b2dd827487dc mysql -uroot -ppass mysql < ~/Downloads/cymbio_3.sql'
+alias processWorkerDebug='cd ~/workspace/cymbio-api-3 && export NODE_ENV=development && ts-node-dev -r tsconfig-paths/register --inspect-brk -- ./scripts/core/processWorkerJob.ts'
