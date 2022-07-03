@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-export NPM_TOKEN=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
+export NPM_TOKEN="NPM_TOKEN_HERE"
 export NODE_ENV=development
 export TS_NODE_TRANSPILE_ONLY=true
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
