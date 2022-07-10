@@ -44,7 +44,7 @@ super + o
 
 # clipmenu select
 super + p
-    clipmenu
+    clipmenu && xdotool key ctrl+shift+v
 
 # launcher
 super + r
@@ -131,7 +131,7 @@ super + shift + o
 
 # clipmenu insert
 super + shift + p
-    clipmenu && xdotool key shift+Insert
+    clipmenu
 
 # quit/restart bspwm
 super + shift + {q,r}
