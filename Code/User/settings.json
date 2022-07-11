@@ -16,9 +16,9 @@
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "block-outline",
-  "vim.cursorStylePerMode.visual": "block",
-  "vim.cursorStylePerMode.visualblock": "block",
-  "vim.cursorStylePerMode.visualline": "block",
+  "vim.cursorStylePerMode.visual": "line-thin",
+  "vim.cursorStylePerMode.visualblock": "line-thin",
+  "vim.cursorStylePerMode.visualline": "line-thin",
   "vim.easymotionIncSearchForegroundColor": "#50fa7b",
   "vim.easymotionKeys": "yuiogasdfhjkl",
   "vim.easymotionMarkerForegroundColorOneChar": "#50fa7b",
@@ -198,10 +198,6 @@
       "before": ["g", "s"],
       "commands": ["find-it-faster.findWithinFiles"]
     },
-    // {
-    //   "before": ["g", "s"],
-    //   "commands": [":!alacritty -t 'FZFCODE' --class 'fzfcode' -e rgfzf &"]
-    // },
     {
       "before": ["g", "d"],
       "commands": ["editor.action.revealDefinition"],
@@ -529,6 +525,5 @@
   "material-icon-theme.folders.color": "#00BBF9",
   "clock.alignment": "Right",
   "clock.format": "HH:MM",
-  "editor.fontSize": 18,
   "workbench.activityBar.visible": false
 }
