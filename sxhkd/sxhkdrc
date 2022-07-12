@@ -105,6 +105,10 @@ super + alt + {h,j,k,l}
 super + control + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
+# change mode to window selection
+super + shift + d : {x,c,h}
+  dunstctl {close, close-all, history-pop}
+
 # project select for vs code
 super + shift + e
   projectselectorcode
