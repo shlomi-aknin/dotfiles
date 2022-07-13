@@ -95,6 +95,10 @@
   "vim.statusBarColors.visualline": ["#FCAB10", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["g", "k"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
       "before": ["c"],
       "after": ["\"", "_", "c"]
     },
