@@ -95,11 +95,6 @@
   "vim.statusBarColors.visualline": ["#FCAB10", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["/"],
-      "commands": ["actions.find"],
-      "when": "editorFocus || editorIsOpen"
-    },
-    {
       "before": ["c"],
       "after": ["\"", "_", "c"]
     },
