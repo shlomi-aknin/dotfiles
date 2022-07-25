@@ -42,7 +42,7 @@ end
 lualine.setup({
   options = {
     -- theme = bubbles_theme,
-    theme = 'powerline_dark',
+    theme = 'material',
     component_separators = '',
     -- section_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
@@ -50,10 +50,10 @@ lualine.setup({
   sections = {
     lualine_a = {
       -- { 'mode', separator = { left = '' }, right_padding = 2 },
-      { 'mode', separator = { left = '' }, right_padding = 2 },
+      { 'mode', separator = { right = '' }, right_padding = 2 },
     },
     -- lualine_b = { 'filename', 'branch', 'diff', { 'diagnostics', sources = { 'nvim_diagnostic' } } },
-    lualine_b = { 'branch' },
+    lualine_b = { { 'branch', separator = { right = '' } } },
     lualine_c = {
       {
         'filename',
@@ -71,11 +71,11 @@ lualine.setup({
     -- lualine_c = { require('auto-session-library').current_session_name },
     -- lualine_x = { { 'filetype', separator = { left = '' } } },
     lualine_x = { { 'filetype', separator = { left = '' } } },
-    lualine_y = { {'location', separator = { left = '' } } },
+    lualine_y = { {'location', separator = { left = '' } } },
     lualine_z = {
       -- { 'os.date("%H:%M", os.time())', separator = { right = '' }, left_padding = 2 },
       -- { 'progress', separator = { right = '' }, left_padding = 2 },
-      { 'progress', separator = { right = '' }, left_padding = 2 },
+      { 'progress', separator = { left = '' }, left_padding = 2 },
     },
   },
   inactive_sections = {
@@ -86,7 +86,7 @@ lualine.setup({
     lualine_y = {},
     lualine_z = {'location'},
   },
-  -- tabline = {},
+  tabline = {},
   extensions = {},
 })
 
