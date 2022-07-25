@@ -3,46 +3,46 @@ if not status_ok then
   return
 end
 
--- local colors = {
---   blue   = '#34a1eb',
---   blue2  = '#00509d',
---   cyan   = '#79dac8',
---   green  = '#50fa7b',
---   black  = '#000000',
---   white  = '#ffffff',
---   red    = '#ff5555',
---   pink   = '#ff79c6',
---   purple = '#6272a4',
---   violet = '#bd93f9',
---   grey   = '#303030',
---   yellow = '#ffff00',
--- }
+local colors = {
+  blue   = '#34a1eb',
+  blue2  = '#00509d',
+  cyan   = '#79dac8',
+  green  = '#50fa7b',
+  black  = '#000000',
+  white  = '#ffffff',
+  red    = '#ff5555',
+  pink   = '#ff79c6',
+  purple = '#6272a4',
+  violet = '#bd93f9',
+  grey   = '#303030',
+  yellow = '#ffff00',
+}
 
--- local bubbles_theme = {
---   normal = {
---     a = { fg = colors.black,  bg = colors.blue },
---     b = { fg = colors.white,  bg = colors.blue2 },
---     c = { fg = colors.yellow, bg = colors.black },
---     x = { fg = colors.black,  bg = colors.blue },
---     y = { fg = colors.white,  bg = colors.blue2 },
---     z = { fg = colors.black,  bg = colors.blue },
---   },
+local bubbles_theme = {
+  normal = {
+    a = { fg = colors.black,  bg = colors.green },
+    b = { fg = colors.black,  bg = colors.violet },
+    c = { fg = colors.yellow, bg = colors.black },
+    x = { fg = colors.black,  bg = colors.blue },
+    y = { fg = colors.black,  bg = colors.violet },
+    z = { fg = colors.black,  bg = colors.green },
+  },
 
---   insert = { a = { fg = colors.black, bg = colors.green } },
---   visual = { a = { fg = colors.black, bg = colors.yellow } },
---   replace = { a = { fg = colors.black, bg = colors.violet } },
+  insert = { a = { fg = colors.black, bg = colors.blue } },
+  visual = { a = { fg = colors.black, bg = colors.yellow } },
+  replace = { a = { fg = colors.black, bg = colors.pink } },
 
---   inactive = {
---     a = { fg = colors.white, bg = colors.black },
---     b = { fg = colors.white, bg = colors.black },
---     c = { fg = colors.black, bg = colors.black },
---   },
--- }
+  inactive = {
+    a = { fg = colors.white, bg = colors.black },
+    b = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
+  },
+}
 
 lualine.setup({
   options = {
-    -- theme = bubbles_theme,
-    theme = 'material',
+    theme = bubbles_theme,
+    -- theme = 'material',
     component_separators = '',
     -- section_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
@@ -70,7 +70,7 @@ lualine.setup({
     },
     -- lualine_c = { require('auto-session-library').current_session_name },
     -- lualine_x = { { 'filetype', separator = { left = '' } } },
-    lualine_x = { { 'filetype', separator = { left = '' } } },
+    lualine_x = { { 'filetype', separator = { left = '' } } },
     lualine_y = { {'location', separator = { left = '' } } },
     lualine_z = {
       -- { 'os.date("%H:%M", os.time())', separator = { right = '' }, left_padding = 2 },
