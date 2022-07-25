@@ -86,7 +86,7 @@ lualine.setup({
     lualine_y = {},
     lualine_z = {'location'},
   },
-  tabline = {},
+  -- tabline = {},
   extensions = {},
 })
 

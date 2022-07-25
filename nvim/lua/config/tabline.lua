@@ -10,5 +10,6 @@ tabline.setup({
     show_filename_only = true,
     tabline_show_bufnr = true,
     modified_icon = "[+]",
+    section_separators = {'', ''},
   }
 })
