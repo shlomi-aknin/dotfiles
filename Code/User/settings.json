@@ -69,7 +69,7 @@
     "editorUnnecessaryCode.opacity": "#ffff00",
     "list.activeSelectionBackground": "#00509d",
     "list.focusBackground": "#00509d",
-    "list.highlightForeground": "#ffffff",
+    "list.highlightForeground": "#ffff00",
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
@@ -529,5 +529,7 @@
   "material-icon-theme.folders.color": "#00BBF9",
   "clock.alignment": "Right",
   "clock.format": "HH:MM",
-  "workbench.activityBar.visible": false
+  "window.commandCenter": true,
+  "workbench.activityBar.visible": false,
+  "editor.snippetSuggestions": "top"
 }
