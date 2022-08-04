@@ -16,9 +16,9 @@
   "vim.cursorStylePerMode.insert": "line-thin",
   "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "block-outline",
-  "vim.cursorStylePerMode.visual": "line-thin",
-  "vim.cursorStylePerMode.visualblock": "line-thin",
-  "vim.cursorStylePerMode.visualline": "line-thin",
+  "vim.cursorStylePerMode.visual": "underline",
+  "vim.cursorStylePerMode.visualblock": "underline",
+  "vim.cursorStylePerMode.visualline": "underline",
   "vim.easymotionIncSearchForegroundColor": "#50fa7b",
   "vim.easymotionKeys": "yuiogasdfhjkl",
   "vim.easymotionMarkerForegroundColorOneChar": "#50fa7b",
@@ -530,6 +530,6 @@
   "clock.alignment": "Right",
   "clock.format": "HH:MM",
   "window.commandCenter": true,
-  "workbench.activityBar.visible": false,
-  "editor.snippetSuggestions": "top"
+  "editor.snippetSuggestions": "top",
+  "workbench.activityBar.visible": false
 }
