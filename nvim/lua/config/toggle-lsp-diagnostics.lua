@@ -3,4 +3,4 @@ if not status_ok then
   return
 end
 
-toggle_lsp_diagnostics.init({ start_on = true })
+toggle_lsp_diagnostics.init({ start_on = false })
