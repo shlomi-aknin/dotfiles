@@ -63,6 +63,7 @@ packer.startup(function()
   use {'nvim-lualine/lualine.nvim'}
   use {'nvim-telescope/telescope.nvim'}
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+  use {'nvim-telescope/telescope-file-browser.nvim'}
   use {'nvim-treesitter/nvim-treesitter'}
   use {'onsails/lspkind-nvim'}
   use {'peterrincker/vim-searchlight'}
