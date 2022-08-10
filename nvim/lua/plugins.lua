@@ -83,6 +83,8 @@ packer.startup(function()
   use {'ur4ltz/surround.nvim'}
   use {'vifm/vifm.vim'}
   use {'whoissethdaniel/toggle-lsp-diagnostics.nvim'}
+  use {'williamboman/mason.nvim'}
+  use {'williamboman/mason-lspconfig.nvim'}
   use {'williamboman/nvim-lsp-installer'}
   use {'windwp/nvim-autopairs'}
   use {'windwp/nvim-spectre'}

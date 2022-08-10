@@ -2,7 +2,7 @@ vim.cmd([[
   silent! colorscheme dracula
   hi Comment guifg=#34a1eb gui=bold
   hi CursorLine guibg=#00509d
-  hi CursorLineNr guifg=#ffff00 guibg=#000000
+  hi CursorLineNr guifg=#ffff00 guibg=#00509d
   hi CursorWord gui=underline
   hi DraculaFg guifg=#ffffff gui=bold
   hi DraculaGreen guifg=#50fa7b gui=bold
