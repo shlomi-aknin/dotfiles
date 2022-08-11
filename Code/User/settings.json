@@ -531,5 +531,11 @@
   "clock.format": "HH:MM",
   "window.commandCenter": true,
   "editor.snippetSuggestions": "top",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "find-it-faster.findFiles.previewCommand": "bat {} --color=always",
+  "find-it-faster.findFiles.previewWindowConfig": "right,50%",
+  "find-it-faster.findWithinFiles.previewCommand": "bat {1} --color=always --highlight-line {2} --line-range {2}:",
+  "find-it-faster.findWithinFiles.previewWindowConfig": "right,50%",
+  "find-it-faster.general.batTheme": "Dracula",
+  "find-it-faster.general.showMaximizedTerminal": true
 }

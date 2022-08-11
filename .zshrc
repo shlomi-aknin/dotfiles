@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 export NPM_TOKEN="NPM_TOKEN_HERE"
 export NODE_ENV=development
 export TS_NODE_TRANSPILE_ONLY=true
+export BAT_THEME="Dracula"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
