@@ -50,6 +50,10 @@ super + p
 super + r
     dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=20"
 
+# printscreen
+super + s
+    scrot ~/Downloads/Screenshot_%Y-%m-%d_%H:%M:%S.png
+
 # dswitcher
 super + space
     dswitcher
@@ -110,7 +114,7 @@ super + shift + d : {x,c,h}
   dunstctl {close, close-all, history-pop}
 
 # project select for vs code
-super + shift + e
+super + shift + c
   projectselectorcode
 
 # project select for lazygit
