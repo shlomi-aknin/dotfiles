@@ -113,6 +113,7 @@ map('n',    'gt',               ':ToggleTerm<cr>')
 map('n',    'y)',               '0f(lyi(')
 map('n',    'y]',               '0f[lyi[')
 map('n',    'y}',               '0f{lyi{')
+map('n',    'yfn',               ':let @*=expand("%:p")<cr>')
 
 map('s',    '<C-j>',            'v:lua.tab_complete()', {expr = true})
 map('s',    '<C-k>',            'v:lua.s_tab_complete()', {expr = true})
