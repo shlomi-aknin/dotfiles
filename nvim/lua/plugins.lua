@@ -29,6 +29,7 @@ packer.startup(function()
   use {'andymass/vim-matchup'}
   use {'akinsho/toggleterm.nvim'}
   use {'cappyzawa/trim.nvim'}
+  use {'Darazaki/indent-o-matic'}
   use {'David-Kunz/jester'}
   use {'dracula/vim', as = 'dracula'}
   use {'elianiva/telescope-npm.nvim'}
