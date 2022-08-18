@@ -34,6 +34,7 @@ packer.startup(function()
   use {'dracula/vim', as = 'dracula'}
   use {'elianiva/telescope-npm.nvim'}
   use {'gbprod/cutlass.nvim'}
+  use {'f-person/git-blame.nvim'}
   use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
