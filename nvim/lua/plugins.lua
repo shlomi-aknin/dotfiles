@@ -31,6 +31,7 @@ packer.startup(function()
   use {'cappyzawa/trim.nvim'}
   use {'David-Kunz/jester'}
   use {'dracula/vim', as = 'dracula'}
+  use {'elianiva/telescope-npm.nvim'}
   use {'gbprod/cutlass.nvim'}
   use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
