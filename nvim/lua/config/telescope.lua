@@ -118,6 +118,7 @@ end
 
 local multi_open_mappings = {
     i = {
+        ['<C-h>'] = action_layout.toggle_preview,
         ['<C-j>'] = actions.move_selection_next,
         ['<C-k>'] = actions.move_selection_previous,
         ['<C-l>']  = stopinsert(custom_actions.multi_selection_open),
@@ -127,6 +128,7 @@ local multi_open_mappings = {
         ['<CR>']  = stopinsert(custom_actions.multi_selection_open)
     },
     n = {
+        ['<C-h>'] = action_layout.toggle_preview,
         ['<C-c>'] = actions.close,
         ['<C-l>'] = custom_actions.multi_selection_open,
         ['<C-v>'] = custom_actions.multi_selection_open_vertical,
