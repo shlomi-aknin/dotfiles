@@ -50,11 +50,11 @@ cmp.setup({
     end,
   },
   sources = cmp.config.sources({
-    { name = 'buffer' },
-    { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
-    { name = 'path' },
     { name = 'vsnip' },
+    { name = 'cmp_tabnine' },
+    { name = 'path' },
+    { name = 'buffer' },
   }, {
     { name = 'buffer' },
   }),
