@@ -1,0 +1,3 @@
+#!/bin/bash
+
+node --inspect-brk --require ts-node/register -r tsconfig-paths/register $1
