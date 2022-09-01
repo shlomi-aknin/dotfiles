@@ -31,10 +31,13 @@ packer.startup(function()
   use {'cappyzawa/trim.nvim'}
   use {'Darazaki/indent-o-matic'}
   use {'David-Kunz/jester'}
+  use {'declancm/cinnamon.nvim'}
   use {'dracula/vim', as = 'dracula'}
   use {'elianiva/telescope-npm.nvim'}
+  use {'folke/tokyonight.nvim'}
   use {'gbprod/cutlass.nvim'}
-  use {'f-person/git-blame.nvim'}
+  use {'haishanh/night-owl.vim'}
+  -- use {'f-person/git-blame.nvim'}
   use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
