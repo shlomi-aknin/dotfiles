@@ -50,6 +50,7 @@ packer.startup(function()
   use {'hrsh7th/cmp-vsnip'}
   use {'hrsh7th/nvim-cmp'}
   use {'hrsh7th/vim-vsnip'}
+  use {'j-hui/fidget.nvim'}
   use {'jiangmiao/auto-pairs'}
   use {'JoosepAlviste/nvim-ts-context-commentstring'}
   use {'karb94/neoscroll.nvim'}
