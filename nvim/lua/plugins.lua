@@ -92,6 +92,7 @@ packer.startup(function()
   use {'tzachar/fuzzy.nvim'}
   use {'ur4ltz/surround.nvim'}
   use {'vifm/vifm.vim'}
+  use {'weilbith/nvim-code-action-menu'}
   use {'whoissethdaniel/toggle-lsp-diagnostics.nvim'}
   use {'williamboman/mason.nvim'}
   use {'williamboman/mason-lspconfig.nvim'}
