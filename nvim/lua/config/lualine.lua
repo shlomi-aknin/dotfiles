@@ -42,7 +42,7 @@ local bubbles_theme = {
 lualine.setup({
   options = {
     theme = bubbles_theme,
-    -- theme = 'material',
+    -- theme = 'night-owl',
     component_separators = '',
     -- section_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
@@ -55,17 +55,17 @@ lualine.setup({
     -- lualine_b = { 'filename', 'branch', 'diff', { 'diagnostics', sources = { 'nvim_diagnostic' } } },
     lualine_b = { { 'branch', separator = { right = '' } } },
     lualine_c = {
-      {
-        'filename',
-        file_status = true,
-        path = 1,
-        shorting_target = 40,
-        symbols = {
-          modified = '[+]',
-          readonly = '[-]',
-          unnamed = '[No Name]',
-        }
-      },
+      -- {
+      --   'filename',
+      --   file_status = true,
+      --   path = 1,
+      --   shorting_target = 40,
+      --   symbols = {
+      --     modified = '[+]',
+      --     readonly = '[-]',
+      --     unnamed = '[No Name]',
+      --   }
+      -- },
       { 'diagnostics' }
     },
     -- lualine_c = { require('auto-session-library').current_session_name },
