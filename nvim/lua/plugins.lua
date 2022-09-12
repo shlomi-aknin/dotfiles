@@ -80,6 +80,7 @@ packer.startup(function()
   use {'peterrincker/vim-searchlight'}
   use {'phaazon/hop.nvim'}
   use {'pocco81/autosave.nvim'}
+  use {'pwntester/octo.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
   use {'rhysd/conflict-marker.vim'}
