@@ -39,7 +39,7 @@ packer.startup(function()
   use {'fgheng/winbar.nvim'}
   use {'gbprod/cutlass.nvim'}
   use {'haishanh/night-owl.vim'}
-  -- use {'f-person/git-blame.nvim'}
+  use {'f-person/git-blame.nvim'}
   use {'famiu/nvim-reload'}
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
