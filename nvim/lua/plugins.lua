@@ -28,6 +28,7 @@ packer.init({
 packer.startup(function()
   use {'andymass/vim-matchup'}
   use {'akinsho/toggleterm.nvim'}
+  use {'anuvyklack/hydra.nvim'}
   use {'cappyzawa/trim.nvim'}
   use {'Darazaki/indent-o-matic'}
   use {'David-Kunz/jester'}
@@ -64,6 +65,7 @@ packer.startup(function()
   use {'mfussenegger/nvim-dap'}
   use {'mg979/vim-visual-multi'}
   use {'mhartington/formatter.nvim'}
+  use {'mrjones2014/smart-splits.nvim'}
   use {'nmac427/guess-indent.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
