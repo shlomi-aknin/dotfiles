@@ -80,6 +80,7 @@ packer.startup(function()
   use {'pocco81/autosave.nvim'}
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
+  use {'rhysd/conflict-marker.vim'}
   use {'rmagatti/auto-session'}
   use {'rmagatti/goto-preview'}
   use {'sindrets/diffview.nvim'}
