@@ -25,7 +25,7 @@ vim.cmd([[
   hi HopNextKey guifg=#50fa7b
   hi HopNextKey1 guifg=#50fa7b
   hi HopNextKey2 guifg=#50fa7b
-  hi IncSearch guibg=#50fa7b guifg=#000000
+  hi IncSearch guibg=#000000 guifg=#50fa7b
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
   hi LineNr guibg=#000000 guifg=#34a1eb
