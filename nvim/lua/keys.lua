@@ -15,9 +15,6 @@ map('i',    '<C-c>',            '<esc>')
 
 map('n',    "'",                ':HopWord<cr>')
 map('n',    ',',                '<cmd>set fdm=manual<cr>0f{zf%')
-map('n',    'z`',               ':set relativenumber!<cr>')
-map('n',    'zj',               ':m+', { noremap = true, silent = false })
-map('n',    'zk',               ':m-1-', { noremap = true, silent = false })
 
 -- map('n',    '<C-A-g>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
 -- map('n',    '<C-A-h>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
@@ -25,6 +22,7 @@ map('n',    'zk',               ':m-1-', { noremap = true, silent = false })
 -- map('n',    '<C-A-k>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
 -- map('n',    '<C-A-l>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
 
+map('n',    '<A-`>',               ':set relativenumber!<cr>')
 map('n',    '<A-h>',            'i<space><esc>')
 map('n',    '<A-j>',            ':MoveLine(1)<cr>')
 map('n',    '<A-k>',            ':MoveLine(-1)<cr>')
