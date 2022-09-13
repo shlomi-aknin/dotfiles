@@ -44,6 +44,7 @@ packer.startup(function()
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
   use {'folke/trouble.nvim'}
+  use {'folke/which-key.nvim'}
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
@@ -59,6 +60,8 @@ packer.startup(function()
   use {'kdheepak/tabline.nvim'}
   use {'kyazdani42/nvim-tree.lua'}
   use {'kyazdani42/nvim-web-devicons'}
+  use {'ldelossa/gh.nvim'}
+  use {'ldelossa/litee.nvim'}
   use {'leafOfTree/vim-matchtag'}
   use {'lewis6991/gitsigns.nvim'}
   use {'lukas-reineke/cmp-rg'}
@@ -91,6 +94,7 @@ packer.startup(function()
   use {'stefandtw/quickfix-reflector.vim'}
   use {'stevearc/dressing.nvim'}
   use {'stevearc/qf_helper.nvim'}
+  use {'gbprod/substitute.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'tzachar/cmp-fuzzy-buffer'}

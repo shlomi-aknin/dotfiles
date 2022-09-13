@@ -110,6 +110,8 @@ map('n',    'gpi',              ':lua require("goto-preview").goto_preview_imple
 map('n',    'gpx',              ':lua require("goto-preview").close_all_win()<CR>')
 map('n',    'gpr',              ':Telescope lsp_references<CR>')
 map('n',    'gt',               ':ToggleTerm<cr>')
+map('n',    's',                '<cmd>lua require("substitute").operator()<cr>')
+map('n',    'ss',               '<cmd>lua require("substitute").line()<cr>')
 map('n',    'y)',               '0f(lyi(')
 map('n',    'y]',               '0f[lyi[')
 map('n',    'y}',               '0f{lyi{')
