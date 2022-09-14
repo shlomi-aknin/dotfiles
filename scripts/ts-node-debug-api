@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DIR=/home/shlomo/workspace/cymbio-api-3
+cd $DIR
+node --inspect-brk --require ts-node/register -r tsconfig-paths/register "$DIR/bin/apiService.ts"
