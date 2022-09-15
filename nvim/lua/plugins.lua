@@ -44,7 +44,6 @@ packer.startup(function()
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
   use {'folke/trouble.nvim'}
-  use {'folke/which-key.nvim'}
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
@@ -67,6 +66,7 @@ packer.startup(function()
   use {'lukas-reineke/cmp-rg'}
   use {'mfussenegger/nvim-dap'}
   use {'mg979/vim-visual-multi'}
+  use {'mizlan/iswap.nvim'}
   use {'mhartington/formatter.nvim'}
   use {'mrjones2014/smart-splits.nvim'}
   use {'nmac427/guess-indent.nvim'}
