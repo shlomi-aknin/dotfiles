@@ -19,5 +19,6 @@ mason.setup({
 })
 
 mason_lspconfig.setup({
-    ensure_installed = { "eslint", "jsonls", "tsserver" }
+    ensure_installed = { "eslint", "jsonls", "tsserver" },
+    automatic_installation = true,
 })
