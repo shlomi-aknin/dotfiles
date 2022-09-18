@@ -36,6 +36,7 @@ packer.startup(function()
   use {'dracula/vim', as = 'dracula'}
   use {'elianiva/telescope-npm.nvim'}
   use {'folke/tokyonight.nvim'}
+  -- use {'folke/which-key.nvim'}
   use {'fgheng/winbar.nvim'}
   use {'gbprod/cutlass.nvim'}
   use {'haishanh/night-owl.vim'}
