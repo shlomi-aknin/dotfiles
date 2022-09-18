@@ -59,31 +59,3 @@ hydra({
       { '<Esc>', nil,  { exit = true, desc = false }}
    }
 })
-
-hydra({
-   name = 'Debug',
-   hint = window_hint,
-   config = {
-      invoke_on_body = true,
-      hint = {
-         border = 'rounded',
-         offset = -1
-      }
-   },
-   mode = 'n',
-   body = '<leader>d',
-   heads = {
-      { '<S-o>', ':lua require("dap").step_over()<cr>' },
-      { 'a',     function() require('debugHelper').attach() end },
-      { 'A',     function() require('debugHelper').attachToRemote() end },
-      { 'b',     ':lua require("dap").list_breakpoints()<cr>' },
-      { 'h',     ':lua require("dap.ui.widgets").hover()<cr>' },
-      { 'i',     ':lua require("dap").step_into()<cr>' },
-      { 'j',     function() require('jester').debug_file() end},
-      { 'n',     ':lua require("dap").continue()<cr>' },
-      { 'o',     ':lua require("dap").step_out()<cr>' },
-      { 'p',     ':lua require("dap").list_breakpoints()<cr>' },
-      { 's',     ':lua local widgets=require("dap.ui.widgets");widgets.centered_float(widgets.scopes)<cr>' },
-      { 't',     ':lua require("dap").toggle_breakpoint()<cr>' },
-  }
-})
