@@ -74,9 +74,12 @@ hydra({
    body = '<leader>d',
    heads = {
       { '<S-o>', ':lua require("dap").step_over()<cr>' },
+      { 'a',     function() require('debugHelper').attach() end },
+      { 'A',     function() require('debugHelper').attachToRemote() end },
       { 'b',     ':lua require("dap").list_breakpoints()<cr>' },
       { 'h',     ':lua require("dap.ui.widgets").hover()<cr>' },
       { 'i',     ':lua require("dap").step_into()<cr>' },
+      { 'j',     function() require('jester').debug_file() end},
       { 'n',     ':lua require("dap").continue()<cr>' },
       { 'o',     ':lua require("dap").step_out()<cr>' },
       { 'p',     ':lua require("dap").list_breakpoints()<cr>' },
