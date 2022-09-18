@@ -17,6 +17,7 @@ vim.api.nvim_exec([[
   autocmd BufWritePost plugins.lua source <afile> | PackerSync
   autocmd CursorMoved * echo
   au! BufNewFile,BufRead *.svelte set ft=svelte
+  autocmd FileType dap-float nnoremap <buffer> za <cmd>lua require('dap.ui').trigger_actions({ mode = 'first' })<cr><cmd>set number relativenumber cursorline<cr>
 
   augroup highlight_yank
       autocmd!
