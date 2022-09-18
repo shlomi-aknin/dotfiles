@@ -7,8 +7,8 @@ super + c
     alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
 
 # lazydocker
-super + d
-    alacritty -t "lazydocker" -e lazydocker
+super + d : {l,p}
+    {alacritty -t "lazydocker" -e lazydocker, alacritty -t "Debug processWorkerJob.ts" -e ts-node-debug-worker-job}
 
 # toggle focused window floating
 super + f
