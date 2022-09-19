@@ -6,6 +6,7 @@ vim.cmd([[
   hi GitSignsAdd guifg=#50fa7b
   hi GitSignsChange guifg=#ff79c6
   hi GitSignsDelete guifg=#ff5555
+  hi NvimTreeFolderIcon guifg=#34a1eb
   ]])
 
 -- vim.cmd([[
