@@ -97,6 +97,7 @@ packer.startup(function()
   use {'stevearc/dressing.nvim'}
   use {'stevearc/qf_helper.nvim'}
   use {'gbprod/substitute.nvim'}
+  use {'simrat39/symbols-outline.nvim'}
   use {'terrortylor/nvim-comment'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'tzachar/cmp-fuzzy-buffer'}

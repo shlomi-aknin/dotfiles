@@ -3,6 +3,9 @@ vim.cmd([[
   hi HopNextKey2 guifg=#50fa7b
   hi CursorLineNr guifg=#ffff00
   hi LineNr guifg=#34a1eb
+  hi GitSignsAdd guifg=#50fa7b
+  hi GitSignsChange guifg=#ff79c6
+  hi GitSignsDelete guifg=#ff5555
   ]])
 
 -- vim.cmd([[
