@@ -22,5 +22,5 @@ vim.o.updatetime = 750
 vim.wo.signcolumn = 'yes'
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.o.laststatus = 3
+vim.o.laststatus = 1
 vim.wo.foldlevel = 99
