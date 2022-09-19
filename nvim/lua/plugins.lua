@@ -76,6 +76,7 @@ packer.startup(function()
   use {'nvim-lua/plenary.nvim'}
   use {'nvim-lualine/lualine.nvim'}
   use {'nvim-telescope/telescope.nvim'}
+  use {'nvim-telescope/telescope-dap.nvim'}
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   use {'nvim-telescope/telescope-file-browser.nvim'}
   use {'nvim-treesitter/nvim-treesitter'}
