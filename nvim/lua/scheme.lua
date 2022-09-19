@@ -7,6 +7,14 @@ vim.cmd([[
   hi GitSignsChange guifg=#ff79c6
   hi GitSignsDelete guifg=#ff5555
   hi NvimTreeFolderIcon guifg=#34a1eb
+  hi Comment guifg=#34a1eb
+  hi CursorLine guibg=#00509d
+  hi CursorColumn guibg=#00509d
+  hi ErrorMsg guibg=#ffa0a0 guifg=#000000
+  hi PMenu guibg=#46244C
+  hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
+  hi WinSeparator guibg=None guifg=#34a1eb
+  hi Folded guibg=#34a1eb guifg=#000000
   ]])
 
 -- vim.cmd([[
