@@ -56,6 +56,7 @@ packer.startup(function()
   use {'j-hui/fidget.nvim'}
   use {'jiangmiao/auto-pairs'}
   use {'JoosepAlviste/nvim-ts-context-commentstring'}
+  use {'jose-elias-alvarez/typescript.nvim'}
   use {'karb94/neoscroll.nvim'}
   use {'kdheepak/tabline.nvim'}
   use {'kyazdani42/nvim-tree.lua'}

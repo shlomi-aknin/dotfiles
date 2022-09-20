@@ -33,7 +33,8 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 
-local servers = { 'tsserver', 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
+-- local servers = { 'tsserver', 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
+local servers = { 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
 for _, server in ipairs(servers) do
   local settings = {}
   if (server == 'svelte') then
