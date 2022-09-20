@@ -118,7 +118,7 @@ end
 
 local multi_open_mappings = {
     i = {
-        ['<c-z>'] = require('telescope.actions').delete_buffer,
+        ['<c-z>'] = actions.delete_buffer + actions.close,
         ['<C-h>'] = action_layout.toggle_preview,
         ['<C-j>'] = actions.move_selection_next,
         ['<C-k>'] = actions.move_selection_previous,
@@ -129,6 +129,7 @@ local multi_open_mappings = {
         ['<CR>']  = stopinsert(custom_actions.multi_selection_open)
     },
     n = {
+        ['<c-z>'] = actions.delete_buffer + actions.close,
         ['<c-z>'] = require('telescope.actions').delete_buffer,
         ['<C-h>'] = action_layout.toggle_preview,
         ['<C-c>'] = actions.close,
