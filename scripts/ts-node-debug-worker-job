@@ -1,5 +1,4 @@
 #!/bin/bash
 
-cd /home/shlomo/workspace/cymbio-api-3
-export NODE_ENV=development
-node --inspect-brk --require ts-node/register -r tsconfig-paths/register /home/shlomo/workspace/cymbio-api-3/scripts/core/processWorkerJob.ts
+cd ~/scripts
+~/scripts/$(ls | dmenu)
