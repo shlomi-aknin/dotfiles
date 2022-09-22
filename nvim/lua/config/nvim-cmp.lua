@@ -16,6 +16,10 @@ cmp.setup({
   completion = {
     completeopt = 'menu,menuone,noinsert,preview'
   },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
       buffer        = '[Buf]',
