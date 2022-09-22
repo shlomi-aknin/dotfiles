@@ -1,3 +1,4 @@
+-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 vim.api.nvim_exec([[
   let g:VM_maps = {}
   let $PATH .= ':/usr/local/lib/node_modules/bin:~/.local/share/nvim/lsp_servers:~/.local/bin'
