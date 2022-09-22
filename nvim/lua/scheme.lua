@@ -50,7 +50,7 @@ vim.cmd([[
   hi Normal gui=bold guifg=#ffffff guibg=#000000
   hi NormalSelected gui=bold guifg=#50fa7b
   hi NvimTreeFolderIcon gui=bold guifg=#34a1eb
-  hi PMenu gui=bold guibg=#00509d guifg=#ffffff
+  hi PMenu gui=bold guibg=#000
   hi PMenuSel gui=bold guibg=#34a1eb guifg=#000000 blend=0
   hi Search gui=bold guifg=#000000 guibg=#ff79c6
   hi SignColumn gui=bold guibg=#000000 guifg=#34a1eb
