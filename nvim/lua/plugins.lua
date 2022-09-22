@@ -84,6 +84,7 @@ packer.startup(function()
   use {'nvim-treesitter/nvim-treesitter-context'}
   use {'onsails/lspkind-nvim'}
   use {'peterrincker/vim-searchlight'}
+  use {'petertriho/nvim-scrollbar'}
   use {'phaazon/hop.nvim'}
   use {'pocco81/autosave.nvim'}
   use {'pwntester/octo.nvim'}
