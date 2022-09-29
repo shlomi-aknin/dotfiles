@@ -462,7 +462,7 @@
         {
           "scope": "comment",
           "settings": {
-            "fontStyle": "bold",
+            // "fontStyle": "bold",
             "foreground": "#34a1eb"
           }
         },
@@ -549,5 +549,6 @@
   "find-it-faster.general.batTheme": "Dracula",
   "find-it-faster.general.showMaximizedTerminal": true,
   "jestrunner.runOptions": ["--coverage=false"],
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.activityBar.visible": false
 }
