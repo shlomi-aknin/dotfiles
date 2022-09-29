@@ -21,17 +21,17 @@ nvim_tree.setup({
   },
   view = {
     width = 45,
-    float = {
-      enable = true,
-      open_win_config = {
-        relative = "editor",
-        border = "rounded",
-        width = 100,
-        height = 30,
-        row = 5,
-        col = 30,
-      },
-    },
+    -- float = {
+    --   enable = true,
+    --   open_win_config = {
+    --     relative = "editor",
+    --     border = "rounded",
+    --     width = 100,
+    --     height = 30,
+    --     row = 5,
+    --     col = 30,
+    --   },
+    -- },
     -- height = 35,
     mappings = {
       list = {
