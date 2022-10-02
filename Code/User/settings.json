@@ -79,11 +79,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#007ACC",
-    "statusBar.debuggingBackground": "#007ACC",
-    "statusBar.debuggingForeground": "#ffffff",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.noFolderBackground": "#007ACC",
+    "statusBar.background": "#44AF69",
+    "statusBar.debuggingBackground": "#44AF69",
+    "statusBar.debuggingForeground": "#000000",
+    "statusBar.foreground": "#000000",
+    "statusBar.noFolderBackground": "#44AF69",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -391,6 +391,11 @@
     {
       "before": ["g", "h"],
       "after": ["i", "<space>", "<esc>"]
+    },
+    {
+      "before": ["<space>", "c", "a"],
+      "commands": ["editor.action.autoFix"],
+      "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
