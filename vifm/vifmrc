@@ -68,6 +68,7 @@ set norunexec
 
 " Colors
 highlight clear
+
 highlight Win cterm=bold ctermfg=118 ctermbg=0
 highlight Directory cterm=bold ctermfg=15 ctermbg=33
 highlight Link cterm=bold ctermfg=yellow ctermbg=0
@@ -325,6 +326,8 @@ filetype *.sha256
 filetype *.sha512
        \ {Check SHA512 hash sum}
        \ sha512sum -c %f %S,
+
+fileviewer *.[ch],*.[ch]pp,*.[ch]xx,*.sql,*.md,*.xml,*.js,*.ts,*.css,*.html bat --color always --wrap never --pager never %c -p
 
 " GPG signature
 filetype *.asc
