@@ -70,6 +70,7 @@ packer.startup(function()
   use {'mg979/vim-visual-multi'}
   use {'mizlan/iswap.nvim'}
   use {'mhartington/formatter.nvim'}
+  use {'mrded/nvim-zond'}
   use {'mrjones2014/smart-splits.nvim'}
   use {'nmac427/guess-indent.nvim'}
   use {'neovim/nvim-lspconfig'}
