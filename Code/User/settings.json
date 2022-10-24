@@ -79,11 +79,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#44AF69",
-    "statusBar.debuggingBackground": "#44AF69",
+    "statusBar.background": "#007acc",
+    "statusBar.debuggingBackground": "#007acc",
     "statusBar.debuggingForeground": "#000000",
     "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#44AF69",
+    "statusBar.noFolderBackground": "#007acc",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -396,6 +396,11 @@
       "before": ["<space>", "c", "a"],
       "commands": ["editor.action.autoFix"],
       "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+    },
+    {
+      "before": ["<space>", "d"],
+      "commands": ["editor.action.peekDefinition"],
+      "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -555,5 +560,8 @@
   "find-it-faster.general.showMaximizedTerminal": true,
   "jestrunner.runOptions": ["--coverage=false"],
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "[xml]": {
+    "editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
+  }
 }
