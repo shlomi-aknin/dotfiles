@@ -5,7 +5,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorStyle": "line-thin",
   "editor.fontFamily": "'SauceCodePro Nerd Font','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontWeight": "bold",
+  "editor.fontWeight": 400,
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
@@ -32,7 +32,7 @@
   "vim.searchHighlightColor": "#50fa7b",
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1.8,
   "workbench.list.smoothScrolling": true,
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
@@ -49,7 +49,7 @@
     "debugTokenExpression.error": "#00BBF9",
     "editor.background": "#000000",
     "editor.hoverHighlightBackground": "#BC4873",
-    "editor.lineHighlightBackground": "#00509d",
+    "editor.lineHighlightBackground": "#2C0972",
     "editor.selectionBackground": "#2176ffcc",
     "editor.selectionHighlightBackground": "#6272a4cc",
     "editor.selectionHighlightBorder": "#00000000",
@@ -79,11 +79,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#007acc",
-    "statusBar.debuggingBackground": "#007acc",
-    "statusBar.debuggingForeground": "#000000",
-    "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#007acc",
+    "statusBar.background": "#007ACC",
+    "statusBar.debuggingBackground": "#007ACC",
+    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.noFolderBackground": "#007ACC",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -544,7 +544,6 @@
     "a11y-invalid-attribute": "ignore",
     "a11y-mouse-events-have-key-events": "ignore"
   },
-  "workbench.colorTheme": "Dracula At Night",
   "editor.inlineSuggest.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.color": "#00BBF9",
@@ -563,5 +562,6 @@
   "workbench.activityBar.visible": false,
   "[xml]": {
     "editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
-  }
+  },
+  "workbench.colorTheme": "Dracula At Night"
 }
