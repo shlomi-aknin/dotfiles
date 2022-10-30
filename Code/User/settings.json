@@ -521,6 +521,12 @@
             "foreground": "#8be9fd"
           },
           "scope": "variable.other.object.property.ts"
+        },
+        {
+          "settings": {
+            "foreground": "#8be9fd"
+          },
+          "scope": "variable.object.property.ts"
         }
       ]
     }
