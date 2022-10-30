@@ -44,6 +44,7 @@
     "debugTokenExpression.number": "#00BBF9",
     "debugTokenExpression.error": "#00BBF9",
     "editor.background": "#000000",
+    "editor.foreground": "#00BBF9",
     "editor.hoverHighlightBackground": "#BC4873",
     "editor.lineHighlightBackground": "#2C0972",
     "editor.selectionBackground": "#2176ffcc",
@@ -478,6 +479,42 @@
             "foreground": "#ff79c6"
           },
           "scope": "support.class.component.svelte"
+        },
+        {
+          "settings": {
+            "foreground": "#ffff00"
+          },
+          "scope": "meta.object-literal.key.ts"
+        },
+        {
+          "settings": {
+            "foreground": "#8BE9FD"
+          },
+          "scope": "variable.other.object.ts"
+        },
+        {
+          "settings": {
+            "foreground": "#8BE9FD"
+          },
+          "scope": "variable.other.property.ts"
+        },
+        {
+          "settings": {
+            "foreground": "#8BE9FD"
+          },
+          "scope": "variable.other.readwrite.ts"
+        },
+        {
+          "settings": {
+            "foreground": "#ffff00"
+          },
+          "scope": "variable.parameter.ts"
+        },
+        {
+          "settings": {
+            "foreground": "#8be9fd"
+          },
+          "scope": "variable.other.readwrite.alias.ts"
         }
       ]
     }
