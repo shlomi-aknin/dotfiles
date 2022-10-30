@@ -69,7 +69,7 @@
     "editorSuggestWidget.selectedForeground": "#000000",
     "editorUnnecessaryCode.border": "#F15BB5",
     "editorUnnecessaryCode.opacity": "#ffff00",
-    "gitlens.trailingLineForegroundColor": "#ffff00",
+    "gitlens.trailingLineForegroundColor": "#FCAB10",
     "list.activeSelectionBackground": "#00509d",
     "list.focusBackground": "#00509d",
     "list.highlightForeground": "#ffff00",
