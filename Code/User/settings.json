@@ -37,12 +37,12 @@
     "badge.background": "#00BBF9",
     "badge.foreground": "#000000",
     "breadcrumb.foreground": "#ffffff",
-    "debugTokenExpression.name": "#ffff00",
-    "debugTokenExpression.value": "#00BBF9",
-    "debugTokenExpression.string": "#00BBF9",
-    "debugTokenExpression.boolean": "#00BBF9",
-    "debugTokenExpression.number": "#00BBF9",
-    "debugTokenExpression.error": "#00BBF9",
+    "debugTokenExpression.name": "#8BE9FD",
+    "debugTokenExpression.value": "#8BE9FD",
+    "debugTokenExpression.string": "#ffff00",
+    "debugTokenExpression.boolean": "#ff79c6",
+    "debugTokenExpression.number": "#8BE9FD",
+    "debugTokenExpression.error": "#BC4873",
     "editor.background": "#000000",
     "editor.foreground": "#00BBF9",
     "editor.hoverHighlightBackground": "#BC4873",
@@ -77,11 +77,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#44AF69",
-    "statusBar.debuggingBackground": "#44AF69",
+    "statusBar.background": "#FCAB10",
+    "statusBar.debuggingBackground": "#FCAB10",
     "statusBar.debuggingForeground": "#000000",
     "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#44AF69",
+    "statusBar.noFolderBackground": "#FCAB10",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -482,7 +482,7 @@
         },
         {
           "settings": {
-            "foreground": "#ffff00"
+            "foreground": "#8BE9FD"
           },
           "scope": "meta.object-literal.key.ts"
         },
@@ -506,7 +506,7 @@
         },
         {
           "settings": {
-            "foreground": "#ffff00"
+            "foreground": "#8BE9FD"
           },
           "scope": "variable.parameter.ts"
         },
@@ -605,9 +605,9 @@
   "find-it-faster.general.showMaximizedTerminal": true,
   "jestrunner.runOptions": ["--coverage=false"],
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.activityBar.visible": false,
   "[xml]": {
     "editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
   },
-  "workbench.colorTheme": "Dracula At Night"
+  "workbench.colorTheme": "Dracula At Night",
+  "workbench.activityBar.visible": false
 }
