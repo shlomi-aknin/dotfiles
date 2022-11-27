@@ -207,6 +207,7 @@ fileviewer <image/*>
    \ vifmimg clear
 
 " Pdf
+filextype *.csv csv2html %c > "%c.html" && google-chrome "%c.html"
 filextype *.pdf devour zathura %c %i &, apvlv %c, devour okular %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
