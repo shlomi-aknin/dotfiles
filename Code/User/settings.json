@@ -77,11 +77,11 @@
     "quickInput.background": "#0F4C75",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
-    "statusBar.background": "#FCAB10",
-    "statusBar.debuggingBackground": "#FCAB10",
-    "statusBar.debuggingForeground": "#000000",
-    "statusBar.foreground": "#000000",
-    "statusBar.noFolderBackground": "#FCAB10",
+    "statusBar.background": "#007ACC",
+    "statusBar.debuggingBackground": "#007ACC",
+    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.noFolderBackground": "#007ACC",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -615,7 +615,6 @@
     "editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
   },
   "workbench.colorTheme": "Dracula At Night",
-  "workbench.activityBar.visible": false,
   "editor.suggest.preview": true,
   "editor.quickSuggestionsDelay": 1,
   "editor.snippetSuggestions": "top",
@@ -625,5 +624,8 @@
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
   "[sql]": {
     "editor.defaultFormatter": "cweijan.vscode-mysql-client2"
-  }
+  },
+  "terminal.integrated.scrollback": 100000,
+  "workbench.activityBar.visible": false,
+  "diffEditor.renderSideBySide": false
 }
