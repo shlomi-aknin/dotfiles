@@ -95,7 +95,7 @@ packer.startup(function()
   use {'rmagatti/auto-session'}
   use {'rmagatti/goto-preview'}
   use {'sindrets/diffview.nvim'}
-  use {'spywhere/detect-language.nvim'}
+  -- use {'spywhere/detect-language.nvim'}
   use {'stefandtw/quickfix-reflector.vim'}
   use {'stevearc/dressing.nvim'}
   use {'stevearc/qf_helper.nvim'}
