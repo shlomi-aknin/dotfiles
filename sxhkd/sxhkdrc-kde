@@ -1,0 +1,63 @@
+# browser
+super + b
+  google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
+
+# clock
+super + c
+    alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
+
+# lazydocker
+super + d : {l,p}
+    {alacritty -t "lazydocker" -e lazydocker, alacritty -t "Debug processWorkerJob.ts" -e ts-node-debug-worker-job}
+
+# neovim
+super + n
+    alacritty -t "Neovim" -e nvim
+
+# htop
+super + o
+	alacritty -t "htop" -e htop
+
+# clipmenu select
+super + p
+    clipmenu && xdotool key ctrl+shift+v
+
+# launcher
+super + r
+    dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=20"
+
+# printscreen
+super + s
+    scrot ~/Downloads/Screenshot_%Y-%m-%d_%H:%M:%S.png
+
+# vifm
+super + z
+  alacritty -t "vifm" -e vifmrun ~/workspace/cymbio-api-3
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# change mode to window selection
+super + shift + d : {x,c,h}
+  dunstctl {close, close-all, history-pop}
+
+# project select for lazygit
+super + shift + g
+  lazygitselector
+
+# compose new email
+super + shift + m
+    google-chrome-stable "https://mail.google.com/mail/u/0/"
+
+# project select for neovim
+super + shift + o
+  projectselectornvim
+
+# clipmenu insert
+super + shift + p
+    clipmenu
+
+# reboot, poweroff
+super + shift + {F1,F2}
+	sudo {reboot,poweroff}
