@@ -408,6 +408,10 @@
       "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
     {
+      "before": ["s", "s"],
+      "after": ["V", "p"]
+    },
+    {
       "before": ["s", "i", "w"],
       "after": ["v", "i", "w", "p"]
     },
@@ -657,5 +661,7 @@
   },
   "terminal.integrated.scrollback": 100000,
   "diffEditor.renderSideBySide": false,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": false
 }
