@@ -438,6 +438,10 @@
     {
       "before": ["s", "a", "p"],
       "after": ["v", "a", "p", "p"]
+    },
+    {
+      "before": ["s", "E"],
+      "after": ["v", "E", "p"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -662,6 +666,5 @@
   "terminal.integrated.scrollback": 100000,
   "diffEditor.renderSideBySide": false,
   "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false,
-  "workbench.editor.showTabs": false
+  "editor.indentSize": "tabSize"
 }
