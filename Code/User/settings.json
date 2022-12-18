@@ -454,7 +454,15 @@
     {
       "before": ["s", "f", "]"],
       "after": ["v", "f", "]", "p"]
-    }
+    },
+    {
+      "before": ["s", "f", ","],
+      "after": ["v", "f", ",", "p"]
+    },
+    {
+      "before": ["s", "t", ","],
+      "after": ["v", "t", ",", "p"]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -588,7 +596,7 @@
       ]
     }
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
@@ -599,9 +607,9 @@
   "svelte.enable-ts-plugin": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "workbench.editor.enablePreview": false,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  // "[jsonc]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
   "editor.cursorSurroundingLines": 999,
   "files.autoSave": "onFocusChange",
   "json.format.enable": false,
