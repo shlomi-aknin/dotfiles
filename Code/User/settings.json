@@ -442,6 +442,18 @@
     {
       "before": ["s", "E"],
       "after": ["v", "E", "p"]
+    },
+    {
+      "before": ["s", "f", ")"],
+      "after": ["v", "f", ")", "p"]
+    },
+    {
+      "before": ["s", "f", "}"],
+      "after": ["v", "f", "}", "p"]
+    },
+    {
+      "before": ["s", "f", "]"],
+      "after": ["v", "f", "]", "p"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
