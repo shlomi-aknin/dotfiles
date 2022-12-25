@@ -428,6 +428,14 @@
       "after": ["v", "i", "p", "p"]
     },
     {
+      "before": ["s", "i", "`"],
+      "after": ["v", "i", "`", "p"]
+    },
+    {
+      "before": ["s", "a", "`"],
+      "after": ["v", "a", "`", "p"]
+    },
+    {
       "before": ["s", "a", "("],
       "after": ["v", "a", "(", "p"]
     },
@@ -685,6 +693,8 @@
   },
   "terminal.integrated.scrollback": 100000,
   "diffEditor.renderSideBySide": false,
-  "workbench.activityBar.visible": false,
-  "editor.indentSize": "tabSize"
+  "editor.indentSize": "tabSize",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.format.enable": true,
+  "workbench.activityBar.visible": false
 }
