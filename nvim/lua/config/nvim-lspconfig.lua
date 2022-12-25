@@ -47,32 +47,32 @@ end
 -- map buffer local keybindings when the language server attaches
 
 -- local servers = { 'tsserver', 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
-local servers = { 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
-for _, server in ipairs(servers) do
-  local settings = {}
-  if (server == 'svelte') then
-    settings = {
-      svelte = {
-        plugin = {
-          svelte = {
-            compilerWarnings = {
-              ['a11y-no-onchange'] = 'ignore',
-              ['a11y-missing-attribute'] = 'ignore',
-              ['a11y-mouse-events-have-key-events'] = 'ignore',
-              ['a11y-invalid-attribute'] = 'ignore'
-            }
-          }
-        }
-      }
-    }
-  end
+-- local servers = { 'cssls', 'html', 'intelephense', 'emmet_ls', 'svelte' }
+-- for _, server in ipairs(servers) do
+--   local settings = {}
+--   if (server == 'svelte') then
+--     settings = {
+--       svelte = {
+--         plugin = {
+--           svelte = {
+--             compilerWarnings = {
+--               ['a11y-no-onchange'] = 'ignore',
+--               ['a11y-missing-attribute'] = 'ignore',
+--               ['a11y-mouse-events-have-key-events'] = 'ignore',
+--               ['a11y-invalid-attribute'] = 'ignore'
+--             }
+--           }
+--         }
+--       }
+--     }
+--   end
 
-  lspconfig[server].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    },
-    settings = settings
-  })
-end
+--   lspconfig[server].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+--     flags = {
+--       debounce_text_changes = 150,
+--     },
+--     settings = settings
+--   })
+-- end

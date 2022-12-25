@@ -11,14 +11,20 @@ end
 mason.setup({
     ui = {
         icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
+            package_installed = '✓',
+            package_pending = '➜',
+            package_uninstalled = '✗'
         }
     }
 })
 
 mason_lspconfig.setup({
-    ensure_installed = { "eslint", "jsonls", "tsserver" },
+    ensure_installed = { 'eslint', 'jsonls', 'tsserver' },
     automatic_installation = true,
 })
+
+require('mason-lspconfig').setup_handlers {
+  function (server_name) -- default handler (optional)
+    require('lspconfig')[server_name].setup {}
+  end,
+}
