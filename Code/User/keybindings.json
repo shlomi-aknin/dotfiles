@@ -333,11 +333,11 @@
     "command": "workbench.action.navigateForward"
   },
   {
-    "key": "ctrl+,",
+    "key": "ctrl+[",
     "command": "workbench.action.moveEditorLeftInGroup"
   },
   {
-    "key": "ctrl+.",
+    "key": "ctrl+]",
     "command": "workbench.action.moveEditorRightInGroup"
   },
   {
