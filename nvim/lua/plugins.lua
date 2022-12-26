@@ -57,8 +57,8 @@ packer.startup(function()
   use {'jiangmiao/auto-pairs'}
   use {'JoosepAlviste/nvim-ts-context-commentstring'}
   use {'jose-elias-alvarez/typescript.nvim'}
-  -- use {'karb94/neoscroll.nvim'}
   use {'kdheepak/tabline.nvim'}
+  use {'kazhala/close-buffers.nvim'}
   use {'kyazdani42/nvim-tree.lua'}
   use {'kyazdani42/nvim-web-devicons'}
   use {'ldelossa/gh.nvim'}
