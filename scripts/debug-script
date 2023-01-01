@@ -1,0 +1,67 @@
+#!/bin/bash
+
+SELECTION=$(printf "test:circleci\ntest:coverage\ntest:changes:files\ntest:changes:jest\ntest:changes:mocha\ntest:cicd:test:coverage\ncommit\npostinstall\nstart:dev\nstart:worker:dev\nstart:api:dev\nstart:scheduler:dev\nstart:order:dev\nstart:image:dev\nmigrate:make\nmigrate:latest\nmigrate:up\nmigrate:rollback\nmigrate:down\nmigrate:currentVersion\nmigrate:list\ntest\njest\nmigrate:test\nlint\nlint:fix\nlint:quiet\nrelease\nrelease-dry-run\nstart:script:processOrderJob\nstart:script:processWorkerJob\nstart:script:exportInvoices\nstart:script:deductZalandoTax\nlicense-report\ndeploy:aws:ng:github\ndeploy:aws:ng\nstart:worker\nstart:order\nstart:scheduler\nstart:api\nstart:image\ngenerate\nhygen" | dmenu)
+
+SCRIPTCMD=""
+
+case $SELECTION in
+"start:dev")
+  SCRIPTCMD="npm run start:worker:dev&& npm run start:api:dev&& npm run start:scheduler:dev&& npm run start:order:dev"
+  ;;
+"start:worker:dev")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./bin/workerService.ts"
+  ;;
+"start:api:dev")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./bin/apiService.ts"
+  ;;
+"start:scheduler:dev")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./bin/taskScheduler/taskScheduler.ts"
+  ;;
+"start:order:dev")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./bin/orderProcessorService.ts"
+  ;;
+"start:image:dev")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./bin/imageServerService.ts"
+  ;;
+"lint")
+  SCRIPTCMD="eslint \"**/*.ts\" --ignore-pattern node_modules/ --ignore-pattern tmp/ --ignore-pattern scripts/ --ignore-pattern test/"
+  ;;
+"lint:fix")
+  SCRIPTCMD="eslint \"**/*.ts\" --ignore-pattern node_modules/ --fix"
+  ;;
+"lint:quiet")
+  SCRIPTCMD="eslint \"**/*.ts\" --ignore-pattern node_modules/ --ignore-pattern tmp/ --ignore-pattern scripts/ --ignore-pattern test/ --quiet"
+  ;;
+"start:script:processOrderJob")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./scripts/core/processOrderJob.ts"
+  ;;
+"start:script:processWorkerJob")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./scripts/core/processWorkerJob.ts"
+  ;;
+"start:script:exportInvoices")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./scripts/invoices/export-invoices.script.ts"
+  ;;
+"start:script:deductZalandoTax")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./scripts/zalando/update-zalando-tax-and-billed-amount.ts"
+  ;;
+"start:worker")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register  ./bin/workerService"
+  ;;
+"start:order")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register  ./bin/orderProcessorService"
+  ;;
+"start:scheduler")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register  ./bin/taskScheduler/taskScheduler"
+  ;;
+"start:api")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./bin/apiService"
+  ;;
+"start:image")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register  ./bin/imageServerService"
+  ;;
+"generate")
+  SCRIPTCMD="node --inspect-brk --require ts-node/register -r tsconfig-paths/register ./integration-generator/index.ts"
+  ;;
+esac
+
+alacritty -e $SCRIPTCMD
