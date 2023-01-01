@@ -53,6 +53,7 @@ packer.startup(function()
   use {'hrsh7th/cmp-vsnip'}
   use {'hrsh7th/nvim-cmp'}
   use {'hrsh7th/vim-vsnip'}
+  use {'jayp0521/mason-nvim-dap.nvim'}
   use {'j-hui/fidget.nvim'}
   use {'jiangmiao/auto-pairs'}
   use {'JoosepAlviste/nvim-ts-context-commentstring'}
@@ -72,6 +73,8 @@ packer.startup(function()
   use {'mhartington/formatter.nvim'}
   use {'mrded/nvim-zond'}
   use {'mrjones2014/smart-splits.nvim'}
+  use {'mxsdev/nvim-dap-vscode-js'}
+  use {'microsoft/vscode-js-debug', opt = true, run = 'npm install --legacy-peer-deps && npm run compile'}
   use {'nmac427/guess-indent.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}

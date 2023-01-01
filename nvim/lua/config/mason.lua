@@ -8,6 +8,11 @@ if not status_ok then
   return
 end
 
+local status_ok, mason_nvim_dap = pcall(require, 'mason-nvim-dap')
+if not status_ok then
+  return
+end
+
 mason.setup({
     ui = {
         icons = {
@@ -23,8 +28,14 @@ mason_lspconfig.setup({
     automatic_installation = true,
 })
 
-require('mason-lspconfig').setup_handlers {
+mason_lspconfig.setup_handlers({
   function (server_name) -- default handler (optional)
     require('lspconfig')[server_name].setup {}
   end,
-}
+})
+
+mason_nvim_dap.setup({
+  ensure_installed = {'node2', 'chrome', 'firefox'},
+  automatic_installation = true,
+  automatic_setup = true,
+})
