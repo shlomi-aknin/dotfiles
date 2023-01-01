@@ -3,6 +3,7 @@
 SELECTION=$(printf "test:circleci\ntest:coverage\ntest:changes:files\ntest:changes:jest\ntest:changes:mocha\ntest:cicd:test:coverage\ncommit\npostinstall\nstart:dev\nstart:worker:dev\nstart:api:dev\nstart:scheduler:dev\nstart:order:dev\nstart:image:dev\nmigrate:make\nmigrate:latest\nmigrate:up\nmigrate:rollback\nmigrate:down\nmigrate:currentVersion\nmigrate:list\ntest\njest\nmigrate:test\nlint\nlint:fix\nlint:quiet\nrelease\nrelease-dry-run\nstart:script:processOrderJob\nstart:script:processWorkerJob\nstart:script:exportInvoices\nstart:script:deductZalandoTax\nlicense-report\ndeploy:aws:ng:github\ndeploy:aws:ng\nstart:worker\nstart:order\nstart:scheduler\nstart:api\nstart:image\ngenerate\nhygen" | dmenu -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=14")
 
 SCRIPTCMD=""
+cd "$HOME/workspace/cymbio-api-3/"
 
 case $SELECTION in
 "start:dev")
