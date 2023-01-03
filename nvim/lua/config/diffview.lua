@@ -51,8 +51,10 @@ require('diffview').setup({
       height = 16,
     },
     log_options = {
-      single_file = log_options,
-      multi_file = log_options,
+      git = {
+        single_file = log_options,
+        multi_file = log_options,
+      }
     },
   },
   default_args = {

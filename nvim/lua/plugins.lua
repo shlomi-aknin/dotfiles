@@ -75,6 +75,7 @@ packer.startup(function()
   use {'mrjones2014/smart-splits.nvim'}
   use {'mxsdev/nvim-dap-vscode-js'}
   use {'microsoft/vscode-js-debug', opt = true, run = 'npm install --legacy-peer-deps && npm run compile'}
+  use {'navarasu/onedark.nvim'}
   use {'nmac427/guess-indent.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'norcalli/nvim-colorizer.lua'}
@@ -105,6 +106,7 @@ packer.startup(function()
   use {'gbprod/substitute.nvim'}
   use {'simrat39/symbols-outline.nvim'}
   use {'terrortylor/nvim-comment'}
+  use {'ThePrimeagen/refactoring.nvim'}
   use {'tzachar/cmp-tabnine', run = './install.sh'}
   use {'tzachar/cmp-fuzzy-buffer'}
   use {'tzachar/fuzzy.nvim'}

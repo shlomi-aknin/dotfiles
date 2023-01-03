@@ -17,6 +17,11 @@
   --   hi Folded guibg=#34a1eb guifg=#000000
   --]])
 
+-- require('onedark').setup {
+--     style = 'warmer'
+-- }
+-- require('onedark').load()
+
 vim.cmd([[
   silent! colorscheme dracula
   hi BreakPoint guifg=#ffa0a0 guibg=#000000
