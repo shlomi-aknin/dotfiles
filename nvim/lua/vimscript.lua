@@ -1,5 +1,7 @@
 -- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 vim.api.nvim_exec([[
+  execute "set t_8f=\e[38;2;%lu;%lu;%lum"
+  execute "set t_8b=\e[48;2;%lu;%lu;%lum"
   let g:VM_maps = {}
   let $PATH .= ':/usr/local/lib/node_modules/bin:~/.local/share/nvim/lsp_servers:~/.local/bin'
   let g:vim_matchtag_enable_by_default = 1

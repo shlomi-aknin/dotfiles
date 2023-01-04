@@ -1,4 +1,5 @@
 vim.cmd([[
+    set guifont=SauceCodePro\ Nerd\ Font:h9
     silent! colorscheme tokyonight-night
     hi CursorLineNr guifg=#ffff00
     hi LineNr guifg=#34a1eb
