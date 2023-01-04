@@ -31,5 +31,6 @@ formatter.setup({
     svelte = config,
     typescript = tsconfig,
     json = config,
+    jsx = tsconfig,
   }
 })

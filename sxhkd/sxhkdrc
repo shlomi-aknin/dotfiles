@@ -7,8 +7,8 @@ super + c
     alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
 
 # lazydocker
-super + d : {l,p}
-    {alacritty -t "lazydocker" -e lazydocker, alacritty -t "Debug processWorkerJob.ts" -e ts-node-debug-worker-job}
+super + d : {l,p,s}
+    {alacritty -t "lazydocker" -e lazydocker, alacritty -t "Debug processWorkerJob.ts" -e ts-node-debug-worker-job, debug-script}
 
 # toggle focused window floating
 super + f
@@ -48,7 +48,7 @@ super + p
 
 # launcher
 super + r
-    dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=20"
+    dmenu_run -nb "#000000" -nf "#ffffff" -sb "#34a1eb" -sf "#000000" -fn "SauceCodePro Nerd Font:size=14"
 
 # printscreen
 super + s
