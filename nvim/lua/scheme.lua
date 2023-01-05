@@ -3,6 +3,8 @@ vim.cmd([[
     silent! colorscheme tokyonight-night
     hi CursorLineNr guifg=#ffff00
     hi LineNr guifg=#34a1eb
+    hi HopNextKey guifg=#50fa7b
+    hi HopNextKey1 guifg=#50fa7b
     hi HopNextKey2 guifg=#50fa7b
     hi GitSignsAdd guifg=#50fa7b
     hi GitSignsChange guifg=#ff79c6
@@ -13,15 +15,22 @@ vim.cmd([[
     hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
     hi WinSeparator guibg=None guifg=#34a1eb
     hi Folded guibg=#34a1eb guifg=#000000
+    hi Normal guibg=#000000
+    hi SignColumn guibg=#000000
+    hi TelescopeBorder guifg=#34a1eb
+    hi TelescopeNormal guibg=#000000
+    hi TelescopeMatching guibg=#9ece6a guifg=#000000
+    hi link TelescopeMultiSelection CursorLine
   ]])
+--
 -- hi CursorColumn guibg=#00509d
 -- hi CursorLine guibg=#00509d
 -- hi NvimTreeFolderIcon guifg=#34a1eb
 
 -- require('onedark').setup {
---     style = 'warmer'
+--     style = 'deep'
 -- }
---
+
 -- require('onedark').load()
 
 -- vim.cmd([[
@@ -67,13 +76,13 @@ vim.cmd([[
 --   hi TelescopeBorder guifg=#34a1eb
 --   hi TelescopeNormal guibg=#000000
 --   hi TelescopeMatching guifg=#ffffff
+--   hi link TelescopeMultiSelection NormalSelected
 --   hi TelescopeSelection guibg=#34a1eb guifg=#000000
 --   hi TSVariable guifg=#ffff00
 --   hi WinSeparator guibg=None guifg=#34a1eb
 --   hi javaScriptLineComment guifg=#34a1eb gui=italic
 --   hi link jsComment Comment
 --   hi link Searchlight IncSearch
---   hi link TelescopeMultiSelection NormalSelected
 --   hi link javaScriptStringS String
 --   hi link jsString String
 --   hi TSParameter guifg=#8be9fd,italic
