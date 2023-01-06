@@ -49,6 +49,7 @@ vim.cmd([[
     hi Folded guibg=#34a1eb guifg=#000000
     hi MatchParen guibg=#34a1eb guifg=#ffffff
     hi Search guibg=#34a1eb guifg=#000000 gui=bold
+    hi IncSearch guibg=#9ece6a guifg=#000000 gui=bold
     hi TelescopeBorder guifg=#34a1eb
     hi TelescopeNormal guibg=#000000
     hi TelescopeBorder guibg=#000000
