@@ -5,9 +5,9 @@ require("tokyonight").setup({
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     comments = { italic = true },
-    keywords = { bold = true },
-    functions = { bold = true },
-    variables = { bold = true },
+    keywords = { italic = true },
+    functions = { italic = true },
+    variables = { italic = true },
     -- Background styles. Can be "dark", "transparent" or "normal"
     sidebars = "dark", -- style for sidebars, see below
     floats = "dark", -- style for floating windows
@@ -46,11 +46,7 @@ vim.cmd([[
     hi ErrorMsg guibg=#ffa0a0 guifg=#000000
     hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
     hi WinSeparator guibg=None guifg=#34a1eb
-    hi Special gui=bold
-    hi Statement gui=bold
-    hi PreProc gui=bold
     hi Folded guibg=#34a1eb guifg=#000000
-    hi Type gui=bold
     hi MatchParen guibg=#34a1eb guifg=#ffffff
     hi TelescopeBorder guifg=#34a1eb
     hi TelescopeNormal guibg=#000000
@@ -61,14 +57,19 @@ vim.cmd([[
     hi NvimTreeNormal guibg=#000000
     hi NvimTreeNormalNC guibg=#000000
     hi NvimTreeWinSeparator guibg=#000000 guifg=#34a1eb
-    hi typescriptFuncCallArg gui=bold
-    hi typescriptBlock gui=bold
-    hi typescriptObjectLiteral gui=bold
-    hi typescriptString gui=bold guifg=#ff4499
-    hi link typescriptStringProperty typescriptString
-    hi link typescriptTemplate typescriptString
-    hi link typescriptStringLiteralType typescriptString
     hi link TelescopeMultiSelection CursorLine
+    " hi PreProc gui=bold
+    " hi Special gui=bold
+    " hi Statement gui=bold
+    " hi Type gui=bold
+    " hi link typescriptStringLiteralType typescriptString
+    " hi link typescriptStringProperty typescriptString
+    " hi link typescriptTemplate typescriptString
+    " hi typescriptAsyncFuncKeyword guifg=#ffa0a0 gui=bold
+    " hi typescriptBlock gui=bold
+    " hi typescriptFuncCallArg gui=bold
+    " hi typescriptObjectLiteral gui=bold
+    " hi typescriptString gui=bold guifg=#ff4499
   ]])
 
 -- vim.cmd([[
