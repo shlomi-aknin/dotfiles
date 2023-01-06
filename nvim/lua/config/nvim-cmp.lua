@@ -17,8 +17,8 @@ cmp.setup({
     completeopt = 'menu,menuone,noinsert,preview'
   },
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    -- completion = cmp.config.window.bordered(),
+    -- documentation = cmp.config.window.bordered(),
   },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, menu = ({
@@ -66,9 +66,9 @@ cmp.setup({
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
   sources = {
-    { name = 'buffer' },
     { name = 'nvim_lsp_document_symbol' },
-    { name = 'fuzzy_buffer' }
+    { name = 'fuzzy_buffer' },
+    { name = 'buffer' }
   }
 })
 

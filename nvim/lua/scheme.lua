@@ -1,6 +1,39 @@
+require("tokyonight").setup({
+  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  light_style = "day", -- The theme is used when the background is set to light
+  transparent = true, -- Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+  styles = {
+    comments = { italic = true },
+    keywords = { bold = true },
+    functions = { bold = true },
+    variables = { bold = true },
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = "dark", -- style for sidebars, see below
+    floats = "dark", -- style for floating windows
+  },
+  sidebars = { "qf", "help", "packer" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+  day_brightness = 1, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
+  dim_inactive = false, -- dims inactive windows
+  lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
+
+  --- You can override specific color groups to use other groups or a hex color
+  --- function will be called with a ColorScheme table
+  ---@param colors ColorScheme
+  on_colors = function(colors) end,
+
+  --- You can override specific highlights to use other groups or a hex color
+  --- function will be called with a Highlights and ColorScheme table
+  ---@param highlights Highlights
+  ---@param colors ColorScheme
+  on_highlights = function(highlights, colors) end,
+})
+
 vim.cmd([[
     set guifont=SauceCodePro\ Nerd\ Font:h9
     silent! colorscheme tokyonight-night
+    hi BreakPoint guifg=#ffa0a0
     hi CursorLineNr guifg=#ffff00
     hi LineNr guifg=#34a1eb
     hi HopNextKey guifg=#50fa7b
@@ -11,27 +44,32 @@ vim.cmd([[
     hi GitSignsDelete guifg=#ff5555
     hi Comment guifg=#34a1eb
     hi ErrorMsg guibg=#ffa0a0 guifg=#000000
-    hi PMenu guibg=#46244C
     hi PMenuSel guibg=#34a1eb guifg=#000000 blend=0
     hi WinSeparator guibg=None guifg=#34a1eb
+    hi Special gui=bold
+    hi Statement gui=bold
+    hi PreProc gui=bold
     hi Folded guibg=#34a1eb guifg=#000000
-    hi Normal guibg=#000000
-    hi SignColumn guibg=#000000
+    hi Type gui=bold
+    hi MatchParen guibg=#34a1eb guifg=#ffffff
     hi TelescopeBorder guifg=#34a1eb
     hi TelescopeNormal guibg=#000000
+    hi TelescopeBorder guibg=#000000
     hi TelescopeMatching guibg=#9ece6a guifg=#000000
+    hi NvimTreeRootFolder guibg=#9ece6a guifg=#000000 gui=bold
+    hi NvimTreeOpenedFile guibg=#000000 guifg=#9ece6a gui=bold
+    hi NvimTreeNormal guibg=#000000
+    hi NvimTreeNormalNC guibg=#000000
+    hi NvimTreeWinSeparator guibg=#000000 guifg=#34a1eb
+    hi typescriptFuncCallArg gui=bold
+    hi typescriptBlock gui=bold
+    hi typescriptObjectLiteral gui=bold
+    hi typescriptString gui=bold guifg=#ff4499
+    hi link typescriptStringProperty typescriptString
+    hi link typescriptTemplate typescriptString
+    hi link typescriptStringLiteralType typescriptString
     hi link TelescopeMultiSelection CursorLine
   ]])
---
--- hi CursorColumn guibg=#00509d
--- hi CursorLine guibg=#00509d
--- hi NvimTreeFolderIcon guifg=#34a1eb
-
--- require('onedark').setup {
---     style = 'deep'
--- }
-
--- require('onedark').load()
 
 -- vim.cmd([[
 --   silent! colorscheme dracula
