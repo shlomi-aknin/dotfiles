@@ -33,6 +33,7 @@ require("tokyonight").setup({
 vim.cmd([[
     set guifont=SauceCodePro\ Nerd\ Font:h9
     silent! colorscheme tokyonight-night
+    hi Bold gui=bold
     hi BreakPoint guifg=#ffa0a0
     hi CursorLineNr guifg=#ffff00
     hi LineNr guifg=#34a1eb
@@ -49,6 +50,7 @@ vim.cmd([[
     hi Folded guibg=#34a1eb guifg=#000000
     hi MatchParen guibg=#34a1eb guifg=#ffffff
     hi Search guibg=#34a1eb guifg=#000000 gui=bold
+    hi String gui=bold
     hi IncSearch guibg=#9ece6a guifg=#000000 gui=bold
     hi TelescopeBorder guifg=#34a1eb
     hi TelescopeNormal guibg=#000000
@@ -60,6 +62,10 @@ vim.cmd([[
     hi NvimTreeNormalNC guibg=#000000
     hi NvimTreeWinSeparator guibg=#000000 guifg=#34a1eb
     hi link TelescopeMultiSelection CursorLine
+    hi link typescriptImport Bold
+    hi link typescriptExport Bold
+    hi link typescriptBoolean Bold
+
     " hi PreProc gui=bold
     " hi Special gui=bold
     " hi Statement gui=bold

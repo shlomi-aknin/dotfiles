@@ -163,6 +163,11 @@ telescope.setup({
     },
     file_ignore_patterns = { 'node_modules', '.git', 'package-lock.json' },
     mappings = multi_open_mappings
+  },
+  pickers = {
+    lsp_references = {
+      show_line = false
+    }
   }
 })
 
