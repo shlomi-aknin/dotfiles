@@ -35,8 +35,8 @@ dapui.setup({
     {
       elements = {
         -- { id = 'scopes', size = 0.25 },
+        'scopes',
         'breakpoints',
-        'watches',
         'stacks',
         -- 'watches',
       },
@@ -45,7 +45,7 @@ dapui.setup({
     },
     {
       elements = {
-        'scopes',
+        'watches',
         -- 'repl',
         -- 'console',
       },
