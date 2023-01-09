@@ -35,9 +35,9 @@ dapui.setup({
     {
       elements = {
         -- { id = 'scopes', size = 0.25 },
-        'scopes',
-        'breakpoints',
         'stacks',
+        'breakpoints',
+        'scopes',
         -- 'watches',
       },
       size = 40,
