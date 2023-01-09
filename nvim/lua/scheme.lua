@@ -65,6 +65,7 @@ vim.cmd([[
     hi link typescriptImport Bold
     hi link typescriptExport Bold
     hi link typescriptBoolean Bold
+    hi Statement gui=bold guifg=#9ece6a
 
     " hi PreProc gui=bold
     " hi Special gui=bold

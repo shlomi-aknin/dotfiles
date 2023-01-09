@@ -3,10 +3,12 @@ if not status_ok then
   return
 end
 
+require('dap.ext.vscode').load_launchjs('.vscoe/launch.json')
+
 dap.adapters.node2 = {
   type = 'executable',
-  command = 'node',
-  args = {os.getenv('HOME') .. '/programs/vscode-node-debug2/out/src/nodeDebug.js'},
+  command = '/usr/local/bin/node',
+  args = {vim.fn.stdpath('data')..'/mason/packages/node-debug2-adapter/out/src/nodeDebug.js'},
 }
 
 dap.configurations.javascript = {
@@ -19,6 +21,19 @@ dap.configurations.javascript = {
 }
 
 dap.configurations.typescript = {
+  {
+    name = 'Launch',
+    type = 'node2',
+    request = 'launch',
+    args = { "--require", "ts-node/register", "-r", "tsconfig-paths/register" },
+    -- program = "${file}",
+    sourceMaps = true,
+    protocol = 'inspector',
+    skipFiles = {'<node_internals>/**/*.js'},
+    console = 'integratedTerminal',
+    disableOptimisticBPs = true,
+    outFiles = { "${workspaceFolder}/**/*.js" },
+  },
   {
     name = 'Attach to process',
     type = 'node2',
