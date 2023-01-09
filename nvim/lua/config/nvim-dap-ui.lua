@@ -23,7 +23,7 @@ end
 dapui.setup({
   icons = { expanded = '▾', collapsed = '▸' },
   mappings = {
-    expand = { '<CR>', 'x' },
+    expand = { '<CR>', 'x', 'za' },
     open = { 'o' },
     remove = 'd',
     edit = 'e',
