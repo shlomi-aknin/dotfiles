@@ -17,7 +17,7 @@ local tsconfig = {
     function()
     return {
         exe = 'eslint_d',
-        args = {'--stdin-filename', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), '--stdin' , '--fix-to-stdout'},
+        args = {'--stdin', '--fix-to-stdout', '--stdin-filename', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
         stdin = true
     }
     end
