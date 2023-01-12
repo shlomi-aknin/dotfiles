@@ -17,26 +17,15 @@ require("tokyonight").setup({
   hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
   dim_inactive = false, -- dims inactive windows
   lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
-
-  --- You can override specific color groups to use other groups or a hex color
-  --- function will be called with a ColorScheme table
-  ---@param colors ColorScheme
-  on_colors = function(colors) end,
-
-  --- You can override specific highlights to use other groups or a hex color
-  --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
-  ---@param colors ColorScheme
-  on_highlights = function(highlights, colors) end,
 })
 
 vim.cmd([[
-    set guifont=SauceCodePro\ Nerd\ Font:h9
+    " set guifont=SauceCodePro\ Nerd\ Font:h9
     silent! colorscheme tokyonight-night
     hi Bold gui=bold
     hi BreakPoint guifg=#ffa0a0
-    hi CursorLineNr guifg=#ffff00
-    hi LineNr guifg=#34a1eb
+    hi CursorLineNr guifg=#ffff00 gui=bold
+    hi LineNr guifg=#34a1eb gui=bold
     hi HopNextKey guifg=#50fa7b
     hi HopNextKey1 guifg=#50fa7b
     hi HopNextKey2 guifg=#50fa7b
@@ -50,7 +39,6 @@ vim.cmd([[
     hi Folded guibg=#34a1eb guifg=#000000
     hi MatchParen guibg=#34a1eb guifg=#ffffff
     hi Search guibg=#34a1eb guifg=#000000 gui=bold
-    hi String gui=bold
     hi IncSearch guibg=#9ece6a guifg=#000000 gui=bold
     hi TelescopeBorder guifg=#34a1eb
     hi TelescopeNormal guibg=#000000
@@ -65,21 +53,15 @@ vim.cmd([[
     hi link typescriptImport Bold
     hi link typescriptExport Bold
     hi link typescriptBoolean Bold
-    hi Statement gui=bold guifg=#9ece6a
-
-    " hi PreProc gui=bold
-    " hi Special gui=bold
-    " hi Statement gui=bold
-    " hi Type gui=bold
-    " hi link typescriptStringLiteralType typescriptString
-    " hi link typescriptStringProperty typescriptString
-    " hi link typescriptTemplate typescriptString
-    " hi typescriptAsyncFuncKeyword guifg=#ffa0a0 gui=bold
-    " hi typescriptBlock gui=bold
-    " hi typescriptFuncCallArg gui=bold
-    " hi typescriptObjectLiteral gui=bold
-    " hi typescriptString gui=bold guifg=#ff4499
   ]])
+
+vim.api.nvim_set_hl(0, "@property", { fg = "#9ece6a", bold = true })
+vim.api.nvim_set_hl(0, "@include", { bold = true })
+vim.api.nvim_set_hl(0, "@repeat", { bold = true })
+vim.api.nvim_set_hl(0, "@conditional", { bold = true })
+vim.api.nvim_set_hl(0, "@number", { fg= "#50fa7b", bold = true })
+vim.api.nvim_set_hl(0, "@keyword.operator", { fg= "#50fa7b", bold = true })
+vim.api.nvim_set_hl(0, "@string", { fg= "#ffff0f", bold = true })
 
 -- vim.cmd([[
 --   silent! colorscheme dracula

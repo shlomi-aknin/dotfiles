@@ -87,6 +87,7 @@ packer.startup(function()
   use {'nvim-telescope/telescope-file-browser.nvim'}
   use {'nvim-treesitter/nvim-treesitter'}
   use {'nvim-treesitter/nvim-treesitter-context'}
+  use {'nvim-treesitter/playground'}
   use {'onsails/lspkind-nvim'}
   use {'peterrincker/vim-searchlight'}
   use {'petertriho/nvim-scrollbar'}
