@@ -45,6 +45,7 @@ vim.cmd([[
     hi TelescopeNormal guibg=#000000
     hi TelescopeBorder guibg=#000000
     hi TelescopeMatching guibg=#9ece6a guifg=#000000
+    hi NvimTreeNormal gui=bold
     hi NvimTreeRootFolder guibg=#9ece6a guifg=#000000 gui=bold
     hi NvimTreeOpenedFile guibg=#000000 guifg=#9ece6a gui=bold
     hi NvimTreeNormal guibg=#000000
