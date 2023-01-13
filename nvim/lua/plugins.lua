@@ -90,7 +90,7 @@ packer.startup(function()
   use {'nvim-treesitter/playground'}
   use {'onsails/lspkind-nvim'}
   use {'peterrincker/vim-searchlight'}
-  use {'petertriho/nvim-scrollbar'}
+  -- use {'petertriho/nvim-scrollbar'}
   use {'phaazon/hop.nvim'}
   -- use {'pocco81/autosave.nvim'}
   use {'pwntester/octo.nvim'}
