@@ -60,11 +60,13 @@ vim.cmd([[
 
 vim.api.nvim_set_hl(0, "@property", { fg = "#9ece6a", bold = true })
 vim.api.nvim_set_hl(0, "@include", { bold = true })
+vim.api.nvim_set_hl(0, "@type", { bold = true })
 vim.api.nvim_set_hl(0, "@boolean", { bold = true })
 vim.api.nvim_set_hl(0, "@repeat", { bold = true })
 vim.api.nvim_set_hl(0, "@conditional", { bold = true })
 vim.api.nvim_set_hl(0, "@number", { fg= "#50fa7b", bold = true })
 vim.api.nvim_set_hl(0, "@keyword.operator", { fg = "#ffa0a0", bold = true })
+vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#50fa7b", bold = true })
 vim.api.nvim_set_hl(0, "@string", { fg = "#ffff00", bold = true })
 
 -- vim.cmd([[
