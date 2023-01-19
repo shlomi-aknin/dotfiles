@@ -8,4 +8,4 @@ COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
 [ "$SELECTED" = "" ] && exit 0
 cd $SELECTED
-alacritty -e nvim
+alacritty -e nvim -u ~/.config/nvim/shlomo.lua

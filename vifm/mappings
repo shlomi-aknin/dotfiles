@@ -28,10 +28,10 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
-nnoremap f :!nvim %f<cr>
-nnoremap u :!nvr %f<cr>
-vnoremap u :!nvr %f<cr>
-nnoremap o :!alacritty -e nvim %d &<cr>:q<cr>
+nnoremap f :!nvim -u ~/.config/nvim/shlomo.lua %f<cr>
+nnoremap u :!nvr %f<cr>:q<cr>
+vnoremap u :!nvr %f<cr>:q<cr>
+nnoremap o :!alacritty -e nvim -u ~/.config/nvim/shlomo.lua %d &<cr>:q<cr>
 " nnoremap O :!alacritty -t "Neovim %c" --working-directory %c -e nvim<cr>
 nnoremap O :!alacritty --working-directory %c -e nvim &<cr>:q<cr>
 
