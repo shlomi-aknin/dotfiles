@@ -4,6 +4,7 @@ local map = function(mode, key, value, opts)
 	vim.api.nvim_set_keymap(mode, key, value, opts or { noremap = true, silent = true });
 end
 
+map('n', '<space>/', '<cmd>call VSCodeNotify("editor.action.commentLine")<cr>')
 map('n', '<space>e', '<cmd>call VSCodeNotify("workbench.explorer.fileView.focus")<cr>')
 map('n', '<space>f', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>')
 map('n', '<space>b', '<cmd>call VSCodeNotify("workbench.action.showAllEditors")<cr>')
@@ -33,7 +34,10 @@ map('n', 'si}', 'vi}p')
 map('n', 'sa}', 'va}p')
 map('n', 'si]', 'vi]p')
 map('n', 'sa]', 'va]p')
+map('n', 'gs', '<cmd>call VSCodeNotify("workbench.action.findInFiles", { "query": expand("<cword>")})<cr>')
+
 map('v', '>', '>gv')
 map('v', '<', '<gv')
+map('v', '<space>/', '<cmd>call VSCodeNotifyVisual("editor.action.commentLine", 1)<cr>')
 
 EOF
