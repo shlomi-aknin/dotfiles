@@ -367,10 +367,6 @@
       ]
     },
     {
-      "before": ["<space>", "o"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
       "before": ["<space>", "x"],
       "commands": [
         "workbench.action.closeAllEditors",
@@ -716,5 +712,25 @@
   "editor.indentSize": "tabSize",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "eslint.format.enable": true,
-  "workbench.activityBar.visible": false
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "vscode-neovim.highlightGroups.highlights": {
+
+    "Directory": "vim",
+    "IncSearch": {
+      "backgroundColor": "vim",
+      "borderColor": "vim"
+    },
+    "Search": {
+      "backgroundColor": "vim",
+      "borderColor": "vim"
+    },
+    "Visual": {
+      "backgroundColor": "theme.editor.selectionBackground"
+    },
+    "Conceal": "vim",
+    "Substitute": "vim"
+  },
+  "workbench.activityBar.visible": false,
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.vim"
 }
