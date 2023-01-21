@@ -1,4 +1,4 @@
-lua << EOF
+-- lua << EOF
 vim.o.clipboard = 'unnamedplus'
 local map = function(mode, key, value, opts)
 	vim.api.nvim_set_keymap(mode, key, value, opts or { noremap = true, silent = true });
@@ -40,4 +40,4 @@ map('v', '>', '>gv')
 map('v', '<', '<gv')
 map('v', '<space>/', '<cmd>call VSCodeNotifyVisual("editor.action.commentLine", 1)<cr>')
 
-EOF
+-- EOF

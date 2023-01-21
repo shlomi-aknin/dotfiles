@@ -1,6 +1,0 @@
-require('vimscript')
-require('settings')
-require('keys')
-require('plugins')
-require('config')
-require('scheme')
