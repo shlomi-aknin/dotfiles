@@ -4,9 +4,15 @@ local map = function(mode, key, value, opts)
 end
 
 vim.cmd([[
+	set incsearch hl
   hi HopNextKey guifg=#00dfff gui=bold
   hi HopNextKey1 guifg=#00dfff gui=bold
   hi HopNextKey2 guifg=#00dfff gui=bold
+
+  augroup highlight_yank
+      autocmd!
+      au TextYankPost * silent! lua vim.highlight.on_yank{ higroup='Search', timeout=450 }
+  augroup END
 ]])
 
 map('n', '<space>/', '<cmd>call VSCodeNotify("editor.action.commentLine")<cr>')
