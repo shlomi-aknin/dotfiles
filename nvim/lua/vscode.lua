@@ -4,9 +4,9 @@ local map = function(mode, key, value, opts)
 end
 
 vim.cmd([[
-  hi HopNextKey guifg=#50fa7b
-  hi HopNextKey1 guifg=#50fa7b
-  hi HopNextKey2 guifg=#50fa7b
+  hi HopNextKey guifg=#00dfff gui=bold
+  hi HopNextKey1 guifg=#00dfff gui=bold
+  hi HopNextKey2 guifg=#00dfff gui=bold
 ]])
 
 map('n', '<space>/', '<cmd>call VSCodeNotify("editor.action.commentLine")<cr>')
