@@ -1,4 +1,3 @@
--- lua << EOF
 vim.o.clipboard = 'unnamedplus'
 local map = function(mode, key, value, opts)
 	vim.api.nvim_set_keymap(mode, key, value, opts or { noremap = true, silent = true });
@@ -19,6 +18,7 @@ map('n', 'za', '<cmd>call VSCodeNotify("editor.toggleFold")<cr>')
 map('n', 'gpd', '<cmd>call VSCodeNotify("editor.action.revealDefinitionAside")<cr>')
 map('n', 'gr', '<cmd>call VSCodeNotify("references-view.findReferences")<cr>')
 map('n', 'gi', '<cmd>call VSCodeNotify("editor.action.goToImplementation")<cr>')
+map('n', "'",  '<cmd>call VSCodeNotify("findThenJump.initiate")<cr>')
 map('n', 'ss', 'Vp')
 map('n', 'siw', 'viwp')
 map('n', 'saw', 'vawp')
@@ -34,10 +34,12 @@ map('n', 'si}', 'vi}p')
 map('n', 'sa}', 'va}p')
 map('n', 'si]', 'vi]p')
 map('n', 'sa]', 'va]p')
+map('n', 'si"', 'vi"p')
+map('n', "si'", "vi'p")
+map('n', 'sa"', 'va"p')
+map('n', "sa'", "va'p")
 map('n', 'gs', '<cmd>call VSCodeNotify("workbench.action.findInFiles", { "query": expand("<cword>")})<cr>')
 
 map('v', '>', '>gv')
 map('v', '<', '<gv')
 map('v', '<space>/', '<cmd>call VSCodeNotifyVisual("editor.action.commentLine", 1)<cr>')
-
--- EOF
