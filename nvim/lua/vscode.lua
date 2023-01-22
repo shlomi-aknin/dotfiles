@@ -3,6 +3,12 @@ local map = function(mode, key, value, opts)
 	vim.api.nvim_set_keymap(mode, key, value, opts or { noremap = true, silent = true });
 end
 
+vim.cmd([[
+  hi HopNextKey guifg=#50fa7b
+  hi HopNextKey1 guifg=#50fa7b
+  hi HopNextKey2 guifg=#50fa7b
+]])
+
 map('n', '<space>/', '<cmd>call VSCodeNotify("editor.action.commentLine")<cr>')
 map('n', '<space>e', '<cmd>call VSCodeNotify("workbench.explorer.fileView.focus")<cr>')
 map('n', '<space>f', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>')
@@ -22,7 +28,7 @@ map('n', 'gpd', '<cmd>call VSCodeNotify("editor.action.revealDefinitionAside")<c
 map('n', 'ge', '<cmd>call VSCodeNotify("find-it-faster.findFiles")<cr>')
 map('n', 'gr', '<cmd>call VSCodeNotify("references-view.findReferences")<cr>')
 map('n', 'gi', '<cmd>call VSCodeNotify("editor.action.goToImplementation")<cr>')
-map('n', "'",  '<cmd>call VSCodeNotify("findThenJump.initiate")<cr>')
+vim.keymap.set('', "'", function() require('hop').hint_words() end, { remap = true })
 map('n', 'ss', 'Vp')
 map('n', 'siw', 'viwp')
 map('n', 'saw', 'vawp')
@@ -81,15 +87,12 @@ packer.init({
 
 packer.startup(function()
   use {'ur4ltz/surround.nvim'}
+  use {'phaazon/hop.nvim'}
 
   if packer_bootstrap then
     packer.sync()
   end
 end)
 
-local status_ok, surround = pcall(require, 'surround')
-if not status_ok then
-  return
-end
-
-surround.setup({ mappings_style = 'surround' })
+require('surround').setup({ mappings_style = 'surround' })
+require('hop').setup({ keys = 'asdfghjklqwertyuiop' })

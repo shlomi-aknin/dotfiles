@@ -38,7 +38,6 @@ code --install-extension steoates.autoimport
 code --install-extension svelte.svelte-vscode
 code --install-extension TabNine.tabnine-vscode
 code --install-extension TomRijndorp.find-it-faster
-code --install-extension tranhl.find-then-jump
 code --install-extension vincaslt.highlight-matching-tag
 code --install-extension vscodevim.vim
 code --install-extension xabikos.JavaScriptSnippets
