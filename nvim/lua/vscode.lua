@@ -10,6 +10,7 @@ map('n', '<space>b', '<cmd>call VSCodeNotify("workbench.action.showAllEditors")<
 map('n', '<space>ca', '<cmd>call VSCodeNotify("editor.action.sourceAction")<cr>')
 map('n', '<space>j', 'o<esc>')
 map('n', '<space>k', 'O<esc>')
+map('n', '<space>r', '<cmd>call VSCodeNotify("editor.action.rename")<cr>')
 map('n', '<space>s', '<cmd>call VSCodeNotify("workbench.action.files.saveFiles")<cr>')
 map('n', '<S-h>', '^')
 map('n', '<S-l>', 'g_')
