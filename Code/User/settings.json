@@ -715,15 +715,16 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "vscode-neovim.highlightGroups.highlights": {
 
+
     "Directory": "vim",
-    "IncSearch": {
-      "backgroundColor": "vim",
-      "borderColor": "vim"
-    },
-    "Search": {
-      "backgroundColor": "vim",
-      "borderColor": "vim"
-    },
+"IncSearch": {
+							"backgroundColor": "theme.editor.findMatchBackground",
+							"borderColor": "theme.editor.findMatchBorder"
+						},
+						"Search": {
+							"backgroundColor": "theme.editor.findMatchHighlightBackground",
+							"borderColor": "theme.editor.findMatchHighlightBorder"
+						},
     "Visual": {
       "backgroundColor": "theme.editor.selectionBackground"
     },
@@ -732,5 +733,5 @@
   },
   "workbench.activityBar.visible": false,
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.vim"
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.lua"
 }
