@@ -50,3 +50,45 @@ map('n', 'gs', '<cmd>call VSCodeNotify("workbench.action.findInFiles", { "query"
 map('v', '>', '>gv')
 map('v', '<', '<gv')
 map('v', '<space>/', '<cmd>call VSCodeNotifyVisual("editor.action.commentLine", 1)<cr>')
+
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local packer_bootstrap
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+  execute('packadd packer.nvim')
+end
+
+local status_ok, packer = pcall(require, 'packer')
+if not status_ok then
+  return
+end
+
+local use = packer.use
+
+-- Have packer use a popup window
+packer.init({
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'rounded' })
+    end,
+  },
+})
+
+packer.startup(function()
+  use {'ur4ltz/surround.nvim'}
+
+  if packer_bootstrap then
+    packer.sync()
+  end
+end)
+
+local status_ok, surround = pcall(require, 'surround')
+if not status_ok then
+  return
+end
+
+surround.setup({ mappings_style = 'surround' })
