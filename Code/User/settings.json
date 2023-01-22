@@ -731,7 +731,7 @@
     "Conceal": "vim",
     "Substitute": "vim"
   },
-  "workbench.activityBar.visible": false,
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.lua"
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.lua",
+  "workbench.activityBar.visible": false
 }

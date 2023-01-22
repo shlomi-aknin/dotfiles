@@ -373,5 +373,45 @@
   {
     "key": "ctrl+space",
     "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "-selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "-selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "hideCodeActionWidget",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "shift+escape",
+    "command": "-hideCodeActionWidget",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "-acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible"
   }
 ]
