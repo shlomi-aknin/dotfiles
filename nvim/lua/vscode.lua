@@ -94,6 +94,7 @@ packer.init({
 packer.startup(function()
   use {'ur4ltz/surround.nvim'}
   use {'phaazon/hop.nvim'}
+  use {'gbprod/cutlass.nvim'}
 
   if packer_bootstrap then
     packer.sync()
@@ -102,3 +103,4 @@ end)
 
 require('surround').setup({ mappings_style = 'surround' })
 require('hop').setup({ keys = 'asdfghjklqwertyuiop' })
+require('cutlass').setup({ cut_key = 'm' })
