@@ -20,6 +20,7 @@ map('n', '<space>e', '<cmd>call VSCodeNotify("workbench.explorer.fileView.focus"
 map('n', '<space>f', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>')
 map('n', '<space>b', '<cmd>call VSCodeNotify("workbench.action.showAllEditors")<cr>')
 map('n', '<space>ca', '<cmd>call VSCodeNotify("editor.action.sourceAction")<cr>')
+map('n', '<space>p', '<cmd>call VSCodeNotify("workbench.action.gotoSymbol")<cr>')
 map('n', '<space>j', 'o<esc>')
 map('n', '<space>k', 'O<esc>')
 map('n', '<space>r', '<cmd>call VSCodeNotify("editor.action.rename")<cr>')
