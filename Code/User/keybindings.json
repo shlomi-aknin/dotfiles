@@ -421,5 +421,49 @@
     "key": "ctrl+6",
     "command": "vscode-neovim.send",
     "args": "<C-^>"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "-vscode-neovim.ctrl-u",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'",
+    "args": "<C-u>zz"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-vscode-neovim.ctrl-d",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'",
+    "args": "<C-d>zz"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-vscode-neovim.ctrl-f",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'",
+    "args": "<C-f>zz"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-vscode-neovim.ctrl-b",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'",
+    "args": "<C-b>zz"
   }
 ]
