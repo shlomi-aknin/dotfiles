@@ -46,11 +46,13 @@
     "diffEditor.removedLineBackground": "#BC487390",
     "diffEditor.insertedLineBackground": "#50fa7b70",
     "editor.background": "#000000",
+    "editor.findMatchBackground": "#00BBF9",
+    "editor.findMatchHighlightBackground": "#00BBF985",
     "editor.foreground": "#00BBF9",
     "editor.hoverHighlightBackground": "#BC4873",
     "editor.lineHighlightBackground": "#2C0972",
     "editor.selectionBackground": "#2176ff",
-    "editor.selectionHighlightBackground": "#6272a4",
+    "editor.selectionHighlightBackground": "#00BBF9",
     "editor.selectionHighlightBorder": "#000000",
     "editorCursor.foreground": "#ffff00",
     "editorGutter.background": "#000000",
@@ -336,7 +338,6 @@
     {
       "before": ["<S-h>"],
       "after": ["^"]
-      // "after": ["i", "<space>", "<esc>"]
     },
     {
       "before": ["<space>", "t"],
@@ -345,14 +346,6 @@
         "workbench.action.terminal.focus"
       ]
     },
-    // {
-    //   "before": ["<space>", "e"],
-    //   "commands": [
-    //     "workbench.action.toggleSidebarVisibility",
-    //     "revealInExplorer",
-    //     "workbench.files.action.focusFilesExplorer"
-    //   ]
-    // },
     {
       "before": ["<space>", "g"],
       "commands": [
@@ -363,7 +356,6 @@
       "before": ["<space>", "f"],
       "commands": [
         "workbench.action.quickOpen"
-        // ":!alacritty -t 'FZFCODE' --class 'fzfcode' -e fzfsearchforcode &"
       ]
     },
     {
@@ -542,17 +534,11 @@
       "commands": ["editor.action.commentLine"]
     }
   ],
-  "vim.insertModeKeyBindings": [],
   "tabnine.experimentalAutoImports": true,
-  "php-cs-fixer.lastDownload": 1648650525211,
-  "sync.autoDownload": true,
-  "sync.forceUpload": true,
-  "sync.autoUpload": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vim.easymotion": true,
-  "sync.gist": "aee1a0ab4aad9271ec1043dad60b47bf",
   "editor.tokenColorCustomizations": {
     "[Dracula At Night]": {
       "textMateRules": [
@@ -631,10 +617,6 @@
   "svelte.enable-ts-plugin": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "workbench.editor.enablePreview": false,
-  // "[jsonc]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  "editor.cursorSurroundingLines": 999,
   "files.autoSave": "onFocusChange",
   "json.format.enable": false,
   "vim.searchHighlightTextColor": "#000000",
@@ -714,26 +696,29 @@
   "eslint.format.enable": true,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "vscode-neovim.highlightGroups.highlights": {
-
-
-    "Directory": "vim",
-"IncSearch": {
-							"backgroundColor": "theme.editor.findMatchBackground",
-							"borderColor": "theme.editor.findMatchBorder"
-						},
-						"Search": {
-							"backgroundColor": "theme.editor.findMatchHighlightBackground",
-							"borderColor": "theme.editor.findMatchHighlightBorder"
-						},
-    "Visual": {
-      "backgroundColor": "theme.editor.selectionBackground"
+      "Directory": "vim",
+      "IncSearch": {
+        "backgroundColor": "theme.editor.findMatchBackground",
+        "borderColor": "theme.editor.findMatchBorder",
+        "borderStyle": "solid",
+        "borderWidth": "1px"
+      },
+      "Search": {
+        "backgroundColor": "theme.editor.findMatchHighlightBackground",
+        "borderColor": "theme.editor.findMatchHighlightBorder",
+        "borderStyle": "solid",
+        "borderWidth": "1px"
+      },
+      "Visual": {
+        "backgroundColor": "theme.editor.selectionBackground"
+      },
+      "Conceal": "vim",
+      "Substitute": "vim"
     },
-    "Conceal": "vim",
-    "Substitute": "vim"
-  },
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.lua",
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": false,
-  "workbench.editor.showTabs": false
+  "workbench.editor.showTabs": false,
+  "editor.cursorSurroundingLines": 999
 }
