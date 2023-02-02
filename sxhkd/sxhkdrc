@@ -71,7 +71,7 @@ super + w : {h,j,k,l}
   bspc node -f {west,south,north,east}.local.window
 
 # close
-super + x
+super + shift + q
 	bspc node -c
 
 # vifm
