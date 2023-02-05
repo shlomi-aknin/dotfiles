@@ -309,10 +309,10 @@
     "command": "workbench.action.closeActiveEditor",
     "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode != 'Insert'"
   },
-  {
-    "key": "ctrl+x",
-    "command": "workbench.action.revertAndCloseActiveEditor"
-  },
+  // {
+  //   "key": "ctrl+x",
+  //   "command": "workbench.action.revertAndCloseActiveEditor"
+  // },
   {
     "key": "ctrl+t",
     "command": "workbench.action.files.newUntitledFile"
