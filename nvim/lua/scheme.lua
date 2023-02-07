@@ -77,7 +77,7 @@ vim.cmd([[
   hi ConflictMarkerTheirs guibg=#344f69
   hi ConflictMarkerEnd guibg=#2f628e
   hi ConflictMarkerCommonAncestorsHunk guibg=#754a81
-  hi CursorLine guibg=#00509d
+  hi CursorLine guibg=#00406d
   hi CursorLineNr guifg=#ffff00
   hi CursorWord gui=underline
   hi DraculaFg guifg=#ffffff
@@ -122,6 +122,7 @@ vim.cmd([[
   hi link TelescopeMultiSelection NormalSelected
   hi TelescopeSelection guibg=#34a1eb guifg=#000000
   hi TSVariable guifg=#ffff00
+  hi Visual guibg=#004687
   hi WinSeparator guibg=None guifg=#34a1eb
   hi javaScriptLineComment guifg=#34a1eb gui=italic
   hi link jsComment Comment
