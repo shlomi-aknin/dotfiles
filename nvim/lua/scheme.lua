@@ -57,7 +57,7 @@
 --     hi link typescriptBoolean Bold
 --   ]])
 
--- vim.api.nvim_set_hl(0, "@property", { fg = "#9ece6a", bold = true })
+-- vim.api.nvim_set_hl(0, "@property", { fg = "#ff79c6", bold = true })
 -- vim.api.nvim_set_hl(0, "@include", { bold = true })
 -- vim.api.nvim_set_hl(0, "@type", { bold = true })
 -- vim.api.nvim_set_hl(0, "@boolean", { bold = true })
@@ -92,7 +92,7 @@ vim.cmd([[
   hi HopNextKey guifg=#50fa7b
   hi HopNextKey1 guifg=#50fa7b
   hi HopNextKey2 guifg=#50fa7b
-  hi IncSearch guibg=#50fa7b guifg=#000000
+  hi IncSearch guifg=#50fa7b guibg=#000000
   hi IndentEven guibg=NONE
   hi IndentOdd guibg=#001f33
   hi LineNr guibg=#000000 guifg=#34a1eb
