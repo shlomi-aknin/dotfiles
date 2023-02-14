@@ -13,7 +13,6 @@ map('i',    '<A-l>',            '<esc>la')
 map('i',    '<A-x>',            '<esc>xi')
 map('i',    '<C-c>',            '<esc>')
 
-map('n',    "'",                ':HopWord<cr>')
 map('n',    ',',                '<cmd>set fdm=manual<cr>0f{zf%')
 
 -- map('n',    '<C-A-g>',          '') -- This mapping is defined on vimscript.lua just here to prevent override
@@ -28,7 +27,6 @@ map('n',    '<A-j>',            ':MoveLine(1)<cr>')
 map('n',    '<A-k>',            ':MoveLine(-1)<cr>')
 map('n',    '<A-l>',            'a<space><esc>')
 map('n',    '<C-A-s>',          ':Telescope live_grep<cr>')
-map('n',    '<C-c>',            ':bd<cr>')
 map('n',    '<C-h>',            ':bp<cr>')
 map('n',    '<C-j>',            'yyp')
 map('n',    '<C-k>',            'yyP')
@@ -65,6 +63,7 @@ map('n',    '<leader>f',        ':Telescope find_files find_command=rg,--ignore,
 map('n',    '<leader>g',        ':lua LazygitToggle()<cr>')
 map('n',    '<leader>hc',        ':lua require("memento").clear_history()<cr>')
 map('n',    '<leader>hh',        ':lua require("memento").toggle()<cr>')
+map('n',    '<leader><leader>',  ':HopWord<cr>')
 map('n',    '<leader>j',        'o<esc>')
 map('n',    '<leader>k',        'O<esc>')
 map('n',    '<leader>ll',       ':LLToggle<cr>')
