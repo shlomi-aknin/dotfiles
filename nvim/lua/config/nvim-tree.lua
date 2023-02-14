@@ -8,7 +8,6 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local winopts = require('nvim-tree.view').View.winopts
 
 nvim_tree.setup({
-  open_on_setup       = false,
   ignore_ft_on_setup  = {'.git', 'node_modules', '.cache'},
   hijack_cursor       = false,
   hijack_unnamed_buffer_when_opening = false,
