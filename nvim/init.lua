@@ -8,5 +8,5 @@ else
   require('keys')
   require('plugins')
   require('config')
-  require('scheme')
+  require('scheme/tokyo-night')
 end
