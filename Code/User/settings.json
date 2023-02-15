@@ -274,6 +274,11 @@
       "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode != 'Normal'"
     },
     {
+      "before": ["<space>", "q", "q"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+    },
+    {
       "before": ["'"],
       "after": ["\\", "\\", "\\", "b", "d", "w"]
     },
@@ -718,7 +723,9 @@
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.lua",
   "workbench.statusBar.visible": false,
-  "workbench.editor.showTabs": false,
   "editor.cursorSurroundingLines": 999,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false
 }

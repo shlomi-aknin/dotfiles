@@ -355,10 +355,6 @@
     "when": "inQuickOpen"
   },
   {
-    "key": "alt+p",
-    "command": "workbench.actions.view.toggleProblems"
-  },
-  {
     "key": "alt+o",
     "command": "workbench.action.output.toggleOutput",
     "when": "workbench.panel.output.active"
