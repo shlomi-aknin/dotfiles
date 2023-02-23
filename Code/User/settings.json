@@ -4,7 +4,7 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorStyle": "line-thin",
-  "editor.fontFamily": "'FiraCode Nerd Font Mono'",
+  "editor.fontFamily": "'SauceCodePro Nerd Font'",
   "editor.fontWeight": 600,
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
@@ -78,9 +78,12 @@
     "list.activeSelectionBackground": "#00509d",
     "list.focusBackground": "#00509d",
     "list.highlightForeground": "#ffff00",
-    "quickInput.background": "#0F4C75",
+    // "quickInput.background": "#0F4C75",
+    "quickInput.foreground": "#ffffff",
     "quickInputList.focusBackground": "#00BBF9",
     "quickInputList.focusForeground": "#000000",
+    "sideBar.foreground": "#ffffff",
+    "list.focusForeground": "#ffffff",
     "statusBar.background": "#007ACC",
     "statusBar.debuggingBackground": "#007ACC",
     "statusBar.debuggingForeground": "#ffffff",
@@ -102,6 +105,10 @@
   "vim.statusBarColors.visualblock": ["#FCAB10", "#000000"],
   "vim.statusBarColors.visualline": ["#FCAB10", "#000000"],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.revealDefinitionAside"]
+    },
     {
       "before": ["g", "k"],
       "commands": ["editor.action.peekTypeDefinition"]
@@ -279,7 +286,7 @@
       "when": "editorTextFocus && !editorReadonly && vim.active && !inDebugRepl && vim.mode == 'Normal'"
     },
     {
-      "before": ["'"],
+      "before": ["<space>", "<space>"],
       "after": ["\\", "\\", "\\", "b", "d", "w"]
     },
     {
@@ -683,7 +690,7 @@
   "[xml]": {
     "editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
   },
-  "workbench.colorTheme": "Dracula At Night",
+  "workbench.colorTheme": "Tokyo Night",
   "editor.suggest.preview": true,
   "editor.quickSuggestionsDelay": 1,
   "editor.snippetSuggestions": "top",
@@ -727,5 +734,6 @@
   "workbench.activityBar.visible": false,
   "workbench.editor.showTabs": false,
   "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": false
+  "editor.renderControlCharacters": false,
+  "editor.fontSize": 16
 }

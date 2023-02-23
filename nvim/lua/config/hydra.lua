@@ -63,7 +63,8 @@ hydra({
       { '<C-c>', pcmd('close', 'E444'), { desc = false } },
       { '<C-q>', pcmd('close', 'E444'), { desc = false } },
 
-      { '<Esc>', nil,  { exit = true, desc = false }}
+      { '<Esc>', nil,  { exit = true, desc = false }},
+      { '<space>', nil,  { exit = true, desc = false }},
    }
 })
 
@@ -94,5 +95,6 @@ hydra({
     { 'r', dap.repl.open, { exit = true, desc = 'open repl' } },
     { 'q', nil, { exit = true, nowait = true, desc = 'exit' } },
     { '<esc>', nil, { exit = true, nowait = true, desc = 'exit' } },
+    { '<space>', nil, { exit = true, nowait = true, desc = 'exit' } },
   }
 })

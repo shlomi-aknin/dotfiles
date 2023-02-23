@@ -33,7 +33,7 @@ vim.cmd([[
     silent! colorscheme tokyonight-night
     hi Bold gui=bold
     hi BreakPoint guifg=#ffa0a0
-    hi CursorLine guibg=#00509d
+    " hi CursorLine guibg=#00509d
     hi CursorLineNr guifg=#ffff00 gui=bold
     hi LineNr guifg=#34a1eb gui=bold
     hi HopNextKey guifg=#50fa7b
