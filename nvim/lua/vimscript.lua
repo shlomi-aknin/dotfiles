@@ -22,6 +22,7 @@ vim.api.nvim_exec([[
   autocmd CursorMoved * echo
   au! BufNewFile,BufRead *.svelte set ft=svelte
   autocmd FileType dap-float nnoremap <buffer> za <cmd>lua require('dap.ui').trigger_actions({ mode = 'first' })<cr><cmd>set number relativenumber cursorline<cr>
+  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 
   augroup highlight_yank
       autocmd!
