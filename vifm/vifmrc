@@ -207,6 +207,7 @@ fileviewer <image/*>
    \ %pc
    \ vifmimg clear
 
+filextype *.xml google-chrome %c
 " Pdf
 filextype *.csv csvlens %c
 " filextype *.csv csv2html %c > "/tmp/%c.html" && google-chrome "/tmp/%c.html"
