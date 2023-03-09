@@ -729,7 +729,6 @@
     },
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.linux": "/home/shlomo/.config/nvim/init.lua",
-  "workbench.statusBar.visible": false,
   "editor.cursorSurroundingLines": 999,
   "workbench.activityBar.visible": false,
   "workbench.editor.showTabs": false,
