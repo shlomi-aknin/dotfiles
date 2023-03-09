@@ -15,6 +15,8 @@ vim.cmd([[
   augroup END
 ]])
 
+map('n',    '<A-j>',            ':MoveLine(1)<cr>')
+map('n',    '<A-k>',            ':MoveLine(-1)<cr>')
 map('n', '<space>/', '<cmd>call VSCodeNotify("editor.action.commentLine")<cr>')
 map('n', '<space>e', '<cmd>call VSCodeNotify("workbench.explorer.fileView.focus")<cr>')
 map('n', '<space>f', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>')

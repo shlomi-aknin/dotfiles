@@ -46,6 +46,7 @@ packer.startup(function()
   use {'fedepujol/move.nvim'}
   use {'folke/lsp-colors.nvim'}
   use {'folke/trouble.nvim'}
+  use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
   use {'hrsh7th/cmp-buffer'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}

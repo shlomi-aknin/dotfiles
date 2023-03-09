@@ -5,7 +5,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorStyle": "line-thin",
   "editor.fontFamily": "'SauceCodePro Nerd Font'",
-  "editor.fontWeight": 600,
+  "editor.fontWeight": 700,
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
@@ -31,7 +31,7 @@
   "vim.searchHighlightColor": "#50fa7b",
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "workbench.list.smoothScrolling": true,
   "workbench.colorCustomizations": {
     "badge.background": "#00BBF9",
@@ -50,7 +50,7 @@
     "editor.findMatchHighlightBackground": "#00BBF985",
     "editor.foreground": "#00BBF9",
     "editor.hoverHighlightBackground": "#BC4873",
-    "editor.lineHighlightBackground": "#2C0972",
+    // "editor.lineHighlightBackground": "#2C0972",
     "editor.selectionBackground": "#2176ff",
     "editor.selectionHighlightBackground": "#00BBF9",
     "editor.selectionHighlightBorder": "#000000",
@@ -735,5 +735,7 @@
   "workbench.editor.showTabs": false,
   "editor.renderWhitespace": "none",
   "editor.renderControlCharacters": false,
-  "editor.fontSize": 16
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
 }

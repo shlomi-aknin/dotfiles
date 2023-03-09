@@ -21,19 +21,23 @@ dap.configurations.javascript = {
 }
 
 dap.configurations.typescript = {
-  {
-    name = 'Launch',
-    type = 'node2',
-    request = 'launch',
-    args = { "--require", "ts-node/register", "-r", "tsconfig-paths/register" },
-    -- program = "${file}",
-    sourceMaps = true,
-    protocol = 'inspector',
-    skipFiles = {'<node_internals>/**/*.js'},
-    console = 'integratedTerminal',
-    disableOptimisticBPs = true,
-    outFiles = { "${workspaceFolder}/**/*.js" },
-  },
+  -- {
+  --   name = 'Process Worker Job',
+  --   type = 'node2',
+  --   command = 'node',
+  --   args = { "--inspect-brk", "--require", "ts-node/register", "-r", "tsconfig-paths/register"  },
+  --   request = 'launch',
+  --   -- runtimeArgs = { "--require", "ts-node/register", "-r", "tsconfig-paths/register" },
+  --   program = "/home/shlomo/workspace/cymbio-api-3/scripts/core/processWorkerJob.ts",
+  --   -- runtimeExecutable = "node",
+  --   cwd = "/home/shlomo/workspace/cymbio-api-3/scripts/core/",
+  --   sourceMaps = true,
+  --   protocol = 'inspector',
+  --   skipFiles = {'<node_internals>/**/*.js'},
+  --   console = 'integratedTerminal',
+  --   -- disableOptimisticBPs = true,
+  --   outFiles = { "${workspaceFolder}/**/*.js" },
+  -- },
   {
     name = 'Attach to process',
     type = 'node2',
@@ -43,6 +47,7 @@ dap.configurations.typescript = {
   -- {
   --   name = 'Launch',
   --   type = 'node2',
+  --   args = { "--inspect-brk", "--require", "ts-node/register", "-r", "tsconfig-paths/register"  },
   --   request = 'launch',
   --   program = '${file}',
   --   cwd = vim.fn.getcwd(),
@@ -50,6 +55,7 @@ dap.configurations.typescript = {
   --   protocol = 'inspector',
   --   console = 'integratedTerminal',
   --   port = 9229,
+  --   outFiles = { "${workspaceFolder}/**/*.js" },
   -- },
 }
 
