@@ -135,7 +135,7 @@ nnoremap zo :sync<CR><Tab>
 nnoremap zp :!opendirindots %d<CR>
 
 nnoremap . za
-nnoremap T :!lazygit %d<CR>
+nnoremap T :!lazygit<CR>
 nnoremap W :!feh --bg-scale %f<CR>:!cp %f /usr/share/slim/themes/default/background.jpg<CR>
 nnoremap * :!chmod +x %f<CR>
 nnoremap F :!touch<space>
