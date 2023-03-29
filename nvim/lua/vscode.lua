@@ -36,6 +36,7 @@ map('n', '<C-j>', '<cmd>call VSCodeNotify("editor.action.copyLinesDownAction")<c
 map('n', '<C-k>', '<cmd>call VSCodeNotify("editor.action.copyLinesUpAction")<cr>')
 map('n', 'za', '<cmd>call VSCodeNotify("editor.toggleFold")<cr>')
 map('n', 'gpd', '<cmd>call VSCodeNotify("editor.action.revealDefinitionAside")<cr>')
+map('n', 'gjd', '<cmd>call VSCodeNotify("extension.debugJest")<cr>')
 map('n', 'gjf', '<cmd>call VSCodeNotify("extension.runJestFile")<cr>')
 map('n', 'ge', '<cmd>call VSCodeNotify("find-it-faster.findFiles")<cr>')
 map('n', 'gr', '<cmd>call VSCodeNotify("references-view.findReferences")<cr>')
