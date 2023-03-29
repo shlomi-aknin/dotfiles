@@ -103,7 +103,8 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["g", "p", "d"],
-      "commands": ["editor.action.revealDefinitionAside"]
+      "commands": ["editor.action.revealDefinitionAside"],
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
       "before": ["g", "k"],
@@ -227,11 +228,6 @@
       "before": ["g", "r"],
       "commands": ["references-view.findReferences"],
       "when": "editorHasReferenceProvider"
-    },
-    {
-      "before": ["g", "p", "d"],
-      "commands": ["editor.action.showDefinitionPreviewHover"],
-      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
       "before": ["g", "p", "r"],
