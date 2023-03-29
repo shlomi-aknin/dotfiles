@@ -80,11 +80,11 @@
     "quickInputList.focusForeground": "#000000",
     "sideBar.foreground": "#ffffff",
     "list.focusForeground": "#ffffff",
-    "statusBar.background": "#007ACC",
-    "statusBar.debuggingBackground": "#007ACC",
-    "statusBar.debuggingForeground": "#ffffff",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.noFolderBackground": "#007ACC",
+    "statusBar.background": "#FCAB10",
+    "statusBar.debuggingBackground": "#FCAB10",
+    "statusBar.debuggingForeground": "#000000",
+    "statusBar.foreground": "#000000",
+    "statusBar.noFolderBackground": "#FCAB10",
     "tab.activeBackground": "#00BBF9",
     "tab.activeForeground": "#000000",
     "tab.inactiveForeground": "#ffffff",
@@ -477,7 +477,7 @@
     },
     {
       "before": ["<space>", "c", "a"],
-      "commands": ["editor.action.autoFix"],
+      "commands": ["editor.action.sourceAction"],
       "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
     },
     {
