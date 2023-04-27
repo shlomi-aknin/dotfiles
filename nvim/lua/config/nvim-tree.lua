@@ -8,8 +8,10 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local winopts = require('nvim-tree.view').View.winopts
 
 nvim_tree.setup({
-  ignore_ft_on_setup  = {'.git', 'node_modules', '.cache'},
-  hijack_cursor       = false,
+  filters = {
+    dotfiles = true,
+  },
+  hijack_cursor = false,
   hijack_unnamed_buffer_when_opening = false,
   update_focused_file = { enable = true },
   update_cwd = false,
