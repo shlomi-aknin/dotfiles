@@ -44,6 +44,7 @@ dap.configurations.typescript = {
     type = 'node2',
     request = 'attach',
     processId = require'dap.utils'.pick_process,
+    skipFiles = {'<node_internals>/**', 'node_modules/**'},
   },
   -- {
   --   name = 'Launch',
