@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 local config = {
-  disable = {},
+  ft_blocklist = {},
   patterns = {
     [[%s/\s\+$//e]],
     [[%s/\($\n\s*\)\+\%$//]],

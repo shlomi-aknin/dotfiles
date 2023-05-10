@@ -99,7 +99,7 @@ packer.startup(function()
   use {'ray-x/lsp_signature.nvim'}
   use {'rcarriga/nvim-dap-ui'}
   use {'rhysd/conflict-marker.vim'}
-  use {'rmagatti/auto-session'}
+  -- use {'rmagatti/auto-session'}
   use {'rmagatti/goto-preview'}
   use {'sindrets/diffview.nvim'}
   -- use {'spywhere/detect-language.nvim'}
