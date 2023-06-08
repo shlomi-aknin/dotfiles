@@ -76,7 +76,7 @@ super + shift + q
 
 # vifm
 super + z
-  alacritty -t "vifm" -e vifmrun ~/workspace/cymbio-api-3
+  alacritty -t "vifm" -e vifmrun ~/workspace/cymbio-api-3 ~/Downloads
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -117,6 +117,9 @@ super + shift + d : {x,c,h}
 # project select for vs code
 super + shift + c
   projectselectorcode
+
+super + shift + f
+  alacritty -t "projectselectorcode" -e fzfsearchforcode
 
 # project select for lazygit
 super + shift + g
