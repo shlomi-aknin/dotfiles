@@ -241,11 +241,6 @@
     "when": "editorFocus && vim.active && vim.mode == 'Insert'"
   },
   {
-    "key": "alt+c",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode != 'Insert'"
-  },
-  {
     "key": "ctrl+c",
     "command": "workbench.action.closeQuickOpen",
     "when": "inQuickOpen"
@@ -372,6 +367,11 @@
   {
     "key": "ctrl+space",
     "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "key": "ctrl+k",
