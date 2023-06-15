@@ -16,6 +16,10 @@
     }
   },
   {
+    "key": "alt+c",
+    "command": "workbench.action.closeSidebar",
+  },
+  {
     "key": "alt+l",
     "command": "-toggleFindInSelection",
     "when": "editorFocus"
@@ -367,11 +371,6 @@
   {
     "key": "ctrl+space",
     "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "space e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "filesExplorerFocus && !inputFocus"
   },
   {
     "key": "ctrl+k",

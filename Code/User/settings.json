@@ -463,9 +463,9 @@
       "before": ["<space>", "e"],
       "commands": [
         "workbench.action.toggleSidebarVisibility",
-        "workbench.files.action.focusFilesExplorer",
+        "workbench.view.explorer",
         "revealInExplorer"
-      ]
+      ],
     },
     {
       "before": ["<space>", "/"],
