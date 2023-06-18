@@ -1,4 +1,4 @@
-mark b /usr/local/bin/
+mark b ~/.local/bin/
 mark c ~/.config
 mark d ~/Downloads
 mark h ~/
