@@ -100,8 +100,9 @@ font:
     # family: "MesloLGS NF"
     # family: "Fira Code"
     # family: "FiraCode Nerd Font Mono"
+    family: "FiraCode Nerd Font"
     # family: "JetBrainsMono NFM"
-    family: "SauceCodePro Nerd Font"
+    # family: "SauceCodePro Nerd Font"
     # family: "FiraCode Nerd Font"
 
     # The `style` can be specified to pick a specific face.
@@ -113,7 +114,7 @@ font:
   #
   # If the bold family is not specified, it will fall back to the
   # value specified for the normal font.
-    family: "SauceCodePro Nerd Font"
+    family: "FiraCode Nerd Font"
 
   # The `style` can be specified to pick a specific face.
     style: Bold
@@ -141,7 +142,7 @@ font:
   #style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -196,7 +197,7 @@ colors:
     focused_match:
       foreground: '#44475a'
       background: '#ffb86c'
-    bar:
+    foot_bar:
       background: '#282a36'
       foreground: '#f8f8f2'
   hints:

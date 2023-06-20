@@ -2,7 +2,7 @@ mark b ~/.local/bin/
 mark c ~/.config
 mark d ~/Downloads
 mark h ~/
-mark p ~/programs
+mark p ~/Programs
 mark r /
-mark t ~/dotfiles
-mark w ~/workspace
+mark t ~/Dotfiles
+mark w ~/Workspace
