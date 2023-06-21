@@ -545,5 +545,8 @@
   "files.autoSave": "onFocusChange",
   "jestrunner.runOptions": [
     "--coverage=false"
-  ]
+  ],
+  "editor.fontWeight": "600",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
 }
