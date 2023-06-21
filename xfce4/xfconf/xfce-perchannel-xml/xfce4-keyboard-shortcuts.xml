@@ -80,6 +80,11 @@
       <property name="&lt;Super&gt;o" type="string" value="alacritty -e /home/shlomo/.local/bin/htop"/>
       <property name="&lt;Super&gt;b" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Super&gt;a" type="string" value="xfce4-appfinder"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;F1" type="string" value="xfce4-session-logout --reboot"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;AudioLowerVolume" type="string" value="xfce4-session-logout --halt"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;c" type="string" value="alacritty -e /home/shlomo/.local/bin/projectselectorcode"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;g" type="string" value="alacritty -e /home/shlomo/.local/bin/lazygitselector"/>
+      <property name="&lt;Super&gt;space" type="string" value="rofi -show windowcd"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -225,6 +230,7 @@
       <property name="&lt;Alt&gt;Delete" type="string" value="del_active_workspace_key"/>
       <property name="&lt;Alt&gt;Insert" type="string" value="add_workspace_key"/>
       <property name="&lt;Super&gt;m" type="string" value="maximize_window_key"/>
+      <property name="&lt;Super&gt;j" type="string" value="switch_application_key"/>
     </property>
   </property>
   <property name="providers" type="array">

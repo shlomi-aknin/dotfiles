@@ -542,5 +542,8 @@
         "commands": ["editor.action.commentLine"]
       }
   ],
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "jestrunner.runOptions": [
+    "--coverage=false"
+  ]
 }

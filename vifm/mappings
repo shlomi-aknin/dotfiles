@@ -141,7 +141,7 @@ nnoremap * :!chmod +x %f<CR>
 nnoremap F :!touch<space>
 nnoremap D :mkdir<space>
 nnoremap gc :!git clone<space>
-nnoremap cd :cd ~/.config ~/dotfiles<cr>
+nnoremap cd :cd ~/.config ~/Dotfiles<cr>
 nnoremap ca :!copytodots %f<cr>
 vnoremap ca :!copytodots %f<cr>
 nnoremap > :copy<cr>
