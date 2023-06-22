@@ -81,10 +81,10 @@
       <property name="&lt;Super&gt;b" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Super&gt;a" type="string" value="xfce4-appfinder"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;F1" type="string" value="xfce4-session-logout --reboot"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;AudioLowerVolume" type="string" value="xfce4-session-logout --halt"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;c" type="string" value="alacritty -e /home/shlomo/.local/bin/projectselectorcode"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;g" type="string" value="alacritty -e /home/shlomo/.local/bin/lazygitselector"/>
       <property name="&lt;Super&gt;space" type="string" value="rofi -show windowcd"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;g" type="string" value="/home/shlomo/.local/bin/lazygitselector"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;F2" type="string" value="xfce4-session-logout --halt"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -161,7 +161,6 @@
       <property name="&lt;Super&gt;d" type="empty"/>
     </property>
     <property name="custom" type="empty">
-      <property name="&lt;Super&gt;KP_7" type="string" value="tile_up_left_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Right" type="string" value="right_workspace_key"/>
       <property name="&lt;Alt&gt;F12" type="string" value="above_key"/>
       <property name="&lt;Alt&gt;F8" type="string" value="stick_window_key"/>
@@ -170,7 +169,6 @@
       <property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>
       <property name="Right" type="string" value="right_key"/>
       <property name="Left" type="string" value="left_key"/>
-      <property name="&lt;Super&gt;KP_9" type="string" value="tile_up_right_key"/>
       <property name="&lt;Alt&gt;F9" type="string" value="hide_window_key"/>
       <property name="&lt;Primary&gt;F10" type="string" value="workspace_10_key"/>
       <property name="Up" type="string" value="up_key"/>
@@ -180,27 +178,17 @@
       <property name="&lt;Super&gt;KP_Next" type="string" value="tile_down_right_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Down" type="string" value="down_workspace_key"/>
       <property name="&lt;Primary&gt;F12" type="string" value="workspace_12_key"/>
-      <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
       <property name="&lt;Super&gt;KP_1" type="string" value="tile_down_left_key"/>
       <property name="Escape" type="string" value="cancel_key"/>
-      <property name="&lt;Super&gt;KP_Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;d" type="string" value="show_desktop_key"/>
-      <property name="&lt;Super&gt;KP_Page_Up" type="string" value="tile_up_right_key"/>
-      <property name="&lt;Super&gt;KP_Down" type="string" value="tile_up_key"/>
-      <property name="&lt;Super&gt;KP_3" type="string" value="tile_down_right_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_key"/>
-      <property name="&lt;Super&gt;Up" type="string" value="tile_up_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Up" type="string" value="up_workspace_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
-      <property name="&lt;Super&gt;Down" type="string" value="tile_down_key"/>
       <property name="&lt;Super&gt;KP_Right" type="string" value="tile_right_key"/>
       <property name="&lt;Alt&gt;F5" type="string" value="maximize_horiz_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Right" type="string" value="move_window_right_key"/>
-      <property name="&lt;Super&gt;KP_Home" type="string" value="tile_up_left_key"/>
       <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;Page_Up" type="string" value="raise_window_key"/>
-      <property name="&lt;Super&gt;KP_Up" type="string" value="tile_down_key"/>
-      <property name="&lt;Super&gt;KP_End" type="string" value="tile_down_left_key"/>
       <property name="&lt;Alt&gt;F11" type="string" value="fullscreen_key"/>
       <property name="&lt;Alt&gt;F6" type="string" value="maximize_vert_key"/>
       <property name="override" type="bool" value="true"/>
@@ -231,6 +219,15 @@
       <property name="&lt;Alt&gt;Insert" type="string" value="add_workspace_key"/>
       <property name="&lt;Super&gt;m" type="string" value="maximize_window_key"/>
       <property name="&lt;Super&gt;j" type="string" value="switch_application_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;i" type="string" value="tile_down_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;u" type="string" value="tile_up_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;i" type="string" value="tile_down_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;y" type="string" value="tile_left_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;o" type="string" value="tile_right_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;h" type="string" value="tile_up_left_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;l" type="string" value="tile_up_right_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;j" type="string" value="tile_down_left_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;k" type="string" value="tile_down_right_key"/>
     </property>
   </property>
   <property name="providers" type="array">

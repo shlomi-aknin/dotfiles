@@ -1,12 +1,12 @@
 #!/bin/bash
 
 LASTDIR=/tmp/lastdir
-PROJECTDIR=/home/shlomo/workspace
+PROJECTDIR=/home/shlomo/Workspace
 LEN=${#PROJECTDIR}
 COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 touch $LASTDIR
 cd $PROJECTDIR
-SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN+2))"- | dmenu -l $COUNT)
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN + 2))"- | dmenu -l $COUNT -fn "FiraCode Nerd Font:14")
 [ "$SELECTED" = "" ] && exit 0
-echo "$PROJECTDIR/$SELECTED" > $LASTDIR
+echo "$PROJECTDIR/$SELECTED" >$LASTDIR
 code $SELECTED

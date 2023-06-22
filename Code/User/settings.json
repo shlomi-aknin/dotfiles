@@ -548,5 +548,9 @@
   ],
   "editor.fontWeight": "600",
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": ["javascript", "typescript"]
 }
