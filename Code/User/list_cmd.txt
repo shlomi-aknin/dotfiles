@@ -1,1 +1,1 @@
-code --list-extensions | xargs -L 1 echo code --install-extension > ~/dotfiles/Code/User/extensions.txt
+code --list-extensions | xargs -L 1 echo code --install-extension > ~/Dotfiles/Code/User/extensions.txt

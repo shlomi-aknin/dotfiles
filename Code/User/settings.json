@@ -552,5 +552,10 @@
     "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "eslint.validate": ["javascript", "typescript"]
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "editor.fontLigatures": true,
+  "vim.useSystemClipboard": true
 }
