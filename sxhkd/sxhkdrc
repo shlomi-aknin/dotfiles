@@ -149,7 +149,7 @@ super + shift + o
 
 # clipmenu insert
 super + shift + p
-    clipmenu
+    copyq toggle
 
 # quit/restart bspwm
 super + shift + {q,r}
