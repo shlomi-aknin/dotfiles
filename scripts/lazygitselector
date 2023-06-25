@@ -4,6 +4,6 @@ PROJECTDIR=/home/shlomo/Workspace
 LEN=${#PROJECTDIR}
 COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 cd $PROJECTDIR
-SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN + 2))"- | dmenu -l $COUNT)
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN + 2))"- | dmenu -l $COUNT -fn "FiraCode Nerd Font:14")
 [ "$SELECTED" = "" ] && exit 0
 alacritty --working-directory $SELECTED -e lazygit
