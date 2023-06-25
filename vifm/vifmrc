@@ -336,8 +336,6 @@ filetype *.sha512
        \ {Check SHA512 hash sum}
        \ sha512sum -c %f %S,
 
-fileviewer *.[ch],*.[ch]pp,*.[ch]xx,*.sql,*.md,*.xml,*.js,*.ts,*.css,*.html bat --color always --wrap never --pager never %c -p
-
 " GPG signature
 filetype *.asc
        \ {Check signature}
@@ -439,7 +437,8 @@ filextype */
 " For *nix:
 " filetype * xdg-open
 
-fileviewer *.js,*.json,*.css,*.html,*.php,*.svelte,*.sh,*.txt,*.mjs,*.md,Dockerfile env -uCOLORTERM bat --color always --wrap never --pager never %c -p
+fileviewer *.js,*.json,*.css,*.html,*.php,*.svelte,*.sh,*.txt,*.mjs,*.md,Dockerfile,*.sql,*.ts env -uCOLORTERM bat --color always --wrap never --pager never %c -p
+
 
 fileviewer * :cd %d %c<CR>
 " fileviewer .*/,*/ br -dsp %f

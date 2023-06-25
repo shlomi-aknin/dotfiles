@@ -82,7 +82,7 @@ super + shift + q
 
 # vifm
 super + z
-  alacritty -t "vifm" -e vifm ~/workspace/cymbio-api-3 ~/Downloads
+  alacritty -t "vifm" -e vifm ~/Workspace/cymbio-api-3 ~/Downloads
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -165,7 +165,7 @@ super + shift + x
 
 # reboot, poweroff
 super + shift + {F1,F2}
-	sudo {reboot,poweroff}
+	{reboot,poweroff}
 
 # swap the current node and the biggest window
 super + shift + Return
