@@ -8,13 +8,21 @@
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.startupPrompt": "never",
     "security.workspace.trust.untrustedFiles": "open",
-    "window.zoomLevel": 1,
     "editor.minimap.enabled": false,
     "workbench.activityBar.visible": false,
     "window.menuBarVisibility": "toggle",
     "editor.cursorSurroundingLines": 999,
     "vim.easymotion": true,
+    "workbench.colorCustomizations": {
+      "editorWarning.foreground": "#00000000",
+      "editorInfo.foreground":    "#00000000"
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["g", "p", "v"],
+        "commands": ["workbench.action.splitEditorDown", "editor.action.goToImplementation"],
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+      },
       {
         "before": ["g", "p", "d"],
         "commands": ["editor.action.revealDefinitionAside"],
@@ -557,5 +565,6 @@
     "typescript"
   ],
   "editor.fontLigatures": true,
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "window.zoomLevel": 1
 }
