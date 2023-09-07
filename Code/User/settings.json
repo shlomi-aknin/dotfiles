@@ -20,7 +20,7 @@
     "vim.normalModeKeyBindingsNonRecursive": [
       {
         "before": ["g", "p", "v"],
-        "commands": ["workbench.action.splitEditorDown", "editor.action.goToImplementation"],
+        "commands": ["workbench.action.splitEditorDown", "editor.action.goToImplementation", "workbench.action.previousEditor", "workbench.action.revertAndCloseActiveEditor"],
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
       },
       {
