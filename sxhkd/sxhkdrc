@@ -4,12 +4,13 @@ super + a
 
 # browser
 super + b
-  firefox
-#  google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
+ google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
+  # firefox
 
 # clock
 super + c
-    alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
+    google-chrome-stable "time.is"
+    # alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
 
 # lazydocker
 super + d : {l,p,s}
@@ -22,6 +23,9 @@ super + f
     else \
         bspc node focused -t tiled; \
     fi
+
+super + F1
+    xfce4-find-cursor
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -83,6 +87,9 @@ super + shift + q
 # vifm
 super + z
   alacritty -t "vifm" -e vifm ~/Workspace/cymbio-api-3 ~/Downloads
+
+super + shift + z
+  thunar ~/Downloads
 
 # make sxhkd reload its configuration files:
 super + Escape
