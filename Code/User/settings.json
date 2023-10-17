@@ -3,7 +3,6 @@
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Dracula At Night",
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.startupPrompt": "never",
@@ -18,6 +17,15 @@
       "editorInfo.foreground":    "#00000000"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["g", "o"],
+        "commands": ["workbench.action.joinAllGroups"]
+      },
+      {
+        "before": ["g", "c"],
+        "commands": ["editor.action.triggerSuggest"],
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+      },
       {
         "before": ["g", "p", "v"],
         "commands": ["workbench.action.splitEditorDown", "editor.action.goToImplementation", "workbench.action.previousEditor", "workbench.action.revertAndCloseActiveEditor"],
@@ -566,5 +574,7 @@
   ],
   "editor.fontLigatures": true,
   "vim.useSystemClipboard": true,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Dracula At Night"
 }
