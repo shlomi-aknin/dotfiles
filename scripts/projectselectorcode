@@ -6,7 +6,7 @@ LEN=${#PROJECTDIR}
 COUNT=$(fd --type d -d 1 . $PROJECTDIR | wc -l)
 touch $LASTDIR
 cd $PROJECTDIR
-SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN + 2))"- | dmenu -l $COUNT -fn "FiraCode Nerd Font:14")
+SELECTED=$(fd --type d -d 1 . $PROJECTDIR | cut -c "$((LEN + 2))"- | dmenu -fn "FiraCode Nerd Font:14")
 [ "$SELECTED" = "" ] && exit 0
 echo "$PROJECTDIR/$SELECTED" >$LASTDIR
 code $SELECTED

@@ -1,7 +1,7 @@
 {
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
-    "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
     "workbench.startupEditor": "newUntitledFile",
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
@@ -379,7 +379,8 @@
       {
         "before": ["<space>", "f"],
         "commands": [
-          "workbench.action.quickOpen"
+          ":!alacritty -t 'fzfcode' --class 'fzfcode' -e fzfsearchforcode"
+          // "workbench.action.quickOpen"
         ]
       },
       {

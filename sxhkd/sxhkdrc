@@ -53,7 +53,7 @@ super + o
 
 # clipmenu select
 super + p
-    copyq menu
+    copyq show
     # clipmenu && xdotool key ctrl+shift+v
 
 # launcher
@@ -156,7 +156,7 @@ super + shift + o
 
 # clipmenu insert
 super + shift + p
-    copyq toggle
+    copyq menu
 
 # quit/restart bspwm
 super + shift + {q,r}
