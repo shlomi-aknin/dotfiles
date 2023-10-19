@@ -14,7 +14,8 @@
     "vim.easymotion": true,
     "workbench.colorCustomizations": {
       "editorWarning.foreground": "#00000000",
-      "editorInfo.foreground":    "#00000000"
+      "editorInfo.foreground":    "#00000000",
+      "gitlens.trailingLineForegroundColor":"#FF79C6"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
       {
