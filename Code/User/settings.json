@@ -373,7 +373,13 @@
       {
         "before": ["<space>", "g"],
         "commands": [
-          ":!alacritty -t 'LAZYGITCODE' --class 'lazygitcode' -e lazygit -p $(cat /tmp/lastdir) &"
+          ":!lazygitcode"
+        ]
+      },
+      {
+        "before": ["<space>", "z"],
+        "commands": [
+          ":!vifmcode"
         ]
       },
       {
