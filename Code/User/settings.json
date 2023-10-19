@@ -377,6 +377,12 @@
         ]
       },
       {
+        "before": ["<space>", "u"],
+        "commands": [
+          ":!alacritty -t 'updatelastproject' --class 'updatelastproject' -e updatelastproject"
+        ]
+      },
+      {
         "before": ["<space>", "f"],
         "commands": [
           ":!alacritty -t 'fzfcode' --class 'fzfcode' -e fzfsearchforcode"
