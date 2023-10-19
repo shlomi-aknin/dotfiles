@@ -4,7 +4,6 @@ export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f
 LASTDIR=$(cat /tmp/lastdir)
 LEN=${#LASTDIR}
 cd $LASTDIR
-SELECTED=$(fd --type f . $LASTDIR | sd $LASTDIR "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+SELECTED=$(fd -I -H --type f . $LASTDIR | sd $LASTDIR "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
 [ "$SELECTED" = "" ] && exit 0
 code $SELECTED
-# echo $SELECTED
