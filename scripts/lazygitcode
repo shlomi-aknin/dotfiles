@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alacritty -t 'LAZYGITCODE' --class 'lazygitcode' -e lazygit -p $(cat /tmp/lastdir) &
