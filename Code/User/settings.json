@@ -8,7 +8,6 @@
     "security.workspace.trust.startupPrompt": "never",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
     "window.menuBarVisibility": "toggle",
     "editor.cursorSurroundingLines": 999,
     "vim.easymotion": true,
@@ -40,6 +39,12 @@
       {
         "before": ["g", "k"],
         "commands": ["editor.action.peekTypeDefinition"]
+      },
+      {
+        "before": ["<space>", "l"],
+        "commands": [
+          ":!alacritty -e fzfwithripgrepcode"
+        ]
       },
       {
         "before": ["c"],
@@ -588,7 +593,8 @@
   ],
   "editor.fontLigatures": true,
   "vim.useSystemClipboard": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Dracula At Night"
+  "workbench.colorTheme": "Dracula At Night",
+  "workbench.activityBar.visible": false
 }
