@@ -43,7 +43,7 @@
       {
         "before": ["<space>", "l"],
         "commands": [
-          ":!alacritty -e fzfwithripgrepcode"
+          ":!alacritty -t 'fzfripgrepcode' --class 'fzfripgrepcode'  -e fzfwithripgrepcode"
         ]
       },
       {
