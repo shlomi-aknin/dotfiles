@@ -43,7 +43,8 @@
       {
         "before": ["<space>", "l"],
         "commands": [
-          ":!alacritty -t 'fzfripgrepcode' --class 'fzfripgrepcode'  -e fzfwithripgrepcode"
+          ":!alacritty -t 'fzfcode' --class 'fzfcode' -e fzfsearchforcode"
+          // ":!alacritty -t 'fzfripgrepcode' --class 'fzfripgrepcode'  -e fzfwithripgrepcode"
         ]
       },
       {
@@ -397,8 +398,8 @@
       {
         "before": ["<space>", "f"],
         "commands": [
-          ":!alacritty -t 'fzfcode' --class 'fzfcode' -e fzfsearchforcode"
-          // "workbench.action.quickOpen"
+          // ":!alacritty -t 'fzfcode' --class 'fzfcode' -e fzfsearchforcode"
+          "workbench.action.quickOpen"
         ]
       },
       {
@@ -596,5 +597,15 @@
   "window.zoomLevel": 2,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.colorTheme": "Dracula At Night",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "vim.cursorStylePerMode.replace": "underline",
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.easymotionKeys": "hjklasdfg;'\\",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#50FA7B",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#50FA7B",
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 300,
+  "vim.hlsearch": true
 }
