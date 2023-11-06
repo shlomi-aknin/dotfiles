@@ -22,7 +22,10 @@
       "editorLineNumber.foreground": "#BD93F9",
       "editorLineNumber.activeForeground": "#50FA7B",
       "editorCursor.background": "#000000",
-      "editorCursor.foreground": "#50FA7B"
+      "editorCursor.foreground": "#50FA7B",
+      "editorSuggestWidget.selectedBackground": "#FF79C6",
+      "editorSuggestWidget.selectedForeground": "#000000",
+      "editorSuggestWidget.focusHighlightForeground": "#000000"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
       {
