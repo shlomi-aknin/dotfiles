@@ -14,7 +14,11 @@
     "workbench.colorCustomizations": {
       "editorWarning.foreground": "#00000000",
       "editorInfo.foreground":    "#00000000",
-      "gitlens.trailingLineForegroundColor":"#FF79C6"
+      "gitlens.trailingLineForegroundColor":"#FF79C6",
+      "debugTokenExpression.value": "#50FA7B",
+      "debugTokenExpression.string": "#50FA7B",
+      "debugTokenExpression.boolean": "#50FA7B",
+      "debugTokenExpression.number": "#50FA7B"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
       {
