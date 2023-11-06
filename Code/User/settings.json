@@ -25,7 +25,11 @@
       "editorCursor.foreground": "#50FA7B",
       "editorSuggestWidget.selectedBackground": "#FF79C6",
       "editorSuggestWidget.selectedForeground": "#000000",
-      "editorSuggestWidget.focusHighlightForeground": "#000000"
+      "editorSuggestWidget.focusHighlightForeground": "#000000",
+      "quickInputList.focusBackground": "#FF79C6",
+      "quickInputList.focusForeground": "#000000",
+      "tab.inactiveForeground": "#50FA7B",
+      "tab.unfocusedInactiveForeground": "#50FA7B"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
       {
@@ -626,5 +630,6 @@
   "vim.searchMatchColor": "#50FA7B",
   "vim.searchMatchTextColor": "#000000",
   "vim.highlightedyank.enable": true,
-  "editor.occurrencesHighlight": false
+  "editor.occurrencesHighlight": false,
+  "breadcrumbs.enabled": false
 }
