@@ -18,7 +18,11 @@
       "debugTokenExpression.value": "#50FA7B",
       "debugTokenExpression.string": "#50FA7B",
       "debugTokenExpression.boolean": "#50FA7B",
-      "debugTokenExpression.number": "#50FA7B"
+      "debugTokenExpression.number": "#50FA7B",
+      "editorLineNumber.foreground": "#BD93F9",
+      "editorLineNumber.activeForeground": "#50FA7B",
+      "editorCursor.background": "#000000",
+      "editorCursor.foreground": "#50FA7B"
     },
     "vim.normalModeKeyBindingsNonRecursive": [
       {
@@ -618,5 +622,6 @@
   "vim.searchHighlightTextColor": "#ffffff",
   "vim.searchMatchColor": "#50FA7B",
   "vim.searchMatchTextColor": "#000000",
-  "vim.highlightedyank.enable": true
+  "vim.highlightedyank.enable": true,
+  "editor.occurrencesHighlight": false
 }
