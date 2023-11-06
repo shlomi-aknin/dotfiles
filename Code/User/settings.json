@@ -33,6 +33,22 @@
     },
     "vim.normalModeKeyBindingsNonRecursive": [
       {
+        "before": ["h"],
+        "commands": [":noh", "extension.vim_left"]
+      },
+      {
+        "before": ["j"],
+        "commands": [":noh", "extension.vim_down"]
+      },
+      {
+        "before": ["k"],
+        "commands": [":noh", "extension.vim_up"]
+      },
+      {
+        "before": ["l"],
+        "commands": [":noh", "extension.vim_right"]
+      },
+      {
         "before": ["g", "o"],
         "commands": ["workbench.action.joinAllGroups"]
       },
