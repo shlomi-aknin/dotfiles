@@ -18,7 +18,7 @@ gui:
     optionsTextColor:
       - blue
     selectedLineBgColor:
-      - default # set to `default` to have no background colour
+      - "#44475A" # set to `default` to have no background colour
     selectedRangeBgColor:
       - blue
     cherryPickedCommitBgColor:
@@ -26,9 +26,9 @@ gui:
     cherryPickedCommitFgColor:
       - blue
     unstagedChangesColor:
-      - red
+      - "#FF79C6"
     defaultFgColor:
-      - default
+      - cyan
   commitLength:
     show: true
   mouseEvents: true
