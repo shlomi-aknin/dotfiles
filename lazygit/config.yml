@@ -11,10 +11,10 @@ gui:
   shortTimeFormat: "3:04PM"
   theme:
     activeBorderColor:
-      - green
+      - "#50FA7B"
       - bold
     inactiveBorderColor:
-      - white
+      - "#6272A4"
     optionsTextColor:
       - blue
     selectedLineBgColor:
@@ -28,7 +28,7 @@ gui:
     unstagedChangesColor:
       - "#FF79C6"
     defaultFgColor:
-      - cyan
+      - "#ffffff"
   commitLength:
     show: true
   mouseEvents: true
