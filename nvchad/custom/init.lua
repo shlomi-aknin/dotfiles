@@ -6,3 +6,4 @@
 --   command = "tabdo wincmd =",
 -- })
 vim.wo.relativenumber = true
+vim.o.scrolloff = 999
