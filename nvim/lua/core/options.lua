@@ -1,5 +1,6 @@
 local opt = vim.opt
-
+vim.api.nvim_command('set grepprg=rg\\ --vimgrep\\ --smart-case')
+vim.api.nvim_command('set grepformat=%f:%l:%c:%m,%f:%l:%m')
 -- Session Management
 opt.sessionoptions='blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
