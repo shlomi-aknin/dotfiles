@@ -1,6 +1,8 @@
 {
   "dracula.nvim": { "branch": "master", "commit": "2f396b6ba988ad4b3961c2e40d1b9ae436b8c26c" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "lsp-progress.nvim": { "branch": "main", "commit": "cabf7fde50cc0dad367a03a1542d9670d1118bd0" },
+  "lualine.nvim": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },
   "nvim-tree.lua": { "branch": "master", "commit": "141c0f97c35f274031294267808ada59bb5fb08e" },
   "nvim-web-devicons": { "branch": "master", "commit": "8b2e5ef9eb8a717221bd96cb8422686d65a09ed5" },
   "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
