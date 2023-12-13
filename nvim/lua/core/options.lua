@@ -18,6 +18,9 @@ vim.bo.softtabstop = 2
 -- Line Wrapping
 opt.wrap = false
 
+-- Scrolloff
+opt.scrolloff = 999
+
 -- Search Settings
 opt.ignorecase = true
 opt.smartcase = true
