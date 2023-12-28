@@ -18,6 +18,9 @@ keymap.set('n', '<leader>p', function() telescope_builtin.lsp_document_symbols({
 keymap.set('n', '<leader>qq', ':bd!<CR>', { silent = true })
 keymap.set('n', '<leader>s', ':w<CR>', { silent = true })
 keymap.set('n', '<leader>x', ':bufdo bd!<CR>', { silent = true })
+keymap.set('n', '<leader>/', ':CommentToggle<CR>', { silent = true })
+
+keymap.set('v', '<leader>/', ':CommentToggle<CR>', { silent = true })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
