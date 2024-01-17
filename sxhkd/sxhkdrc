@@ -7,6 +7,10 @@ super + b
  google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --force-device-scale-factor=1.2
   # firefox
 
+# beekeepr
+super + shift + b
+    /home/shlomo/.local/bin/beekeeper-studio.AppImage
+
 # clock
 super + c
     google-chrome-stable "time.is"
@@ -177,3 +181,4 @@ super + shift + {F1,F2}
 # swap the current node and the biggest window
 super + shift + Return
 	bspc node -s biggest.local.window
+
