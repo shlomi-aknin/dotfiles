@@ -289,10 +289,11 @@ fileviewer *.[1-8] man ./%c | col -b
 "     \ %pc
 "     \ kitty icat --clear --silent %pd
 
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
- \ vifmimg draw %px %py %pw %ph %c
- \ %pc
- \ vifmimg clear
+" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+"  \ google-chrome-stable %c
+
+fileviewer *.xlsx
+ \ ~/.local/bin/xlsxconvert %c
 
 fileviewer *.gif
 	\ vifmimg gifpreview %px %py %pw %ph %c
@@ -471,3 +472,4 @@ set syncregs=general
 " ------------------------------------------------------------------------------
 let $PATH .= ':/usr/local/lib/node_modules/bin'
 source ~/.config/vifm/mappings
+command! nv nvim -u ~/.config/nvim-minimal/init.lua %f
