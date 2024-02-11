@@ -34,15 +34,15 @@ vim.bo.tabstop = 2
 hl(0, 'Normal',         { fg='#F8F8F2', bg='#282A36' })
 hl(0, 'CursorLine',     { bg='#44475A' })
 hl(0, 'CursorLineNr',   { fg='#BD93F9' })
-hl(0, 'LineNr',   { fg='#BD93F9' })
-hl(0, 'NonText',   { fg='#BD93F9' })
+hl(0, 'LineNr',         { fg='#BD93F9' })
+hl(0, 'NonText',        { fg='#BD93F9' })
 hl(0, 'Comment',        { fg='#6272A4' })
 hl(0, 'Cursor',         { fg='#282A36', bg='#F8F8F2' })
 hl(0, 'VertSplit',      { fg='#44475A', bg='#44475A' })
 hl(0, 'Visual',         { fg='#F8F8F2', bg='#6272A4' })
 hl(0, 'Pmenu',          { fg='#F8F8F2', bg='#44475A' })
 hl(0, 'PmenuSel',       { fg='#F8F8F2', bg='#BD93F9' })
-hl(0, "StatusLine", { bg='#6272A4', fg='#FFFFFF' })
+hl(0, "StatusLine",     { bg='#6272A4', fg='#FFFFFF' })
 hl(0, 'StatusLineNC',   { fg='#6272A4', bg='#44475A' })
 hl(0, 'Error',          { fg='#FF5555', bg=NONE })
 
@@ -97,4 +97,4 @@ function get_line_info()
 end
 
 -- Set the statusline
-vim.opt.statusline = [[%<%f %= %{luaeval("get_line_info()")}]]
+vim.opt.statusline = [[%<%f%m %= %{luaeval("get_line_info()")}]]
