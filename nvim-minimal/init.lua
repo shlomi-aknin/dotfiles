@@ -74,6 +74,17 @@ hl(0, 'GitGutterDelete',       { fg='#FF5555', bg=NONE })
 hl(0, 'GitGutterChangeDelete', { fg='#FFB86C', bg=NONE })
 
 -- Keys
+
+-- Function to clear search highlighting
+function clear_search_highlight()
+    vim.cmd('noh') -- Equivalent to :noh command
+end
+
+-- Define key mappings to call clear_search_highlight function along with original hjkl movement
+key('n', 'h', ':lua clear_search_highlight()<CR>h', { noremap = true, silent = true })
+key('n', 'j', ':lua clear_search_highlight()<CR>j', { noremap = true, silent = true })
+key('n', 'k', ':lua clear_search_highlight()<CR>k', { noremap = true, silent = true })
+key('n', 'l', ':lua clear_search_highlight()<CR>l', { noremap = true, silent = true })
 key('n', '<space>s', ':w<cr>', { silent=true })
 key('n', '<C-j>', 'yyp', { silent=true })
 key('n', '<C-k>', 'yyP', { silent=true })
@@ -97,4 +108,4 @@ function get_line_info()
 end
 
 -- Set the statusline
-vim.opt.statusline = [[%<%f%m %= %{luaeval("get_line_info()")}]]
+vim.opt.statusline = [[%<%f%m%r %= %{luaeval("get_line_info()")}]]
