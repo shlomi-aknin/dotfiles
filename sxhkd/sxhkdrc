@@ -28,8 +28,8 @@ super + f
         bspc node focused -t tiled; \
     fi
 
-super + F1
-    xfce4-find-cursor
+# super + F1
+#     xfce4-find-cursor
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -45,7 +45,7 @@ super + {j,k}
 
 # neovim
 super + n
-    alacritty -t "Neovim" -e nvim
+    alacritty -t "Neovim" -e nvim -u ~/.config/nvim-minimal/init.lua
 
 # alternate between the tiled and monocle layout
 super + m
@@ -66,7 +66,10 @@ super + r
 
 # printscreen
 super + s
-    scrot ~/Downloads/Screenshot_%Y-%m-%d_%H:%M:%S.png
+    scrot ~/Downloads/Screenshot_%F_%T.png
+
+super + shift + s
+    scrot -s ~/Downloads/Screenshot_%F_%T.png
 
 # dswitcher
 super + space
