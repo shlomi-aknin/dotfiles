@@ -270,6 +270,11 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
+
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif
+        \ {View in browser}
+        \ google-chrome-stable %f,
+
 " filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
 "         \ {View in sxiv}
 "         \ sxiv %f,
