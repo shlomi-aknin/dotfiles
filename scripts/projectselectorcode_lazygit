@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+DIR=/home/shlomo/Workspace
+cd $DIR
+SELECTED=$(fd --max-depth 1 | /home/shlomo/.local/bin/fzf)
+
+[ "$SELECTED" = "" ] && exit 0
+cd $SELECTED
+/home/shlomo/.local/bin/lazygit
+
