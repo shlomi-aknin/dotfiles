@@ -1,9 +1,17 @@
 #!/bin/bash
 
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
-LASTDIR=$(cat /tmp/lastdir)
-LEN=${#LASTDIR}
-cd $LASTDIR
-SELECTED=$(fd -I -H --type f . $LASTDIR | sd $LASTDIR "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+
+WORKSPACE_DIR=~/Workspace
+PROJECT=$(find $WORKSPACE_DIR -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | ~/.local/bin/fzf -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+
+[ "$PROJECT" = "" ] && exit 0
+
+PROJECT_DIR="$WORKSPACE_DIR/$PROJECT"
+cd $PROJECT_DIR
+
+SELECTED=$(find $PROJECT_DIR -mindepth 1 -type f -printf "%P\n" | ~/.local/bin/fzf -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+
 [ "$SELECTED" = "" ] && exit 0
+
 code $SELECTED
