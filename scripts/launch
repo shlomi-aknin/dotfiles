@@ -1,0 +1,21 @@
+#!/bin/bash
+
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+
+SELECTED=$(printf "Postman\nFilezilla\nRedis client" | ~/.local/bin/fzf -m --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+
+[ "$SELECTED" = "" ] && exit 0
+
+case $SELECTED in
+  "Postman")
+    devour /home/shlomo/Downloads/Postman/app/postman
+    ;;
+
+  "Filezilla")
+    devour filezilla
+    ;;
+
+  "Redis client")
+    devour /home/shlomo/.local/bin/redis-client
+    ;;
+esac

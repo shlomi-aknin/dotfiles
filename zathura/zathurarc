@@ -95,4 +95,4 @@ set smooth-scroll "true"
 set zoom-min 10
 set guioptions ""
 
-set font "SauceCodePro Nerd Font 16"
+# set font "SauceCodePro Nerd Font 16"
