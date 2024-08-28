@@ -13,6 +13,7 @@ return {
     -- LSP completion capabilities
     -- https://github.com/hrsh7th/cmp-nvim-lsp
     'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
 
     -- Additional user-friendly snippets
     -- https://github.com/rafamadriz/friendly-snippets
@@ -27,8 +28,24 @@ return {
   config = function()
     local cmp = require('cmp')
     local luasnip = require('luasnip')
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
     vim.opt.completeopt = "menu,menuone,noselect"
+
+    cmp.event:on(
+      'confirm_done',
+      cmp_autopairs.on_confirm_done()
+    )
+
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = 'path' }
+      }, {
+          { name = 'cmdline' }
+        }),
+      matching = { disallow_symbol_nonprefix_matching = false }
+    })
 
     cmp.setup({
       snippet = {
@@ -53,6 +70,7 @@ return {
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
+        { name = 'nvim_lsp_signature_help' }, -- lsp signature
       }),
     })
   end,
