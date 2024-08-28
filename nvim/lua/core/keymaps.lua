@@ -18,6 +18,7 @@ keymap.set('n', '<leader>p', function() telescope_builtin.lsp_document_symbols({
   { silent = true })
 keymap.set('n', '<leader>qq', ':bd!<CR>', { silent = true })
 keymap.set('n', '<leader>s', ':FormatWrite<CR>', { silent = true })
+keymap.set('n', '<leader><leader>', ':HopWord<CR>', { silent = true })
 keymap.set('n', '<leader>x', ':bufdo bd!<CR>', { silent = true })
 keymap.set('n', '<leader>/', ':CommentToggle<CR>', { silent = true })
 keymap.set('n', 'gjf', ':sp | terminal npx jest --no-coverage %<CR>', { silent = true })
