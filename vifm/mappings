@@ -28,7 +28,11 @@ vnoremap w :view<cr>gv
 
 " Open file in existing instance of gvim
 " nnoremap o :!gvim --remote-tab-silent %f<cr>
+" nnoremap f :!nvim %f<cr>
+" nnoremap f :!nvim -u ~/.config/nvim-minimal/init.lua %f<cr>
 nnoremap f :!nvim %f<cr>
+" vnoremap f :!nvim -u ~/.config/nvim-minimal/init.lua %f<cr>
+vnoremap f :!nvim %f<cr>
 nnoremap u :!nvr %f<cr>:q<cr>
 vnoremap u :!nvr %f<cr>:q<cr>
 nnoremap o :!alacritty -e nvim %d &<cr>:q<cr>
@@ -108,7 +112,7 @@ nnoremap <f8> :delete<cr>
 " let $VIFM_SERVER_NAME = v:servername
 
 command ln ln -s %f:p %D
-source ~/.config/vifm/SETUP
+" source ~/.config/vifm/SETUP
 nnoremap <C-c> :!$(fd --type f | fzf -m --cycle | xargs -r code)<cr>
 " command! extractfiles unzip -o %c -d %D && rm -f %c
 nnoremap x :!ouch c %f archive.zip<CR>
@@ -136,7 +140,7 @@ nnoremap zp :!opendirindots %d<CR>
 
 nnoremap . za
 nnoremap T :!lazygit<CR>
-nnoremap W :!feh --bg-scale %f<CR>:!cp %f /usr/share/slim/themes/default/background.jpg<CR>
+nnoremap W :!feh --bg-scale %f<CR>
 nnoremap * :!chmod +x %f<CR>
 nnoremap F :!touch<space>
 nnoremap D :mkdir<space>

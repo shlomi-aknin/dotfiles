@@ -1,3 +1,9 @@
+super + shift + e
+  killall bspwm
+
+super + p
+  copyq show
+
 # whiskermenu
 super + a
   xfce4-popup-whiskermenu
@@ -16,9 +22,15 @@ super + c
     google-chrome-stable "time.is"
     # alacritty -t "Clock" --class "ttyclock" -e tty-clock -bcs -C 4 -f "%d/%m/%Y"
 
+# Launch applications
+super + d
+  alacritty -t 'launchapplications' --class 'launchapplications' -e launch
+
 # lazydocker
-super + d : {l,p,s}
-    {alacritty -t "lazydocker" -e lazydocker, alacritty -t "Debug processWorkerJob.ts" -e ts-node-debug-worker-job, debug-script}
+super + shift + d
+  alacritty -t "lazydocker" -e lazydocker
+# super + d : {l,p,s}
+    # {alacritty -t "lazydocker" -e lazydocker, alacritty -t "Debug processWorkerJob.ts" -e ts-node-debug-worker-job, debug-script}
 
 # toggle focused window floating
 super + f
@@ -45,7 +57,7 @@ super + {j,k}
 
 # neovim
 super + n
-    alacritty -t "Neovim" -e nvim -u ~/.config/nvim-minimal/init.lua
+    alacritty -t "Neovim" -e nvim
 
 # alternate between the tiled and monocle layout
 super + m
@@ -66,10 +78,10 @@ super + r
 
 # printscreen
 super + s
-    scrot ~/Downloads/Screenshot_%F_%T.png
+    scrot ~/Downloads/screenshots/Screenshot_%F_%T_$(uuidgen).png
 
 super + shift + s
-    scrot -s ~/Downloads/Screenshot_%F_%T.png
+    scrot -s ~/Downloads/screenshots/Screenshot_%F_%T_$(uuidgen).png
 
 # dswitcher
 super + space
@@ -136,14 +148,14 @@ super + shift + d : {x,c,h}
 
 # project select for vs code
 super + shift + c
-  projectselectorcode
+  alacritty -t 'projectselectorcode_fzf' --class 'projectselectorcode_fzf' -e projectselectorcode_fzf
 
 super + shift + f
   alacritty -t "projectselectorcode" -e fzfsearchforcode
 
 # project select for lazygit
 super + shift + g
-  lazygitselector
+  alacritty -e projectselectorcode_lazygit
 
 # move window to prev/next desktop
 super + shift + {h,l}
