@@ -1,2 +1,5 @@
-vim.cmd('hi HopNextKey1 guifg=#50FA7B gui=bold')
-vim.cmd('hi HopNextKey2 guifg=#50FA7B gui=bold')
+vim.cmd('highlight HopNextKey1 guifg=#50FA7B gui=bold')
+vim.cmd('highlight HopNextKey2 guifg=#50FA7B gui=bold')
+vim.cmd('highlight GitSignsAdd guifg=#50FA7B')
+vim.cmd('highlight GitSignsChange guifg=#FF79C6')
+vim.cmd('highlight GitSignsDelete guifg=#FF5555')
