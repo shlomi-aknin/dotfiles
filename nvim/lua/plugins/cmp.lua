@@ -24,11 +24,13 @@ return {
     'hrsh7th/cmp-path',
     -- https://github.com/hrsh7th/cmp-cmdline
     'hrsh7th/cmp-cmdline',
+    'onsails/lspkind.nvim',
   },
   config = function()
     local cmp = require('cmp')
     local luasnip = require('luasnip')
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+    local lspkind = require('lspkind')
 
     vim.opt.completeopt = "menu,menuone,noselect"
 
@@ -47,11 +49,34 @@ return {
       matching = { disallow_symbol_nonprefix_matching = false }
     })
 
+    cmp.setup.cmdline({ '/', '?' }, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' }
+      }
+    })
+
     cmp.setup({
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
         end,
+      },
+      window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      },
+      formatting = {
+        format = lspkind.cmp_format({
+          mode = "symbol_text",
+          menu = ({
+            buffer = "[Buffer]",
+            nvim_lsp = "[LSP]",
+            luasnip = "[LuaSnip]",
+            nvim_lua = "[Lua]",
+            latex_symbols = "[Latex]",
+          })
+        }),
       },
       mapping = cmp.mapping.preset.insert({
         ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
