@@ -26,8 +26,12 @@ keymap.set('n', '<leader><leader>', ':HopWord<CR>', { silent = true })
 keymap.set('n', '<leader>x', ':bufdo bd!<CR>', { silent = true })
 keymap.set('n', '<leader>/', ':CommentToggle<CR>', { silent = true })
 keymap.set('n', 'gjf', ':sp | terminal npx jest --no-coverage %<CR>', { silent = true })
-keymap.set('n', 'gs', telescope_builtin.live_grep, {})
+keymap.set('n', 'gsp', telescope_builtin.live_grep, {})
+keymap.set('n', 'gst', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
+keymap.set('n', 'gsw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word" })
+keymap.set('n', 'gsf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })
 
+keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
 keymap.set('v', '<leader>/', ':CommentToggle<CR>', { silent = true })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -53,6 +57,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
     keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
     keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
-    keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    -- keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    keymap.set('n', 'gr', function() require('telescope.builtin').lsp_references() end, opts)
   end,
 })
