@@ -26,6 +26,7 @@ return {
         -- "gradle_ls",
         -- "groovyls",
         "lua_ls",
+        "sqls",
         -- "intelephense", # requires npm to be installed
         -- "jsonls", # requires npm to be installed
         -- "lemminx",

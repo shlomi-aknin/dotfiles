@@ -45,6 +45,7 @@ opt.splitbelow = true
 
 -- Consider - as part of keyword
 opt.iskeyword:append('-')
+-- vim.env.PATH = vim.env.PATH .. ':/home/shlomo/.local/go/bin'
 
 -- Disable the mouse while in nvim
 opt.mouse = ''
