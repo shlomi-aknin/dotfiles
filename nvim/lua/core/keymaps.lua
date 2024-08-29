@@ -61,6 +61,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     keymap.set({ 'n', 'v' }, '<space>ca', ':Lspsaga code_action<CR>', opts)
     -- keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    keymap.set('n', 'gr', 'Lspsaga finder ref<CR>', opts)
+    keymap.set('n', 'gr', ':Lspsaga finder ref<CR>', opts)
   end,
 })
