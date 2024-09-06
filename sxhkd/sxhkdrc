@@ -171,7 +171,7 @@ super + shift + m
 
 # project select for neovim
 super + shift + o
-  projectselectornvim
+  alacritty -t 'projectselectornvim_fzf' --class 'projectselectornvim_fzf' -e projectselectornvim_fzf
 
 # clipmenu insert
 super + shift + p
@@ -196,4 +196,3 @@ super + shift + {F1,F2}
 # swap the current node and the biggest window
 super + shift + Return
 	bspc node -s biggest.local.window
-
