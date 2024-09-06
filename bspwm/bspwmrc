@@ -1,4 +1,12 @@
-#! /bin/sh
+#! /bin/bash
+
+PATH="$HOME/.local/bin:$PATH"
+# pgrep -x sxhkd > /dev/null || sxhkd &
+~/.fehbg &
+~/.screenlayout/arandr.sh &
+~/.local/bin/clip.sh &
+copyq &
+setxkbmap -option grp:alt_shift_toggle us,il &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 bspc config border_width        5
@@ -23,6 +31,10 @@ done
 bspc rule -a Alacritty:ttyclock center=on state=floating rectangle=1376x625+0+0
 bspc rule -a fzfcode center=on state=floating rectangle=1376x625+0+0
 bspc rule -a fzfripgrepcode center=on state=floating rectangle=1376x625+0+0
+bspc rule -a projectselectorcode center=on state=floating rectangle=1376x625+0+0
+bspc rule -a launchapplications center=on state=floating rectangle=1376x625+0+0
+bspc rule -a projectselectorcode_fzf center=on state=floating rectangle=1376x625+0+0
+bspc rule -a projectselectornvim_fzf center=on state=floating rectangle=1376x625+0+0
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
 # bspc rule -a Firefox state=fullscreen
@@ -34,3 +46,5 @@ bspc rule -a Zathura state=tiled
 # bspc subscribe node_remove | while read line; do
 #     /usr/local/bin/backonempty
 # done
+
+sxhkd &
