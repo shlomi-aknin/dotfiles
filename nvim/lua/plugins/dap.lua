@@ -11,6 +11,19 @@ return {
     "mfussenegger/nvim-dap",
     config = function()
       local dap = require("dap")
+      local dapui = require("dapui")
+      dap.listeners.before.attach.dapui_config = function()
+        dapui.open()
+      end
+      dap.listeners.before.launch.dapui_config = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated.dapui_config = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited.dapui_config = function()
+        dapui.close()
+      end
 
       vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
 
@@ -30,9 +43,13 @@ return {
             type = "pwa-node",
             request = "attach",
             name = "Attach",
-            processId = require("dap.utils").pick_process,
+            processId = function() require("dap.utils").pick_process({ filter = "npx" }) end,
             cwd = vim.fn.getcwd(),
-            sourceMaps = true,
+            -- sourceMaps = true,
+            skipFiles = {
+              "<node_internals>/**",
+              "node_modules/**",
+            }
           },
           -- Debug web applications (client side)
           {
@@ -108,6 +125,13 @@ return {
         "<leader>do",
         function()
           require("dap").step_over()
+        end,
+        desc = "Step Over",
+      },
+      {
+        "<leader>dh",
+        function()
+          require("dap.ui.widgets").hover()
         end,
         desc = "Step Over",
       },
