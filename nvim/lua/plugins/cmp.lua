@@ -31,7 +31,11 @@ return {
         {"kndndrj/nvim-dbee"}
       },
       ft = "sql", -- optional but good to have
-      opts = {}, -- needed
+      opts = {
+        sources = {
+          { "cmp-dbee" },
+        },
+      },
     },
   },
   config = function()
@@ -100,7 +104,7 @@ return {
         ["<C-l>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
       }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp" }, -- lsp 
+        { name = "nvim_lsp" }, -- lsp
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths

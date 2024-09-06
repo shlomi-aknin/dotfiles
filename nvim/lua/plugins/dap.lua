@@ -77,6 +77,13 @@ return {
         desc = "Dap UI toggle",
       },
       {
+        "<leader>dc",
+        function()
+          require("dap").continue()
+        end,
+        desc = "Continue",
+      },
+      {
         "<leader>di",
         function()
           require("dap").step_into()
@@ -84,7 +91,7 @@ return {
         desc = "Step Into",
       },
       {
-        "<leader>db",
+        "<leader>dd",
         function()
           require("dap").toggle_breakpoint()
         end,
@@ -121,7 +128,7 @@ return {
       },
     },
     dependencies = {
-      { "rcarriga/nvim-dap-ui", opts = {} },
+      { "rcarriga/nvim-dap-ui", opts = {}, dependencies = { "nvim-neotest/nvim-nio" } },
       -- Install the vscode-js-debug adapter
       {
         "microsoft/vscode-js-debug",

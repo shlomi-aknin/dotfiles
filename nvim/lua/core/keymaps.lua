@@ -22,6 +22,8 @@ keymap.set('n', '<leader>p', function() telescope_builtin.lsp_document_symbols({
   { silent = true })
 keymap.set('n', '<leader>qq', ':bd!<CR>', { silent = true })
 keymap.set('n', '<leader>s', ':w<CR>', { silent = true })
+keymap.set('n', '<leader>tc', ':tabclose<CR>', { silent = true })
+keymap.set('n', '<leader>tn', ':tabnew %<CR>', { silent = true })
 keymap.set('n', '<leader><leader>', ':HopWord<CR>', { silent = true })
 keymap.set('n', '<leader>x', ':bufdo bd!<CR>', { silent = true })
 keymap.set('n', '<leader>/', ':CommentToggle<CR>', { silent = true })
