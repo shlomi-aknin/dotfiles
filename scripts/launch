@@ -8,7 +8,7 @@ SELECTED=$(printf "ARandR\nPasswords\nPerimeter\nPostman\nFilezilla\nRedis clien
 
 case $SELECTED in
   "Debug")
-    alacritty -e ~/.local/bin/run-scratch.sh
+    ~/.local/bin/run-scratch.sh
     ;;
   "Passwords")
     alacritty -e nvim ~/Downloads/admin-ui.txt
