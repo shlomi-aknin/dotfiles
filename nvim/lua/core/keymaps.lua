@@ -39,7 +39,7 @@ vim.keymap.set('n', '<F1>', function()
   vim.fn.feedkeys('a')
   local enter = vim.api.nvim_replace_termcodes("<CR>", true, true, true)
   vim.fn.feedkeys('clear' .. enter)
-  vim.fn.feedkeys('cd ~/Workspace/cymbio-api-3 && TZ=UTC NODE_ENV=prod NODE_OPTIONS="--inspect-brk" npx ts-node --swc ./scratches/analytics-report.ts' .. enter)
+  vim.fn.feedkeys('~/.local/bin/run-scratch.sh' .. enter)
 end)
 
 keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
