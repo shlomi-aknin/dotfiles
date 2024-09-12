@@ -6,6 +6,9 @@ return {
     local actions = require('telescope.actions')
     require('telescope').setup({
       defaults = {
+        file_ignore_patterns = {
+          "node_modules", "build", "dist", "yarn.lock", ".git"
+        },
         mappings = {
           n = {
             ["<C-l>"] = actions.select_default,
