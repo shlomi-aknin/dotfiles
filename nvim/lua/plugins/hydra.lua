@@ -17,35 +17,28 @@ return {
           { desc = "Toggle Breakpoint" },
         },
         {
-          "c",
+          "K",
           function()
             require("dap").continue()
           end,
           { desc = "Continue", nowait = true },
         },
         {
-          "a",
-          function()
-            require("dap").continue({ before = get_args })
-          end,
-          { desc = "Run with args", nowait = true },
-        },
-        {
-          "i",
+          "L",
           function()
             require("dap").step_into()
           end,
           { desc = "Step Into", nowait = true },
         },
         {
-          "n",
+          "J",
           function()
             require("dap").step_over()
           end,
           { desc = "Step Over", nowait = true },
         },
         {
-          "o",
+          "H",
           function()
             require("dap").step_out()
           end,
