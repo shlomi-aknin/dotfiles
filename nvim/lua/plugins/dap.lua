@@ -36,14 +36,14 @@ return {
             name = "Launch file",
             program = "${file}",
             cwd = vim.fn.getcwd(),
-            sourceMaps = true,
+            -- sourceMaps = true,
           },
           -- Debug nodejs processes (make sure to add --inspect when you run the process)
           {
             type = "pwa-node",
             request = "attach",
             name = "Attach",
-            processId = function() require("dap.utils").pick_process({ filter = "npx" }) end,
+            processId = function() require("dap.utils").pick_process({ filter = "--neovim-debug" }) end,
             cwd = vim.fn.getcwd(),
             -- sourceMaps = true,
             skipFiles = {
@@ -73,7 +73,7 @@ return {
             end,
             webRoot = vim.fn.getcwd(),
             protocol = "inspector",
-            sourceMaps = true,
+            -- sourceMaps = true,
             userDataDir = false,
           },
           -- Divider for the launch.json derived configs
