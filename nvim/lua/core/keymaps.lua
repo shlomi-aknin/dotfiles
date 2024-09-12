@@ -15,7 +15,7 @@ keymap.set('n', '<leader>db', ':Dbee toggle<CR>', { silent = true })
 keymap.set('n', '<leader>dsc', function() require("dbee").store("csv", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.csv' }) end, { silent = true })
 keymap.set('n', '<leader>dsj', function() require("dbee").store("json", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.json' }) end, { silent = true })
 keymap.set('n', '<leader>e', ':Oil<CR>', { silent = true })
-keymap.set('n', '<leader>f', function() telescope_builtin.find_files({ hidden = true }) end, { noremap = true, silent = true })
+keymap.set('n', '<leader>f', function() telescope_builtin.find_files({ hidden = true, no_ignore = true }) end, { noremap = true, silent = true })
 keymap.set('n', '<leader>j', 'o<ESC>', { silent = true })
 keymap.set('n', '<leader>k', 'O<ESC>', { silent = true })
 keymap.set('n', '<leader>p', function() telescope_builtin.lsp_document_symbols({ symbols = { "method" } }) end,
