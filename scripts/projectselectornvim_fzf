@@ -9,4 +9,5 @@ SELECTED=$(fd --max-depth 1 | /home/shlomo/.local/bin/fzf --bind=ctrl-l:accept)
 
 [ "$SELECTED" = "" ] && exit 0
 echo "$DIR/$SELECTED" > $LASTDIR
-nvim $SELECTED
+cd "$DIR/$SELECTED"
+nvim .
