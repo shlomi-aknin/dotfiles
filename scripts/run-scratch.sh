@@ -25,6 +25,6 @@ if [ -z "$FILE_SELECTED" ]; then
 fi
 
 # Step 7: Build and execute the command
-COMMAND="TZ=UTC NODE_OPTIONS='--inspect-brk' NODE_ENV='${NODE_ENV}' npx ts-node $(realpath --relative-to=$(pwd) "$FILE_SELECTED") --neovim-debug"
+COMMAND="TZ=UTC NODE_OPTIONS='--inspect-brk' NODE_ENV='${NODE_ENV}' npx ts-node --swc $(realpath --relative-to=$(pwd) "$FILE_SELECTED") --neovim-debug"
 echo "Executing: $COMMAND"
 eval $COMMAND
