@@ -38,6 +38,22 @@ return {
             cwd = vim.fn.getcwd(),
             -- sourceMaps = true,
           },
+          {
+            type = "pwa-node",
+            request = "launch",
+            name = "Launch Current File (pwa-node with ts-node)",
+            cwd = vim.fn.getcwd(),
+            runtimeArgs = { "--loader", "ts-node/esm" },
+            runtimeExecutable = "node",
+            args = { "${file}" },
+            sourceMaps = true,
+            protocol = "inspector",
+            skipFiles = { "<node_internals>/**", "node_modules/**" },
+            resolveSourceMapLocations = {
+              "${workspaceFolder}/**",
+              "!**/node_modules/**",
+            },
+          },
           -- Debug nodejs processes (make sure to add --inspect when you run the process)
           {
             type = "pwa-node",
