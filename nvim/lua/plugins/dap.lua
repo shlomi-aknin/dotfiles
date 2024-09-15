@@ -30,22 +30,22 @@ return {
       for _, language in ipairs(js_based_languages) do
         dap.configurations[language] = {
           -- Debug single nodejs files
+          -- {
+          --   type = "pwa-node",
+          --   request = "launch",
+          --   name = "Launch file",
+          --   program = "${file}",
+          --   cwd = vim.fn.getcwd(),
+          --   sourceMaps = true,
+          -- },
           {
             type = "pwa-node",
             request = "launch",
-            name = "Launch file",
-            program = "${file}",
-            cwd = vim.fn.getcwd(),
-            -- sourceMaps = true,
-          },
-          {
-            type = "pwa-node",
-            request = "launch",
-            name = "Launch Current File (pwa-node with ts-node) STAGING",
+            name = "STAGING run ts-node on current file",
             cwd = vim.fn.getcwd(),
             env = { NODE_ENV = 'staging' },
-            runtimeArgs = { "--loader", "ts-node/esm" },
-            runtimeExecutable = "node",
+            runtimeArgs = { "--swc" },
+            runtimeExecutable = "ts-node",
             args = { "${file}" },
             sourceMaps = true,
             protocol = "inspector",
@@ -58,11 +58,11 @@ return {
           {
             type = "pwa-node",
             request = "launch",
-            name = "Launch Current File (pwa-node with ts-node) PROD",
+            name = "PRODUCTION run ts-node on current file",
             cwd = vim.fn.getcwd(),
             env = { NODE_ENV = 'prod' },
-            runtimeArgs = { "--loader", "ts-node/esm" },
-            runtimeExecutable = "node",
+            runtimeArgs = { "--swc" },
+            runtimeExecutable = "ts-node",
             args = { "${file}" },
             sourceMaps = true,
             protocol = "inspector",
@@ -72,6 +72,40 @@ return {
               "!**/node_modules/**",
             },
           },
+          -- {
+          --   type = "pwa-node",
+          --   request = "launch",
+          --   name = "Launch Current File (pwa-node with ts-node) STAGING",
+          --   cwd = vim.fn.getcwd(),
+          --   env = { NODE_ENV = 'staging' },
+          --   runtimeArgs = { "--loader", "ts-node/esm" },
+          --   runtimeExecutable = "node",
+          --   args = { "${file}" },
+          --   sourceMaps = true,
+          --   protocol = "inspector",
+          --   skipFiles = { "<node_internals>/**", "node_modules/**" },
+          --   resolveSourceMapLocations = {
+          --     "${workspaceFolder}/**",
+          --     "!**/node_modules/**",
+          --   },
+          -- },
+          -- {
+          --   type = "pwa-node",
+          --   request = "launch",
+          --   name = "Launch Current File (pwa-node with ts-node) PROD",
+          --   cwd = vim.fn.getcwd(),
+          --   env = { NODE_ENV = 'prod' },
+          --   runtimeArgs = { "--loader", "ts-node/esm" },
+          --   runtimeExecutable = "node",
+          --   args = { "${file}" },
+          --   sourceMaps = true,
+          --   protocol = "inspector",
+          --   skipFiles = { "<node_internals>/**", "node_modules/**" },
+          --   resolveSourceMapLocations = {
+          --     "${workspaceFolder}/**",
+          --     "!**/node_modules/**",
+          --   },
+          -- },
           {
             type = "pwa-node",
             request = "launch",
@@ -85,6 +119,22 @@ return {
             console = "integratedTerminal",
             internalConsoleOptions = "neverOpen",
             skipFiles = { "<node_internals>/**", "node_modules/**" },
+          },
+          {
+            name = "Launch NestJS (Debug Mode)",
+            type = "pwa-node",
+            request = "launch",
+            cwd = vim.fn.getcwd(),
+            runtimeExecutable = "npm", -- Specify npm as the runtime executable
+            args = { "run", "start:shlomo" }, -- Pass the run command and script name as arguments
+            sourceMaps = true,
+            protocol = "inspector",
+            console = "integratedTerminal",
+            -- outFiles = { "${workspaceFolder}/dist/**/*.js" },
+            skipFiles = {
+              "${workspaceFolder}/node_modules/**/*.js",
+              "<node_internals>/**",
+            },
           },
           -- Debug nodejs processes (make sure to add --inspect when you run the process)
           {
