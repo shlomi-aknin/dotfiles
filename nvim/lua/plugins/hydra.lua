@@ -747,7 +747,7 @@ _q_: Quit Mode
             color = "blue",
             invoke_on_body = true,
         },
-        body = ";",
+        body = "<leader>h",
         heads = {
             {
                 "d",
