@@ -185,6 +185,27 @@ return {
     end,
     keys = {
       {
+        "<leader>dx",
+        function()
+          local dap = require("dap")
+          dap.terminate(
+            {},
+            {
+              terminateDebugee = true
+            },
+            function()
+              dap.close()
+            end
+          )
+        end,
+        {
+          desc = "Stop Debugger",
+          exit = false,
+          private = true,
+          silent = true
+        }
+      },
+      {
         "<leader>du",
         function()
           require("dapui").toggle()
@@ -251,6 +272,7 @@ return {
     },
     dependencies = {
       { "rcarriga/nvim-dap-ui", opts = {}, dependencies = { "nvim-neotest/nvim-nio" } },
+      { "theHamsta/nvim-dap-virtual-text", opts = { enabled = true, virt_text_pos = 'inline' } },
       -- Install the vscode-js-debug adapter
       {
         "microsoft/vscode-js-debug",
