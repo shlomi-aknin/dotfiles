@@ -6,7 +6,7 @@ return {
     vim.cmd[[
       augroup fmt
       autocmd!
-      autocmd BufWritePre *.js,*.ts Neoformat
+      autocmd BufWritePre * undojoin | Neoformat
       augroup END
     ]]
 
