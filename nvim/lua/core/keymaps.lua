@@ -46,7 +46,9 @@ keymap.set('n', '<F1>', function()
   vim.fn.feedkeys('~/.local/bin/run-scratch.sh' .. enter)
 end)
 
-keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
+keymap.set('v', 'gsw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
+keymap.set('v', '>', '>gv', { noremap = true })
+keymap.set('v', '<', '<gv', { noremap = true })
 keymap.set('v', '<leader>/', ':CommentToggle<CR>', { silent = true })
 
 vim.api.nvim_create_autocmd('LspAttach', {

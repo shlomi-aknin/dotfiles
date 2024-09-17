@@ -1,4 +1,8 @@
 return {
     "gbprod/substitute.nvim",
-    opts = {}
+    opts = {
+      highlight_substituted_text = {
+        enabled = false
+      }
+  }
 }
