@@ -32,8 +32,12 @@ keymap.set('n', 'gsp', telescope_builtin.live_grep, { silent = true })
 keymap.set('n', 'gst', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
 keymap.set('n', 'gsw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word" })
 keymap.set('n', 'gsf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })
+keymap.set('n', 's', require('substitute').operator, { noremap = true })
+keymap.set('n', 'ss', require('substitute').line, { noremap = true })
 
-vim.keymap.set('n', '<F1>', function()
+keymap.set('x', 's', require('substitute').visual, { noremap = true })
+
+keymap.set('n', '<F1>', function()
   vim.cmd('below split')
   vim.cmd('terminal')
   vim.fn.feedkeys('a')
