@@ -32,7 +32,8 @@ return {
         -- "lemminx",
         -- "marksman",
         "quick_lint_js",
-        "tsserver",
+        -- "tsserver",
+        "ts_ls",
         -- "yamlls", # requires npm to be installed
       }
     })
