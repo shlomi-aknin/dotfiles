@@ -28,7 +28,7 @@ keymap.set('n', '<leader><leader>', ':HopWord<CR>', { silent = true })
 keymap.set('n', '<leader>x', ':1,$ bd!<CR>', { silent = true, nowait = true })
 keymap.set('n', '<leader>/', ':CommentToggle<CR>', { silent = true })
 keymap.set('n', 'gjf', ':sp | terminal npx jest --no-coverage %<CR>', { silent = true })
-keymap.set('n', 'gsp', telescope_builtin.live_grep, {})
+keymap.set('n', 'gsp', telescope_builtin.live_grep, { silent = true })
 keymap.set('n', 'gst', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
 keymap.set('n', 'gsw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word" })
 keymap.set('n', 'gsf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })
@@ -53,7 +53,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local opts = { buffer = ev.buf }
+    local opts = { buffer = ev.buf, silent = true }
     keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
     keymap.set('n', 'gpd', ':vsplit | lua vim.lsp.buf.definition()<CR>', opts)
@@ -72,6 +72,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     keymap.set({ 'n', 'v' }, '<space>ca', ':Lspsaga code_action<CR>', opts)
     -- keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    keymap.set('n', 'gr', ':Lspsaga finder ref<CR>', opts)
+    -- keymap.set('n', 'gr', ':Lspsaga finder ref<CR>', opts)
+    keymap.set('n', 'gr', ':Telescope lsp_references show_line=false<CR>', opts)
   end,
 })
