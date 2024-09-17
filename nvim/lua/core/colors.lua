@@ -4,6 +4,7 @@ vim.cmd [[
   highlight GitSignsAdd guifg=#50FA7B
   highlight GitSignsChange guifg=#FF79C6
   highlight GitSignsDelete guifg=#FF5555
+  highlight GitSignsCurrentLineBlame guifg=#FFB86C
   highlight Search guibg=#FF79C6 guifg=#000000
   highlight CurSearch guibg=#50FA7B guifg=#000000
   highlight Normal guibg=#000000
