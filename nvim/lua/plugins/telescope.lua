@@ -13,6 +13,9 @@ return {
         file_ignore_patterns = {
           "node_modules", "build", "dist", "yarn.lock", ".git"
         },
+        -- preview = {
+        --   hide_on_startup = true
+        -- },
         mappings = {
           n = {
             ["<C-l>"] = actions.select_default,
