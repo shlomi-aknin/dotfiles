@@ -3,6 +3,7 @@ return {
   tag = '0.1.5',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    { 'nvim-telescope/telescope-ui-select.nvim' },
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
   },
   config = function ()
@@ -24,7 +25,13 @@ return {
             ["<C-k>"] = actions.move_selection_previous,
           }
         }
+      },
+      extensions = {
+        ["ui-select"] = {
+          require("telescope.themes").get_dropdown({})
+        }
       }
     })
+    require("telescope").load_extension("ui-select")
   end
 }
