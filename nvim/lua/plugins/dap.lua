@@ -143,7 +143,7 @@ return {
             name = "Attach",
             processId = function() require("dap.utils").pick_process({ filter = "--neovim-debug" }) end,
             cwd = vim.fn.getcwd(),
-            -- sourceMaps = true,
+            sourceMaps = false,
             skipFiles = {
               "<node_internals>/**",
               "node_modules/**",
