@@ -75,6 +75,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
     -- keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
     keymap.set('n', '<space>rn', ':Lspsaga rename<CR>', opts)
+    keymap.set('n', '<space>rf', ':TSToolsRenameFile<CR>', opts)
+    keymap.set('n', '<space>ru', ':TSToolsRemoveUnused<CR>', opts)
     keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     -- keymap.set({ 'n', 'v' }, '<space>ca', ':Lspsaga code_action<CR>', opts)
     -- keymap.set('n', 'gr', vim.lsp.buf.references, opts)

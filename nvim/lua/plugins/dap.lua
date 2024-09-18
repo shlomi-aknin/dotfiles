@@ -255,6 +255,14 @@ return {
         desc = "Step Over",
       },
       {
+        "<leader>de",
+        function()
+          require("dapui").eval()
+          require("dapui").eval()
+        end,
+        desc = "Evaluate",
+      },
+      {
         "<leader>da",
         function()
           if vim.fn.filereadable(".vscode/launch.json") then
