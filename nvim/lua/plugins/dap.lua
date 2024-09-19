@@ -142,6 +142,7 @@ return {
             request = "attach",
             name = "Attach",
             processId = function() require("dap.utils").pick_process({ filter = "--neovim-debug" }) end,
+            -- processId = require("dap.utils").pick_process,
             cwd = vim.fn.getcwd(),
             sourceMaps = false,
             skipFiles = {
@@ -174,16 +175,31 @@ return {
             -- sourceMaps = true,
             userDataDir = false,
           },
-          -- Divider for the launch.json derived configs
-          {
-            name = "----- ↓ launch.json configs ↓ -----",
-            type = "",
-            request = "launch",
-          },
         }
       end
     end,
     keys = {
+      {
+        "<leader>dt",
+        function()
+          local dap = require("dap")
+
+          local session_to_activate = nil
+          local sessions = dap.sessions()
+
+          for _, s in pairs(sessions) do
+            session_to_activate = s
+            break
+          end
+
+          if session_to_activate ~= nil then
+            dap.set_session(session_to_activate)
+          end
+
+          dap.terminate()
+        end,
+        desc = "Terminate",
+      },
       {
         "<leader>dx",
         function()
