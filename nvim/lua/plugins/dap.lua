@@ -180,7 +180,7 @@ return {
     end,
     keys = {
       {
-        "<leader>dt",
+        "<leader>dx",
         function()
           local dap = require("dap")
           local session = dap.session()
@@ -205,27 +205,27 @@ return {
         end,
         desc = "Terminate",
       },
-      {
-        "<leader>dx",
-        function()
-          local dap = require("dap")
-          dap.terminate(
-            {},
-            {
-              terminateDebugee = true
-            },
-            function()
-              dap.close()
-            end
-          )
-        end,
-        {
-          desc = "Stop Debugger",
-          exit = false,
-          private = true,
-          silent = true
-        }
-      },
+      -- {
+      --   "<leader>dx",
+      --   function()
+      --     local dap = require("dap")
+      --     dap.terminate(
+      --       {},
+      --       {
+      --         terminateDebugee = true
+      --       },
+      --       function()
+      --         dap.close()
+      --       end
+      --     )
+      --   end,
+      --   {
+      --     desc = "Stop Debugger",
+      --     exit = false,
+      --     private = true,
+      --     silent = true
+      --   }
+      -- },
       {
         "<leader>du",
         function()
@@ -241,6 +241,13 @@ return {
         desc = "Continue",
       },
       {
+        "<leader>dC",
+        function()
+          require("dap").run_to_cursor()
+        end,
+        desc = "Run to cursor",
+      },
+      {
         "<leader>di",
         function()
           require("dap").step_into()
@@ -253,6 +260,13 @@ return {
           require("dap").toggle_breakpoint()
         end,
         desc = "Toggle break point",
+      },
+      {
+        "<leader>dD",
+        function()
+          require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+        end,
+        desc = "Toggle conditional break point",
       },
       {
         "<leader>dO",
