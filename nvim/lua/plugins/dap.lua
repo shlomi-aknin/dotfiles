@@ -257,16 +257,25 @@ return {
       {
         "<leader>dd",
         function()
-          require("dap").toggle_breakpoint()
+          -- require("dap").toggle_breakpoint()
+          require('persistent-breakpoints.api').toggle_breakpoint()
         end,
         desc = "Toggle break point",
       },
       {
         "<leader>dD",
         function()
-          require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+          -- require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+          require('persistent-breakpoints.api').set_conditional_breakpoint()
         end,
         desc = "Toggle conditional break point",
+      },
+      {
+        "<leader>dz",
+        function()
+          require('persistent-breakpoints.api').clear_all_breakpoints()
+        end,
+        desc = "Clear all break points",
       },
       {
         "<leader>dO",
@@ -344,6 +353,7 @@ return {
       } },
       }, dependencies = { "nvim-neotest/nvim-nio" } },
       { "theHamsta/nvim-dap-virtual-text", opts = { enabled = true, virt_text_pos = 'inline' } },
+      { "Weissle/persistent-breakpoints.nvim", opts = { load_breakpoints_event = { "BufReadPost" } } },
       -- Install the vscode-js-debug adapter
       {
         "microsoft/vscode-js-debug",
