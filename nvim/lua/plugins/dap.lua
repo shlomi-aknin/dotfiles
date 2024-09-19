@@ -183,20 +183,25 @@ return {
         "<leader>dt",
         function()
           local dap = require("dap")
-
-          local session_to_activate = nil
-          local sessions = dap.sessions()
-
-          for _, s in pairs(sessions) do
-            session_to_activate = s
-            break
+          local session = dap.session()
+          if session and session.parent then
+            dap.set_session(session.parent)
           end
-
-          if session_to_activate ~= nil then
-            dap.set_session(session_to_activate)
-          end
-
           dap.terminate()
+
+          -- local session_to_activate = nil
+          -- local sessions = dap.sessions()
+
+          -- for _, s in pairs(sessions) do
+          --   session_to_activate = s
+          --   break
+          -- end
+
+          -- if session_to_activate ~= nil then
+          --   dap.set_session(session_to_activate)
+          -- end
+
+          -- dap.terminate()
         end,
         desc = "Terminate",
       },
