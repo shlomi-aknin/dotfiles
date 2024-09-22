@@ -43,7 +43,7 @@ local copy_path = function (path)
 end
 
 vim.api.nvim_create_user_command("CopyRelativePath", function()
-    copy_path(vim.fn.expand("%"))
+    copy_path(vim.fn.expand("%:."))
 end, {})
 
 vim.api.nvim_create_user_command("CopyAbsolutePath", function()
