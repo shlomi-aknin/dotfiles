@@ -22,11 +22,13 @@ return {
             ['<C-l>'] = actions.select_default,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
+            ['<C-x>'] = actions.delete_buffer,
           },
           i = {
             ['<C-l>'] = actions.select_default,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
+            ['<C-x>'] = actions.delete_buffer,
           }
         }
       },
