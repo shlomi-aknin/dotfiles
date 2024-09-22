@@ -37,6 +37,19 @@ augroup("ibhagwan/ToggleSearchHL", function(g)
   })
 end)
 
+local copy_path = function (path)
+    vim.fn.setreg("+", path)
+    vim.notify('Copied "' .. path .. '" to the clipboard!')
+end
+
+vim.api.nvim_create_user_command("CopyRelativePath", function()
+    copy_path(vim.fn.expand("%"))
+end, {})
+
+vim.api.nvim_create_user_command("CopyAbsolutePath", function()
+    copy_path(vim.fn.expand("%:p"))
+end, {})
+
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   pattern = { "*.tsx", "*.ts" },
 --   callback = function()
