@@ -56,6 +56,11 @@ keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', { noremap = true, silent = true })
 keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', { noremap = true, silent = true })
 keymap.set('v', '<leader>/', ':CommentToggle<CR>', { silent = true })
 
+
+keymap.set('c', '<C-j>', '<C-n>', { noremap = true, silent = true })
+keymap.set('c', '<C-k>', '<C-p>', { noremap = true, silent = true })
+keymap.set('c', '<C-l>', '<CR>', { noremap = true, silent = true })
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
