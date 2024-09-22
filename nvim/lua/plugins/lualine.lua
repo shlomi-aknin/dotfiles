@@ -1,4 +1,3 @@
--- Status line
 return {
   -- https://github.com/nvim-lualine/lualine.nvim
   'nvim-lualine/lualine.nvim',
@@ -8,9 +7,20 @@ return {
     -- https://github.com/linrongbin16/lsp-progress.nvim
     'linrongbin16/lsp-progress.nvim', -- LSP loading progress
   },
-  opts = {
+  config = function ()
+    local custom_dracula = require'lualine.themes.dracula'
+    custom_dracula.normal.a.bg = '#50FA7B'
+    custom_dracula.insert.a.bg = '#BD93F9'
+    custom_dracula.replace.a.bg = '#6272A4'
+    custom_dracula.replace.a.fg = '#F8F8F2'
+
+    require('lualine').setup({
     options = {
-      theme = 'dracula', -- lualine theme
+      section_separators = {
+        left = "",
+        right = ""
+      },
+      theme = custom_dracula, -- lualine theme
     },
     sections = {
       -- lualine_a = {
@@ -37,5 +47,6 @@ return {
       },
       lualine_x = {'encoding', 'filetype'},
     }
-  }
+  })
+  end,
 }

@@ -22,7 +22,7 @@ keymap.set('n', '<leader>mh', function() require("memento").toggle() end, { nore
 keymap.set('n', '<leader>mc', function() require("memento").clear_history() end, { noremap = true, silent = true })
 keymap.set('n', '<leader>j', 'o<ESC>', { silent = true })
 keymap.set('n', '<leader>k', 'O<ESC>', { silent = true })
-keymap.set('n', '<leader>p', function() telescope_builtin.lsp_document_symbols({ symbols = { "method" } }) end, { noremap = true, silent = true })
+keymap.set('n', '<leader>p', function() telescope_builtin.lsp_document_symbols({ symbols = { "method" }  }) end, { noremap = true, silent = true })
 keymap.set('n', '<leader>qq', ':bd!<CR>', { silent = true })
 keymap.set('n', '<leader>s', ':w<CR>', { silent = true })
 keymap.set('n', '<leader>tc', ':tabclose<CR>', { silent = true })
