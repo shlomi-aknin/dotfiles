@@ -1,6 +1,7 @@
 local keymap = vim.keymap
 local telescope_builtin = require('telescope.builtin')
 local downloads_directory = vim.fn.expand('$HOME/Downloads')
+local toggle_quickfix = require('core.toggle-quickfix').toggle_qf
 
 keymap.set('n', 'gv', 'Vg_%', { silent = true })
 keymap.set('n', 'H', '^', { silent = true })
@@ -14,6 +15,7 @@ keymap.set('n', '<C-l>', ':bn<CR>', { silent = true })
 keymap.set('n', '<C-t>', ':enew<CR>', { silent = true })
 keymap.set('n', '<leader>as', ':ASToggle<CR>', { noremap = true, silent = true })
 keymap.set('n', '<leader>b', function() telescope_builtin.buffers() end, { noremap = true, silent = true })
+keymap.set('n', '<leader>cc', function() toggle_quickfix() end, { noremap = true, silent = true, nowait = true })
 keymap.set('n', '<leader>db', ':Dbee toggle<CR>', { silent = true })
 keymap.set('n', '<leader>dsc', function() require("dbee").store("csv", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.csv' }) end, { silent = true })
 keymap.set('n', '<leader>dsj', function() require("dbee").store("json", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.json' }) end, { silent = true })
