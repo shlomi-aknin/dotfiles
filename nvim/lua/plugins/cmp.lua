@@ -58,7 +58,16 @@ return {
     )
 
     cmp.setup.cmdline(':', {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline({
+        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+        ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+        ["<C-c>"] = cmp.mapping.abort(), -- clear completion window
+        ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
+        ["<C-l>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
+      }),
       sources = cmp.config.sources({
         { name = 'path' },
         { name = 'cmp-dbee' }, -- database
@@ -69,7 +78,16 @@ return {
     })
 
     cmp.setup.cmdline({ '/', '?' }, {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline({
+        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+        ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+        ["<C-c>"] = cmp.mapping.abort(), -- clear completion window
+        ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
+        ["<C-l>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
+      }),
       sources = {
         { name = 'buffer' }
       }
