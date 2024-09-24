@@ -13,3 +13,7 @@ vim.cmd [[
   highlight SpectreReplace guibg=#50FA7B guifg=#000000
   highlight SpectreSearch guibg=#FF79C6 guifg=#000000
 ]]
+
+  -- highlight BufferLineBuffer guibg=#FF79C6 guifg=#000000
+  -- highlight BufferLineBackground guibg=#FF79C6 guifg=#000000
+  -- highlight BufferLineBufferSelected guibg=#50FA7B guifg=#000000
