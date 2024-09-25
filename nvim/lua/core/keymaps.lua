@@ -1,5 +1,6 @@
 local keymap = vim.keymap
 local telescope_builtin = require('telescope.builtin')
+local live_grep_args_shortcuts = require('telescope-live-grep-args.shortcuts')
 local downloads_directory = vim.fn.expand('$HOME/Downloads')
 local toggle_quickfix = require('core.toggle-quickfix').toggle_qf
 
@@ -37,7 +38,9 @@ keymap.set('n', '<leader><leader>', ':HopWord<CR>', { noremap = true, silent = t
 keymap.set('n', '<leader>x', ':1,$ bd!<CR>', { silent = true, nowait = true })
 keymap.set('n', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
 keymap.set('n', 'gjf', ':sp | terminal npx jest --no-coverage %<CR>', { silent = true })
-keymap.set('n', 'gsl', telescope_builtin.live_grep, { noremap = true, silent = true })
+keymap.set('n', 'gsl', live_grep_args_shortcuts.grep_word_under_cursor, { noremap = true, silent = true })
+keymap.set('n', 'gsL', telescope_builtin.live_grep, { noremap = true, silent = true })
+keymap.set('v', 'gsv', live_grep_args_shortcuts.grep_visual_selection, { noremap = true, silent = true })
 keymap.set('n', 'gsp', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
 keymap.set('n', 'gsw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word" })
 keymap.set('n', 'gsf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })

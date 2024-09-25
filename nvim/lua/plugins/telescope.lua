@@ -5,7 +5,8 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-ui-select.nvim',
     'nvim-telescope/telescope-dap.nvim',
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' },
+    { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
   },
   config = function ()
     local actions = require('telescope.actions')
@@ -40,5 +41,6 @@ return {
     })
     require('telescope').load_extension('ui-select')
     require('telescope').load_extension('dap')
+    require('telescope').load_extension('live_grep_args')
   end
 }
