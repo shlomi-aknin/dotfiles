@@ -5,6 +5,29 @@ local js_based_languages = {
   "javascriptreact",
   "vue",
 }
+local isUiOpen = false
+
+local uiClose = function ()
+  if isUiOpen == true then
+    require('dapui').close()
+    isUiOpen = false
+  end
+end
+
+local uiOpen = function ()
+  if isUiOpen == false then
+    require('dapui').open()
+    isUiOpen = true
+  end
+end
+
+local uiToggle = function ()
+  if isUiOpen then
+   uiClose()
+  else
+    uiOpen()
+  end
+end
 
 return {
   {
@@ -13,16 +36,16 @@ return {
       local dap = require("dap")
       local dapui = require("dapui")
       dap.listeners.before.attach.dapui_config = function()
-        dapui.open()
+        uiOpen()
       end
       dap.listeners.before.launch.dapui_config = function()
-        dapui.open()
+        uiOpen()
       end
       dap.listeners.before.event_terminated.dapui_config = function()
-        dapui.close()
+        uiClose()
       end
       dap.listeners.before.event_exited.dapui_config = function()
-        dapui.close()
+        uiClose()
       end
 
       vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
@@ -230,7 +253,8 @@ return {
       {
         "<leader>du",
         function()
-          require("dapui").toggle()
+          uiToggle()
+          -- require("dapui").toggle()
         end,
         desc = "Dap UI toggle",
       },
