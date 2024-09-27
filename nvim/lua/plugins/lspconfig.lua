@@ -27,11 +27,12 @@ return {
         -- "groovyls",
         "lua_ls",
         "sqls",
+        "eslint",
         -- "intelephense", # requires npm to be installed
         -- "jsonls", # requires npm to be installed
         -- "lemminx",
         -- "marksman",
-        "quick_lint_js",
+        -- "quick_lint_js",
         -- "tsserver",
         "ts_ls",
         -- "yamlls", # requires npm to be installed
@@ -65,5 +66,18 @@ return {
         },
       },
     }
+
+    lspconfig.eslint.setup({
+      settings = {
+        packageManager = 'npm'
+      },
+      capabilities = lsp_capabilities,
+      on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          command = "EslintFixAll",
+        })
+      end,
+    })
   end
 }

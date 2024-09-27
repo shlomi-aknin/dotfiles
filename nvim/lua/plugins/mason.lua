@@ -3,6 +3,11 @@ return {
   opts = {},
   dependencies = {
     {
+      "williamboman/mason-lspconfig.nvim",
+      ensure_installed = { "eslint", "ts_ls" },
+      automatic_installation = true,
+    },
+    {
       "jay-babu/mason-nvim-dap.nvim",
       dependencies = { "mfussenegger/nvim-dap" },
       opts = {
