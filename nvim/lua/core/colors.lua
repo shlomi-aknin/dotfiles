@@ -8,6 +8,7 @@ vim.cmd [[
   highlight Search guibg=#FF79C6 guifg=#000000
   highlight CurSearch guibg=#50FA7B guifg=#000000
   highlight Normal guibg=#000000
+  highlight Comment guifg=#7aa2f7
   highlight LineNr guibg=#000000
   highlight TelescopeMatching guibg=#FF79C6 guifg=#000000
   highlight SpectreReplace guibg=#50FA7B guifg=#000000
