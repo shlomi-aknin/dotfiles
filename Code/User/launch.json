@@ -1,0 +1,36 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+      {
+        "name": "Staging",
+        "type": "node",
+        "request": "launch",
+        "envFile": "${workspaceFolder}/staging.env",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
+        "runtimeArgs": [
+          "--esm" 
+        ],
+        "program": "${file}",
+        "cwd": "${workspaceRoot}",
+        "internalConsoleOptions": "openOnSessionStart",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    },
+    {
+        "name": "Production",
+        "type": "node",
+        "request": "launch",
+        "envFile": "${workspaceFolder}/prod.env",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
+        "runtimeArgs": [
+          "--esm" 
+        ],
+        "program": "${file}",
+        "cwd": "${workspaceRoot}",
+        "internalConsoleOptions": "openOnSessionStart",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    }
+  ]
+}
