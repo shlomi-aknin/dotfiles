@@ -11,6 +11,7 @@
         "envFile": "${workspaceFolder}/staging.env",
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
         "runtimeArgs": [
+          "--swc",
           "--esm" 
         ],
         "program": "${file}",
@@ -25,6 +26,7 @@
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
         "runtimeArgs": [
+          "--swc",
           "--esm" 
         ],
         "program": "${file}",
