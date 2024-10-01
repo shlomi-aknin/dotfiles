@@ -12,12 +12,13 @@
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
         "runtimeArgs": [
           "--swc",
-          "--esm" 
+          // "--esm" 
         ],
         "program": "${file}",
         "cwd": "${workspaceRoot}",
-        "internalConsoleOptions": "openOnSessionStart",
-        "skipFiles": ["<node_internals>/**", "node_modules/**"]
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
     },
     {
         "name": "Production",
@@ -27,12 +28,35 @@
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
         "runtimeArgs": [
           "--swc",
-          "--esm" 
+          // "--esm",
         ],
         "program": "${file}",
         "cwd": "${workspaceRoot}",
-        "internalConsoleOptions": "openOnSessionStart",
-        "skipFiles": ["<node_internals>/**", "node_modules/**"]
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+    },
+    {
+        "name": "Staging - Debug using tsx",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}",
+        "envFile": "${workspaceFolder}/staging.env",
+        "runtimeExecutable": "/home/shlomo/.nvm/versions/node/v20.12.2/bin/tsx",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
+    },
+    {
+        "name": "Production - Debug using tsx",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}",
+        "envFile": "${workspaceFolder}/prod.env",
+        "runtimeExecutable": "/home/shlomo/.nvm/versions/node/v20.12.2/bin/tsx",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
     }
   ]
 }
