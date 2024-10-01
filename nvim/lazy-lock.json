@@ -66,6 +66,5 @@
   "trim.nvim": { "branch": "master", "commit": "4fe47a46c02a58894ded8328ca81f6c214a892f5" },
   "trouble.nvim": { "branch": "main", "commit": "6efc446226679fda0547c0fd6a7892fd5f5b15d8" },
   "typescript-tools.nvim": { "branch": "master", "commit": "f8c2e0b36b651c85f52ad5c5373ff8b07adc15a7" },
-  "vscode-js-debug": { "branch": "main", "commit": "2249345ba43984d62a161bbe3b3bef02f8ff45e2" },
-  "workspace-diagnostics.nvim": { "branch": "main", "commit": "573ff93c47898967efdfbc6587a1a39e3c2d365e" }
+  "vscode-js-debug": { "branch": "main", "commit": "2249345ba43984d62a161bbe3b3bef02f8ff45e2" }
 }

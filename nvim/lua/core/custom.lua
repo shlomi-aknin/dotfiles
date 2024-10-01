@@ -50,15 +50,15 @@ vim.api.nvim_create_user_command("CopyAbsolutePath", function()
     copy_path(vim.fn.expand("%:p"))
 end, {})
 
--- vim.api.nvim_create_autocmd("BufWritePre", {
---   pattern = { "*.tsx", "*.ts" },
---   callback = function()
---     vim.lsp.buf.code_action({
---       apply = true,
---       context = {
---         only = { "source.removeUnusedImports.ts" },
---         diagnostics = {},
---       },
---     })
---   end,
--- })
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.tsx", "*.ts" },
+  callback = function()
+    vim.lsp.buf.code_action({
+      apply = true,
+      context = {
+        only = { "source.removeUnusedImports.ts" },
+        diagnostics = {},
+      },
+    })
+  end,
+})
