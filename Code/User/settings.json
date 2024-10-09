@@ -14,7 +14,7 @@
     "workbench.colorCustomizations": {
       "editorWarning.foreground": "#00000000",
       "editorInfo.foreground":    "#00000000",
-      "gitlens.trailingLineForegroundColor":"#FF79C6",
+      "gitlens.trailingLineForegroundColor":"#BD93F9",
       "debugTokenExpression.value": "#50FA7B",
       "debugTokenExpression.string": "#50FA7B",
       "debugTokenExpression.boolean": "#50FA7B",
@@ -24,6 +24,7 @@
       "editorCursor.background": "#000000",
       "editorCursor.foreground": "#50FA7B",
       "editorSuggestWidget.selectedBackground": "#FF79C6",
+      "betterGitLineBlame.foregroundColor": "#FF79C6",
       "editorSuggestWidget.selectedForeground": "#000000",
       "editorSuggestWidget.focusHighlightForeground": "#000000",
       "quickInputList.focusBackground": "#FF79C6",
@@ -74,7 +75,7 @@
       {
         "before": ["<space>", "l"],
         "commands": [
-          ":!alacritty -t 'fzfcode' --class 'fzfcode' -e fzfsearchforcode"
+          ":!alacritty -t 'fzfcode' --class 'fzfcode' -e ~/.local/bin/fzfsearchforcode"
           // ":!alacritty -t 'fzfripgrepcode' --class 'fzfripgrepcode'  -e fzfwithripgrepcode"
         ]
       },
@@ -617,18 +618,16 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
     "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
+      "source.fixAll": "explicit",
+      "source.removeUnusedImports": true
+    },
   "eslint.validate": [
     "javascript",
     "typescript"
   ],
   "editor.fontLigatures": true,
   "vim.useSystemClipboard": true,
-  "window.zoomLevel": 2,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Dracula At Night",
-  "workbench.activityBar.visible": false,
   "vim.cursorStylePerMode.replace": "block-outline",
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
@@ -646,6 +645,16 @@
   "vim.searchMatchColor": "#50FA7B",
   "vim.searchMatchTextColor": "#000000",
   "vim.highlightedyank.enable": true,
-  "editor.occurrencesHighlight": false,
-  "breadcrumbs.enabled": false
+  "editor.occurrencesHighlight": "off",
+  "breadcrumbs.enabled": true,
+  "terminal.integrated.scrollback": 1000000,
+  "window.zoomLevel": 1.2,
+  "workbench.activityBar.location": "hidden",
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.associations": {
+    "*.env": "shellscript"
+  },
+  "workbench.colorTheme": "Dracula At Night",
+  "betterGitLineBlame.showStatusBarItem": true
 }
