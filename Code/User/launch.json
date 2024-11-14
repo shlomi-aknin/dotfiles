@@ -49,6 +49,20 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
+        "name": "STAGING - worker service (tsx)",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/bin/workerService.ts",
+        "envFile": "${workspaceFolder}/staging.env",
+        "runtimeExecutable": "npx",
+        "runtimeArgs": [
+          "tsx",
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
+    },
+    {
         "name": "STAGING - processOrderJob (tsx)",
         "type": "node",
         "request": "launch",
@@ -97,6 +111,20 @@
         "type": "node",
         "request": "launch",
         "program": "${file}",
+        "envFile": "${workspaceFolder}/prod.env",
+        "runtimeExecutable": "npx",
+        "runtimeArgs": [
+          "tsx",
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
+    },
+    {
+        "name": "PRODUCTION - worker service (tsx)",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/bin/workerService.ts",
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [

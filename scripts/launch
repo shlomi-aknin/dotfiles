@@ -11,7 +11,7 @@ case $SELECTED in
     ~/.local/bin/run-scratch.sh
     ;;
   "Passwords")
-    alacritty -e nvim ~/Downloads/admin-ui.txt
+    devour alacritty -e nvim ~/Downloads/admin-ui.txt
     ;;
   "Sound Control")
     pavucontrol
