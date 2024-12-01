@@ -1,13 +1,22 @@
 #!/bin/bash
 
-# Check if argument is provided
-if [ -z "$1" ]; then
-  echo "Usage: $0 <file_path:line_number>"
+# Fetch input from the system clipboard using xclip or xsel
+if command -v xclip &> /dev/null; then
+  input=$(xclip -selection clipboard -o)
+elif command -v xsel &> /dev/null; then
+  input=$(xsel --clipboard --output)
+else
+  echo "Error: Clipboard utility not found. Install xclip or xsel."
+  exit 1
+fi
+
+# Verify clipboard content
+if [ -z "$input" ]; then
+  echo "Clipboard is empty. Please copy the file path with line number (format: <file_path:line_number>) to the clipboard."
   exit 1
 fi
 
 # Extract file path and line number
-input="$1"
 file_path="${input%%:*}"
 line_number="${input##*:}"
 
