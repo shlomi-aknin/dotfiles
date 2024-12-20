@@ -56,6 +56,15 @@ return {
       end
     })
 
+    local function organize_imports()
+      local params = {
+        command = "_typescript.organizeImports",
+        arguments = {vim.api.nvim_buf_get_name(0)},
+        title = ""
+      }
+      vim.lsp.buf.execute_command(params)
+    end
+
     -- Lua LSP settings
     lspconfig.lua_ls.setup {
       settings = {
@@ -81,5 +90,16 @@ return {
         })
       end,
     })
+
+    lspconfig.ts_ls.setup {
+      on_attach = lsp_attach,
+      capabilities = lsp_capabilities,
+      commands = {
+        OrganizeImports = {
+          organize_imports,
+          description = "Organize Imports"
+        }
+      }
+    }
   end
 }
