@@ -7,7 +7,6 @@
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.startupPrompt": "never",
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.minimap.enabled": false,
     "window.menuBarVisibility": "toggle",
     "editor.cursorSurroundingLines": 999,
     "vim.easymotion": true,
@@ -619,7 +618,7 @@
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
-      "source.removeUnusedImports": true
+      "source.removeUnusedImports": "explicit"
     },
   "eslint.validate": [
     "javascript",
@@ -656,5 +655,23 @@
     "*.env": "shellscript"
   },
   "workbench.colorTheme": "Dracula At Night",
-  "betterGitLineBlame.showStatusBarItem": true
+  "betterGitLineBlame.showStatusBarItem": true,
+  "editor.minimap.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true,
+    "**/node_modules": true
+  },
+  "typescript.tsserver.enableTracing": false,
+  "typescript.tsserver.watchOptions": "vscode",
+  "typescript.validate.enable": false,
+  "typescript.tsserver.maxTsServerMemory": 4096,
+  "typescript.tsserver.log": "off",
+  "files.exclude": {
+    "**/node_modules": true
+  }
 }
