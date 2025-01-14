@@ -668,7 +668,6 @@
   },
   "typescript.tsserver.enableTracing": false,
   "typescript.tsserver.watchOptions": "vscode",
-  "typescript.validate.enable": false,
   "typescript.tsserver.maxTsServerMemory": 4096,
   "typescript.tsserver.log": "off",
   "files.exclude": {
