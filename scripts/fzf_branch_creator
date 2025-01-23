@@ -1,0 +1,51 @@
+#!/bin/bash
+
+cd ~/Workspace
+
+# Ensure fd and fzf are installed
+if ! command -v fd &> /dev/null || ! command -v fzf &> /dev/null; then
+  echo "Error: Please make sure both 'fd' and 'fzf' are installed."
+  exit 1
+fi
+
+# Prompt to select a project (top-level directories only)
+project=$(fd -t d -d 1 . ~/Workspace | fzf --prompt="Select project: ")
+if [ -z "$project" ]; then
+  echo "No project selected. Exiting..."
+  exit 1
+fi
+
+# Prompt to select commit type
+commit_type=$(echo -e "chore\nfeat\nrefactor\ntest" | fzf --prompt="Select commit type: ")
+if [ -z "$commit_type" ]; then
+  echo "No commit type selected. Exiting..."
+  exit 1
+fi
+
+# Prompt for branch name input
+read -p "Enter branch input (e.g., git checkout -b DEV-XXXXX/BRANCH-NAME): " branch_input
+if [[ ! "$branch_input" =~ ^git\ checkout\ -b\ (DEV-[0-9]+/[-a-zA-Z0-9]+)$ ]]; then
+  echo "Invalid branch input format. Must be in the form: git checkout -b DEV-XXXXX/BRANCH-NAME"
+  exit 1
+fi
+
+# Extract the branch name
+branch_name="${BASH_REMATCH[1]}"
+
+# Combine commit type and branch name
+final_branch_name="${commit_type}/${branch_name}"
+
+# Change directory to the selected project
+cd "$project" || { echo "Failed to change directory to $project. Exiting..."; exit 1; }
+
+# Run git checkout
+git checkout -b "$final_branch_name"
+if [ $? -eq 0 ]; then
+  echo "Branch created and switched to: $final_branch_name"
+else
+  echo "Failed to create branch. Exiting..."
+  exit 1
+fi
+
+# Exit script
+exit 0

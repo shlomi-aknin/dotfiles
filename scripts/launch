@@ -2,11 +2,26 @@
 
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
-SELECTED=$(printf "ARandR\nPasswords\nPerimeter\nPostman\nFilezilla\nRedis client\nRedis insight\nSound Control\nDebug" | ~/.local/bin/fzf -m --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+SELECTED=$(printf "ARandR\nPasswords\nPerimeter\nPostman\nFilezilla\nRedis client\nRedis insight\nSound Control\nDebug\nOpen blame on Github\nOpen all files in PR\nDocker desktop\nVi mongo\nGit branch creator" | ~/.local/bin/fzf -m --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
 
 [ "$SELECTED" = "" ] && exit 0
 
 case $SELECTED in
+  "Git branch creator")
+    devour alacritty -e ~/.local/bin/fzf_branch_creator
+    ;;
+  "Vi mongo")
+    devour alacritty -e /usr/bin/vi-mongo
+    ;;
+  "Docker desktop")
+    ~/.local/bin/launch_docker_desktop
+    ;;
+  "Open all files in PR")
+    ~/.local/bin/changed-files-in-branch.sh
+    ;;
+  "Open blame on Github")
+    ~/.local/bin/projectselector_git_blame_fzf
+    ;;
   "Debug")
     ~/.local/bin/run-scratch.sh
     ;;
@@ -14,7 +29,7 @@ case $SELECTED in
     devour alacritty -e nvim ~/Downloads/admin-ui.txt
     ;;
   "Sound Control")
-    pavucontrol
+    devour pavucontrol
     ;;
   "ARandR")
     devour arandr
