@@ -23,7 +23,8 @@ if [ -z "$commit_type" ]; then
 fi
 
 # Prompt for branch name input
-read -p "Enter branch input (e.g., git checkout -b DEV-XXXXX/BRANCH-NAME): " branch_input
+branch_input=$(xclip -o)
+# read -p "Enter branch input (e.g., git checkout -b DEV-XXXXX/BRANCH-NAME): " branch_input
 if [[ ! "$branch_input" =~ ^git\ checkout\ -b\ (DEV-[0-9]+/[-a-zA-Z0-9]+)$ ]]; then
   echo "Invalid branch input format. Must be in the form: git checkout -b DEV-XXXXX/BRANCH-NAME"
   exit 1
@@ -39,6 +40,8 @@ final_branch_name="${commit_type}/${branch_name}"
 cd "$project" || { echo "Failed to change directory to $project. Exiting..."; exit 1; }
 
 # Run git checkout
+git checkout master
+git pull
 git checkout -b "$final_branch_name"
 if [ $? -eq 0 ]; then
   echo "Branch created and switched to: $final_branch_name"
