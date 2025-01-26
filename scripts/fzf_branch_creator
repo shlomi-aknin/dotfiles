@@ -16,7 +16,7 @@ if [ -z "$project" ]; then
 fi
 
 # Prompt to select commit type
-commit_type=$(echo -e "chore\nfeat\nrefactor\ntest" | fzf --prompt="Select commit type: ")
+commit_type=$(echo -e "chore\nfeat\nrefactor\ntest\nfix" | fzf --prompt="Select commit type: ")
 if [ -z "$commit_type" ]; then
   echo "No commit type selected. Exiting..."
   exit 1
