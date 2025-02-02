@@ -31,7 +31,7 @@ vim.bo.shiftwidth = 2
 vim.bo.tabstop = 2
 
 -- Colors
-hl(0, 'Normal',         { fg='#F8F8F2', bg='#282A36' })
+hl(0, 'Normal',         { fg='#F8F8F2', bg='#000000' })
 hl(0, 'CursorLine',     { bg='#44475A' })
 hl(0, 'CursorLineNr',   { fg='#BD93F9' })
 hl(0, 'LineNr',         { fg='#BD93F9' })
@@ -41,7 +41,7 @@ hl(0, 'Cursor',         { fg='#282A36', bg='#F8F8F2' })
 hl(0, 'VertSplit',      { fg='#44475A', bg='#44475A' })
 hl(0, 'Visual',         { fg='#F8F8F2', bg='#6272A4' })
 hl(0, 'Pmenu',          { fg='#F8F8F2', bg='#44475A' })
-hl(0, 'PmenuSel',       { fg='#F8F8F2', bg='#BD93F9' })
+hl(0, 'PmenuSel',       { fg='#000000', bg='#BD93F9' })
 hl(0, "StatusLine",     { bg='#6272A4', fg='#FFFFFF' })
 hl(0, 'StatusLineNC',   { fg='#6272A4', bg='#44475A' })
 hl(0, 'Error',          { fg='#FF5555', bg=NONE })
@@ -73,18 +73,7 @@ hl(0, 'GitGutterChange',       { fg='#FFB86C', bg=NONE })
 hl(0, 'GitGutterDelete',       { fg='#FF5555', bg=NONE })
 hl(0, 'GitGutterChangeDelete', { fg='#FFB86C', bg=NONE })
 
--- Keys
-
--- Function to clear search highlighting
-function clear_search_highlight()
-    vim.cmd('noh') -- Equivalent to :noh command
-end
-
 -- Define key mappings to call clear_search_highlight function along with original hjkl movement
-key('n', 'h', ':lua clear_search_highlight()<CR>h', { noremap = true, silent = true })
-key('n', 'j', ':lua clear_search_highlight()<CR>j', { noremap = true, silent = true })
-key('n', 'k', ':lua clear_search_highlight()<CR>k', { noremap = true, silent = true })
-key('n', 'l', ':lua clear_search_highlight()<CR>l', { noremap = true, silent = true })
 key('n', '<space>s', ':w<cr>', { silent=true })
 key('n', '<C-j>', 'yyp', { silent=true })
 key('n', '<C-k>', 'yyP', { silent=true })
