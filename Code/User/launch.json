@@ -1,25 +1,6 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-    //   {
-    //     "name": "Staging using ts-node",
-    //     "type": "node",
-    //     "request": "launch",
-    //     "envFile": "${workspaceFolder}/staging.env",
-    //     "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
-    //     "runtimeArgs": [
-    //       "--swc",
-    //       // "--esm" 
-    //     ],
-    //     "program": "${file}",
-    //     "cwd": "${workspaceRoot}",
-    //     "skipFiles": ["<node_internals>/**", "node_modules/**"],
-    //     "console": "integratedTerminal",
-    //     "internalConsoleOptions": "neverOpen",
-    // },
     {
         "name": "STAGING - current file (tsx)",
         "type": "node",
@@ -28,7 +9,8 @@
         "envFile": "${workspaceFolder}/staging.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -42,7 +24,8 @@
         "envFile": "${workspaceFolder}/staging.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -56,7 +39,8 @@
         "envFile": "${workspaceFolder}/staging.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -70,7 +54,8 @@
         "envFile": "${workspaceFolder}/staging.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -84,7 +69,8 @@
         "envFile": "${workspaceFolder}/staging.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -114,7 +100,8 @@
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -128,7 +115,8 @@
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -142,7 +130,8 @@
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -156,7 +145,8 @@
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -170,7 +160,8 @@
         "envFile": "${workspaceFolder}/prod.env",
         "runtimeExecutable": "npx",
         "runtimeArgs": [
-          "tsx",
+          "ts-node",
+          "--swc"
         ],
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
