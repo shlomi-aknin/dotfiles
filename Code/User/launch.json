@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-        "name": "STAGING - current file (tsx)",
+        "name": "STAGING - current file (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${file}",
@@ -17,7 +17,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "STAGING - processWorkerJob (tsx)",
+        "name": "STAGING - processWorkerJob (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/scripts/core/processWorkerJob.ts",
@@ -32,7 +32,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "STAGING - worker service (tsx)",
+        "name": "STAGING - worker service (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/bin/workerService.ts",
@@ -47,7 +47,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "STAGING - processOrderJob (tsx)",
+        "name": "STAGING - processOrderJob (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/scripts/core/processOrderJob.ts",
@@ -62,7 +62,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "STAGING - apiService (tsx)",
+        "name": "STAGING - apiService (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/bin/apiService.ts",
@@ -93,7 +93,7 @@
     //     "internalConsoleOptions": "neverOpen",
     // },
     {
-        "name": "PRODUCTION - current file (tsx)",
+        "name": "PRODUCTION - current file (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${file}",
@@ -108,7 +108,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "PRODUCTION - worker service (tsx)",
+        "name": "PRODUCTION - worker service (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/bin/workerService.ts",
@@ -123,7 +123,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "PRODUCTION - processWorkerJob (tsx)",
+        "name": "PRODUCTION - processWorkerJob (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/scripts/core/processWorkerJob.ts",
@@ -138,7 +138,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "PRODUCTION - processOrderJob (tsx)",
+        "name": "PRODUCTION - processOrderJob (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/scripts/core/processOrderJob.ts",
@@ -153,7 +153,7 @@
         "skipFiles": ["<node_internals>/**", "node_modules/**"],
     },
     {
-        "name": "PRODUCTION - apiService (tsx)",
+        "name": "PRODUCTION - apiService (ts-node)",
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/bin/apiService.ts",

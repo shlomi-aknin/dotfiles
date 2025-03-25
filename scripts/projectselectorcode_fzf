@@ -5,7 +5,7 @@ LASTDIR=/tmp/lastdir
 touch $LASTDIR
 DIR=/home/shlomo/Workspace
 cd $DIR
-SELECTED=$(fd --max-depth 1 | /home/shlomo/.local/bin/fzf)
+SELECTED=$(fd --max-depth 1 | fzf --cycle --bind=ctrl-l:accept,ctrl-j:down,ctrl-k:up)
 
 [ "$SELECTED" = "" ] && exit 0
 echo "$DIR/$SELECTED" > $LASTDIR
