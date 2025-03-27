@@ -2,6 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+        "name": "LOCAL - current file (ts-node)",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}",
+        "envFile": "${workspaceFolder}/.env",
+        "runtimeExecutable": "npx",
+        "runtimeArgs": [
+          "ts-node",
+          "--swc"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": ["<node_internals>/**", "node_modules/**"],
+    },
+    {
         "name": "STAGING - current file (ts-node)",
         "type": "node",
         "request": "launch",
