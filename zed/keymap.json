@@ -1,0 +1,53 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-l": "menu::Confirm"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Picker || menu",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      "L": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }],
+      "H": [
+        "editor::MoveToBeginningOfLine",
+        { "stop_at_soft_wraps": true, "stop_at_indent": true }
+      ],
+      "space f": "file_finder::Toggle",
+      "space s": "workspace::Save",
+      "space q q": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "space e": "workspace::ToggleLeftDock",
+      "ctrl-[": "pane::SwapItemLeft",
+      "ctrl-]": "pane::SwapItemRight",
+      "sapce x": ["pane::CloseAllItems", { "close_pinned": false }],
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown"
+      // "K": "editor::ShowSignatureHelp"
+      //
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  }
+]
