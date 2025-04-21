@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="720">
+  <name>Krohnkite</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>anametologin</author>
+  <homepage>https://store.kde.org/p/2144146</homepage>
+  <licence></licence>
+  <version>0.9.8.5</version>
+  <rating>81</rating>
+  <downloads>5967</downloads>
+  <installedfile>/home/shlomo/.local/share/kwin/scripts/krohnkite/</installedfile>
+  <id>2144146</id>
+  <releasedate>2025-01-08</releasedate>
+  <summary>&lt;p>A dynamic tiling extension for KWin6.&lt;/p>
+
+&lt;p>Kr&amp;ouml;hnkite is mainly inspired by dwm from suckless folks, and aims to be "simple" in both development and usage.&lt;/p>
+
+&lt;h2>Features&lt;/h2>
+
+&lt;ul>
+&lt;li>DWM-like window tiling&lt;/li>
+&lt;li>Dynamically tile windows, rather than manually placing each.&lt;/li>
+&lt;li>Floating windows&lt;/li>
+&lt;li>Multiple Layout Support&lt;/li>
+&lt;li>Tiling layout&lt;/li>
+&lt;li>Monocle layout&lt;/li>
+&lt;li>Desktop-friendly layouts (Spread, Stair)&lt;/li>
+&lt;li>Integrates well into KWin features, including:&lt;/li>
+&lt;li>Activities&lt;/li>
+&lt;li>Virtual desktops&lt;/li>
+&lt;li>Window switcher&lt;/li>
+&lt;li>Fullscreen (KWin can fullscreen any window)&lt;/li>
+&lt;li>Minimization&lt;/li>
+&lt;/ul>
+
+&lt;h2>Look at me&lt;/h2>
+
+&lt;ol>
+&lt;li>Delete old or unused  KWin shortcuts with reboot after it:
+qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.cleanUp&lt;/li>
+&lt;li>If you have a gap or vice versa you have gray(white etc) rectangle that means that there is a program with size 1x1 that have to be filtered by title or other ways. Make sure that the following programs, if you have them, have been added to the filter:
+  2.1 xwaylandvideobridge&lt;/li>
+&lt;/ol>
+</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/77/69/99/2144146/krohnkite1.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/77/69/99/2144146/krohnkite1.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTczNjMyNjcwMywibyI6IjEiLCJzIjoiOGNjYWNjOTIzN2U0ZjdiNjdlZDc3ZjcxODg5M2QyYjY1ZWU2MGNjYjg4NDRhYWYzYmZkMDg2YmI5MGY2NWM3MzQ0ZGQyZWY3Nzc1MzI3MDYzZjA5NzQxZTEzYTIwMGNhOTYwZjE2MjBmNzAyZjM0NTQ2ZDhiM2E1MmZlYTFkMDYiLCJ0IjoxNzQyODk3MTE0LCJzdGZwIjpudWxsLCJzdGlwIjoiMjEyLjU5LjcwLjIzIn0.4ajI5Tt6lZjF8xC_LZWlVEPBcXFN51FB2gBYtnnx3wQ/krohnkite-0.9.8.5.kwinscript</payload>
+  <tags>mit-license,linux,tiling,kwin,efi,unix</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
