@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Script to mount a remote SFTP folder from exavault.com to local folder
+# using sshfs with secure authentication
+
+# Configuration
+REMOTE_USER="cymbio"
+REMOTE_HOST="cymbio.exavault.com"
+LOCAL_MOUNT_POINT="$HOME/Downloads/exavault"
+
+# Check if sshfs is installed
+if ! command -v sshfs &> /dev/null; then
+    echo "sshfs is not installed. Please install it first."
+    echo "On Debian/Ubuntu: sudo apt-get install sshfs"
+    echo "On Fedora/CentOS: sudo dnf install fuse-sshfs"
+    exit 1
+fi
+
+# Create local mount point if it doesn't exist
+if [ ! -d "$LOCAL_MOUNT_POINT" ]; then
+    echo "Creating mount point directory: $LOCAL_MOUNT_POINT"
+    mkdir -p "$LOCAL_MOUNT_POINT"
+fi
+
+# Check if already mounted
+if mount | grep -q "$LOCAL_MOUNT_POINT"; then
+    echo "A filesystem is already mounted at $LOCAL_MOUNT_POINT"
+    echo "Unmounting first..."
+    fusermount -u "$LOCAL_MOUNT_POINT"
+fi
+
+# Option 1: Use SSH key authentication (most secure)
+# This assumes you've already set up SSH key authentication with the server
+# Commented out as we're using KDE Wallet instead
+# sshfs "$REMOTE_USER@$REMOTE_HOST:/" "$LOCAL_MOUNT_POINT" \
+#    -o reconnect \
+#    -o ServerAliveInterval=15 \
+#    -o ServerAliveCountMax=3
+
+# Option 2: Use password stored in encrypted file (alternative)
+# Uncomment the following lines to use this method instead
+# CREDENTIALS_FILE="$HOME/.exavault_credentials"
+# 
+# # Read the encrypted password (first time setup requires running: 
+# # echo "your_password" | gpg --symmetric --output $CREDENTIALS_FILE)
+# PASSWORD=$(gpg --quiet --decrypt "$CREDENTIALS_FILE" 2>/dev/null)
+# 
+# # Mount using the decrypted password
+# echo "$PASSWORD" | sshfs "$REMOTE_USER@$REMOTE_HOST:/" "$LOCAL_MOUNT_POINT" \
+#     -o password_stdin \
+#     -o reconnect \
+#     -o ServerAliveInterval=15 \
+#     -o ServerAliveCountMax=3
+
+# Option 3: Use password stored in KDE Wallet (KDE's secure password manager)
+# Make sure you have the kwallet tools installed
+# For most KDE distributions, these should be available by default
+# If not, install them with: sudo apt install kwalletcli (for Debian/Ubuntu)
+# Or: sudo dnf install kwalletcli (for Fedora)
+
+# Check if kwallet-query is available
+if ! command -v kwallet-query &> /dev/null; then
+    echo "kwallet-query not found. Please install kwalletcli package."
+    exit 1
+fi
+
+# Retrieve password from KDE Wallet
+# Note: This will only work if KDE Wallet is unlocked
+WALLET="kdewallet"  # The default wallet name in KDE
+FOLDER="SFTP"      # Create this folder in KDE Wallet
+ENTRY="exavault"   # Name of the password entry
+
+# Get password from KDE Wallet
+PASSWORD=$(kwallet-query -r "$ENTRY" -f "$FOLDER" "$WALLET" 2>/dev/null)
+
+# If password retrieval failed or returned empty
+if [ -z "$PASSWORD" ]; then
+    echo "Failed to get password from KDE Wallet."
+    echo "Please make sure:"
+    echo "1. KDE Wallet is unlocked"
+    echo "2. You've stored the password in $WALLET wallet, folder $FOLDER, entry $ENTRY"
+    echo "To add the password to KDE Wallet, use KDE Wallet Manager application"
+    exit 1
+fi
+
+# Mount using the retrieved password
+echo "$PASSWORD" | sshfs "$REMOTE_USER@$REMOTE_HOST:/" "$LOCAL_MOUNT_POINT" \
+    -o password_stdin \
+    -o reconnect \
+    -o ServerAliveInterval=15 \
+    -o ServerAliveCountMax=3
+
+# Check if mount was successful
+if [ $? -eq 0 ]; then
+    echo "Successfully mounted $REMOTE_USER@$REMOTE_HOST to $LOCAL_MOUNT_POINT"
+else
+    echo "Failed to mount remote SFTP directory"
+    exit 1
+fi
+
+echo "To unmount, use: fusermount -u $LOCAL_MOUNT_POINT"
