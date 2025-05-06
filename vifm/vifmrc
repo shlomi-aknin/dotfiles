@@ -414,6 +414,10 @@ filextype *.pro qtcreator %f &
 filextype */
         \ {View in thunar}
         \ Thunar %f &,
+" CSV
+filetype {*.csv}
+       \ {View in csvlens}
+       \ csvlens %c,
 
 " Syntax highlighting in preview
 "
@@ -564,7 +568,7 @@ nnoremap <a-o> :sync %c<cr>
 " set grepprg='ag --line-numbers %i %a %s'
 
 " Add additional place to look for executables
-" let $PATH = $HOME.'/bin/fuse:'.$PATH
+let $PATH = $HOME.'/.cargo/bin:'.$HOME.'/.local/bin:'.$PATH
 
 " Block particular shortcut
 " nnoremap <left> <nop>
