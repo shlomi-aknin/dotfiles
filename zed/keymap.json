@@ -1,10 +1,3 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
   {
     "bindings": {
@@ -15,9 +8,7 @@
   },
   {
     "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
+    "bindings": {}
   },
   {
     "context": "Picker || menu",
@@ -27,27 +18,67 @@
     }
   },
   {
-    "context": "Editor",
+    "context": "Editor && mode == full",
     "bindings": {
       "ctrl-h": "pane::ActivatePreviousItem",
       "ctrl-l": "pane::ActivateNextItem",
-      "L": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }],
+      "L": [
+        "editor::MoveToEndOfLine",
+        {
+          "stop_at_soft_wraps": true
+        }
+      ],
       "H": [
         "editor::MoveToBeginningOfLine",
-        { "stop_at_soft_wraps": true, "stop_at_indent": true }
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true
+        }
       ],
       "space f": "file_finder::Toggle",
+      "space p": "outline::Toggle",
       "space s": "workspace::Save",
-      "space q q": ["pane::CloseActiveItem", { "close_pinned": false }],
-      "space e": "workspace::ToggleLeftDock",
+      "space q q": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ],
+      "space e": "project_panel::ToggleFocus",
       "ctrl-[": "pane::SwapItemLeft",
       "ctrl-]": "pane::SwapItemRight",
-      "sapce x": ["pane::CloseAllItems", { "close_pinned": false }],
+      "sapce x": [
+        "pane::CloseAllItems",
+        {
+          "close_pinned": false
+        }
+      ],
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown"
-      // "K": "editor::ShowSignatureHelp"
-      //
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "h": "project_panel::CollapseSelectedEntry",
+      "l": "project_panel::ExpandSelectedEntry",
+      "o": "project_panel::NewFile",
+      "O": "project_panel::NewDirectory",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "Y": "project_panel::CopyPath",
+      "R": "workspace::CopyRelativePath",
+      "r": "project_panel::Rename",
+      "d": [
+        "project_panel::Delete",
+        {
+          "skip_prompt": true
+        }
+      ],
+      "/": "project_panel::NewSearchInDirectory",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+      "tab": "menu::Cancel"
     }
   }
 ]
