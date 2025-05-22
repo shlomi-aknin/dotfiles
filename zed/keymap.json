@@ -8,13 +8,26 @@
   },
   {
     "context": "Workspace",
-    "bindings": {}
+    "bindings": {
+      "ctrl-t": "workspace::NewFile"
+    }
   },
   {
     "context": "Picker || menu",
     "bindings": {
       "ctrl-k": "menu::SelectPrevious",
       "ctrl-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-k": "editor::AddSelectionAbove",
+      "ctrl-shift-j": "editor::AddSelectionBelow",
+      "ctrl-k": "editor::DuplicateLineUp",
+      "ctrl-j": "editor::DuplicateLineDown",
+      "K": "editor::Hover",
+      "space /": ["editor::ToggleComments", { "advance_downwards": false }]
     }
   },
   {
@@ -54,7 +67,12 @@
         }
       ],
       "alt-k": "editor::MoveLineUp",
-      "alt-j": "editor::MoveLineDown"
+      "alt-j": "editor::MoveLineDown",
+      "space k": "editor::NewlineAbove",
+      "space j": "editor::NewlineBelow",
+      "g p d": "editor::GoToDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+      "space c a": "editor::ToggleCodeActions"
     }
   },
   {
@@ -66,7 +84,7 @@
       "O": "project_panel::NewDirectory",
       "y": "project_panel::Copy",
       "p": "project_panel::Paste",
-      "Y": "project_panel::CopyPath",
+      "Y": "workspace::CopyPath",
       "R": "workspace::CopyRelativePath",
       "r": "project_panel::Rename",
       "d": [
