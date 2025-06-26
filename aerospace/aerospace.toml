@@ -13,18 +13,19 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
     inner.horizontal = 5
     inner.vertical =   5
-    outer.left =       5
-    outer.bottom =     5
-    outer.top =        5
-    outer.right =      5
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
 
 [mode.main.binding]
-
     # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
-    alt-enter = 'exec-and-forget open -na /Applications/Alacritty.app'
-    alt-z = '''exec-and-forget MYVIFMRC="$HOME/.config/vifm/vifmrc" alacritty -e vifm'''
-    alt-o = '''exec-and-forget alacritty -e htop'''
+    # alt-enter = 'exec-and-forget open -na /Applications/Alacritty.app'
+    alt-enter = 'exec-and-forget /usr/local/bin/alacritty'
+    alt-z = 'exec-and-forget MYVIFMRC="$HOME/.config/vifm/vifmrc" /usr/local/bin/alacritty -e /usr/local/bin/vifm'
+    alt-o = 'exec-and-forget /usr/local/bin/alacritty -e /usr/local/bin/htop'
     alt-shift-q = "close"
+    alt-shift-x = "close-all-windows-but-current"
     # alt-enter = '''exec-and-forget osascript -e '
     # tell application "Terminal"
     #     do script
