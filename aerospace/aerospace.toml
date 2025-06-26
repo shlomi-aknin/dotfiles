@@ -24,8 +24,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-enter = 'exec-and-forget /usr/local/bin/alacritty'
     alt-z = 'exec-and-forget MYVIFMRC="$HOME/.config/vifm/vifmrc" /usr/local/bin/alacritty -e /usr/local/bin/vifm'
     alt-o = 'exec-and-forget /usr/local/bin/alacritty -e /usr/local/bin/htop'
+    alt-i = 'workspace next --wrap-around'
+    alt-u = 'workspace prev --wrap-around'
+    alt-b = 'exec-and-forget open -a "Google Chrome"'
     alt-shift-q = "close"
     alt-shift-x = "close-all-windows-but-current"
+    alt-shift-o = "workspace-back-and-forth"
     # alt-enter = '''exec-and-forget osascript -e '
     # tell application "Terminal"
     #     do script
@@ -37,7 +41,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-h =         'focus --boundaries-action wrap-around-the-workspace left'
     alt-j =         'focus --boundaries-action wrap-around-the-workspace down'
     alt-k =         'focus --boundaries-action wrap-around-the-workspace up'
-    alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
+    alt-l =         'focus --boundaries-action wrap-around-the-workspace right'
 
     alt-shift-h = 'move left'
     alt-shift-j = 'move down'
