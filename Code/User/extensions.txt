@@ -1,9 +1,8 @@
+code --install-extension andys8.jest-snippets
 code --install-extension bceskavich.theme-dracula-at-night
 code --install-extension dbaeumer.vscode-eslint
-code --install-extension eamodio.gitlens
-code --install-extension esbenp.prettier-vscode
 code --install-extension firsttris.vscode-jest-runner
+code --install-extension maattdd.gitless
 code --install-extension redguardtoo.matchit
-code --install-extension rvest.vs-code-prettier-eslint
 code --install-extension ryuta46.multi-command
 code --install-extension vscodevim.vim
