@@ -24,6 +24,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [mode.main.binding]
     cmd-enter = 'exec-and-forget /opt/homebrew/bin/alacritty'
+    cmd-b = 'exec-and-forget open -a "/Applications/Google Chrome.app"'
     cmd-z = 'exec-and-forget /opt/homebrew/bin/alacritty -e vifm'
     cmd-n = 'exec-and-forget /opt/homebrew/bin/alacritty -e nvim'
     cmd-r = ['reload-config', 'mode main']
@@ -37,6 +38,8 @@ automatically-unhide-macos-hidden-apps = false
     cmd-j = 'focus dfs-next'
     cmd-k = 'focus dfs-prev'
     cmd-l = 'exec-and-forget ~/.local/bin/aerospace-next-non-empty-workspace'
+    cmd-u = 'workspace --wrap-around prev'
+    cmd-i = 'workspace --wrap-around next'
 
     # cmd-shift-h = 'move left'
     # cmd-shift-l = 'move right'
