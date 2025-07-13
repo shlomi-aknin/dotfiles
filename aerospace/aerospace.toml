@@ -9,7 +9,10 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+
+after-startup-command = [
+  # 'exec-and-forget borders active_color=0xff34a1eb inactive_color=0xff000000 width=8.0'
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -57,12 +60,12 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 5
-    inner.vertical =   5
-    outer.left =       5
-    outer.bottom =     5
-    outer.top =        5
-    outer.right =      5
+    inner.horizontal = 0
+    inner.vertical =   0
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -73,7 +76,7 @@ automatically-unhide-macos-hidden-apps = false
     cmd-z = 'exec-and-forget /opt/homebrew/bin/alacritty -e vifm'
     cmd-n = 'exec-and-forget /opt/homebrew/bin/alacritty -e nvim'
     cmd-r = ['reload-config', 'mode main']
-    cmd-shift-x = ['close-all-windows-but-current', 'mode main']
+    cmd-shift-x = ['close-all-windows-but-current', 'close', 'mode main']
     # alt-z = 'exec-and-forget ghostty -e vifm'
     # All possible keys:
     # - Letters.        a, b, c, ..., z
@@ -103,8 +106,8 @@ automatically-unhide-macos-hidden-apps = false
     # '''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    cmd-slash = 'layout tiles horizontal vertical'
-    cmd-comma = 'layout accordion horizontal vertical'
+    cmd-t = 'layout tiles horizontal vertical'
+    cmd-slash = 'layout accordion horizontal vertical'
     cmd-m = 'layout tiles accordion'
     cmd-f = 'layout tiling floating'
 
