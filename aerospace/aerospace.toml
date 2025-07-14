@@ -35,8 +35,8 @@ automatically-unhide-macos-hidden-apps = false
     cmd-backtick = 'workspace-back-and-forth'
 
     cmd-h = 'exec-and-forget ~/.local/bin/aerospace-prev-non-empty-workspace'
-    cmd-j = 'focus dfs-next'
-    cmd-k = 'focus dfs-prev'
+    cmd-j = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
+    cmd-k = 'focus dfs-prev --boundaries-action wrap-around-the-workspace'
     cmd-l = 'exec-and-forget ~/.local/bin/aerospace-next-non-empty-workspace'
     cmd-u = 'workspace --wrap-around prev'
     cmd-i = 'workspace --wrap-around next'
