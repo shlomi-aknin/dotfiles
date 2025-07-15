@@ -1,3 +1,3 @@
 #!/bin/bash
 
-screencapture -cx ~/Pictures/screenshots/screenshot_$(date +%s).jpg
+screencapture -icx ~/Pictures/screenshots/screenshot_$(date +%s).jpg
