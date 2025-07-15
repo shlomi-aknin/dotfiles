@@ -41,7 +41,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-l = 'exec-and-forget ~/.local/bin/aerospace-next-non-empty-workspace'
     alt-u = 'workspace --wrap-around prev'
     alt-i = 'workspace --wrap-around next'
-    alt-shift-q = 'close'
+    alt-s = 'exec-and-forget ~/.local/bin/screencapture-window'
 
     # alt-shift-h = 'move left'
     # alt-shift-l = 'move right'
@@ -50,6 +50,8 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-x = ['close-all-windows-but-current', 'close', 'mode main']
     alt-shift-g = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_lazygit'
     alt-shift-c = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_fzf'
+    alt-shift-s = 'exec-and-forget ~/.local/bin/screencapture-rect'
+    alt-shift-q = 'close'
 
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
