@@ -23,48 +23,52 @@ automatically-unhide-macos-hidden-apps = false
     outer.right =      0
 
 [mode.main.binding]
-    cmd-enter = 'exec-and-forget /opt/homebrew/bin/alacritty'
-    cmd-b = 'exec-and-forget open -a "/Applications/Google Chrome.app"'
-    cmd-z = 'exec-and-forget /opt/homebrew/bin/alacritty -e vifm'
-    cmd-n = 'exec-and-forget /opt/homebrew/bin/alacritty -e nvim'
-    cmd-r = ['reload-config', 'mode main']
-    cmd-t = 'layout tiles horizontal vertical'
-    cmd-slash = 'layout accordion horizontal vertical'
-    cmd-m = 'layout tiles accordion'
-    cmd-f = 'layout tiling floating'
-    cmd-backtick = 'workspace-back-and-forth'
+    alt-enter = 'exec-and-forget /opt/homebrew/bin/alacritty'
+    alt-b = 'exec-and-forget open -a "/Applications/Google Chrome.app"'
+    alt-z = 'exec-and-forget /opt/homebrew/bin/alacritty -e vifm'
+    alt-n = 'exec-and-forget /opt/homebrew/bin/alacritty -e nvim'
+    alt-r = ['reload-config', 'mode main']
+    alt-t = 'layout tiles horizontal vertical'
+    alt-slash = 'layout accordion horizontal vertical'
+    alt-m = 'layout tiles accordion'
+    alt-f = 'layout tiling floating'
+    alt-backtick = 'workspace-back-and-forth'
+    alt-q = 'close'
 
-    cmd-h = 'exec-and-forget ~/.local/bin/aerospace-prev-non-empty-workspace'
-    cmd-j = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
-    cmd-k = 'focus dfs-prev --boundaries-action wrap-around-the-workspace'
-    cmd-l = 'exec-and-forget ~/.local/bin/aerospace-next-non-empty-workspace'
-    cmd-u = 'workspace --wrap-around prev'
-    cmd-i = 'workspace --wrap-around next'
+    alt-h = 'exec-and-forget ~/.local/bin/aerospace-prev-non-empty-workspace'
+    alt-j = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
+    alt-k = 'focus dfs-prev --boundaries-action wrap-around-the-workspace'
+    alt-l = 'exec-and-forget ~/.local/bin/aerospace-next-non-empty-workspace'
+    alt-u = 'workspace --wrap-around prev'
+    alt-i = 'workspace --wrap-around next'
+    alt-shift-q = 'close'
 
-    # cmd-shift-h = 'move left'
-    # cmd-shift-l = 'move right'
-    cmd-shift-j = 'move down'
-    cmd-shift-k = 'move up'
-    cmd-shift-x = ['close-all-windows-but-current', 'close', 'mode main']
+    # alt-shift-h = 'move left'
+    # alt-shift-l = 'move right'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-x = ['close-all-windows-but-current', 'close', 'mode main']
+    alt-shift-g = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_lazygit'
+    alt-shift-c = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_fzf'
 
-    cmd-minus = 'resize smart -50'
-    cmd-equal = 'resize smart +50'
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
 
-    cmd-1 = 'workspace 1'
-    cmd-2 = 'workspace 2'
-    cmd-3 = 'workspace 3'
-    cmd-4 = 'workspace 4'
-    cmd-5 = 'workspace 5'
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
 
-    cmd-shift-1 = 'move-node-to-workspace 1'
-    cmd-shift-2 = 'move-node-to-workspace 2'
-    cmd-shift-3 = 'move-node-to-workspace 3'
-    cmd-shift-4 = 'move-node-to-workspace 4'
-    cmd-shift-5 = 'move-node-to-workspace 5'
-    cmd-shift-l = 'move-node-to-workspace next --wrap-around'
-    cmd-shift-h = 'move-node-to-workspace prev --wrap-around'
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-l = 'move-node-to-workspace next --wrap-around'
+    alt-shift-h = 'move-node-to-workspace prev --wrap-around'
 
-    cmd-shift-semicolon = 'mode service'
+    alt-shift-semicolon = 'mode service'
 
 [mode.service.binding]
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
