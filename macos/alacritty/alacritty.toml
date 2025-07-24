@@ -90,6 +90,11 @@ key = "b"
 mods = "Command"
 chars = "\u0002"  # Ctrl+B
 
+[[keyboard.bindings]]
+key = "r"
+mods = "Command"
+chars = "\u0012"  # Ctrl+R
+
 [general]
 import = ["./dracula.toml"]
 
