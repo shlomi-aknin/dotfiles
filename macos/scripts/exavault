@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/usr/local/bin/sshfs cymbio@cymbio.exavault.com:/ ~/Downloads/exavault

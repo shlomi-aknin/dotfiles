@@ -1,0 +1,161 @@
+" Rename file(s)
+nnoremap r :rename<cr>
+vnoremap r :rename<cr>
+
+" Open file in VS code
+nnoremap i :!code -n %f<cr>:q<cr>
+vnoremap i :!code -n %f<cr>:q<cr>
+" nnoremap o :!code %d<cr>
+" nnoremap O :!code %c<cr>
+
+nnoremap E :!code %f<cr>:q<cr>
+vnoremap E :!code %f<cr>:q<cr>
+
+nnoremap C :!code %d<cr>
+vnoremap C :!code %d<cr>
+
+" Start shell in current directory
+nnoremap s :sh<cr>
+" Start shell on selected directory
+nnoremap L :!alacritty --working-directory %c &<cr>:q<cr>
+
+" Display sorting dialog
+nnoremap S :sort<cr>
+
+" Toggle visibility of preview window
+nnoremap w :view<cr>
+vnoremap w :view<cr>gv
+
+" Open file in existing instance of gvim
+" nnoremap o :!gvim --remote-tab-silent %f<cr>
+" nnoremap f :!nvim %f<cr>
+" nnoremap f :!nvim -u ~/.config/nvim-minimal/init.lua %f<cr>
+nnoremap f :!nvim %f<cr>
+" vnoremap f :!nvim -u ~/.config/nvim-minimal/init.lua %f<cr>
+vnoremap f :!nvim %f<cr>
+nnoremap u :!nvr %f<cr>:q<cr>
+vnoremap u :!nvr %f<cr>:q<cr>
+nnoremap o :!alacritty -e nvim %d &<cr>:q<cr>
+" nnoremap O :!alacritty -t "Neovim %c" --working-directory %c -e nvim<cr>
+nnoremap O :!alacritty --working-directory %c -e nvim &<cr>:q<cr>
+
+" Open file in the background using its default program
+nnoremap gb :file &<cr>l
+
+" Interaction with system clipboard
+if has('win')
+    " Yank current directory path to Windows clipboard with forward slashes
+    nnoremap yp :!echo %"d:gs!\!/! %i | clip<cr>
+    " Yank path to current file to Windows clipboard with forward slashes
+    nnoremap yf :!echo %"c:gs!\!/! %i | clip<cr>
+elseif executable('xclip')
+    " Yank current directory path into the clipboard
+    nnoremap yd :!echo %d | xclip %i<cr>
+    " Yank current file path into the clipboard
+    nnoremap yf :!echo %c:p | xclip %i<cr>
+elseif executable('xsel')
+    " Yank current directory path into primary and selection clipboards
+    nnoremap yd :!echo -n %d | xsel --input --primary %i &&
+                \ echo -n %d | xsel --clipboard --input %i<cr>
+    " Yank current file path into into primary and selection clipboards
+    nnoremap yf :!echo -n %c:p | xsel --input --primary %i &&
+                \ echo -n %c:p | xsel --clipboard --input %i<cr>
+endif
+
+" Mappings for faster renaming
+nnoremap I cw<c-a>
+nnoremap cc cw<c-u>
+nnoremap A cw
+
+" Open console in current directory
+" nnoremap ,t :!xterm &<cr>
+nnoremap ,t :!alacritty &<cr>
+
+" Open editor to edit vifmrc and apply settings after returning to vifm
+nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
+" Open gvim to edit vifmrc
+nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
+
+" Toggle wrap setting on ,w key
+nnoremap ,w :set wrap!<cr>
+
+" Example of standard two-panel file managers mappings
+nnoremap <f3> :!less %f<cr>
+nnoremap <f4> :edit<cr>
+nnoremap <f5> :copy<cr>
+nnoremap <f6> :move<cr>
+nnoremap <f7> :mkdir<space>
+nnoremap <f8> :delete<cr>
+
+" ------------------------------------------------------------------------------
+
+" Various customization examples
+
+" Use ag (the silver searcher) instead of grep
+"
+" set grepprg='ag --line-numbers %i %a %s'
+
+" Add additional place to look for executables
+"
+" let $PATH = $HOME.'/bin/fuse:'.$PATH
+
+" Block particular shortcut
+"
+" nnoremap <left> <nop>
+
+" Export IPC name of current instance as environment variable and use it to
+" communicate with the instance later.
+"
+" It can be used in some shell script that gets run from inside vifm, for
+" example, like this:
+"     vifm --server-name "$VIFM_SERVER_NAME" --remote +"cd '$PWD'"
+" let $VIFM_SERVER_NAME = v:servername
+
+command ln ln -s %f:p %D
+" source ~/.config/vifm/SETUP
+nnoremap <C-c> :!$(fd --type f | fzf -m --cycle | xargs -r code)<cr>
+" command! extractfiles unzip -o %c -d %D && rm -f %c
+nnoremap x :!ouch c %f archive.zip<CR>
+nnoremap X :!ouch d %c && rm -f %c<CR>
+" yank current directory path into the clipboard
+nnoremap yd :!echo -n %d | xclip -selection clipboard %i<cr>:echo expand('%"d') "is yanked to clipboard"<cr>
+
+" yank current file path into the clipboard
+nnoremap yf :!echo -n %c:p | xclip -selection clipboard %i<cr>:echo expand('%"c:p') "is yanked to clipboard"<cr>
+
+" yank current filename without path into the clipboard
+nnoremap yn :!echo -n %c | xclip -selection clipboard %i<cr>:echo expand('%"c') "is yanked to clipboard"<cr>
+
+" yank root of current file's name into the clipboard
+nnoremap yr :!echo -n %c:r | xclip -selection clipboard %i<cr>:echo expand('%"c:r') "is yanked to clipboard"<cr>
+
+" toggle single pane view and 2 panes horizontally
+nnoremap zz :vsplit!<cr>
+
+" open current directory in other pane
+nnoremap zo :sync<CR><Tab>
+
+" open current directory in dotfiles
+nnoremap zp :!opendirindots %d<CR>
+
+nnoremap . za
+nnoremap T :!lazygit<CR>
+nnoremap W :!feh --bg-scale %f<CR>
+nnoremap * :!chmod +x %f<CR>
+nnoremap F :!touch<space>
+nnoremap D :mkdir<space>
+nnoremap gc :!git clone<space>
+nnoremap cd :cd ~/.config ~/Dotfiles<cr>
+nnoremap ca :!copytodots %f<cr>
+vnoremap ca :!copytodots %f<cr>
+nnoremap > :copy<cr>
+nnoremap < :copy<cr>
+vnoremap > :copy<cr>
+vnoremap < :!mv %f %D<cr>
+nnoremap <C-l> :!alacritty -e vifm %d &<cr>
+nnoremap <A-l> :!cp -r %f %D<cr>
+nnoremap <A-h> :!cp -r %f %D<cr>
+nnoremap <space> tj
+nnoremap q :q<cr>
+
+source ~/.config/vifm/custom-keys

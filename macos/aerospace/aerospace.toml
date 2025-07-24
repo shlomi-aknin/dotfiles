@@ -1,0 +1,80 @@
+after-login-command = []
+after-startup-command = [
+  # 'exec-and-forget borders active_color=0xff34a1eb inactive_color=0xff000000 width=8.0'
+]
+start-at-login = true
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+accordion-padding = 0
+default-root-container-layout = 'accordion'
+default-root-container-orientation = 'vertical'
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+automatically-unhide-macos-hidden-apps = false
+
+[key-mapping]
+    preset = 'qwerty'
+
+[gaps]
+    inner.horizontal = 0
+    inner.vertical =   0
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
+
+[mode.main.binding]
+    alt-enter = 'exec-and-forget alacritty'
+    alt-b = 'exec-and-forget open -a "/Applications/Google Chrome.app"'
+    alt-z = 'exec-and-forget alacritty -e vifm'
+    alt-n = 'exec-and-forget alacritty -e nvim'
+    alt-r = ['reload-config', 'mode main']
+    alt-t = 'layout tiles horizontal vertical'
+    alt-slash = 'layout accordion horizontal vertical'
+    alt-m = 'layout tiles accordion'
+    alt-f = 'layout tiling floating'
+    alt-backtick = 'workspace-back-and-forth'
+    alt-q = 'close'
+
+    alt-h = 'exec-and-forget ~/.local/bin/aerospace-prev-non-empty-workspace'
+    alt-j = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
+    alt-k = 'focus dfs-prev --boundaries-action wrap-around-the-workspace'
+    alt-l = 'exec-and-forget ~/.local/bin/aerospace-next-non-empty-workspace'
+    alt-u = 'workspace --wrap-around prev'
+    alt-i = 'workspace --wrap-around next'
+    alt-s = 'exec-and-forget ~/.local/bin/screencapture-window'
+
+    # alt-shift-h = 'move left'
+    # alt-shift-l = 'move right'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-x = ['close-all-windows-but-current', 'close', 'mode main']
+    alt-shift-g = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_lazygit'
+    alt-shift-c = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_fzf'
+    alt-shift-s = 'exec-and-forget ~/.local/bin/screencapture-rect'
+    alt-shift-q = 'close'
+
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
+
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-l = 'move-node-to-workspace next --wrap-around'
+    alt-shift-h = 'move-node-to-workspace prev --wrap-around'
+
+    alt-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+    r = ['flatten-workspace-tree', 'mode main'] # reset layout
+    h = ['join-with left', 'mode main']
+    j = ['join-with down', 'mode main']
+    k = ['join-with up', 'mode main']
+    l = ['join-with right', 'mode main']

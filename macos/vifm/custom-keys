@@ -1,0 +1,1 @@
+nnoremap E :!~/.local/bin/exavault<cr>

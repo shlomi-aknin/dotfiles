@@ -1,0 +1,8 @@
+mark b ~/.local/bin/
+mark c ~/.config
+mark d ~/Downloads
+mark h ~/
+mark p ~/Programs
+mark r /
+mark t ~/Dotfiles
+mark w ~/Workspace
