@@ -75,6 +75,21 @@ key = "u"
 mods = "Command"
 chars = "\u0015"  # Ctrl+U
 
+[[keyboard.bindings]]
+key = "o"
+mods = "Command"
+chars = "\u000F"  # Ctrl+O
+
+[[keyboard.bindings]]
+key = "f"
+mods = "Command"
+chars = "\u0006"  # Ctrl+F
+
+[[keyboard.bindings]]
+key = "b"
+mods = "Command"
+chars = "\u0002"  # Ctrl+B
+
 [general]
 import = ["./dracula.toml"]
 
