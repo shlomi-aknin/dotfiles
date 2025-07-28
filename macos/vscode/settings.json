@@ -454,14 +454,6 @@
       "commands": ["editor.action.commentLine"]
     },
     {
-      "before": ["g", "l"],
-      "after": ["a", "<space>", "<esc>"]
-    },
-    {
-      "before": ["g", "h"],
-      "after": ["i", "<space>", "<esc>"]
-    },
-    {
       "before": ["<space>", "c", "a"],
       "commands": ["editor.action.sourceAction"],
       "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
