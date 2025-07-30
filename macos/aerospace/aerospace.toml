@@ -23,10 +23,10 @@ automatically-unhide-macos-hidden-apps = false
     outer.right =      0
 
 [mode.main.binding]
-    alt-enter = 'exec-and-forget alacritty'
+    alt-enter = 'exec-and-forget open -na Ghostty'
     alt-b = 'exec-and-forget open -a "/Applications/Google Chrome.app"'
-    alt-z = 'exec-and-forget alacritty -e vifm'
-    alt-n = 'exec-and-forget alacritty -e nvim'
+    alt-z = 'exec-and-forget open -na Ghostty --args -e vifm'
+    alt-n = 'exec-and-forget open -na Ghostty --args -e nvim'
     alt-r = ['reload-config', 'mode main']
     alt-t = 'layout tiles horizontal vertical'
     alt-slash = 'layout accordion horizontal vertical'
@@ -78,3 +78,4 @@ automatically-unhide-macos-hidden-apps = false
     j = ['join-with down', 'mode main']
     k = ['join-with up', 'mode main']
     l = ['join-with right', 'mode main']
+
