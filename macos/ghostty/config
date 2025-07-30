@@ -2,8 +2,9 @@ theme = "Dracula+"
 font-family = "JetBrains Mono"
 font-size = 16
 cursor-style-blink = false
-keybind = clear
+confirm-close-surface = false
 
+keybind = clear
 keybind = cmd+a=text:\x01
 keybind = cmd+b=text:\x02
 keybind = cmd+c=text:\x03
