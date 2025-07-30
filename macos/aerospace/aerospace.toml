@@ -33,7 +33,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-m = 'layout tiles accordion'
     alt-f = 'layout tiling floating'
     alt-backtick = 'workspace-back-and-forth'
-    alt-q = 'close'
 
     alt-h = 'exec-and-forget ~/.local/bin/aerospace-prev-non-empty-workspace'
     alt-j = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
@@ -51,7 +50,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-g = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_lazygit'
     alt-shift-c = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_fzf'
     alt-shift-s = 'exec-and-forget ~/.local/bin/screencapture-rect'
-    alt-shift-q = 'close'
+    alt-shift-q = 'close --quit-if-last-window'
 
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'

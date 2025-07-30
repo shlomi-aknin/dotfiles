@@ -23,17 +23,16 @@ automatically-unhide-macos-hidden-apps = false
     outer.right =      0
 
 [mode.main.binding]
-    alt-enter = 'exec-and-forget /opt/homebrew/bin/alacritty'
+    alt-enter = 'exec-and-forget open -na Ghostty'
     alt-b = 'exec-and-forget open -a "/Applications/Google Chrome.app"'
-    alt-z = 'exec-and-forget /opt/homebrew/bin/alacritty -e vifm'
-    alt-n = 'exec-and-forget /opt/homebrew/bin/alacritty -e nvim'
+    alt-z = 'exec-and-forget open -na Ghostty --args -e vifm'
+    alt-n = 'exec-and-forget open -na Ghostty --args -e nvim'
     alt-r = ['reload-config', 'mode main']
     alt-t = 'layout tiles horizontal vertical'
     alt-slash = 'layout accordion horizontal vertical'
     alt-m = 'layout tiles accordion'
     alt-f = 'layout tiling floating'
     alt-backtick = 'workspace-back-and-forth'
-    alt-q = 'close'
 
     alt-h = 'exec-and-forget ~/.local/bin/aerospace-prev-non-empty-workspace'
     alt-j = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
@@ -51,7 +50,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-g = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_lazygit'
     alt-shift-c = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_fzf'
     alt-shift-s = 'exec-and-forget ~/.local/bin/screencapture-rect'
-    alt-shift-q = 'close'
+    alt-shift-q = 'close --quit-if-last-window'
 
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
@@ -78,3 +77,4 @@ automatically-unhide-macos-hidden-apps = false
     j = ['join-with down', 'mode main']
     k = ['join-with up', 'mode main']
     l = ['join-with right', 'mode main']
+
