@@ -1,4 +1,4 @@
-theme = "Dracula+"
+theme = "Dracula"
 font-family = "JetBrains Mono"
 font-size = 16
 cursor-style-blink = false
