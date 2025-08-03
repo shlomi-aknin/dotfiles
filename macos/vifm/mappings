@@ -4,6 +4,7 @@ vnoremap r :rename<cr>
 
 " Open file in VS code
 nnoremap i :!code -n %f<cr>:q<cr>
+nnoremap U :!clear; viu %c; read -n 1<cr>
 vnoremap i :!code -n %f<cr>:q<cr>
 " nnoremap o :!code %d<cr>
 " nnoremap O :!code %c<cr>
@@ -33,8 +34,8 @@ vnoremap w :view<cr>gv
 nnoremap f :!nvim %f<cr>
 " vnoremap f :!nvim -u ~/.config/nvim-minimal/init.lua %f<cr>
 vnoremap f :!nvim %f<cr>
-nnoremap u :!nvr %f<cr>:q<cr>
-vnoremap u :!nvr %f<cr>:q<cr>
+" nnoremap u :!nvr %f<cr>:q<cr>
+" vnoremap u :!nvr %f<cr>:q<cr>
 nnoremap o :!alacritty -e nvim %d &<cr>:q<cr>
 " nnoremap O :!alacritty -t "Neovim %c" --working-directory %c -e nvim<cr>
 nnoremap O :!alacritty --working-directory %c -e nvim &<cr>:q<cr>
@@ -157,5 +158,4 @@ nnoremap <A-l> :!cp -r %f %D<cr>
 nnoremap <A-h> :!cp -r %f %D<cr>
 nnoremap <space> tj
 nnoremap q :q<cr>
-
 source ~/.config/vifm/custom-keys

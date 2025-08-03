@@ -287,17 +287,18 @@ filextype {*.blend}
 filextype {*.sh3d}
         \ {Open in Sweet Home 3D}
         \ sweethome3d %c:p,
-filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
-        \ {View in sxiv}
-        \ sxiv %f,
-        \ {View in gpicview}
-        \ gpicview %c,
-        \ {View in shotwell}
-        \ shotwell,
-        \ {View in chrome}
-        \ google-chrome-stable %f,
-fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
-         \ identify %f
+" filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+"         \ {View in sxiv}
+"         \ sxiv %f,
+"         \ {View in gpicview}
+"         \ gpicview %c,
+"         \ {View in shotwell}
+"         \ shotwell,
+"         \ {View in chrome}
+"         \ google-chrome-stable %f,
+" fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+"          \ identify %f
+
 
 " OpenRaster
 filextype *.ora
@@ -434,7 +435,7 @@ filetype {*.csv}
 " fileviewer *[^/] pygmentize -O style=monokai -f console256 -g
 
 " Displaying pictures in terminal
-" fileviewer *.jpg,*.png shellpic %c
+fileviewer *.jpg,*.jpeg,*.png,*.bmp,*.gif,*.xpm,*.svg chafa --size=%pwx%ph --polite=on %c %pd %N
 
 " Open all other files with default system programs (you can also remove all
 " :file[x]type commands above to ensure they don't interfere with system-wide
@@ -592,5 +593,6 @@ let $PATH = $HOME.'/.cargo/bin:'.$HOME.'/.local/bin:'.$PATH
 " https://github.com/cirala/vifm_devicons
 set number
 set relativenumber
+set previewoptions=hardgraphicsclear
 source ~/.config/vifm/mappings
 source ~/.config/vifm/marks
