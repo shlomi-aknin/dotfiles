@@ -1,6 +1,8 @@
+code --install-extension alimostafavi.voil
 code --install-extension andys8.jest-snippets
 code --install-extension bceskavich.theme-dracula-at-night
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
 code --install-extension firsttris.vscode-jest-runner
 code --install-extension maattdd.gitless
 code --install-extension redguardtoo.matchit

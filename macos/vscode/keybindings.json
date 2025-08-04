@@ -569,5 +569,53 @@
     "key": "cmd+w",
     "command": "-workbench.action.closeGroup",
     "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "cmd+l",
+    "command": "voil.enter",
+    "when": "editorTextFocus && voilDoc && vim.mode == 'Normal'"
+  },
+  {
+    "key": "cmd+h",
+    "command": "voil.gotoParentDir",
+    "when": "editorTextFocus && voilDoc && vim.mode == 'Normal'"
+  },
+  {
+    "key": "!",
+    "command": "voil.runShellCommandOnSelection",
+    "when": "editorTextFocus && voilDoc && vim.mode == 'Normal'"
+  },
+  {
+    "key": "/",
+    "command": "voil.setFilter",
+    "when": "editorTextFocus && voilDoc && vim.mode == 'Normal'"
+  },
+  {
+    "key": "u",
+    "command": "voil.undo",
+    "when": "editorTextFocus && voilDoc && vim.mode == 'Normal'"
+  },
+  {
+    "key": "cmd+shift+o",
+    "command": "voil.openPanelCurrentDir",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "cmd+v",
+    "command": "extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "-extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
   }
 ]

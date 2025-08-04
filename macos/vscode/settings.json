@@ -670,5 +670,6 @@
   "vim.highlightedyank.textColor": "#ffff00",
   "terminal.external.linuxExec": "/opt/homebrew/bin/alacritty",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.localEchoLatencyThreshold": 10
+  "terminal.integrated.localEchoLatencyThreshold": 10,
+  "extensions.ignoreRecommendations": true
 }
