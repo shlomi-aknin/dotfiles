@@ -9,7 +9,6 @@ api.map('J', 'E');
 api.map('K', 'R');
 api.map('u', 'e');
 api.map('F', 'cf');
-aceVimMap('ZZ', ':wq<cr>', 'normal');
 
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
