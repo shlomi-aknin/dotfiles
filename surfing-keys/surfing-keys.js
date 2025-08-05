@@ -10,7 +10,8 @@ api.map('K', 'R');
 api.map('u', 'e');
 api.map('F', 'cf');
 
-settings.scrollStepSize = 140;
+api.aceVimMap('ZZ', ':wq<cr>', 'normal');
+api.aceVimMap('ZQ', ':q!<cr>', 'normal');
 
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
@@ -26,6 +27,8 @@ api.Hints.style("             \
  font-family: Input Sans Condensed, Charcoal, sans-serif;",
   "hint"
 );
+
+settings.scrollStepSize = 140;
 
 // set theme
 settings.theme = `
