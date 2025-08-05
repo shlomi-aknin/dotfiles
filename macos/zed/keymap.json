@@ -56,7 +56,6 @@
           "close_pinned": false
         }
       ],
-      "space e": "project_panel::ToggleFocus",
       "cmd-[": "pane::SwapItemLeft",
       "cmd-]": "pane::SwapItemRight",
       "sapce x": [
@@ -138,9 +137,22 @@
     }
   },
   {
-    "context": "(vim_mode == helix_normal && !menu)",
     "bindings": {
-      "space r n": "editor::Rename"
+      "alt-cmd-shift-w": "zed::Hide"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-h": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "cmd-w h": "workspace::ActivatePaneLeft",
+      "cmd-w l": "workspace::ActivatePaneRight",
+      "cmd-w k": "workspace::ActivatePaneUp",
+      "cmd-w j": "workspace::ActivatePaneDown",
     }
   },
   {
@@ -150,23 +162,9 @@
     }
   },
   {
+    "context": "Workspace",
     "bindings": {
-      "alt-cmd-shift-w": "zed::Hide"
-    }
-  },
-  {
-    "bindings": {
-      "cmd-h": null
-    }
-  },
-  {
-    "context": "(VimControl || (!Editor && !Terminal))",
-    "bindings": {
-      "cmd-h": "pane::ActivatePreviousItem",
-      "cmd-w h": "workspace::ActivatePaneLeft",
-      "cmd-w l": "workspace::ActivatePaneRight",
-      "cmd-w k": "workspace::ActivatePaneUp",
-      "cmd-w j": "workspace::ActivatePaneDown",
+      "cmd-`": "workspace::ToggleBottomDock",
     }
   }
 ]
