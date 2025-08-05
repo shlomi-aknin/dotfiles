@@ -206,5 +206,12 @@
     "bindings": {
       "cmd-v": "vim::ToggleVisualBlock"
     }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "cmd-o": "pane::GoBack",
+      "cmd-i": "pane::GoForward",
+    }
   }
 ]
