@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4 --bind=alt-l:accept,alt-j:down,alt-k:up,tab:toggle+up,shift-tab:toggle+down'
 
 LASTDIR=/tmp/lastdir
