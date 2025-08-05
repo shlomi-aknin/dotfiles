@@ -10,6 +10,8 @@ api.map('K', 'R');
 api.map('u', 'e');
 api.map('F', 'cf');
 
+settings.scrollStepSize = 140;
+
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
 
