@@ -51,6 +51,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-c = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorcode_fzf'
     alt-shift-s = 'exec-and-forget ~/.local/bin/screencapture-rect'
     alt-shift-q = 'close --quit-if-last-window'
+    alt-shift-z = 'exec-and-forget /opt/homebrew/bin/alacritty -e ~/.local/bin/projectselectorzed_fzf'
 
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
