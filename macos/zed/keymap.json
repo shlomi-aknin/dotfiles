@@ -77,7 +77,6 @@
     "context": "ProjectPanel",
     "bindings": {
       "h": "project_panel::CollapseSelectedEntry",
-      "l": "project_panel::ExpandSelectedEntry",
       "o": "project_panel::NewFile",
       "O": "project_panel::NewDirectory",
       "y": "project_panel::Copy",
@@ -165,6 +164,47 @@
     "context": "Workspace",
     "bindings": {
       "cmd-`": "workspace::ToggleBottomDock",
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "l": "project_panel::OpenPermanent"
+    }
+  },
+  {
+    "bindings": {
+      "shift-h": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      ".": "project_panel::ToggleHideGitIgnore"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Editor && vim_mode != normal",
+    "bindings": {
+      "cmd-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-v": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-v": "vim::ToggleVisualBlock"
     }
   }
 ]
