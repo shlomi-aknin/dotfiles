@@ -12,6 +12,7 @@ api.map('F', 'cf');
 
 api.aceVimMap('ZZ', ':wq<cr>', 'normal');
 api.aceVimMap('ZQ', ':q!<cr>', 'normal');
+api.aceVimMap('jj', '<esc>', 'insert');
 
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
