@@ -7,16 +7,11 @@
       "request": "launch",
       "program": "${file}",
       "envFile": "${workspaceFolder}/.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "STAGING - current file (ts-node)",
@@ -24,16 +19,11 @@
       "request": "launch",
       "program": "${file}",
       "envFile": "${workspaceFolder}/staging.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "STAGING - processWorkerJob (ts-node)",
@@ -41,16 +31,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/scripts/core/processWorkerJob.ts",
       "envFile": "${workspaceFolder}/staging.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "STAGING - worker service (ts-node)",
@@ -58,16 +43,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/bin/workerService.ts",
       "envFile": "${workspaceFolder}/staging.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "STAGING - processOrderJob (ts-node)",
@@ -75,16 +55,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/scripts/core/processOrderJob.ts",
       "envFile": "${workspaceFolder}/staging.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "STAGING - apiService (ts-node)",
@@ -92,16 +67,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/bin/apiService.ts",
       "envFile": "${workspaceFolder}/staging.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "PRODUCTION - current file (ts-node)",
@@ -109,16 +79,11 @@
       "request": "launch",
       "program": "${file}",
       "envFile": "${workspaceFolder}/prod.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "PRODUCTION - worker service (ts-node)",
@@ -126,16 +91,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/bin/workerService.ts",
       "envFile": "${workspaceFolder}/prod.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "PRODUCTION - processWorkerJob (ts-node)",
@@ -143,16 +103,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/scripts/core/processWorkerJob.ts",
       "envFile": "${workspaceFolder}/prod.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "PRODUCTION - processOrderJob (ts-node)",
@@ -160,16 +115,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/scripts/core/processOrderJob.ts",
       "envFile": "${workspaceFolder}/prod.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     },
     {
       "name": "PRODUCTION - apiService (ts-node)",
@@ -177,16 +127,11 @@
       "request": "launch",
       "program": "${workspaceFolder}/bin/apiService.ts",
       "envFile": "${workspaceFolder}/prod.env",
-      "runtimeExecutable": "ts-node",
-      "runtimeArgs": [
-        "--swc"
-      ],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeArgs": ["--swc"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**",
-        "node_modules/**"
-      ],
-    },
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    }
   ]
 }
