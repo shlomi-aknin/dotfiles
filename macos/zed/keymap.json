@@ -51,12 +51,6 @@
       "space s": "workspace::Save",
       "cmd-[": "pane::SwapItemLeft",
       "cmd-]": "pane::SwapItemRight",
-      "sapce x": [
-        "pane::CloseAllItems",
-        {
-          "close_pinned": false
-        }
-      ],
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown",
       "space k": "editor::NewlineAbove",
@@ -142,7 +136,7 @@
         {
           "close_pinned": false
         }
-      ],
+      ]
     }
   },
   {
@@ -151,7 +145,7 @@
       "cmd-w h": "workspace::ActivatePaneLeft",
       "cmd-w l": "workspace::ActivatePaneRight",
       "cmd-w k": "workspace::ActivatePaneUp",
-      "cmd-w j": "workspace::ActivatePaneDown",
+      "cmd-w j": "workspace::ActivatePaneDown"
     }
   },
   {
@@ -163,7 +157,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-`": "workspace::ToggleBottomDock",
+      "cmd-`": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -211,7 +205,7 @@
     "context": "VimControl && !menu",
     "bindings": {
       "cmd-o": "pane::GoBack",
-      "cmd-i": "pane::GoForward",
+      "cmd-i": "pane::GoForward"
     }
   },
   {
@@ -232,6 +226,36 @@
   {
     "bindings": {
       "f7": "debugger::RunToCursor"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space x": [
+        "pane::CloseAllItems",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "cmd-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "cmd-k": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-j": "menu::SelectNext",
+      "cmd-k": "menu::SelectPrevious",
+      "cmd-l": "menu::Confirm"
     }
   }
 ]
