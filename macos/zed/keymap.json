@@ -33,7 +33,6 @@
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "cmd-l": "pane::ActivateNextItem",
       "L": [
         "editor::MoveToEndOfLine",
         {
@@ -50,12 +49,6 @@
       "space f": "file_finder::Toggle",
       "space p": "outline::Toggle",
       "space s": "workspace::Save",
-      "space q q": [
-        "pane::CloseActiveItem",
-        {
-          "close_pinned": false
-        }
-      ],
       "cmd-[": "pane::SwapItemLeft",
       "cmd-]": "pane::SwapItemRight",
       "sapce x": [
@@ -142,7 +135,14 @@
   },
   {
     "bindings": {
-      "cmd-h": "pane::ActivatePreviousItem"
+      "cmd-h": "pane::ActivatePreviousItem",
+      "cmd-l": "pane::ActivateNextItem",
+      "space q q": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ],
     }
   },
   {
@@ -212,6 +212,26 @@
     "bindings": {
       "cmd-o": "pane::GoBack",
       "cmd-i": "pane::GoForward",
+    }
+  },
+  {
+    "bindings": {
+      "f11": "debugger::StepInto"
+    }
+  },
+  {
+    "bindings": {
+      "f10": "debugger::StepOver"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-f7": "debugger::StepOver"
+    }
+  },
+  {
+    "bindings": {
+      "f7": "debugger::RunToCursor"
     }
   }
 ]
