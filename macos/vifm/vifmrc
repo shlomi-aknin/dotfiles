@@ -394,7 +394,7 @@ filetype {*.7z},<application/x-7z-compressed>
 fileviewer {*.7z},<application/x-7z-compressed> 7z l %c
 
 " Office files
-filextype {*.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt},
+filextype {*.odt,*.doc,*.docx,*.xls,*.odp,*.pptx,*.ppt},
          \<application/vnd.openxmlformats-officedocument.*,
           \application/msword,
           \application/vnd.ms-excel>
@@ -419,6 +419,10 @@ filextype */
 filetype {*.csv}
        \ {View in csvlens}
        \ csvlens %c,
+
+filetype {*.xlsx}
+       \ {View in csvlens}
+       \ ~/.local/bin/convert-xlsx-to-csv %c,
 
 " Syntax highlighting in preview
 "
