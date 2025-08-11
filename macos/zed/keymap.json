@@ -1,9 +1,14 @@
 [
   {
     "bindings": {
-      "cmd-j": "menu::SelectNext",
-      "cmd-k": "menu::SelectPrevious",
-      "cmd-l": "menu::Confirm"
+      "cmd-h": "pane::ActivatePreviousItem",
+      "cmd-l": "pane::ActivateNextItem",
+      "space q q": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
     }
   },
   {
@@ -15,12 +20,13 @@
   {
     "context": "Picker || menu",
     "bindings": {
-      "cmd-k": "menu::SelectPrevious",
-      "cmd-j": "menu::SelectNext"
+      "K": "menu::SelectPrevious",
+      "J": "menu::SelectNext",
+      "L": "menu::Confirm",
     }
   },
   {
-    "context": "Editor",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "cmd-shift-k": "editor::AddSelectionAbove",
       "cmd-shift-j": "editor::AddSelectionBelow",
@@ -31,7 +37,7 @@
     }
   },
   {
-    "context": "Editor && mode == full",
+    "context": "Editor && mode == full && vim_mode == normal",
     "bindings": {
       "L": [
         "editor::MoveToEndOfLine",
@@ -84,7 +90,7 @@
     }
   },
   {
-    "context": "Pane",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "space q q": [
         "pane::CloseActiveItem",
@@ -128,18 +134,6 @@
     }
   },
   {
-    "bindings": {
-      "cmd-h": "pane::ActivatePreviousItem",
-      "cmd-l": "pane::ActivateNextItem",
-      "space q q": [
-        "pane::CloseActiveItem",
-        {
-          "close_pinned": false
-        }
-      ]
-    }
-  },
-  {
     "context": "(VimControl || (!Editor && !Terminal))",
     "bindings": {
       "cmd-w h": "workspace::ActivatePaneLeft",
@@ -149,7 +143,7 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Workspace && vim_mode == normal",
     "bindings": {
       "space e": "workspace::ToggleLeftDock"
     }
@@ -229,7 +223,7 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "space x": [
         "pane::CloseAllItems",
@@ -242,20 +236,9 @@
   {
     "context": "(Editor && (showing_code_actions || showing_completions))",
     "bindings": {
-      "cmd-j": "editor::ContextMenuNext"
-    }
-  },
-  {
-    "context": "(Editor && (showing_code_actions || showing_completions))",
-    "bindings": {
-      "cmd-k": "editor::ContextMenuPrevious"
-    }
-  },
-  {
-    "bindings": {
-      "cmd-j": "menu::SelectNext",
-      "cmd-k": "menu::SelectPrevious",
-      "cmd-l": "menu::Confirm"
+      "J": "editor::ContextMenuNext",
+      "K": "editor::ContextMenuPrevious",
+      "L": "editor::ConfirmCodeAction"
     }
   }
 ]
