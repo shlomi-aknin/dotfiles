@@ -14,6 +14,7 @@ return {
     -- Additional lua configuration, makes nvim stuff amazing!
     -- https://github.com/folke/neodev.nvim
     {'folke/neodev.nvim' },
+    -- { 'saghen/blink.cmp' },
   },
   config = function ()
     require('mason').setup()
@@ -41,6 +42,7 @@ return {
 
     local lspconfig = require('lspconfig')
     local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+    -- local lsp_capabilities = require('blink.cmp').get_lsp_capabilities()
     local lsp_attach = function(client, bufnr)
       -- Create your keybindings here...
       -- require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)

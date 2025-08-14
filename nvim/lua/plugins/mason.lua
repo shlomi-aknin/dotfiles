@@ -4,7 +4,7 @@ return {
   dependencies = {
     {
       "williamboman/mason-lspconfig.nvim",
-      ensure_installed = { "eslint", "ts_ls" },
+      ensure_installed = { "eslint_d", "ts_ls" },
       automatic_installation = true,
     },
     {
