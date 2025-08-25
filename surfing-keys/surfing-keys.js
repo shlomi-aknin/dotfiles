@@ -15,6 +15,7 @@ api.aceVimMap('ZQ', ':q!<cr>', 'normal');
 
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
+api.unmapAllExcept([], /vscode.dev/);
 
 api.Hints.style("             \
  text-align: center;          \
