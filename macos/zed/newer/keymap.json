@@ -1,0 +1,155 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space e": "pane::RevealInProjectPanel",
+      "alt-c": "workspace::ToggleLeftDock",
+      "space s": "workspace::Save",
+      "cmd-space": "command_palette::Toggle",
+      "space q q": ["pane::CloseActiveItem", { "close_pinned": true }]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-[": "pane::SwapItemLeft",
+      "cmd-]": "pane::SwapItemRight",
+      "space q q": ["pane::CloseActiveItem", { "close_pinned": true }],
+      "space x": ["pane::CloseAllItems", { "close_pinned": true }],
+      "space X": "workspace::CloseAllItemsAndPanes"
+    }
+  },
+  {
+    "context": "Workspace && !Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewFile"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      "h": "project_panel::CollapseSelectedEntry",
+      "l": ["project_panel::Open", "project_panel::ToggleFocus"],
+      "o": "project_panel::NewFile",
+      "O": "project_panel::NewDirectory",
+      "x": "project_panel::Cut",
+      "y y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "y P": "workspace::CopyPath",
+      "y p": "workspace::CopyRelativePath",
+      "r": "project_panel::Rename",
+      "d d": ["project_panel::Trash", { "skip_prompt": true }],
+      "/": "project_panel::NewSearchInDirectory",
+      "escape": "menu::Cancel"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-h": null
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-cmd-shift-h": "zed::Hide"
+    }
+  },
+  {
+    "context": "((FileFinder || FileFinder > Picker > Editor) || FileFinder > Picker > menu)",
+    "bindings": {
+      "cmd-h": null
+    }
+  },
+  {
+    "bindings": {
+      "cmd-h": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-j": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-k": "editor::DuplicateLineUp"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "cmd-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "cmd-k": "menu::SelectPrevious"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-y": "menu::Confirm"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "space f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal && !menu)",
+    "bindings": {
+      "space f": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g r r": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space p": "outline::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-`": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-f": [
+        "pane::DeploySearch",
+        {
+          "replace_enabled": true
+        }
+      ]
+    }
+  }
+]
