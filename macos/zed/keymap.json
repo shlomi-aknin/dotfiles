@@ -89,8 +89,9 @@
     }
   },
   {
+    "context": "Picker > Editor",
     "bindings": {
-      "cmd-y": "menu::Confirm"
+      "cmd-l": "menu::Confirm"
     }
   },
   {
@@ -243,7 +244,7 @@
     "context": "Editor && !menu && !VimWaiting && VimControl && vim_mode == normal && (vim_operator == none || vim_operator == n)",
     "bindings": {
       "g p d": "editor::GoToDefinitionSplit",
-      "g v": ["workspace::SendKeystrokes", "shift-v $ %"],
+      "g v": ["workspace::SendKeystrokes", "shift-v $ % $"],
       "g j f": [
         "task::Spawn",
         { "task_name": "Run Jest", "reveal_target": "center" }
