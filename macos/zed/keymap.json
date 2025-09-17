@@ -10,7 +10,7 @@
     "context": "Pane",
     "bindings": {
       "cmd-[": "pane::SwapItemLeft",
-      "cmd-]": "pane::SwapItemRight",
+      "cmd-]": "pane::SwapItemRight"
     }
   },
   {
@@ -237,9 +237,14 @@
     }
   },
   {
-    "context": "(VimControl && !menu)",
+    "context": "Editor && !menu && !VimWaiting && VimControl && vim_mode == normal && (vim_operator == none || vim_operator == n)",
     "bindings": {
-      "cmd-g": "editor::GoToDefinitionSplit"
+      "g p d": "editor::GoToDefinitionSplit",
+      "g v": ["workspace::SendKeystrokes", "shift-v $ %"],
+      "g j f": [
+        "task::Spawn",
+        { "task_name": "Run Jest", "reveal_target": "center" }
+      ]
     }
   }
 ]

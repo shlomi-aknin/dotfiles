@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Run Jest",
+    "command": "./node_modules/.bin/jest",
+    "args": ["--no-coverage", "$ZED_RELATIVE_FILE"],
+    "env": { "foo": "bar" },
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "never",
+    "show_summary": false,
+    "show_command": false,
+    "shell": "system"
+  }
+]
