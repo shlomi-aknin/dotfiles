@@ -182,8 +182,11 @@
   {
     "context": "Editor && !menu && VimControl && vim_mode == normal",
     "bindings": {
+      "space b": "tab_switcher::ToggleAll",
       "space e": "pane::RevealInProjectPanel",
       "space f": "file_finder::Toggle",
+      "space j": ["workspace::SendKeystrokes", "o escape"],
+      "space k": ["workspace::SendKeystrokes", "O escape"],
       "space s": "workspace::Save",
       "space q q": ["pane::CloseActiveItem", { "close_pinned": true }],
       "space x": ["pane::CloseAllItems", { "close_pinned": true }],
