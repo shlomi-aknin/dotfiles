@@ -202,4 +202,44 @@
       "shift-h": "vim::FirstNonWhitespace"
     }
   },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-o": "pane::GoBack"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-i": "pane::GoForward"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-d": "editor::HalfPageDown"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-u": "editor::HalfPageUp"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-f": "vim::PageDown"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-b": "vim::PageUp"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-g": "editor::GoToDefinitionSplit"
+    }
+  }
 ]
