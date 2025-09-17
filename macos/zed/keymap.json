@@ -184,7 +184,6 @@
     "context": "Editor && !menu && VimControl && vim_mode == normal",
     "bindings": {
       "space b": "tab_switcher::ToggleAll",
-      "space e": "pane::RevealInProjectPanel",
       "space f": "file_finder::Toggle",
       "space j": ["workspace::SendKeystrokes", "o escape"],
       "space k": ["workspace::SendKeystrokes", "O escape"],
@@ -249,6 +248,65 @@
         "task::Spawn",
         { "task_name": "Run Jest", "reveal_target": "center" }
       ]
+    }
+  },
+  {
+    "context": "!ContextEditor > (Editor && mode == full)",
+    "bindings": {
+      "space e": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-w": null
+    }
+  },
+  {
+    "context": "PromptLibrary",
+    "bindings": {
+      "cmd-w": null
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "cmd-w h": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "cmd-w l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "cmd-w k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "cmd-w j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "VimControl && vim_mode == normal",
+      "bindings": {
+      "g o": "pane::JoinAll"
     }
   }
 ]
