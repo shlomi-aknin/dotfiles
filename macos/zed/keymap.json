@@ -184,6 +184,10 @@
       "space e": "pane::RevealInProjectPanel",
       "space f": "file_finder::Toggle",
       "space j": ["workspace::SendKeystrokes", "o escape"],
+      "space l": [
+        "task::Spawn",
+        { "task_name": "Open FZF", "reveal_target": "center" }
+      ],
       "space k": ["workspace::SendKeystrokes", "O escape"],
       "space s": "workspace::Save",
       "space q q": ["pane::CloseActiveItem", { "close_pinned": true }],

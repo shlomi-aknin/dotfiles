@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#000000,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#000000,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4 --bind=ctrl-l:accept,ctrl-j:down,ctrl-k:up,tab:toggle+up,shift-tab:toggle+down'
+
+WORKSPACE_DIR=/Users/shlomo/Workspace
+cd $WORKSPACE_DIR
+PROJECT=$(fd --max-depth 1 | fzf --cycle --bind=ctrl-l:accept,ctrl-j:down,ctrl-k:up)
+# PROJECT=$(/user/bin/find $WORKSPACE_DIR -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | /opt/homebrew/bin/fzf -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+
+echo $PROJECT
+[ "$PROJECT" = "" ] && exit 0
+
+PROJECT_DIR="$WORKSPACE_DIR/$PROJECT"
+cd $PROJECT_DIR
+
+SELECTED=$(/opt/homebrew/bin/fzf -m -d / --cycle --bind=ctrl-l:accept,tab:toggle+up,shift-tab:toggle+down)
+
+[ "$SELECTED" = "" ] && exit 0
+
+/usr/local/bin/zed $SELECTED

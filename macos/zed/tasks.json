@@ -13,5 +13,18 @@
     "show_summary": false,
     "show_command": false,
     "shell": "system"
+  },
+  {
+    "label": "Open FZF",
+    "command": "~/.local/bin/fzfsearchforzed",
+    "args": [],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "never",
+    "reveal_target": "dock",
+    "hide": "always",
+    "show_summary": false,
+    "show_command": false,
+    "shell": "system"
   }
 ]
