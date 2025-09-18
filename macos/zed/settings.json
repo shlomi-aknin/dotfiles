@@ -11,7 +11,10 @@
     "hide_gitignore": false
   },
   "ui_font_size": 16,
+  "ui_font_weight": 600,
   "buffer_font_size": 16,
+  "buffer_font_weight": 600,
+  "agent_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -25,5 +28,6 @@
   "relative_line_numbers": true,
   "cursor_blink": false,
   "vertical_scroll_margin": 999,
-  "autosave": "on_focus_change"
+  "autosave": "on_focus_change",
+  "scroll_beyond_last_line": "off"
 }
