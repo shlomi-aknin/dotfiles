@@ -25,6 +25,7 @@
     "editor.gutter.background": "#000",
     "editor.document_highlight.bracket_background": "#BD93F9",
     "hint": "#cccccc",
+    "tab.active_background": "#6272A4",
     "players": [
       {
         "cursor": "#5ac1feff",

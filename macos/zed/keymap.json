@@ -334,5 +334,47 @@
     "bindings": {
       "cmd-r": "vim::Redo"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-shift-v": "terminal::Paste"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-v": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-v": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-v": "vim::ToggleVisualBlock"
+    }
+  },
+  {
+    "context": "((vim_mode == normal || vim_mode == visual) || vim_mode == operator)",
+    "bindings": {
+      "alt-cmd-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "((vim_mode == normal || vim_mode == visual) || vim_mode == operator)",
+    "bindings": {
+      "alt-cmd-k": "editor::MoveLineUp"
+    }
   }
 ]
