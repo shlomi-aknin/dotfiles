@@ -83,6 +83,12 @@
     }
   },
   {
+    "context": "(Editor && showing_code_actions)",
+    "bindings": {
+      "cmd-j": "menu::SelectNext"
+    }
+  },
+  {
     "context": "Picker > Editor",
     "bindings": {
       "cmd-k": "menu::SelectPrevious"
@@ -184,6 +190,8 @@
     "context": "Editor && !menu && VimControl && vim_mode == normal",
     "bindings": {
       "space b": "tab_switcher::ToggleAll",
+      "space c a": "editor::ToggleCodeActions",
+      "space e": "pane::RevealInProjectPanel",
       "space f": "file_finder::Toggle",
       "space j": ["workspace::SendKeystrokes", "o escape"],
       "space k": ["workspace::SendKeystrokes", "O escape"],
@@ -200,7 +208,7 @@
     }
   },
   {
-    "context": "(VimControl && !menu)",
+    "context": "(VimControl && !menu && !ProjectPanel)",
     "bindings": {
       "shift-h": "vim::FirstNonWhitespace"
     }
@@ -248,12 +256,6 @@
         "task::Spawn",
         { "task_name": "Run Jest", "reveal_target": "center" }
       ]
-    }
-  },
-  {
-    "context": "!ContextEditor > (Editor && mode == full)",
-    "bindings": {
-      "space e": "pane::RevealInProjectPanel"
     }
   },
   {
@@ -305,8 +307,32 @@
   },
   {
     "context": "VimControl && vim_mode == normal",
-      "bindings": {
+    "bindings": {
       "g o": "pane::JoinAll"
+    }
+  },
+  {
+    "context": "(Editor && showing_code_actions)",
+    "bindings": {
+      "cmd-l": "editor::ConfirmCodeAction"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal && !menu)",
+    "bindings": {
+      "shift-h": null
+    }
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "shift-h": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space r": "editor::Rename"
     }
   }
 ]
