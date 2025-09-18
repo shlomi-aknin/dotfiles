@@ -161,17 +161,6 @@
   {
     "context": "Editor",
     "bindings": {
-      "g n": [
-        "editor::SelectNext",
-        {
-          "replace_newest": false
-        }
-      ]
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
       "g u": "editor::UndoSelection"
     }
   },
@@ -334,6 +323,12 @@
     "context": "(VimControl && !menu)",
     "bindings": {
       "space r": "editor::Rename"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "cmd-r": "vim::Redo"
     }
   }
 ]
