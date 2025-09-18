@@ -22,7 +22,15 @@
   },
   "experimental.theme_overrides": {
     "editor.background": "#000",
-    "editor.gutter.background": "#000"
+    "editor.gutter.background": "#000",
+    "editor.document_highlight.bracket_background": "#BD93F9",
+    "players": [
+      {
+        "cursor": "#5ac1feff",
+        "background": "#5ac1feff",
+        "selection": "#BD93F9ff"
+      }
+    ]
   },
   "vim_mode": true,
   "relative_line_numbers": true,
