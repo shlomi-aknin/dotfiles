@@ -24,13 +24,22 @@
     "editor.background": "#000",
     "editor.gutter.background": "#000",
     "editor.document_highlight.bracket_background": "#BD93F9",
+    "hint": "#cccccc",
     "players": [
       {
         "cursor": "#5ac1feff",
         "background": "#5ac1feff",
         "selection": "#BD93F9ff"
       }
-    ]
+    ],
+    "syntax": {
+      "comment": {
+        "color": "#FF79C6" // Example: a shade of green
+      },
+      "comment.doc": {
+        "color": "#FF79C6" // Example: a shade of blue
+      }
+    }
   },
   "vim_mode": true,
   "relative_line_numbers": true,
