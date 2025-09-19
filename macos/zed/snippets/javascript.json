@@ -1,0 +1,12 @@
+{
+  "Jest Describe": {
+    "prefix": "desc",
+    "body": ["describe('$0', () => {", "  ", "});"],
+    "description": "Jest test description"
+  },
+  "Jest test case": {
+    "prefix": "ita",
+    "body": ["it('$0', async () => {", "  ", "});"],
+    "description": "Jest test case"
+  }
+}
