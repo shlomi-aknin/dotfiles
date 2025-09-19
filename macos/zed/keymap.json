@@ -429,5 +429,20 @@
     "bindings": {
       "f5": "debugger::Start"
     }
+  },
+  {
+    "bindings": {
+      "space d b": "debugger::FocusBreakpointList"
+    }
+  },
+  {
+    "bindings": {
+      "space d v": "debugger::FocusVariables"
+    }
+  },
+  {
+    "bindings": {
+      "space d t": "debugger::FocusTerminal"
+    }
   }
 ]
