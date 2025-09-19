@@ -29,6 +29,7 @@
     "element.hover": "#BD93F9",
     "ghost_element.selected": "#6272A4",
     "editor.background": "#000",
+    "editor.active_line.background": "#6272A4",
     "editor.gutter.background": "#000",
     "editor.document_highlight.bracket_background": "#BD93F9",
     "hint": "#cccccc",
