@@ -27,7 +27,6 @@
   },
   "experimental.theme_overrides": {
     "element.hover": "#BD93F9",
-    "border": "#6272A4",
     "ghost_element.selected": "#6272A4",
     "editor.background": "#000",
     "editor.gutter.background": "#000",
