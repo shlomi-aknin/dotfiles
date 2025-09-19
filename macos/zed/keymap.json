@@ -56,37 +56,27 @@
     }
   },
   {
+    "context": "!(showing_code_actions || showing_completions)",
     "bindings": {
       "cmd-h": "pane::ActivatePreviousItem"
     }
   },
   {
+    "context": "!(showing_code_actions || showing_completions)",
     "bindings": {
       "cmd-l": "pane::ActivateNextItem"
     }
   },
   {
-    "context": "Editor",
+    "context": "(Editor && vim_mode == normal && !(showing_code_actions || showing_completions))",
     "bindings": {
       "cmd-j": "editor::DuplicateLineDown"
     }
   },
   {
-    "context": "Editor",
+    "context": "(Editor && vim_mode == normal && !(showing_code_actions || showing_completions))",
     "bindings": {
       "cmd-k": "editor::DuplicateLineUp"
-    }
-  },
-  {
-    "context": "Picker > Editor",
-    "bindings": {
-      "cmd-j": "menu::SelectNext"
-    }
-  },
-  {
-    "context": "(Editor && showing_code_actions)",
-    "bindings": {
-      "cmd-j": "menu::SelectNext"
     }
   },
   {
@@ -375,6 +365,41 @@
     "context": "((vim_mode == normal || vim_mode == visual) || vim_mode == operator)",
     "bindings": {
       "alt-cmd-k": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "cmd-j": "menu::SelectNext"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Prompt",
+    "bindings": {
+      "cmd-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "cmd-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "cmd-k": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "(Editor && showing_completions)",
+    "bindings": {
+      "cmd-l": "editor::ConfirmCompletion"
     }
   }
 ]
