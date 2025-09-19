@@ -20,7 +20,14 @@
     "light": "One Light",
     "dark": "Dracula Solid"
   },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true
+    }
+  },
   "experimental.theme_overrides": {
+    "element.hover": "#BD93F9",
+    "border": "#6272A4",
     "ghost_element.selected": "#6272A4",
     "editor.background": "#000",
     "editor.gutter.background": "#000",
@@ -49,5 +56,6 @@
   "vertical_scroll_margin": 999,
   "autosave": "on_focus_change",
   "scroll_beyond_last_line": "off",
-  "auto_signature_help": true
+  "auto_signature_help": true,
+  "lsp_document_colors": "border"
 }
