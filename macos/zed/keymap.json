@@ -92,7 +92,7 @@
     }
   },
   {
-    "context": "(vim_mode == helix_normal && !menu)",
+    "context": "(vim_mode == normal && !menu)",
     "bindings": {
       "space f": null
     }
@@ -235,6 +235,8 @@
     "context": "Editor && !menu && !VimWaiting && VimControl && vim_mode == normal && (vim_operator == none || vim_operator == n)",
     "bindings": {
       "g p d": "editor::GoToDefinitionSplit",
+      "s i w": ["workspace::SendKeystrokes", "v i w p"],
+      "s a w": ["workspace::SendKeystrokes", "v a w p"],
       "s i )": ["workspace::SendKeystrokes", "v i ) p"],
       "s a )": ["workspace::SendKeystrokes", "v a ) p"],
       "s i (": ["workspace::SendKeystrokes", "v i ( p"],
@@ -431,16 +433,19 @@
     }
   },
   {
+    "context": "!menu",
     "bindings": {
       "space d b": "debugger::FocusBreakpointList"
     }
   },
   {
+    "context": "!menu",
     "bindings": {
       "space d v": "debugger::FocusVariables"
     }
   },
   {
+    "context": "!menu",
     "bindings": {
       "space d t": "debugger::FocusTerminal"
     }
