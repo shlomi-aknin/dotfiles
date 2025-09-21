@@ -11,5 +11,5 @@ SELECTED=$(fd --max-depth 1 | fzf --cycle --bind=ctrl-l:accept,ctrl-j:down,ctrl-
 [ "$SELECTED" = "" ] && exit 0
 echo "$DIR/$SELECTED" > $LASTDIR
 # /usr/local/bin/code $SELECTED
-/usr/local/bin/code -n $SELECTED
+/usr/local/bin/cursor -n $SELECTED
 
