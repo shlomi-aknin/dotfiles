@@ -424,12 +424,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "f4": "debugger::Rerun"
-    }
-  },
-  {
-    "bindings": {
-      "f5": "debugger::Start"
+      "cmd-shift-f5": "debugger::Rerun"
     }
   },
   {
