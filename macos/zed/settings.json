@@ -45,12 +45,15 @@
     ],
     "syntax": {
       "comment": {
-        "color": "#FF79C6" // Example: a shade of green
+        "color": "#FF79C6"
       },
       "comment.doc": {
-        "color": "#FF79C6" // Example: a shade of blue
+        "color": "#FF79C6"
       }
     }
+  },
+  "file_types": {
+    "Shell Script": ["*.env"]
   },
   "vim_mode": true,
   "relative_line_numbers": true,
@@ -58,6 +61,6 @@
   "vertical_scroll_margin": 999,
   "autosave": "on_focus_change",
   "scroll_beyond_last_line": "off",
-  "auto_signature_help": true,
+  // "auto_signature_help": true,
   "lsp_document_colors": "border"
 }
