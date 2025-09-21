@@ -262,7 +262,7 @@
   {
     "context": "Pane",
     "bindings": {
-      "cmd-shift-w": [
+      "cmd-q cmd-q": [
         "pane::CloseActiveItem",
         {
           "close_pinned": false
