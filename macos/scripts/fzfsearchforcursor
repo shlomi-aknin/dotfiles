@@ -17,4 +17,4 @@ SELECTED=$(/opt/homebrew/bin/fzf -m -d / --cycle --bind=ctrl-l:accept,tab:toggle
 
 [ "$SELECTED" = "" ] && exit 0
 
-/usr/local/bin/code $SELECTED
+/usr/local/bin/cursor $SELECTED
