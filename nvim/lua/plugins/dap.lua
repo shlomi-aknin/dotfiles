@@ -23,24 +23,25 @@ return {
       opts = {},
       config = function()
               local dap, dapui = require("dap"), require("dapui")
-	      dapui.setup()
+        dapui.setup()
               dap.listeners.before.attach.dapui_config = function()
-        	      dapui.open({})
+                dapui.open({})
               end
               dap.listeners.before.launch.dapui_config = function()
-        	      dapui.open({})
+                dapui.open({})
               end
               dap.listeners.before.event_terminated.dapui_config = function()
-        	      dapui.close({})
+                dapui.close({})
               end
               dap.listeners.before.event_exited.dapui_config = function()
-        	      dapui.close({})
+                dapui.close({})
               end
       end,
       dependencies = { "nvim-neotest/nvim-nio" }
     }
   },
   config = function()
+    vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
     local dap = require("dap")
     if not dap.adapters["pwa-node"] then
       require("dap").adapters["pwa-node"] = {
