@@ -1,436 +1,100 @@
-local js_based_languages = {
-  "typescript",
-  "javascript",
-  "typescriptreact",
-  "javascriptreact",
-  "vue",
-}
-local isUiOpen = false
-
-local uiClose = function ()
-  if isUiOpen == true then
-    require('dapui').close()
-    isUiOpen = false
-  end
-end
-
-local uiOpen = function ()
-  if isUiOpen == false then
-    require('dapui').open()
-    isUiOpen = true
-  end
-end
-
-local uiToggle = function ()
-  if isUiOpen then
-   uiClose()
-  else
-    uiOpen()
-  end
-end
-
 return {
-  {
-    "mfussenegger/nvim-dap",
-    config = function()
-      local dap = require("dap")
-      local dapui = require("dapui")
-      dap.listeners.before.attach.dapui_config = function()
-        uiOpen()
+  "mfussenegger/nvim-dap",
+  keys = {
+    { "<leader>dd", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+    { "<leader>dc", function() require("dap").continue() end, desc = "Continue/Start Debugging" },
+    { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
+    { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
+    { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
+    { "<leader>dr", function() require("dap").repl.open() end, desc = "Open REPL" },
+    { "<leader>dT", function() require("dap").terminate() end, desc = "Terminate Debugging" },
+    { "<leader>dt", function() require("dapui").toggle({}) end, desc = "Toggle Dap UI" },
+  },
+  dependencies = {
+    {
+      "williamboman/mason.nvim",
+      opts = function(_, opts)
+        opts.ensure_installed = opts.ensure_installed or {}
+        table.insert(opts.ensure_installed, "js-debug-adapter")
+      end,
+    },
+    { 
+      "rcarriga/nvim-dap-ui", 
+      opts = {},
+      config = function()
+              local dap, dapui = require("dap"), require("dapui")
+	      dapui.setup()
+              dap.listeners.before.attach.dapui_config = function()
+        	      dapui.open({})
+              end
+              dap.listeners.before.launch.dapui_config = function()
+        	      dapui.open({})
+              end
+              dap.listeners.before.event_terminated.dapui_config = function()
+        	      dapui.close({})
+              end
+              dap.listeners.before.event_exited.dapui_config = function()
+        	      dapui.close({})
+              end
+      end,
+      dependencies = { "nvim-neotest/nvim-nio" }
+    }
+  },
+  config = function()
+    local dap = require("dap")
+    if not dap.adapters["pwa-node"] then
+      require("dap").adapters["pwa-node"] = {
+        type = "server",
+        host = "localhost",
+        port = "${port}",
+        executable = {
+          command = "/usr/local/bin/node",
+          args = {
+      vim.fn.stdpath('data') .. "/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js",
+            "${port}",
+          },
+        },
+      }
+    end
+    if not dap.adapters["node"] then
+      dap.adapters["node"] = function(cb, config)
+        if config.type == "node" then
+          config.type = "pwa-node"
+        end
+        local nativeAdapter = dap.adapters["pwa-node"]
+        if type(nativeAdapter) == "function" then
+          nativeAdapter(cb, config)
+        else
+          cb(nativeAdapter)
+        end
       end
-      dap.listeners.before.launch.dapui_config = function()
-        uiOpen()
-      end
-      dap.listeners.before.event_terminated.dapui_config = function()
-        uiClose()
-      end
-      dap.listeners.before.event_exited.dapui_config = function()
-        uiClose()
-      end
+    end
 
-      vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
+    local js_filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact" }
 
-      for _, language in ipairs(js_based_languages) do
+    local vscode = require("dap.ext.vscode")
+    vscode.type_to_filetypes["node"] = js_filetypes
+    vscode.type_to_filetypes["pwa-node"] = js_filetypes
+
+    for _, language in ipairs(js_filetypes) do
+      if not dap.configurations[language] then
         dap.configurations[language] = {
-          -- Debug single nodejs files
-          -- {
-          --   type = "pwa-node",
-          --   request = "launch",
-          --   name = "Launch file",
-          --   program = "${file}",
-          --   cwd = vim.fn.getcwd(),
-          --   sourceMaps = true,
-          -- },
-
           {
             type = "pwa-node",
             request = "launch",
-            name = "STAGING run ts-node on current file",
-            cwd = vim.fn.getcwd(),
-            env = { NODE_ENV = 'staging' },
-            runtimeArgs = { "--swc" },
-            runtimeExecutable = "ts-node",
-            args = { "${file}" },
-            sourceMaps = true,
-            protocol = "inspector",
-            skipFiles = { "<node_internals>/**", "node_modules/**" },
-            resolveSourceMapLocations = {
-              "${workspaceFolder}/**",
-              "!**/node_modules/**",
-            },
+            name = "Launch file",
+            program = "${file}",
+            cwd = "${workspaceFolder}",
           },
-          {
-            type = "pwa-node",
-            request = "launch",
-            name = "PRODUCTION run ts-node on current file",
-            cwd = vim.fn.getcwd(),
-            env = { NODE_ENV = 'prod' },
-            runtimeArgs = { "--swc" },
-            runtimeExecutable = "ts-node",
-            args = { "${file}" },
-            sourceMaps = true,
-            protocol = "inspector",
-            skipFiles = { "<node_internals>/**", "node_modules/**" },
-            resolveSourceMapLocations = {
-              "${workspaceFolder}/**",
-              "!**/node_modules/**",
-            },
-          },
-          -- {
-          --   type = "pwa-node",
-          --   request = "launch",
-          --   name = "Launch Current File (pwa-node with ts-node) STAGING",
-          --   cwd = vim.fn.getcwd(),
-          --   env = { NODE_ENV = 'staging' },
-          --   runtimeArgs = { "--loader", "ts-node/esm" },
-          --   runtimeExecutable = "node",
-          --   args = { "${file}" },
-          --   sourceMaps = true,
-          --   protocol = "inspector",
-          --   skipFiles = { "<node_internals>/**", "node_modules/**" },
-          --   resolveSourceMapLocations = {
-          --     "${workspaceFolder}/**",
-          --     "!**/node_modules/**",
-          --   },
-          -- },
-          -- {
-          --   type = "pwa-node",
-          --   request = "launch",
-          --   name = "Launch Current File (pwa-node with ts-node) PROD",
-          --   cwd = vim.fn.getcwd(),
-          --   env = { NODE_ENV = 'prod' },
-          --   runtimeArgs = { "--loader", "ts-node/esm" },
-          --   runtimeExecutable = "node",
-          --   args = { "${file}" },
-          --   sourceMaps = true,
-          --   protocol = "inspector",
-          --   skipFiles = { "<node_internals>/**", "node_modules/**" },
-          --   resolveSourceMapLocations = {
-          --     "${workspaceFolder}/**",
-          --     "!**/node_modules/**",
-          --   },
-          -- },
-          {
-            type = "pwa-node",
-            request = "launch",
-            name = "Launch Test Current File (pwa-node with jest)",
-            cwd = vim.fn.getcwd(),
-            runtimeArgs = { "${workspaceFolder}/node_modules/.bin/jest" },
-            runtimeExecutable = "node",
-            args = { "${file}", "--coverage", "false" },
-            rootPath = "${workspaceFolder}",
-            sourceMaps = true,
-            console = "integratedTerminal",
-            internalConsoleOptions = "neverOpen",
-            skipFiles = { "<node_internals>/**", "node_modules/**" },
-          },
-          {
-            name = "Launch NestJS (Debug Mode)",
-            type = "pwa-node",
-            request = "launch",
-            cwd = vim.fn.getcwd(),
-            runtimeExecutable = "npm", -- Specify npm as the runtime executable
-            args = { "run", "start:shlomo" }, -- Pass the run command and script name as arguments
-            sourceMaps = true,
-            protocol = "inspector",
-            console = "integratedTerminal",
-            -- outFiles = { "${workspaceFolder}/dist/**/*.js" },
-            skipFiles = {
-              "${workspaceFolder}/node_modules/**/*.js",
-              "<node_internals>/**",
-            },
-          },
-          -- Debug nodejs processes (make sure to add --inspect when you run the process)
           {
             type = "pwa-node",
             request = "attach",
             name = "Attach",
             processId = require("dap.utils").pick_process,
-            -- processId = require("dap.utils").pick_process,
-            cwd = vim.fn.getcwd(),
-            sourceMaps = true,
-            skipFiles = {
-              "<node_internals>/**",
-              "node_modules/**",
-            }
-          },
-          -- Debug web applications (client side)
-          {
-            type = "pwa-chrome",
-            request = "launch",
-            name = "Launch & Debug Chrome",
-            url = function()
-              local co = coroutine.running()
-              return coroutine.create(function()
-                vim.ui.input({
-                  prompt = "Enter URL: ",
-                  default = "http://localhost:3000",
-                }, function(url)
-                  if url == nil or url == "" then
-                    return
-                  else
-                    coroutine.resume(co, url)
-                  end
-                end)
-              end)
-            end,
-            webRoot = vim.fn.getcwd(),
-            protocol = "inspector",
-            -- sourceMaps = true,
-            userDataDir = false,
+            cwd = "${workspaceFolder}",
           },
         }
       end
-    end,
-    keys = {
-      {
-        "<leader>dx",
-        function()
-          local dap = require("dap")
-          local session = dap.session()
-          if session and session.parent then
-            dap.set_session(session.parent)
-          end
-          dap.terminate()
-
-          -- local session_to_activate = nil
-          -- local sessions = dap.sessions()
-
-          -- for _, s in pairs(sessions) do
-          --   session_to_activate = s
-          --   break
-          -- end
-
-          -- if session_to_activate ~= nil then
-          --   dap.set_session(session_to_activate)
-          -- end
-
-          -- dap.terminate()
-        end,
-        desc = "Terminate",
-      },
-      -- {
-      --   "<leader>dx",
-      --   function()
-      --     local dap = require("dap")
-      --     dap.terminate(
-      --       {},
-      --       {
-      --         terminateDebugee = true
-      --       },
-      --       function()
-      --         dap.close()
-      --       end
-      --     )
-      --   end,
-      --   {
-      --     desc = "Stop Debugger",
-      --     exit = false,
-      --     private = true,
-      --     silent = true
-      --   }
-      -- },
-      {
-        "<leader>du",
-        function()
-          uiToggle()
-          -- require("dapui").toggle()
-        end,
-        desc = "Dap UI toggle",
-      },
-      {
-        "<leader>dc",
-        function()
-          require("dap").continue()
-        end,
-        desc = "Continue",
-      },
-      {
-        "<leader>dC",
-        function()
-          require("dap").run_to_cursor()
-        end,
-        desc = "Run to cursor",
-      },
-      {
-        "<leader>di",
-        function()
-          require("dap").step_into()
-        end,
-        desc = "Step Into",
-      },
-      {
-        "<leader>dd",
-        function()
-          -- require("dap").toggle_breakpoint()
-          require('persistent-breakpoints.api').toggle_breakpoint()
-        end,
-        desc = "Toggle break point",
-      },
-      {
-        "<leader>dD",
-        function()
-          -- require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
-          require('persistent-breakpoints.api').set_conditional_breakpoint()
-        end,
-        desc = "Toggle conditional break point",
-      },
-      {
-        "<leader>dz",
-        function()
-          require('persistent-breakpoints.api').clear_all_breakpoints()
-        end,
-        desc = "Clear all break points",
-      },
-      {
-        "<leader>dO",
-        function()
-          require("dap").step_out()
-        end,
-        desc = "Step Out",
-      },
-      {
-        "<leader>do",
-        function()
-          require("dap").step_over()
-        end,
-        desc = "Step Over",
-      },
-      {
-        "<leader>dh",
-        function()
-          require("dap.ui.widgets").hover()
-        end,
-        desc = "Step Over",
-      },
-      {
-        "<leader>de",
-        function()
-          require("dapui").eval()
-          require("dapui").eval()
-        end,
-        desc = "Evaluate",
-      },
-      {
-        "<leader>da",
-        function()
-          if vim.fn.filereadable(".vscode/launch.json") then
-            local dap_vscode = require("dap.ext.vscode")
-            dap_vscode.load_launchjs(nil, {
-              ["pwa-node"] = js_based_languages,
-              ["chrome"] = js_based_languages,
-              ["pwa-chrome"] = js_based_languages,
-            })
-          end
-          require("dap").continue()
-        end,
-        desc = "Run with Args",
-      },
-    },
-    dependencies = {
-      { "rcarriga/nvim-dap-ui", opts = {
-        layouts = { {
-        elements = { {
-            id = "scopes",
-            size = 0.25
-          }, {
-            id = "watches",
-            size = 0.25
-          }, {
-            id = "breakpoints",
-            size = 0.25
-          }, {
-            id = "stacks",
-            size = 0.25
-          } },
-        position = "left",
-        size = 40
-      }, {
-        elements = { {
-            id = "repl",
-            size = 0.5
-          }, {
-            id = "console",
-            size = 0.5
-          } },
-        position = "bottom",
-        size = 10
-      } },
-      }, dependencies = { "nvim-neotest/nvim-nio" } },
-      { "theHamsta/nvim-dap-virtual-text", opts = { enabled = true, virt_text_pos = 'inline' } },
-      { "Weissle/persistent-breakpoints.nvim", opts = { load_breakpoints_event = { "BufReadPost" } } },
-      -- Install the vscode-js-debug adapter
-      {
-        "microsoft/vscode-js-debug",
-        -- After install, build it and rename the dist directory to out
-        build = "npm install --legacy-peer-deps --no-save && npx gulp vsDebugServerBundle && rm -rf out && mv dist out",
-        version = "1.*",
-      },
-      {
-        "mxsdev/nvim-dap-vscode-js",
-        config = function()
-          vim.fn.sign_define('DapBreakpoint', { text='', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
-          vim.fn.sign_define('DapBreakpointCondition', { text='', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
-          vim.fn.sign_define('DapBreakpointRejected', { text='', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl= 'DapBreakpoint' })
-          vim.fn.sign_define('DapLogPoint', { text='', texthl='DapLogPoint', linehl='DapLogPoint', numhl= 'DapLogPoint' })
-          -- vim.fn.sign_define('DapStopped', { text='', texthl='DapStopped', linehl='DapStopped', numhl= 'DapStopped' })
-          ---@diagnostic disable-next-line: missing-fields
-          ---
-          require("dap-vscode-js").setup({
-            -- Path of node executable. Defaults to $NODE_PATH, and then "node"
-            -- node_path = "node",
-
-            -- Path to vscode-js-debug installation.
-            debugger_path = vim.fn.resolve(vim.fn.stdpath("data") .. "/lazy/vscode-js-debug"),
-
-            -- Command to use to launch the debug server. Takes precedence over "node_path" and "debugger_path"
-            -- debugger_cmd = { "js-debug-adapter" },
-
-            -- which adapters to register in nvim-dap
-            adapters = {
-              "chrome",
-              "pwa-node",
-              "pwa-chrome",
-              "pwa-msedge",
-              "pwa-extensionHost",
-              "node-terminal",
-            },
-
-            -- Path for file logging
-            -- log_file_path = "(stdpath cache)/dap_vscode_js.log",
-
-            -- Logging level for output to file. Set to false to disable logging.
-            -- log_file_level = false,
-
-            -- Logging level for output to console. Set to false to disable console output.
-            -- log_console_level = vim.log.levels.ERROR,
-          })
-        end,
-      },
-      {
-        "Joakker/lua-json5",
-        build = "./install.sh",
-      },
-    },
-  },
+    end
+  end,
 }
