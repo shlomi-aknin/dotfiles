@@ -54,5 +54,6 @@ opt.mouse = ''
 opt.foldlevel = 20
 opt.foldmethod = 'expr'
 opt.foldexpr = 'nvim_treesitter#foldexpr()' -- Utilize Treesitter folds
+opt.laststatus = 3
 
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

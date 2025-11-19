@@ -18,12 +18,12 @@ return {
         table.insert(opts.ensure_installed, "js-debug-adapter")
       end,
     },
-    { 
-      "rcarriga/nvim-dap-ui", 
+    {
+      "rcarriga/nvim-dap-ui",
       opts = {},
       config = function()
               local dap, dapui = require("dap"), require("dapui")
-        dapui.setup()
+              dapui.setup()
               dap.listeners.before.attach.dapui_config = function()
                 dapui.open({})
               end
@@ -41,7 +41,7 @@ return {
     }
   },
   config = function()
-    vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
+    vim.fn.sign_define('DapBreakpoint', {text='󰧟', texthl='', linehl='', numhl=''})
     local dap = require("dap")
     if not dap.adapters["pwa-node"] then
       require("dap").adapters["pwa-node"] = {
@@ -86,6 +86,8 @@ return {
             name = "Launch file",
             program = "${file}",
             cwd = "${workspaceFolder}",
+            runtimeExecutable = "${workspaceFolder}/node_modules/.bin/ts-node",
+            runtimeArgs = { "--swc" },
           },
           {
             type = "pwa-node",
