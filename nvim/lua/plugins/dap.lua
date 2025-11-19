@@ -1,14 +1,14 @@
 return {
   "mfussenegger/nvim-dap",
   keys = {
-    { "<leader>dd", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
-    { "<leader>dc", function() require("dap").continue() end, desc = "Continue/Start Debugging" },
-    { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
-    { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
-    { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
-    { "<leader>dr", function() require("dap").repl.open() end, desc = "Open REPL" },
-    { "<leader>dT", function() require("dap").terminate() end, desc = "Terminate Debugging" },
-    { "<leader>dt", function() require("dapui").toggle({}) end, desc = "Toggle Dap UI" },
+    { "<F5>", function() require("dap").continue() end, desc = "Continue/Start Debugging" },
+    { "<F6>", function() require("dap").terminate() end, desc = "Terminate Debugging" },
+    { "<F7>", function() require("dapui").toggle({}) end, desc = "Toggle Dap UI" },
+    { "<F8>", function() require("dap").repl.open() end, desc = "Open REPL" },
+    { "<F9>", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+    { "<F10>", function() require("dap").step_over() end, desc = "Step Over" },
+    { "<F11>", function() require("dap").step_into() end, desc = "Step Into" },
+    { "<F12>", function() require("dap").step_out() end, desc = "Step Out" },
   },
   dependencies = {
     {
