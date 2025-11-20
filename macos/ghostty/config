@@ -1,6 +1,12 @@
 theme = "Dracula"
+background = "#000000"
 font-family = "JetBrains Mono"
 font-size = 16
+font-style = SemiBold
+font-style-bold = ExtraBold
+font-style-italic = SemiBold Italic
+font-style-bold-italic = ExtraBold Italic
+font-thicken = true
 cursor-style-blink = false
 confirm-close-surface = false
 
