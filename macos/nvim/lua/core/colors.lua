@@ -13,7 +13,11 @@ vim.cmd [[
   highlight TelescopeMatching guibg=#FF79C6 guifg=#000000
   highlight SpectreReplace guibg=#50FA7B guifg=#000000
   highlight SpectreSearch guibg=#FF79C6 guifg=#000000
+  highlight GrugFarResultsMatch guibg=#50FA7B guifg=#000000
+  highlight GrugFarResultsMatchRemoved guibg=#FF5555 guifg=#000000
+  highlight GrugFarResultsMatchAdded guibg=#50FA7B guifg=#000000
 ]]
+
 
   -- highlight BufferLineBuffer guibg=#FF79C6 guifg=#000000
   -- highlight BufferLineBackground guibg=#FF79C6 guifg=#000000

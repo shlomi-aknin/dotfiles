@@ -1,6 +1,7 @@
 return {
   "mfussenegger/nvim-dap",
   keys = {
+    { "<F4>", function() require("dapui").eval() end, desc = "Toggle Dap UI" },
     { "<F5>", function() require("dap").continue() end, desc = "Continue/Start Debugging" },
     { "<F6>", function() require("dap").terminate() end, desc = "Terminate Debugging" },
     { "<F7>", function() require("dapui").toggle({}) end, desc = "Toggle Dap UI" },
