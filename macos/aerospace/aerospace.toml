@@ -52,6 +52,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-s = 'exec-and-forget ~/.local/bin/screencapture-rect'
     alt-shift-q = 'close --quit-if-last-window'
     alt-shift-v = 'exec-and-forget open -na Ghostty --args -e ~/.local/bin/projectselectorcode_fzf'
+    alt-shift-o = 'exec-and-forget open -na Ghostty --args -e ~/.local/bin/projectselectorcode_neovim'
     alt-shift-z = 'exec-and-forget open -na Ghostty --args -e ~/.local/bin/projectselectorzed_fzf'
 
     alt-minus = 'resize smart -50'
