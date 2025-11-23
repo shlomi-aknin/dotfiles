@@ -32,18 +32,6 @@ return {
     -- https://github.com/hrsh7th/cmp-cmdline
     'hrsh7th/cmp-cmdline',
     'onsails/lspkind.nvim',
-    {
-      "MattiasMTS/cmp-dbee",
-      dependencies = {
-        {"kndndrj/nvim-dbee"}
-      },
-      ft = "sql", -- optional but good to have
-      opts = {
-        sources = {
-          { "cmp-dbee" },
-        },
-      },
-    },
   },
   config = function()
     local cmp = require('cmp')
@@ -71,7 +59,6 @@ return {
       }),
       sources = cmp.config.sources({
         { name = 'path' },
-        { name = 'cmp-dbee' }, -- database
       }, {
           { name = 'cmdline' }
         }),
@@ -134,7 +121,6 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
         { name = 'nvim_lsp_signature_help' }, -- lsp signature
-        { name = 'cmp-dbee' }, -- database
       }),
     })
   end,

@@ -9,6 +9,7 @@ font-style-bold-italic = ExtraBold Italic
 font-thicken = true
 cursor-style-blink = false
 confirm-close-surface = false
+window-colorspace = display-p3
 
 keybind = clear
 keybind = cmd+a=text:\x01
