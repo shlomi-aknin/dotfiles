@@ -16,6 +16,7 @@ vim.cmd [[
   highlight GrugFarResultsMatch guibg=#50FA7B guifg=#000000
   highlight GrugFarResultsMatchRemoved guibg=#FF5555 guifg=#000000
   highlight GrugFarResultsMatchAdded guibg=#50FA7B guifg=#000000
+  highlight Constant guifg=#FFB86C
 ]]
 
 
