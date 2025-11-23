@@ -43,6 +43,7 @@ return {
   },
   config = function()
     vim.fn.sign_define('DapBreakpoint', {text='󰧟', texthl='', linehl='', numhl=''})
+    -- vim.fn.sign_define('DapStopped', {text='󰜴', texthl='', linehl='', numhl=''})
     local dap = require("dap")
     if not dap.adapters["pwa-node"] then
       require("dap").adapters["pwa-node"] = {
