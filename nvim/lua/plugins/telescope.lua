@@ -10,26 +10,34 @@ return {
   },
   config = function ()
     local actions = require('telescope.actions')
+    local layout = require('telescope.actions.layout')
     require('telescope').setup({
+      pickers = {
+        find_files = {
+          hidden = true
+        }
+      },
       defaults = {
         file_ignore_patterns = {
           'node_modules', 'build', 'dist', 'yarn.lock', '.git'
         },
-        -- preview = {
-        --   hide_on_startup = true
-        -- },
+        preview = {
+          hide_on_startup = true
+        },
         mappings = {
           n = {
             ['<C-l>'] = actions.select_default,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-x>'] = actions.delete_buffer,
+            ['<C-p>'] = layout.toggle_preview
           },
           i = {
             ['<C-l>'] = actions.select_default,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-x>'] = actions.delete_buffer,
+            ['<C-p>'] = layout.toggle_preview
           }
         }
       },

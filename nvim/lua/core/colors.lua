@@ -20,9 +20,15 @@ vim.cmd [[
   highlight Identifier guifg=#50FA7B
   highlight CursorLineNr guifg=#FFFF00
   highlight LineNr guifg=#0CAFFF
+  highlight VertSplit guibg=#000000
+  highlight StatusLineNC guibg=#000000
+  highlight TelescopeBorder guibg=#000000
+  highlight TelescopeNormal guibg=#000000
+  highlight WinSeparator guibg=#000000
 ]]
 
-
+  -- highlight VertSplit guibg=#000000
+  -- highlight StatusLineNC guibg=#000000
   -- highlight Constant guifg=#FFB86C
   -- highlight BufferLineBuffer guibg=#FF79C6 guifg=#000000
   -- highlight BufferLineBackground guibg=#FF79C6 guifg=#000000
