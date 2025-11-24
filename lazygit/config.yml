@@ -84,10 +84,10 @@ git:
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
 os:
   editPreset: "" # see 'Configuring File Editing' section
-  edit: "code {{filename}}"
-  editAtLine: "code --line={{line}}"
-  editAtLineAndWait: "code --block --line={{line}}"
-  open: "code {{filename}}"
+  edit: "/usr/local/bin/cursor {{filename}}"
+  editAtLine: "/usr/local/bin/cursor --line={{line}}"
+  editAtLineAndWait: "/usr/local/bin/cursor --block --line={{line}}"
+  open: "/usr/local/bin/cursor {{filename}}"
   openLink: ""
 refresher:
   refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
@@ -236,3 +236,7 @@ customCommands:
     command: git commit --no-verify
     context: "global"
     subprocess: true
+  - key: <c-f>
+    description: Fetch branch
+    context: localBranches
+    command: git fetch origin {{.SelectedLocalBranch.Name}}:{{.SelectedLocalBranch.Name}}

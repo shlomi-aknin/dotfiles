@@ -16,10 +16,14 @@ vim.cmd [[
   highlight GrugFarResultsMatch guibg=#50FA7B guifg=#000000
   highlight GrugFarResultsMatchRemoved guibg=#FF5555 guifg=#000000
   highlight GrugFarResultsMatchAdded guibg=#50FA7B guifg=#000000
-  highlight Constant guifg=#FFB86C
+  highlight Constant guifg=#50FA7B
+  highlight Identifier guifg=#50FA7B
+  highlight CursorLineNr guifg=#FFFF00
+  highlight LineNr guifg=#0CAFFF
 ]]
 
 
+  -- highlight Constant guifg=#FFB86C
   -- highlight BufferLineBuffer guibg=#FF79C6 guifg=#000000
   -- highlight BufferLineBackground guibg=#FF79C6 guifg=#000000
   -- highlight BufferLineBufferSelected guibg=#50FA7B guifg=#000000
