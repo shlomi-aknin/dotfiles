@@ -23,7 +23,7 @@ keymap.set('n', '<leader>b', ':Telescope buffers<CR>', { noremap = true, silent 
 keymap.set({ "n", "x" }, '<leader>ca', ':LspTypescriptSourceAction<CR>', { noremap = true, silent = true })
 keymap.set('n', '<leader>cc', function() toggle_quickfix() end, { noremap = true, silent = true, nowait = true })
 keymap.set('n', '<leader>ch', function() vim.lsp.buf.incoming_calls() end, { noremap = true, silent = true, nowait = true })
-keymap.set('n', '<leader>db', ':Dbee toggle<CR>', { noremap = true, silent = true })
+-- keymap.set('n', '<leader>db', ':Dbee toggle<CR>', { noremap = true, silent = true })
 keymap.set('n', '<leader>dsc', function() require("dbee").store("csv", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.csv' }) end, { silent = true })
 keymap.set('n', '<leader>dsj', function() require("dbee").store("json", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.json' }) end, { silent = true })
 keymap.set('n', '<leader>e', ':Oil<CR>', { silent = true })
