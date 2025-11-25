@@ -38,3 +38,5 @@ keybind = cmd+w=text:\x17
 keybind = cmd+x=text:\x18
 keybind = cmd+y=text:\x19
 keybind = cmd+z=text:\x1A
+keybind = cmd+left_bracket=text:\x1B
+keybind = cmd+right_bracket=text:\x1D

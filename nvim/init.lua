@@ -19,7 +19,7 @@ require('lazy').setup('plugins', {
   },
   install = {
     missing = true,
-    colorscheme = { 'dracula' }
+    -- colorscheme = { 'dracula' }
   }
 })
 

@@ -25,6 +25,7 @@ vim.cmd [[
   highlight TelescopeBorder guibg=#000000
   highlight TelescopeNormal guibg=#000000
   highlight WinSeparator guibg=#000000
+  highlight Visual guibg=#2f547f
 ]]
 
   -- highlight VertSplit guibg=#000000

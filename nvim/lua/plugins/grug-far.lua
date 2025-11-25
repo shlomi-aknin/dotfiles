@@ -1,6 +1,5 @@
 return  {
   'MagicDuck/grug-far.nvim',
-  opts = {},
   config = function ()
     vim.api.nvim_create_autocmd('FileType', {
       group = vim.api.nvim_create_augroup('grug-far-keybindings', { clear = true }),
