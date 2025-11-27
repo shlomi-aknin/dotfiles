@@ -121,6 +121,7 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
         { name = 'nvim_lsp_signature_help' }, -- lsp signature
+        {name = "vim-dadbod-completion"}
       }),
     })
   end,
