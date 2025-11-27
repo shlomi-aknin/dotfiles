@@ -48,7 +48,7 @@ return {
               -- end
       end,
       dependencies = { "nvim-neotest/nvim-nio" }
-    }
+    },
   },
   config = function()
     vim.fn.sign_define('DapBreakpoint', {text='󰧟', texthl='', linehl='', numhl=''})

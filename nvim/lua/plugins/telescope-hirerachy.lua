@@ -23,7 +23,7 @@ return {
     extensions = {
       hierarchy = {
         -- telescope-hierarchy.nvim config
-        multi_depth = 20, -- How many layers deep should a multi-expand go?
+        multi_depth = 1000, -- How many layers deep should a multi-expand go?
       },
     },
   },
