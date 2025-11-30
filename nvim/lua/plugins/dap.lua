@@ -6,7 +6,8 @@ return {
     { "<F6>", function() require("dap").terminate() end, desc = "Terminate Debugging" },
     { "<F7>", function() require("dapui").toggle({}) end, desc = "Toggle Dap UI" },
     { "<F8>", function() require("dap").repl.open() end, desc = "Open REPL" },
-    { "<F9>", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+    { "<F3>", function() require('persistent-breakpoints.api').set_conditional_breakpoint() end, desc = "Set Conditional Breakpoint" },
+    { "<F9>", function() require('persistent-breakpoints.api').toggle_breakpoint() end, desc = "Toggle Breakpoint" },
     { "<F10>", function() require("dap").step_over() end, desc = "Step Over" },
     { "<F11>", function() require("dap").step_into() end, desc = "Step Into" },
     { "<F12>", function() require("dap").step_out() end, desc = "Step Out" },
@@ -15,7 +16,8 @@ return {
     { "<leader>dT", function() require("dap").terminate() end, desc = "Terminate Debugging" },
     { "<leader>dt", function() require("dapui").toggle({}) end, desc = "Toggle Dap UI" },
     { "<leader>dr", function() require("dap").repl.open() end, desc = "Open REPL" },
-    { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+    { "<leader>db", function() require('persistent-breakpoints.api').toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+    { "<leader>dB", function() require('persistent-breakpoints.api').set_conditional_breakpoint() end, desc = "Set Conditional Breakpoint" },
     { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
     { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
     { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
@@ -49,6 +51,10 @@ return {
       end,
       dependencies = { "nvim-neotest/nvim-nio" }
     },
+    {
+      'Weissle/persistent-breakpoints.nvim',
+      opts = { load_breakpoints_event = { "BufReadPost" } }
+    }
   },
   config = function()
     vim.fn.sign_define('DapBreakpoint', {text='󰧟', texthl='', linehl='', numhl=''})
