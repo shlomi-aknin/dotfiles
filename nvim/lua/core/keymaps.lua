@@ -4,6 +4,7 @@ local live_grep_args_shortcuts = require('telescope-live-grep-args.shortcuts')
 local downloads_directory = vim.fn.expand('$HOME/Downloads')
 local toggle_quickfix = require('core.toggle-quickfix').toggle_qf
 
+keymap.set('n', 'gdb', ':DBUIToggle<cr>', { noremap = true, silent = true })
 keymap.set('n', 'gv', 'Vg_%', { noremap = true, silent = true })
 keymap.set('n', 'FF', ':GrugFar<CR>', { noremap = true, silent = true })
 keymap.set('n', 'H', '^', { noremap = true, silent = true })
@@ -24,8 +25,8 @@ keymap.set({ "n", "x" }, '<leader>ca', ':LspTypescriptSourceAction<CR>', { norem
 keymap.set('n', '<leader>cc', function() toggle_quickfix() end, { noremap = true, silent = true, nowait = true })
 keymap.set('n', '<leader>ch', function() vim.lsp.buf.incoming_calls() end, { noremap = true, silent = true, nowait = true })
 -- keymap.set('n', '<leader>db', ':Dbee toggle<CR>', { noremap = true, silent = true })
-keymap.set('n', '<leader>dsc', function() require("dbee").store("csv", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.csv' }) end, { silent = true })
-keymap.set('n', '<leader>dsj', function() require("dbee").store("json", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.json' }) end, { silent = true })
+-- keymap.set('n', '<leader>dsc', function() require("dbee").store("csv", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.csv' }) end, { silent = true })
+-- keymap.set('n', '<leader>dsj', function() require("dbee").store("json", "file", { extra_arg = downloads_directory .. '/sql-export-' .. os.date("%Y%m%d%H%M%S") .. '.json' }) end, { silent = true })
 keymap.set('n', '<leader>e', ':Oil<CR>', { silent = true })
 -- keymap.set('n', '<leader>f', ':FzfxFiles<CR>', { noremap = true, silent = true })
 keymap.set('n', '<leader>f', ':Telescope find_files<CR>', { noremap = true, silent = true })
