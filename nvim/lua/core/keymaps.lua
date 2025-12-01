@@ -4,7 +4,7 @@ local live_grep_args_shortcuts = require('telescope-live-grep-args.shortcuts')
 local downloads_directory = vim.fn.expand('$HOME/Downloads')
 local toggle_quickfix = require('core.toggle-quickfix').toggle_qf
 
-keymap.set('n', 'gdb', ':DBUIToggle<cr>', { noremap = true, silent = true })
+keymap.set('n', '<leader>dd', ':DBUIToggle<cr>', { noremap = true, silent = true })
 keymap.set('n', 'gv', 'Vg_%', { noremap = true, silent = true })
 keymap.set('n', 'FF', ':GrugFar<CR>', { noremap = true, silent = true })
 keymap.set('n', 'H', '^', { noremap = true, silent = true })
@@ -85,7 +85,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local opts = { buffer = ev.buf, silent = true }
+    local opts = { buffer = ev.buf, silent = true, noremap = true }
     keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
     keymap.set('n', 'gpd', ':vsplit | lua vim.lsp.buf.definition()<CR>', opts)
@@ -99,8 +99,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
       print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
     keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-    -- keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
-    keymap.set('n', '<space>rn', ':Lspsaga rename<CR>', opts)
+    keymap.set('n', '<space>r', ':lua vim.lsp.buf.rename()<cr>', { noremap = true, silent = true, nowait = true })
+    -- keymap.set('n', '<space>rn', ':Lspsaga rename<CR>', opts)
     -- keymap.set('n', '<space>rf', ':TSToolsRenameFile<CR>', opts)
     -- keymap.set('n', '<space>ru', ':TSToolsRemoveUnused<CR>', opts)
     -- keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
