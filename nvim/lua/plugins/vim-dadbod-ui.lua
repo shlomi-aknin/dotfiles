@@ -16,9 +16,11 @@ return {
   end,
   config = function ()
     vim.g.dbs = {
-      mydb = vim.env.LOCAL_DB,
-      staging = vim.env.STAGING_DB,
-      prod = vim.env.PRODUCTION_DB,
+      mysql_local = vim.env.MYSQL_LOCAL,
+      mysql_staging = vim.env.MYSQL_STAGING,
+      mysql_production = vim.env.MYSQL_PRODUCTION,
+      redis_staging = vim.env.REDIS_STAGING,
+      redis_production = vim.env.REDIS_PRODUCTION,
     }
   end
 }

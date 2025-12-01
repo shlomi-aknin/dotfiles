@@ -9,5 +9,5 @@ SELECTED=$(fd --max-depth 1 | fzf --cycle --bind=ctrl-l:accept,ctrl-j:down,ctrl-
 
 [ "$SELECTED" = "" ] && exit 0
 cd $SELECTED
-nvim .
+nvim
 
