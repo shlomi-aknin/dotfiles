@@ -85,7 +85,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local opts = { buffer = ev.buf, silent = true, noremap = true }
+    local opts = { buffer = ev.buf, silent = true }
     keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
     keymap.set('n', 'gpd', ':vsplit | lua vim.lsp.buf.definition()<CR>', opts)
