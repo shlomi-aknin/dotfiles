@@ -7,7 +7,6 @@
       "cmd-l": "pane::ActivateNextItem",
       "cmd-[": "pane::SwapItemLeft",
       "cmd-]": "pane::SwapItemRight",
-      // "space x": "workspace::CloseAllItemsAndPanes",
       "shift-h": ["workspace::SendKeystrokes", "^"],
       "shift-l": ["workspace::SendKeystrokes", "g _"],
       "s i '": ["workspace::SendKeystrokes", "v i ' p"],
@@ -33,36 +32,27 @@
     "context": "Workspace",
     "use_key_equivalents": true,
     "bindings": {
-      // "space s": "workspace::Save",
       "cmd-`": "terminal_panel::Toggle",
-      // "space e": "workspace::ToggleLeftDock",
-      // "space e": ["workspace::SendKeystrokes", "cmd-shift-e z z"],
       "cmd-shift-j": "workspace::ToggleBottomDock",
-      // "space f": "file_finder::Toggle",
       "cmd-space": "command_palette::Toggle",
-      // "cmd-shift-e": "project_panel::ToggleFocus",
+      "cmd-j": null,
     },
   },
   {
     "context": "VimControl && vim_mode == normal",
     "bindings": {
+      "cmd-k": "editor::DuplicateLineUp",
+      "cmd-j": "editor::DuplicateLineDown",
       "space f": "file_finder::Toggle",
       "space e": ["workspace::SendKeystrokes", "cmd-shift-e z z"],
       "space s": "workspace::Save",
       "space q q": ["pane::CloseActiveItem", { "close_pinned": false }],
-      "space x": "workspace::CloseAllItemsAndPanes",
+      "space x": ["workspace::SendKeystrokes", "cmd-k cmd-w cmd-n"],
       "space /": ["editor::ToggleComments", { "advance_downwards": false }],
       "space j": "editor::NewlineBelow",
       "space k": "editor::NewlineAbove",
     },
   },
-  // {
-  //   "context": "Pane",
-  //   "use_key_equivalents": true,
-  //   "bindings": {
-  //     "space q q": ["pane::CloseActiveItem", { "close_pinned": false }],
-  //   },
-  // },
   {
     "context": "ProjectPanel",
     "use_key_equivalents": true,
@@ -87,7 +77,6 @@
     "bindings": {
       "g p d": "editor::GoToDefinitionSplit",
       "g v": ["workspace::SendKeystrokes", "V g _ %"],
-      // "space /": ["editor::ToggleComments", { "advance_downwards": false }],
     },
   },
   {
@@ -122,14 +111,6 @@
       "cmd-w q": "pane::CloseActiveItem",
     },
   },
-  // {
-  //   "context": "Editor && mode == full",
-  //   "use_key_equivalents": true,
-  //   "bindings": {
-  //     "space j": "editor::NewlineBelow",
-  //     "space k": "editor::NewlineAbove",
-  //   },
-  // },
   {
     "context": "Picker > Editor",
     "bindings": {
