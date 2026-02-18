@@ -5,8 +5,8 @@
     "bindings": {
       "cmd-l": "editor::ConfirmCodeAction",
       "cmd-j": ["workspace::SendKeystrokes", "down"],
-      "cmd-k": ["workspace::SendKeystrokes", "up"]
-    }
+      "cmd-k": ["workspace::SendKeystrokes", "up"],
+    },
   },
   {
     "context": "Editor && showing_completions",
@@ -14,8 +14,8 @@
     "bindings": {
       "cmd-l": ["workspace::SendKeystrokes", "enter"],
       "cmd-j": ["workspace::SendKeystrokes", "down"],
-      "cmd-k": ["workspace::SendKeystrokes", "up"]
-    }
+      "cmd-k": ["workspace::SendKeystrokes", "up"],
+    },
   },
   {
     "context": "vim_mode == normal && !(showing_code_actions || showing_completions)",
@@ -44,8 +44,8 @@
       "s a (": ["workspace::SendKeystrokes", "v a ( p"],
       "s i )": ["workspace::SendKeystrokes", "v i ) p"],
       "s a )": ["workspace::SendKeystrokes", "v a ) p"],
-      "s s": ["workspace::SendKeystrokes", "shift-v p"]
-    }
+      "s s": ["workspace::SendKeystrokes", "shift-v p"],
+    },
   },
   {
     "context": "Workspace",
@@ -54,8 +54,8 @@
       "cmd-`": "terminal_panel::Toggle",
       "cmd-shift-j": "workspace::ToggleBottomDock",
       "cmd-space": "command_palette::Toggle",
-      "cmd-j": null
-    }
+      "cmd-j": null,
+    },
   },
   {
     "context": "VimControl && vim_mode == normal && !(showing_code_actions || showing_completions)",
@@ -64,14 +64,18 @@
       "cmd-j": "editor::DuplicateLineDown",
       "space c a": "editor::ToggleCodeActions",
       "space f": "file_finder::Toggle",
+      "h": ["workspace::SendKeystrokes", "escape left"],
+      "j": ["workspace::SendKeystrokes", "escape down"],
+      "k": ["workspace::SendKeystrokes", "escape up"],
+      "l": ["workspace::SendKeystrokes", "escape right"],
       "space e": ["workspace::SendKeystrokes", "cmd-shift-e z z"],
       "space s": "workspace::Save",
       "space q q": ["pane::CloseActiveItem", { "close_pinned": false }],
       "space x": ["workspace::SendKeystrokes", "cmd-k cmd-w cmd-n"],
       "space /": ["editor::ToggleComments", { "advance_downwards": false }],
       "space j": "editor::NewlineBelow",
-      "space k": "editor::NewlineAbove"
-    }
+      "space k": "editor::NewlineAbove",
+    },
   },
   {
     "context": "ProjectPanel",
@@ -89,15 +93,15 @@
       "r": "project_panel::Rename",
       "d": ["project_panel::Trash", { "skip_prompt": true }],
       "escape": "menu::Cancel",
-      "space e": ["workspace::SendKeystrokes", "cmd-b"]
-    }
+      "space e": ["workspace::SendKeystrokes", "cmd-b"],
+    },
   },
   {
     "context": "Editor",
     "bindings": {
       "g p d": "editor::GoToDefinitionSplit",
-      "g v": ["workspace::SendKeystrokes", "V g _ %"]
-    }
+      "g v": ["workspace::SendKeystrokes", "V g _ %"],
+    },
   },
   {
     "context": "VimControl && !menu || !Editor && !Terminal",
@@ -128,8 +132,8 @@
       "cmd-w cmd-c": "pane::CloseActiveItem",
       "cmd-w c": "pane::CloseActiveItem",
       "cmd-w cmd-q": "pane::CloseActiveItem",
-      "cmd-w q": "pane::CloseActiveItem"
-    }
+      "cmd-w q": "pane::CloseActiveItem",
+    },
   },
   {
     "context": "Picker > Editor",
@@ -137,7 +141,7 @@
       "cmd-u": "editor::DeleteToBeginningOfLine",
       "cmd-k": "menu::SelectPrevious",
       "cmd-j": "menu::SelectNext",
-      "cmd-l": ["workspace::SendKeystrokes", "enter"]
-    }
-  }
+      "cmd-l": ["workspace::SendKeystrokes", "enter"],
+    },
+  },
 ]
