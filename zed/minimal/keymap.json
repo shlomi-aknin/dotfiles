@@ -64,17 +64,18 @@
       "cmd-j": "editor::DuplicateLineDown",
       "space c a": "editor::ToggleCodeActions",
       "space f": "file_finder::Toggle",
-      "h": ["workspace::SendKeystrokes", "escape left"],
-      "j": ["workspace::SendKeystrokes", "escape down"],
-      "k": ["workspace::SendKeystrokes", "escape up"],
-      "l": ["workspace::SendKeystrokes", "escape right"],
       "space e": ["workspace::SendKeystrokes", "cmd-shift-e z z"],
       "space s": "workspace::Save",
       "space q q": ["pane::CloseActiveItem", { "close_pinned": false }],
       "space x": ["workspace::SendKeystrokes", "cmd-k cmd-w cmd-n"],
-      "space /": ["editor::ToggleComments", { "advance_downwards": false }],
       "space j": "editor::NewlineBelow",
       "space k": "editor::NewlineAbove",
+    },
+  },
+  {
+    "context": "VimControl && (vim_mode == normal || vim_mode == visual) && !(showing_code_actions || showing_completions)",
+    "bindings": {
+      "space /": ["editor::ToggleComments", { "advance_downwards": false }],
     },
   },
   {
