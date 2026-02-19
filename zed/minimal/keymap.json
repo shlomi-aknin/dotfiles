@@ -1,5 +1,12 @@
 [
   {
+    "context": "!Terminal",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-c": ["workspace::SendKeystrokes", "escape"],
+    },
+  },
+  {
     "context": "Editor && showing_code_actions",
     "use_key_equivalents": true,
     "bindings": {
@@ -70,12 +77,21 @@
       "space x": ["workspace::SendKeystrokes", "cmd-k cmd-w cmd-n"],
       "space j": "editor::NewlineBelow",
       "space k": "editor::NewlineAbove",
+      "space p": "outline::Toggle",
+      "space r": "editor::Rename",
     },
   },
   {
     "context": "VimControl && (vim_mode == normal || vim_mode == visual) && !(showing_code_actions || showing_completions)",
     "bindings": {
       "space /": ["editor::ToggleComments", { "advance_downwards": false }],
+    },
+  },
+  {
+    "context": "VimControl && vim_mode == visual && !(showing_code_actions || showing_completions)",
+    "bindings": {
+      ">": ["workspace::SendKeystrokes", "> shift-v"],
+      "<": ["workspace::SendKeystrokes", "< shift-v"],
     },
   },
   {
@@ -143,6 +159,25 @@
       "cmd-k": "menu::SelectPrevious",
       "cmd-j": "menu::SelectNext",
       "cmd-l": ["workspace::SendKeystrokes", "enter"],
+    },
+  },
+  {
+    "context": "BufferSearchBar",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-c": ["workspace::SendKeystrokes", "escape"],
+      "cmd-k": "search::PreviousHistoryQuery",
+      "cmd-j": "search::NextHistoryQuery",
+      "cmd-l": "search::SelectNextMatch",
+    },
+  },
+  {
+    "context": "Terminal",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-c": ["workspace::SendKeystrokes", "ctrl-c"],
+      "cmd-d": ["workspace::SendKeystrokes", "ctrl-d"],
+      "cmd-l": ["workspace::SendKeystrokes", "ctrl-l"],
     },
   },
 ]
