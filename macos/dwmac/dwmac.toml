@@ -144,6 +144,8 @@ on-mode-changed = []
     alt-shift-j = 'swap --wrap-around next'
     alt-shift-k = 'swap --wrap-around prev'
     alt-shift-q = 'close --quit-if-last-window'
+    alt-shift-h = ['move-node-to-workspace --wrap-around prev', 'workspace --wrap-around prev']
+    alt-shift-l = ['move-node-to-workspace --wrap-around next', 'workspace --wrap-around next']
 
 
     alt-shift-g = 'exec-and-forget open -na Ghostty --args -e ~/.local/bin/projectselectorcode_lazygit'
