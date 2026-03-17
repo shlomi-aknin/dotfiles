@@ -141,8 +141,8 @@ on-mode-changed = []
 
     # See: https://hillyu.github.io/Dwmac/commands#move
     # cmd-alt-ctrl-space = 'move-node-to-master'
-    alt-shift-j = 'swap next'
-    alt-shift-k = 'swap prev'
+    alt-shift-j = 'swap --wrap-around next'
+    alt-shift-k = 'swap --wrap-around prev'
     alt-shift-q = 'close --quit-if-last-window'
 
 
