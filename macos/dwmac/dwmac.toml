@@ -82,6 +82,7 @@ on-mode-changed = []
 # See: https://hillyu.github.io/Dwmac/guide#binding-modes
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
+
 [mode.main.binding]
 
     # All possible keys:
@@ -123,6 +124,8 @@ on-mode-changed = []
     alt-v = 'layout v_master-stack'
     alt-t = 'layout h_master-stack'
     # alt-f = 'layout tiling floating'
+    alt-shift-space = 'layout floating tiling'
+    alt-f ='macos-native-fullscreen'
 
     alt-backtick = 'workspace-back-and-forth'
 
@@ -130,8 +133,10 @@ on-mode-changed = []
     cmd-alt-ctrl-slash = 'layout master-stack'
 
     # See: https://hillyu.github.io/Dwmac/commands#focus
-    alt-j = 'focus next'
-    alt-k = 'focus prev'
+    # alt-j = 'focus next'
+    # alt-k = 'focus prev'
+    alt-j = ['focus next', 'fullscreen']
+    alt-k = ['focus prev', 'fullscreen']
 
     alt-h = 'workspace --wrap-around prev'
     alt-l = 'workspace --wrap-around next'
@@ -198,5 +203,4 @@ on-mode-changed = []
 
     # sticky is not yet supported https://github.com/hillyu/Dwmac/issues/2
     #s = ['layout sticky tiling', 'mode main']
-
 
